@@ -1,0 +1,1549 @@
+/* ==========================================================================
+   ByMarta · Portfolio de Marta Rodríguez
+   Hoja de estilos principal
+   --------------------------------------------------------------------------
+   Uso de IA: este archivo se ha desarrollado con asistencia de IA
+   (Claude, de Anthropic) a partir de las indicaciones de diseño de Marta,
+   y ha sido revisado y ajustado por ella.
+   --------------------------------------------------------------------------
+   Índice
+   1. Variables (colores, tipografías, medidas)
+   2. Tema oscuro
+   3. Idiomas (EN / ES / DE)
+   4. Base y utilidades
+   5. Cabecera y menú
+   6. Portada (hero)
+   7. Secciones comunes
+   8. Proyectos y carrusel
+   9. Qué hago
+   10. Sobre mí
+   11. Contacto y pie
+   12. Movimiento reducido
+   ========================================================================== */
+
+/* 1. VARIABLES
+   Colores sacados del logotipo: papel, tinta, marrón, turquesa y mostaza. */
+:root {
+  --paper: #fbf8f3; /* fondo, papel de acuarela */
+  --ink: #2b2724; /* texto principal, el negro de la firma */
+  --muted: #6f655c; /* texto secundario */
+  --taupe: #8a7462; /* marrón de "hello, I'm" */
+  --teal: #4f9aa1; /* acento turquesa */
+  --mustard: #d9b24a; /* acento mostaza */
+  --line: #e6ddd2; /* líneas y bordes */
+  --chip: #f2ece4; /* fondo de etiquetas */
+  --wash: 0.22; /* intensidad de las manchas de color de la portada */
+
+  --f-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Escala tipográfica */
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.125rem;
+  --step-2: 1.625rem;
+  --step-3: clamp(1.9rem, 3.6vw, 2.75rem);
+  --step-4: clamp(2.2rem, 4.6vw, 3.5rem);
+
+  /* Medidas */
+  --gutter: clamp(16px, 5vw, 56px);
+  --maxw: 1160px;
+  --section-space: clamp(4rem, 9vw, 7.5rem);
+}
+
+/* 2. TEMA OSCURO
+   Se aplica si el sistema está en modo oscuro (o si se fuerza con data-theme). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1d1a17;
+    --ink: #f1ebe3;
+    --muted: #b5aa9e;
+    --taupe: #c9b29d;
+    --teal: #7cc3c8;
+    --mustard: #e6c565;
+    --line: #36302a;
+    --chip: #2a2521;
+    --wash: 0.16;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #1d1a17;
+  --ink: #f1ebe3;
+  --muted: #b5aa9e;
+  --taupe: #c9b29d;
+  --teal: #7cc3c8;
+  --mustard: #e6c565;
+  --line: #36302a;
+  --chip: #2a2521;
+  --wash: 0.16;
+  color-scheme: dark;
+}
+
+/* 3. IDIOMAS
+   Cada texto existe en inglés, español y alemán (atributo data-l).
+   Solo se muestra el idioma activo, guardado en <html data-lang>. Español por defecto. */
+:root:not([data-lang="en"]) [data-l="en"],
+:root:not([data-lang="de"]) [data-l="de"],
+:root[data-lang="en"] [data-l="es"],
+:root[data-lang="de"] [data-l="es"] {
+  display: none !important;
+}
+
+/* Imágenes distintas para tema claro y oscuro (monograma) */
+.on-dark {
+  display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .on-light {
+    display: none !important;
+  }
+
+  :root:not([data-theme="light"]) .on-dark {
+    display: block !important;
+  }
+}
+
+:root[data-theme="dark"] .on-light {
+  display: none !important;
+}
+
+:root[data-theme="dark"] .on-dark {
+  display: block !important;
+}
+
+/* 4. BASE Y UTILIDADES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--f-display);
+  font-weight: 350;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+/* Contenedor central con márgenes laterales */
+.wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Antetítulo en mayúsculas */
+.eyebrow {
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Enlace para saltar al contenido (accesibilidad) */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 20;
+  padding: 0.5rem 1rem;
+  background: var(--paper);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.9rem 1.4rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 600 0.9rem/1 var(--f-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Trazo de acuarela bajo los títulos de sección */
+.stroke {
+  display: block;
+  width: 120px;
+  height: 14px;
+  margin-top: 1rem;
+}
+
+/* 5. CABECERA Y MENÚ */
+.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.top__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.7rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.brand__mono {
+  width: 34px;
+  height: 34px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2.5vw, 2rem);
+}
+
+.nav__list {
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__list a {
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.nav__list a:hover {
+  color: var(--ink);
+}
+
+/* Selector de idioma */
+.lang {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.lang button {
+  min-width: 40px;
+  min-height: 32px;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: 600 0.75rem/1 var(--f-body);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.lang button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Botón del menú móvil (hamburguesa): oculto en escritorio */
+.menu-btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  margin: 4px auto;
+  background: currentColor;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Menú móvil: los enlaces pasan a un panel desplegable */
+@media (max-width: 760px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .brand__name {
+    display: none;
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem var(--gutter) 1.25rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s;
+  }
+
+  .nav__list a {
+    display: block;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+    font-family: var(--f-display);
+    font-size: 1.35rem;
+  }
+
+  /* Estado abierto: lo añade main.js con la clase .is-open */
+  .top.is-open .nav__list {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .top.is-open .menu-btn span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  .top.is-open .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .top.is-open .menu-btn span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+  }
+}
+
+/* 6. PORTADA (HERO)
+   Composición centrada: firma de acuarela, especialidades, titular y llamadas a la acción. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--section-space);
+  text-align: center;
+}
+
+/* Manchas de color difuminadas que se mueven despacio al fondo */
+.washes {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.washes span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: var(--wash);
+  animation: drift 22s ease-in-out infinite alternate;
+}
+
+.washes span:nth-child(1) {
+  top: 6%;
+  left: -6vw;
+  width: 44vw;
+  height: 30vw;
+  background: var(--teal);
+}
+
+.washes span:nth-child(2) {
+  top: 22%;
+  right: -8vw;
+  width: 40vw;
+  height: 28vw;
+  background: var(--mustard);
+  animation-duration: 26s;
+  animation-delay: -6s;
+}
+
+.washes span:nth-child(3) {
+  top: 48%;
+  left: 32%;
+  width: 30vw;
+  height: 22vw;
+  background: var(--taupe);
+  opacity: calc(var(--wash) * 0.7);
+  animation-duration: 30s;
+  animation-delay: -12s;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(4vw, -3vw, 0) scale(1.12);
+  }
+}
+
+/* Firma: capa de acuarela (imagen) + letras vectoriales (SVG) encima.
+   Las letras son vectores, así que se ven nítidas a cualquier tamaño. */
+.signature {
+  position: relative;
+  max-width: 680px;
+  margin-inline: auto;
+  aspect-ratio: 1165 / 424;
+  animation: float 9s ease-in-out 3s infinite;
+}
+
+.signature__wash,
+.signature svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* La acuarela se "pinta" de izquierda a derecha al cargar */
+.signature__wash {
+  -webkit-mask-image: linear-gradient(90deg, #000 42%, transparent 58%);
+  mask-image: linear-gradient(90deg, #000 42%, transparent 58%);
+  -webkit-mask-size: 260% 100%;
+  mask-size: 260% 100%;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  animation: paint 1.8s cubic-bezier(0.55, 0.05, 0.25, 1) 0.1s both;
+}
+
+/* Después se "escribe" la firma */
+.signature__hello {
+  color: var(--taupe);
+  animation: fade 0.9s ease-out 0.5s both;
+}
+
+.signature__ink {
+  color: var(--ink);
+  clip-path: inset(0 0 0 0);
+  animation: write 1.6s cubic-bezier(0.6, 0.1, 0.3, 1) 0.9s both;
+}
+
+@keyframes paint {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes write {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.001;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Especialidades bajo la firma */
+.tagline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.25rem;
+  margin: clamp(2rem, 4.5vw, 3rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tagline li + li::before {
+  content: "·";
+  margin-right: 1.25rem;
+  color: var(--taupe);
+}
+
+/* En móvil las especialidades caben en una sola línea */
+@media (max-width: 560px) {
+  .tagline {
+    gap: 0.3rem 0.55rem;
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+  }
+
+  .tagline li + li::before {
+    margin-right: 0.55rem;
+  }
+}
+
+/* Titular y texto de la portada, centrados */
+.hero__text {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  max-width: 760px;
+  margin: clamp(2.5rem, 6vw, 4rem) auto 0;
+}
+
+.hero h1 {
+  font-size: var(--step-4);
+  letter-spacing: -0.01em;
+}
+
+.hero h1 em {
+  color: var(--taupe);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.hero .lede {
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: var(--step-1);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--teal) 22%, transparent);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--teal) 8%, transparent);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* 7. SECCIONES COMUNES
+   Todas las cabeceras de sección siguen el mismo patrón: antetítulo, título, trazo y entradilla. */
+section {
+  scroll-margin-top: 80px;
+}
+
+.section {
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.section-head h2 {
+  margin-top: 0.75rem;
+  font-size: var(--step-3);
+}
+
+.section-head .intro {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: var(--step-1);
+}
+
+/* 8. PROYECTOS Y CARRUSEL
+   Cada proyecto ocupa todo el ancho: cabecera en dos columnas, carrusel grande
+   dentro de un marco de navegador y, debajo, lo más destacado y la tecnología. */
+/* Cada proyecto es una franja a todo el ancho con el color de su marca:
+   Casa Brava en verde salvia claro y Vagamundo en azul noche.
+   Los colores se cambian redefiniendo las variables dentro de cada franja. */
+#projects {
+  padding-bottom: 0;
+}
+
+.case {
+  padding-block: clamp(4rem, 9vw, 7rem);
+  background: var(--panel, var(--paper));
+  color: var(--ink);
+}
+
+.case--cb {
+  --panel: #e9ebe1;
+  --paper: #e9ebe1;
+  --ink: #2b2a24;
+  --muted: #5d6356;
+  --taupe: #6f7a5f;
+  --line: #d2d7c4;
+  --chip: #dde1d2;
+}
+
+.case--vg {
+  --panel: #1d2634;
+  --paper: #1d2634;
+  --ink: #f3eee6;
+  --muted: #b7b3ab;
+  --taupe: #d6c2a8;
+  --teal: #8fc7cc;
+  --line: #354256;
+  --chip: #263244;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .case--cb {
+    --panel: #20251d;
+    --paper: #20251d;
+    --ink: #eef0e6;
+    --muted: #aeb4a3;
+    --taupe: #b7c2a4;
+    --line: #343b2e;
+    --chip: #2a3026;
+  }
+
+  :root:not([data-theme="light"]) .case--vg {
+    --panel: #141b26;
+    --paper: #141b26;
+    --line: #2b3646;
+    --chip: #1d2635;
+  }
+}
+
+:root[data-theme="dark"] .case--cb {
+  --panel: #20251d;
+  --paper: #20251d;
+  --ink: #eef0e6;
+  --muted: #aeb4a3;
+  --taupe: #b7c2a4;
+  --line: #343b2e;
+  --chip: #2a3026;
+}
+
+:root[data-theme="dark"] .case--vg {
+  --panel: #141b26;
+  --paper: #141b26;
+  --line: #2b3646;
+  --chip: #1d2635;
+}
+
+/* Golden Chance Senior: arena cálida con acento terracota, los colores de su marca */
+.case--gcs {
+  --panel: #ece5d6;
+  --paper: #ece5d6;
+  --ink: #30352f;
+  --muted: #565b52;
+  --taupe: #8a5640;
+  --teal: #7c8265;
+  --line: #d8d0be;
+  --chip: #e3dbca;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .case--gcs {
+    --panel: #26231d;
+    --paper: #26231d;
+    --ink: #f1ece2;
+    --muted: #b6ad9e;
+    --taupe: #d3a58c;
+    --teal: #a9ae8f;
+    --line: #3a352c;
+    --chip: #302b24;
+  }
+}
+
+:root[data-theme="dark"] .case--gcs {
+  --panel: #26231d;
+  --paper: #26231d;
+  --ink: #f1ece2;
+  --muted: #b6ad9e;
+  --taupe: #d3a58c;
+  --teal: #a9ae8f;
+  --line: #3a352c;
+  --chip: #302b24;
+}
+
+/* Plan de Marketing DEMYA: azul marino y dorado, los colores de la marca */
+.case--dm {
+  --panel: #1f2a40;
+  --paper: #1f2a40;
+  --ink: #f3ede3;
+  --muted: #bfc3cc;
+  --taupe: #d2bc85;
+  --teal: #b69e60;
+  --line: #34405a;
+  --chip: #28344d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .case--dm {
+    --panel: #161e2e;
+    --paper: #161e2e;
+    --line: #2a3448;
+    --chip: #1e283a;
+  }
+}
+
+:root[data-theme="dark"] .case--dm {
+  --panel: #161e2e;
+  --paper: #161e2e;
+  --line: #2a3448;
+  --chip: #1e283a;
+}
+
+.case__title--dm {
+  font-weight: 400;
+}
+
+.case__title--dm em {
+  display: block;
+  color: var(--taupe);
+  font-weight: 300;
+  font-size: 0.6em;
+}
+
+/* Título con "Senior" en cursiva, como en su logotipo */
+.case__title--gcs {
+  font-weight: 400;
+}
+
+.case__title--gcs em {
+  color: var(--taupe);
+  font-weight: 300;
+}
+
+/* Etiqueta "En desarrollo" */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--chip);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge .dot {
+  background: var(--taupe);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--taupe) 22%, transparent);
+}
+
+/* Nota pequeña bajo el resumen */
+.case__note {
+  max-width: 58ch;
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+/* Cabecera del proyecto: título a la izquierda, resumen y enlaces a la derecha */
+.case__head {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.25rem, 5vw, 4.5rem);
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.case__meta {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case__meta li + li {
+  color: var(--muted);
+}
+
+.case h3 {
+  margin-top: 0.85rem;
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+  letter-spacing: -0.01em;
+}
+
+/* Cada título imita el logotipo de su marca */
+.case__title--cb {
+  font-family: var(--f-body);
+  font-weight: 200;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case__title--vg {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.case__summary {
+  max-width: 58ch;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.links a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--taupe);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.links a::after {
+  content: " ↗";
+  font-weight: 400;
+}
+
+/* Zona de imágenes: navegador + móvil superpuesto + controles */
+.case__media {
+  position: relative;
+  padding-right: clamp(3rem, 9vw, 7rem);
+}
+
+.case--reverse .case__media {
+  padding-right: 0;
+  padding-left: clamp(3rem, 9vw, 7rem);
+}
+
+/* Marco de navegador para que se lea como una web */
+.browser {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--chip);
+  box-shadow: 0 30px 60px -40px rgba(60, 45, 30, 0.45);
+}
+
+.browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+.browser__dots {
+  flex: none;
+  width: 42px;
+  height: 10px;
+  background: radial-gradient(circle 5px at 5px 5px, #e0a39a 98%, transparent) 0 0 / 16px 10px repeat-x;
+  opacity: 0.85;
+}
+
+/* Carrusel */
+.carousel {
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+}
+
+.carousel__slide img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Captura móvil superpuesta en la esquina */
+.phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 19%;
+  max-width: 200px;
+  overflow: hidden;
+  border: 6px solid #1b1917;
+  border-radius: 22px;
+  background: #1b1917;
+  box-shadow: 0 24px 50px -20px rgba(0, 0, 0, 0.5);
+}
+
+.case--reverse .phone {
+  right: auto;
+  left: 0;
+}
+
+.phone img {
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Controles: flechas, puntos y contador */
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 72px;
+  padding-top: 1rem;
+}
+
+.case--reverse .carousel__controls {
+  justify-content: flex-end;
+}
+
+.carousel__arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel__arrows button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.carousel__arrows button:hover {
+  border-color: var(--ink);
+}
+
+.carousel__dots {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.carousel__dots button {
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel__dots button::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: auto;
+  border-radius: 50%;
+  background: var(--line);
+  transition:
+    background 0.3s ease,
+    width 0.3s ease;
+}
+
+.carousel__dots button[aria-current="true"]::before {
+  width: 18px;
+  border-radius: 4px;
+  background: var(--taupe);
+}
+
+.carousel__count {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+/* Debajo: lo más destacado en cuatro piezas, cada una con una palabra clave grande */
+.case__details {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.highlights li {
+  padding-top: 1.1rem;
+  border-top: 2px solid var(--c);
+}
+
+.highlights li:nth-child(1) {
+  --c: var(--teal);
+}
+
+.highlights li:nth-child(2) {
+  --c: var(--mustard);
+}
+
+.highlights li:nth-child(3) {
+  --c: var(--taupe);
+}
+
+.highlights li:nth-child(4) {
+  --c: var(--teal);
+}
+
+.highlights strong {
+  display: block;
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-style: italic;
+  font-weight: 350;
+  line-height: 1.1;
+}
+
+.highlights span {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Tecnologías en una sola línea */
+.case__stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 1000px) {
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .case__head {
+    grid-template-columns: 1fr;
+  }
+
+  .case__media,
+  .case--reverse .case__media {
+    padding-right: 2.5rem;
+    padding-left: 0;
+  }
+
+  .case--reverse .phone {
+    right: 0;
+    left: auto;
+  }
+
+  .case--reverse .carousel__controls {
+    justify-content: flex-start;
+  }
+
+  .phone {
+    width: 24%;
+    border-width: 4px;
+    border-radius: 14px;
+  }
+
+  /* En móvil se ve el contador en lugar de los puntos, para que no los tape el móvil */
+  .carousel__dots {
+    display: none;
+  }
+}
+
+/* 8b. CINTA EN MOVIMIENTO
+   Tipografía: Bodoni Moda en cursiva, con un aire de revista de moda.
+   Franja con las especialidades que se desplaza sola (solo CSS). Se pausa al pasar el ratón. */
+.marquee {
+  overflow: hidden;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__group {
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0 2.5rem 0 0;
+  list-style: none;
+}
+
+.marquee__group li {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  color: var(--taupe);
+  font-family: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  font-style: italic;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Gota de color entre palabras, alternando los tonos del logo */
+.marquee__group li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.marquee__group li:nth-child(3n + 2)::after {
+  background: var(--mustard);
+}
+
+.marquee__group li:nth-child(3n)::after {
+  background: var(--taupe);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 9. QUÉ HAGO */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.skill {
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--c);
+}
+
+.skill:nth-child(1) {
+  --c: var(--teal);
+}
+
+.skill:nth-child(2) {
+  --c: var(--mustard);
+}
+
+.skill:nth-child(3) {
+  --c: var(--taupe);
+}
+
+.skill h3 {
+  font-size: var(--step-2);
+}
+
+.skill p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.skill ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 860px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 10. SOBRE MÍ
+   Formato carta: todo centrado y estrecho, con la acuarela del logo muy difuminada detrás.
+   Sin foto, para que la atención vaya a lo que cuento. */
+.about {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  text-align: center;
+}
+
+.about__wash {
+  position: absolute;
+  right: -10%;
+  bottom: 6%;
+  left: -10%;
+  z-index: -1;
+  height: 55%;
+  background: url("../img/acuarela-fondo.webp") center / 100% 100% no-repeat;
+  opacity: 0.3;
+}
+
+.about__inner {
+  max-width: 760px;
+}
+
+.about h2 {
+  margin-top: 1rem;
+  font-family: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about__lead {
+  margin-top: 1.5rem;
+  font-family: var(--f-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.about__body {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.about__body p {
+  max-width: 62ch;
+}
+
+/* Firma al final de la carta */
+.about__sign {
+  display: block;
+  width: min(230px, 60%);
+  height: auto;
+  margin-top: 1.5rem;
+  color: var(--ink);
+}
+
+/* Datos clave en una línea */
+.about__strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 2.25rem;
+  margin: clamp(2.5rem, 6vw, 3.5rem) 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.about__strip div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.about__strip dt {
+  color: var(--taupe);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about__strip dd {
+  margin: 0;
+}
+
+/* Bloques que suben al entrar en pantalla (solo si JavaScript está activo) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 560px) {
+  .about__strip {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 11. CONTACTO Y PIE
+   Panel de cierre con fondo suave: mensaje a la izquierda y enlaces en filas a la derecha. */
+.contact__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding: clamp(2rem, 6vw, 4.5rem);
+  border-radius: 14px;
+  background: var(--chip);
+}
+
+.contact h2 {
+  margin-top: 0.75rem;
+  font-size: var(--step-4);
+}
+
+.contact .intro {
+  max-width: 50ch;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: var(--step-1);
+}
+
+.contact .actions {
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.contact__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.contact__list li {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding-block: 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__list a {
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact__list a:hover {
+  color: var(--teal);
+}
+
+.contact__cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .contact__panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact__list li {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}
+
+.footer {
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* 12. MOVIMIENTO REDUCIDO
+   Si la persona lo pide en su sistema, se quitan animaciones y transiciones. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,6 @@
+# Archivos que no se suben a GitHub
+_borrar/
+.DS_Store
+.vscode/
+package-lock.json
+node_modules/
