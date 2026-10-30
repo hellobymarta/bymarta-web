@@ -404,49 +404,86 @@
         </div>
       </article>
 
-      <!-- Proyecto anterior y siguiente -->
-      <nav class="case-pager wrap" aria-label="Projects">
-        <a class="case-pager__link" href="../demya/">
-          <span class="case-pager__label">
-            <span data-l="en">← Previous</span>
-            <span data-l="es">← Anterior</span>
-            <span data-l="de">← Vorheriges</span>
+      <!-- Siguiente proyecto: bloque grande con su miniatura -->
+      <nav class="next-project wrap" aria-label="Projects">
+        <a class="next-project__link" href="../vagamundo/">
+          <span class="next-project__text">
+            <span class="next-project__label">
+              <span data-l="en">Next project</span>
+              <span data-l="es">Siguiente proyecto</span>
+              <span data-l="de">Nächstes Projekt</span>
+            </span>
+            <span class="next-project__name">
+              Vagamundo
+              <span aria-hidden="true">→</span>
+            </span>
+            <span class="next-project__type">
+              <span data-l="en">Travel agency · full stack</span>
+              <span data-l="es">Agencia de viajes · full stack</span>
+              <span data-l="de">Reiseveranstalter · Full Stack</span>
+            </span>
           </span>
-          <span class="case-pager__name">DEMYA</span>
-        </a>
-        <a class="case-pager__link case-pager__link--next" href="../vagamundo/">
-          <span class="case-pager__label">
-            <span data-l="en">Next →</span>
-            <span data-l="es">Siguiente →</span>
-            <span data-l="de">Nächstes →</span>
+          <span class="next-project__media">
+            <img
+              src="../../img/vg-inicio-800.webp"
+              srcset="
+                ../../img/vg-inicio-640.webp  640w,
+                ../../img/vg-inicio-800.webp  800w,
+                ../../img/vg-inicio.webp     1440w
+              "
+              sizes="(max-width: 760px) 92vw, 520px"
+              width="1440"
+              height="900"
+              alt=""
+              loading="lazy"
+            />
           </span>
-          <span class="case-pager__name">Vagamundo</span>
         </a>
+        <p class="next-project__more">
+          <a href="../demya/">
+            <span data-l="en">← Previous:</span>
+            <span data-l="es">← Anterior:</span>
+            <span data-l="de">← Vorheriges:</span>
+            DEMYA
+          </a>
+          <a href="../../#projects">
+            <span data-l="en">All projects</span>
+            <span data-l="es">Todos los proyectos</span>
+            <span data-l="de">Alle Projekte</span>
+          </a>
+        </p>
       </nav>
 
-      <!-- Llamada a la acción -->
-      <section class="wrap case-cta" aria-labelledby="cta-title">
-        <h2 id="cta-title">
-          <span data-l="en">Like what you see? Let's talk.</span>
-          <span data-l="es">¿Te gusta lo que ves? Hablemos.</span>
-          <span data-l="de">Gefällt Ihnen, was Sie sehen? Lassen Sie uns sprechen.</span>
-        </h2>
-        <div class="actions">
-          <a class="btn" href="../../#contact">
-            <span data-l="en">Get in touch</span>
-            <span data-l="es">Escríbeme</span>
-            <span data-l="de">Kontakt aufnehmen</span>
-          </a>
-          <a
-            class="btn btn--ghost"
-            href="https://cal.com/bymarta/virtual-coffee-with-marta"
-            target="_blank"
-            rel="noopener"
-          >
-            <span data-l="en">Book a virtual coffee · 15 min</span>
-            <span data-l="es">Reserva un café virtual · 15 min</span>
-            <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
-          </a>
+      <!-- Llamada a la acción final -->
+      <section class="case-cta wrap" aria-labelledby="cta-title">
+        <div class="case-cta__box">
+          <h2 id="cta-title">
+            <span data-l="en">Like what you see?</span>
+            <span data-l="es">¿Te gusta lo que ves?</span>
+            <span data-l="de">Gefällt Ihnen, was Sie sehen?</span>
+          </h2>
+          <p>
+            <span data-l="en">Tell me about your project or book a 15-minute coffee and let's talk.</span>
+            <span data-l="es">Cuéntame tu proyecto o reserva un café de 15 minutos y lo hablamos.</span>
+            <span data-l="de">Erzählen Sie mir von Ihrem Projekt oder buchen Sie einen 15-minütigen Kaffee.</span>
+          </p>
+          <div class="actions">
+            <a class="btn btn--light" href="../../#contact">
+              <span data-l="en">Get in touch</span>
+              <span data-l="es">Escríbeme</span>
+              <span data-l="de">Kontakt aufnehmen</span>
+            </a>
+            <a
+              class="btn btn--ghost-light"
+              href="https://cal.com/bymarta/virtual-coffee-with-marta"
+              target="_blank"
+              rel="noopener"
+            >
+              <span data-l="en">Book a virtual coffee · 15 min</span>
+              <span data-l="es">Reserva un café virtual · 15 min</span>
+              <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
