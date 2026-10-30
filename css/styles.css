@@ -1200,6 +1200,123 @@ section {
   font-size: 0.92rem;
 }
 
+/* Caso de estudio: cuatro bloques cortos (papel, reto, lo que hice, resultado) */
+.story {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.story > div {
+  padding: 1.4rem 1.5rem 1.6rem;
+  background: var(--chip);
+}
+
+.story dt {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--taupe);
+  font: 600 0.75rem/1.3 var(--f-body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.story__num {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.story dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+  .story {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .story {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Índice de proyectos: cuatro miniaturas al principio de la sección */
+.case-index ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  margin: clamp(2rem, 4vw, 3rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-index a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.15rem 0.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.case-index img {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.case-index a:hover img,
+.case-index a:focus-visible img {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -18px rgb(0 0 0 / 0.45);
+}
+
+.case-index__num {
+  grid-row: span 2;
+  color: var(--taupe);
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.case-index__name {
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.case-index__type {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 760px) {
+  .case-index ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Tecnologías en una sola línea */
 .case__stack {
   display: flex;

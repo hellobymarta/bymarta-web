@@ -270,10 +270,64 @@
               </span>
             </p>
           </header>
+
+          <!-- Índice de proyectos: miniaturas que llevan a cada caso -->
+          <nav class="case-index" aria-label="Project index">
+            <ol>
+              <li>
+                <a href="#casa-brava">
+                  <img src="img/cb-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <span class="case-index__num">01</span>
+                  <span class="case-index__name">Casa Brava</span>
+                  <span class="case-index__type">
+                    <span data-l="es">Hotel boutique</span>
+                    <span data-l="en">Boutique hotel</span>
+                    <span data-l="de">Boutique-Hotel</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#vagamundo">
+                  <img src="img/vg-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <span class="case-index__num">02</span>
+                  <span class="case-index__name">Vagamundo</span>
+                  <span class="case-index__type">
+                    <span data-l="es">Full stack</span>
+                    <span data-l="en">Full stack</span>
+                    <span data-l="de">Full Stack</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#golden-chance">
+                  <img src="img/gcs-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <span class="case-index__num">03</span>
+                  <span class="case-index__name">Golden Chance Senior</span>
+                  <span class="case-index__type">
+                    <span data-l="es">Residencial sénior</span>
+                    <span data-l="en">Senior living</span>
+                    <span data-l="de">Wohnen im Alter</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#demya">
+                  <img src="img/dm-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <span class="case-index__num">04</span>
+                  <span class="case-index__name">DEMYA</span>
+                  <span class="case-index__type">
+                    <span data-l="es">Plan de marketing</span>
+                    <span data-l="en">Marketing plan</span>
+                    <span data-l="de">Marketingplan</span>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </nav>
         </div>
 
         <!-- Proyecto 1: Casa Brava -->
-        <article class="case case--cb" aria-labelledby="casa-brava-title">
+        <article class="case case--cb" id="casa-brava" aria-labelledby="casa-brava-title">
           <div class="wrap">
             <div class="case__head">
               <div>
@@ -416,6 +470,87 @@
             </div>
 
             <div class="case__details">
+              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+              <dl class="story">
+                <div>
+                  <dt>
+                    <span class="story__num">01</span>
+                    <span data-l="es">Mi papel</span>
+                    <span data-l="en">My role</span>
+                    <span data-l="de">Meine Rolle</span>
+                  </dt>
+                  <dd data-l="es">
+                    Diseño y desarrollo de principio a fin: estructura, textos de interfaz, maquetación y código.
+                  </dd>
+                  <dd data-l="en">
+                    Design and development from start to finish: structure, interface copy, layout and code.
+                  </dd>
+                  <dd data-l="de">
+                    Konzeption, Design und Entwicklung aus einer Hand: Struktur, Interface-Texte, Layout und Code.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">02</span>
+                    <span data-l="es">El reto</span>
+                    <span data-l="en">The challenge</span>
+                    <span data-l="de">Die Herausforderung</span>
+                  </dt>
+                  <dd data-l="es">
+                    Transmitir la calma y la exclusividad de unas villas en Lombok sin convertir la web en un catálogo
+                    de reservas, y que cargara bien en el móvil.
+                  </dd>
+                  <dd data-l="en">
+                    Conveying the calm and exclusivity of a villa retreat in Lombok without turning the site into a
+                    booking catalogue – and making it load well on phones.
+                  </dd>
+                  <dd data-l="de">
+                    Die Ruhe und Exklusivität einer Villenanlage auf Lombok vermitteln, ohne dass die Website wie ein
+                    Buchungskatalog wirkt – und das auch mobil mit kurzen Ladezeiten.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">03</span>
+                    <span data-l="es">Lo que hice</span>
+                    <span data-l="en">What I did</span>
+                    <span data-l="de">Was ich gemacht habe</span>
+                  </dt>
+                  <dd data-l="es">
+                    Un diseño editorial de 5 páginas, con HTML semántico, CSS ordenado en SUIT, animaciones con GSAP que
+                    nunca ocultan el contenido y reservas directas por email, teléfono o WhatsApp.
+                  </dd>
+                  <dd data-l="en">
+                    A five-page editorial design with semantic HTML, CSS organised in SUIT, GSAP animations that never
+                    hide content, and direct booking by email, phone or WhatsApp.
+                  </dd>
+                  <dd data-l="de">
+                    Ein fünfseitiges Editorial-Design mit semantischem HTML, nach SUIT strukturiertem CSS,
+                    GSAP-Animationen, die nie Inhalte verbergen, und Direktbuchung per E-Mail, Telefon oder WhatsApp.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">04</span>
+                    <span data-l="es">El resultado</span>
+                    <span data-l="en">The result</span>
+                    <span data-l="de">Das Ergebnis</span>
+                  </dt>
+                  <dd data-l="es">
+                    Una web publicada, accesible (WCAG AA) y mobile first, que fue a la vez encargo real y proyecto de
+                    máster.
+                  </dd>
+                  <dd data-l="en">
+                    A live, accessible (WCAG AA), mobile-first website that served both as real client work and as a
+                    master's project.
+                  </dd>
+                  <dd data-l="de">
+                    Eine veröffentlichte, barrierefreie (WCAG AA) Mobile-first-Website – zugleich Kundenauftrag und
+                    Masterprojekt.
+                  </dd>
+                </div>
+              </dl>
+
               <h4 class="sr-only">
                 <span data-l="en">Highlights</span>
                 <span data-l="es">Lo más destacado</span>
@@ -462,7 +597,7 @@
         </article>
 
         <!-- Proyecto 2: Vagamundo -->
-        <article class="case case--vg case--reverse" aria-labelledby="vagamundo-title">
+        <article class="case case--vg case--reverse" id="vagamundo" aria-labelledby="vagamundo-title">
           <div class="wrap">
             <div class="case__head">
               <div>
@@ -604,6 +739,83 @@
             </div>
 
             <div class="case__details">
+              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+              <dl class="story">
+                <div>
+                  <dt>
+                    <span class="story__num">01</span>
+                    <span data-l="es">Mi papel</span>
+                    <span data-l="en">My role</span>
+                    <span data-l="de">Meine Rolle</span>
+                  </dt>
+                  <dd data-l="es">
+                    Desarrollo full stack completo: interfaz, front-end en React, API y base de datos.
+                  </dd>
+                  <dd data-l="en">Full-stack development end to end: interface, React front end, API and database.</dd>
+                  <dd data-l="de">Full-Stack-Entwicklung komplett: Oberfläche, React-Frontend, API und Datenbank.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">02</span>
+                    <span data-l="es">El reto</span>
+                    <span data-l="en">The challenge</span>
+                    <span data-l="de">Die Herausforderung</span>
+                  </dt>
+                  <dd data-l="es">
+                    Crear una agencia de viajes que funcione de verdad: reservas que nunca superen las plazas libres y
+                    una zona privada para el equipo.
+                  </dd>
+                  <dd data-l="en">
+                    Building a travel agency that really works: bookings that never exceed the seats available, plus a
+                    private area for the team.
+                  </dd>
+                  <dd data-l="de">
+                    Einen Reiseveranstalter bauen, der wirklich funktioniert: Buchungen, die nie die freien Plätze
+                    überschreiten, und ein geschützter Bereich fürs Team.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">03</span>
+                    <span data-l="es">Lo que hice</span>
+                    <span data-l="en">What I did</span>
+                    <span data-l="de">Was ich gemacht habe</span>
+                  </dt>
+                  <dd data-l="es">
+                    Front-end en React y TypeScript sobre una API propia en Express y MongoDB Atlas, login con JWT,
+                    control de plazas por salida y un panel de estadísticas.
+                  </dd>
+                  <dd data-l="en">
+                    A React and TypeScript front end on my own Express and MongoDB Atlas API, JWT login, seat control
+                    per departure and a statistics dashboard.
+                  </dd>
+                  <dd data-l="de">
+                    React- und TypeScript-Frontend auf einer eigenen Express-API mit MongoDB Atlas, JWT-Login,
+                    Platzverwaltung pro Termin und ein Statistik-Dashboard.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">04</span>
+                    <span data-l="es">El resultado</span>
+                    <span data-l="en">The result</span>
+                    <span data-l="de">Das Ergebnis</span>
+                  </dt>
+                  <dd data-l="es">
+                    Una aplicación completa desplegada en Vercel, con la que superé el módulo de Desarrollo Full Stack
+                    del máster.
+                  </dd>
+                  <dd data-l="en">
+                    A complete application deployed on Vercel, which helped me pass the master's Full Stack Development
+                    module.
+                  </dd>
+                  <dd data-l="de">
+                    Eine vollständige, auf Vercel veröffentlichte Anwendung, mit der ich das Modul
+                    Full-Stack-Entwicklung im Master bestanden habe.
+                  </dd>
+                </div>
+              </dl>
+
               <h4 class="sr-only">
                 <span data-l="en">Highlights</span>
                 <span data-l="es">Lo más destacado</span>
@@ -651,7 +863,7 @@
           </div>
         </article>
         <!-- Proyecto 3: Golden Chance Senior (en desarrollo) -->
-        <article class="case case--gcs" aria-labelledby="gcs-title">
+        <article class="case case--gcs" id="golden-chance" aria-labelledby="gcs-title">
           <div class="wrap">
             <div class="case__head">
               <div>
@@ -810,6 +1022,88 @@
             </div>
 
             <div class="case__details">
+              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+              <dl class="story">
+                <div>
+                  <dt>
+                    <span class="story__num">01</span>
+                    <span data-l="es">Mi papel</span>
+                    <span data-l="en">My role</span>
+                    <span data-l="de">Meine Rolle</span>
+                  </dt>
+                  <dd data-l="es">
+                    Marca, textos, dirección de arte y desarrollo de la landing, en contacto directo con el cliente.
+                  </dd>
+                  <dd data-l="en">
+                    Brand, copy, art direction and development of the landing page, working directly with the client.
+                  </dd>
+                  <dd data-l="de">
+                    Marke, Texte, Art Direction und Entwicklung der Landingpage – in direktem Austausch mit dem Kunden.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">02</span>
+                    <span data-l="es">El reto</span>
+                    <span data-l="en">The challenge</span>
+                    <span data-l="de">Die Herausforderung</span>
+                  </dt>
+                  <dd data-l="es">
+                    Presentar un proyecto residencial que todavía no existe, transmitiendo confianza a personas mayores
+                    y a sus familias, en dos idiomas.
+                  </dd>
+                  <dd data-l="en">
+                    Presenting a residential project that doesn't exist yet, building trust with older people and their
+                    families, in two languages.
+                  </dd>
+                  <dd data-l="de">
+                    Ein Wohnprojekt vorstellen, das es noch nicht gibt, und dabei älteren Menschen und ihren Familien
+                    Vertrauen vermitteln – in zwei Sprachen.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">03</span>
+                    <span data-l="es">Lo que hice</span>
+                    <span data-l="en">What I did</span>
+                    <span data-l="de">Was ich gemacht habe</span>
+                  </dt>
+                  <dd data-l="es">
+                    Una landing bilingüe (ES/EN) con mensajes claros sobre independencia, comunidad y seguridad,
+                    formulario con consentimiento de privacidad y despliegue en Vercel con tipografías propias.
+                  </dd>
+                  <dd data-l="en">
+                    A bilingual (ES/EN) landing page with clear messages on independence, community and security, an
+                    enquiry form with privacy consent, and deployment on Vercel with self-hosted fonts.
+                  </dd>
+                  <dd data-l="de">
+                    Eine zweisprachige Landingpage (ES/EN) mit klaren Botschaften zu Unabhängigkeit, Gemeinschaft und
+                    Sicherheit, Anfrageformular mit Datenschutz-Einwilligung und Deployment auf Vercel mit lokal
+                    eingebundenen Schriften.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">04</span>
+                    <span data-l="es">El resultado</span>
+                    <span data-l="en">The result</span>
+                    <span data-l="de">Das Ergebnis</span>
+                  </dt>
+                  <dd data-l="es">
+                    La web ya está online como primer punto de contacto con las personas interesadas. Ahora estoy
+                    sumando la versión móvil y nuevos contenidos.
+                  </dd>
+                  <dd data-l="en">
+                    The site is already live as the first point of contact for interested people. I'm now adding the
+                    mobile experience and new content.
+                  </dd>
+                  <dd data-l="de">
+                    Die Website ist bereits online und erster Anlaufpunkt für Interessierte. Derzeit ergänze ich die
+                    mobile Ansicht und neue Inhalte.
+                  </dd>
+                </div>
+              </dl>
+
               <h4 class="sr-only">
                 <span data-l="en">Highlights</span>
                 <span data-l="es">Lo más destacado</span>
@@ -864,7 +1158,7 @@
         </article>
 
         <!-- Proyecto 4: Plan de Marketing Digital DEMYA -->
-        <article class="case case--dm case--reverse" aria-labelledby="demya-title">
+        <article class="case case--dm case--reverse" id="demya" aria-labelledby="demya-title">
           <div class="wrap">
             <div class="case__head">
               <div>
@@ -1009,6 +1303,81 @@
             </div>
 
             <div class="case__details">
+              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+              <dl class="story">
+                <div>
+                  <dt>
+                    <span class="story__num">01</span>
+                    <span data-l="es">Mi papel</span>
+                    <span data-l="en">My role</span>
+                    <span data-l="de">Meine Rolle</span>
+                  </dt>
+                  <dd data-l="es">Análisis, estrategia y presentación del plan, de la auditoría a los KPIs.</dd>
+                  <dd data-l="en">Analysis, strategy and presentation of the plan, from the audit to the KPIs.</dd>
+                  <dd data-l="de">Analyse, Strategie und Aufbereitung des Plans – vom Audit bis zu den KPIs.</dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">02</span>
+                    <span data-l="es">El reto</span>
+                    <span data-l="en">The challenge</span>
+                    <span data-l="de">Die Herausforderung</span>
+                  </dt>
+                  <dd data-l="es">
+                    Ordenar mucha información (web, SEO, redes y competencia) en un plan que una clínica pudiera
+                    entender y poner en práctica.
+                  </dd>
+                  <dd data-l="en">
+                    Turning a lot of information (website, SEO, social media and competitors) into a plan a clinic could
+                    understand and put into practice.
+                  </dd>
+                  <dd data-l="de">
+                    Viele Informationen (Website, SEO, Social Media und Wettbewerb) in einen Plan übersetzen, den eine
+                    Klinik versteht und umsetzen kann.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">03</span>
+                    <span data-l="es">Lo que hice</span>
+                    <span data-l="en">What I did</span>
+                    <span data-l="de">Was ich gemacht habe</span>
+                  </dt>
+                  <dd data-l="es">
+                    Auditoría con Screaming Frog, PageSpeed Insights y Ahrefs, DAFO, objetivos SMART, plan de acción y
+                    KPIs, actualizado con datos de octubre de 2026.
+                  </dd>
+                  <dd data-l="en">
+                    An audit with Screaming Frog, PageSpeed Insights and Ahrefs, a SWOT, SMART goals, an action plan and
+                    KPIs, updated with October 2026 data.
+                  </dd>
+                  <dd data-l="de">
+                    Audit mit Screaming Frog, PageSpeed Insights und Ahrefs, SWOT-Analyse, SMART-Ziele, Maßnahmenplan
+                    und KPIs – aktualisiert mit Daten von Oktober 2026.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="story__num">04</span>
+                    <span data-l="es">El resultado</span>
+                    <span data-l="en">The result</span>
+                    <span data-l="de">Das Ergebnis</span>
+                  </dt>
+                  <dd data-l="es">
+                    Un informe web interactivo de 16 capítulos, con versión PDF lista para imprimir, donde cada hallazgo
+                    se ve con su captura y su recomendación.
+                  </dd>
+                  <dd data-l="en">
+                    A 16-chapter interactive web report with a print-ready PDF, where every finding comes with its
+                    screenshot and recommendation.
+                  </dd>
+                  <dd data-l="de">
+                    Ein interaktiver Web-Bericht mit 16 Kapiteln und druckfertiger PDF-Version, in dem jeder Befund mit
+                    Screenshot und Empfehlung gezeigt wird.
+                  </dd>
+                </div>
+              </dl>
+
               <h4 class="sr-only">
                 <span data-l="en">Highlights</span>
                 <span data-l="es">Lo más destacado</span>
