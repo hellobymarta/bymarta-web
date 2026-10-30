@@ -36,13 +36,9 @@
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 
-    <!-- Tipografías: Fraunces (títulos) y Manrope (texto) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&amp;family=Manrope:wght@200..700&amp;family=Playfair+Display:wght@400&amp;family=Bodoni+Moda:ital,opsz,wght@1,6..96,400&amp;display=swap"
-    />
+    <!-- Tipografías alojadas en la propia web (carpeta fonts/): se precargan las dos principales -->
+    <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Estilos y script de idioma (antes de pintar la página) -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -1649,13 +1645,7 @@
                 />
                 <input type="hidden" name="idioma" value="es" id="form-idioma" />
                 <!-- Casilla trampa contra spam: las personas no la ven -->
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  class="contact-form__honey"
-                  tabindex="-1"
-                  aria-hidden="true"
-                />
+                <input type="checkbox" name="botcheck" class="contact-form__honey" tabindex="-1" aria-hidden="true" />
 
                 <div class="field">
                   <label for="form-nombre">
@@ -1717,10 +1707,18 @@
                 <div class="field field--check">
                   <input id="form-privacidad" name="privacidad" type="checkbox" value="aceptada" required />
                   <label for="form-privacidad">
-                    <span data-l="en">I agree that my details are used only to reply to this message.</span>
-                    <span data-l="es">Acepto que mis datos se usen solo para responder a este mensaje.</span>
+                    <span data-l="en">
+                      I agree that my details are used only to reply to this message (see the
+                      <a href="privacidad.html">privacy policy</a>).
+                    </span>
+                    <span data-l="es">
+                      Acepto que mis datos se usen solo para responder a este mensaje (ver la
+                      <a href="privacidad.html">política de privacidad</a>).
+                    </span>
                     <span data-l="de">
-                      Ich bin einverstanden, dass meine Daten nur zur Beantwortung dieser Nachricht verwendet werden.
+                      Ich bin einverstanden, dass meine Daten nur zur Beantwortung dieser Nachricht verwendet werden
+                      (siehe
+                      <a href="privacidad.html">Datenschutzerklärung</a>).
                     </span>
                   </label>
                 </div>
@@ -1734,16 +1732,19 @@
                 <p class="contact-form__error" id="form-error" role="alert" hidden>
                   <span data-l="en">
                     Sorry, the message couldn't be sent. Please try again or write to me at
-                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
+                    .
                   </span>
                   <span data-l="es">
                     Vaya, el mensaje no se ha podido enviar. Inténtalo de nuevo o escríbeme a
-                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
+                    .
                   </span>
                   <span data-l="de">
                     Leider konnte die Nachricht nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie
                     mir an
-                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
+                    .
                   </span>
                 </p>
               </form>
@@ -1776,6 +1777,23 @@
           <span data-l="es">Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
           <span data-l="de">Gestaltet und umgesetzt mit HTML, CSS und JavaScript.</span>
         </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="footer__legal">
+          <li>
+            <a href="aviso-legal.html">
+              <span data-l="en">Legal notice</span>
+              <span data-l="es">Aviso legal</span>
+              <span data-l="de">Impressum</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacidad.html">
+              <span data-l="en">Privacy</span>
+              <span data-l="es">Privacidad</span>
+              <span data-l="de">Datenschutz</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

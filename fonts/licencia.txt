@@ -1,0 +1,3 @@
+Tipografías alojadas en esta web (subconjunto "latin", formato WOFF2, obtenidas de Fontsource / Google Fonts):
+Fraunces, Manrope, Playfair Display, Bodoni Moda, Hanken Grotesk e IBM Plex Mono.
+Todas se distribuyen bajo la SIL Open Font License, versión 1.1: https://openfontlicense.org

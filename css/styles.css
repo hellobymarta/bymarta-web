@@ -7,6 +7,7 @@
    y ha sido revisado y ajustado por ella.
    --------------------------------------------------------------------------
    Índice
+   0. Tipografías (alojadas en la propia web, sin Google Fonts)
    1. Variables (colores, tipografías, medidas)
    2. Tema oscuro
    3. Idiomas (EN / ES / DE)
@@ -15,11 +16,51 @@
    6. Portada (hero)
    7. Secciones comunes
    8. Proyectos y carrusel
-   9. Qué hago
+   9. Cómo puedo ayudarte
    10. Sobre mí
    11. Contacto y pie
    12. Movimiento reducido
+   13. Páginas legales (aviso legal y privacidad)
    ========================================================================== */
+
+/* 0. TIPOGRAFÍAS
+   Se sirven desde la carpeta /fonts para no enviar datos a Google (RGPD).
+   Licencia SIL Open Font License 1.1. Solo el juego "latin" (español, inglés y alemán). */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/fraunces.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/fraunces-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("../fonts/manrope.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/playfair-display.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/bodoni-moda-italic.woff2") format("woff2");
+}
 
 /* 1. VARIABLES
    Colores sacados del logotipo: papel, tinta, marrón, turquesa y mostaza. */
@@ -1780,6 +1821,26 @@ section {
   gap: 1rem;
 }
 
+.footer__legal {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer a,
+.field--check a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--ink);
+}
+
 /* 12. MOVIMIENTO REDUCIDO
    Si la persona lo pide en su sistema, se quitan animaciones y transiciones. */
 @media (prefers-reduced-motion: reduce) {
@@ -1793,4 +1854,70 @@ section {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* 13. PÁGINAS LEGALES
+   Aviso legal (Impressum) y privacidad (Datenschutzerklärung): columna de lectura sencilla. */
+.legal {
+  padding-block: clamp(7rem, 12vw, 9rem) var(--section-space);
+}
+
+.legal__inner {
+  max-width: 46rem;
+}
+
+.legal__back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--muted);
+  font-size: var(--step--1);
+  text-decoration: none;
+}
+
+.legal__back:hover,
+.legal__back:focus-visible {
+  color: var(--ink);
+}
+
+.legal h1 {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: var(--step-4);
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+}
+
+.legal h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: var(--step-2);
+  margin: 2.5rem 0 0.75rem;
+}
+
+.legal p {
+  max-width: 68ch;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.legal a {
+  color: var(--teal);
+}
+
+.legal__note {
+  color: var(--muted);
+  font-size: var(--step--1);
+}
+
+.legal__lead {
+  padding: 1.1rem 1.4rem;
+  border-left: 3px solid var(--mustard);
+  background: var(--chip);
+  border-radius: 4px;
+}
+
+.legal__date {
+  margin-top: 2.5rem;
+  color: var(--muted);
+  font-size: var(--step--1);
 }
