@@ -1,0 +1,563 @@
+<!doctype html>
+<!--
+  ByMarta · Portfolio de Marta Rodríguez
+  Web developer & digital marketing · Colonia (Alemania)
+  Uso de IA: esta página se ha desarrollado con asistencia de IA (Claude, de Anthropic)
+  a partir de las indicaciones, textos y proyectos de Marta, y ha sido revisada por ella.
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Casa Brava · Caso de estudio · Marta Rodríguez</title>
+    <meta
+      name="description"
+      content="Caso de estudio de Casa Brava: web editorial accesible para un hotel boutique en Lombok, hecha con HTML, CSS y JavaScript."
+    />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Casa Brava · Marta Rodríguez" />
+    <meta
+      property="og:description"
+      content="Caso de estudio de Casa Brava: web editorial accesible para un hotel boutique en Lombok, hecha con HTML, CSS y JavaScript."
+    />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/cb-inicio.webp" />
+    <link rel="canonical" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/proyectos/casa-brava/?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/proyectos/casa-brava/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <link rel="icon" type="image/png" href="../../img/favicon.png" />
+    <link rel="preload" href="../../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script src="../../js/idioma.js"></script>
+    <script src="../../js/main.js" defer></script>
+  </head>
+  <body class="page-project">
+    <a class="skip" href="#case">
+      <span data-l="en">Skip to content</span>
+      <span data-l="es">Saltar al contenido</span>
+      <span data-l="de">Zum Inhalt</span>
+    </a>
+
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CABECERA ===== -->
+    <header class="top">
+      <div class="wrap top__inner">
+        <a class="brand" href="../../#home" aria-label="Marta Rodríguez">
+          <img class="brand__mono on-light" src="../../img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="brand__mono on-dark" src="../../img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="brand__name">Marta Rodríguez</span>
+        </a>
+
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list" id="menu">
+            <li>
+              <a href="../../#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" id="lang-es" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+            <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+            <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false" lang="de">DE</button>
+          </div>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="theme-btn" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="sr-only" data-l="en">Dark mode</span>
+            <span class="sr-only" data-l="es">Modo oscuro</span>
+            <span class="sr-only" data-l="de">Dunkelmodus</span>
+            <svg class="theme-btn__moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="theme-btn__sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
+
+          <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="case">
+      <!-- Migas: volver a todos los proyectos -->
+      <nav class="crumbs wrap" aria-label="Breadcrumb">
+        <a href="../../#projects">
+          <span data-l="en">← All projects</span>
+          <span data-l="es">← Todos los proyectos</span>
+          <span data-l="de">← Alle Projekte</span>
+        </a>
+        <span class="crumbs__count">01 / 04</span>
+      </nav>
+
+      <article class="case case--cb" aria-labelledby="casa-brava-title">
+        <div class="wrap">
+          <div class="case__head">
+            <div>
+              <ul class="case__meta eyebrow">
+                <li>
+                  <span data-l="en">Boutique hotel, Lombok</span>
+                  <span data-l="es">Hotel boutique, Lombok</span>
+                  <span data-l="de">Boutique-Hotel, Lombok</span>
+                </li>
+                <li>
+                  <span data-l="en">Master's project &amp; client work</span>
+                  <span data-l="es">Proyecto de máster y encargo real</span>
+                  <span data-l="de">Masterprojekt &amp; Kundenauftrag</span>
+                </li>
+              </ul>
+              <h1 id="casa-brava-title" class="case__title--cb">Casa Brava</h1>
+            </div>
+            <div>
+              <p class="case__summary" data-l="en">
+                An editorial website for a retreat of villas and suites in Kuta Mandalika, Lombok. It reads like an
+                architecture magazine rather than a booking catalogue, and guests book by email, phone or WhatsApp.
+              </p>
+              <p class="case__summary" data-l="es">
+                Web editorial para un complejo de villas y suites en Kuta Mandalika. Pensada como una revista de
+                arquitectura más que como un catálogo de reservas: las reservas se derivan a correo, teléfono y
+                WhatsApp.
+              </p>
+              <p class="case__summary" data-l="de">
+                Eine Website im Magazin-Stil für eine Anlage mit Villen und Suiten in Kuta Mandalika auf Lombok. Sie
+                liest sich eher wie ein Architekturmagazin als wie ein Buchungsportal; gebucht wird per E-Mail, Telefon
+                oder WhatsApp.
+              </p>
+              <div class="links">
+                <a href="https://hellobymarta.github.io/casa-brava/" target="_blank" rel="noopener">
+                  <span data-l="en">Visit site</span>
+                  <span data-l="es">Ver la web</span>
+                  <span data-l="de">Website ansehen</span>
+                </a>
+                <a href="https://github.com/hellobymarta/casa-brava" target="_blank" rel="noopener">
+                  <span data-l="en">Code</span>
+                  <span data-l="es">Código</span>
+                  <span data-l="de">Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__media" data-carousel role="region" aria-roledescription="carousel" aria-label="Casa Brava">
+            <div class="browser">
+              <p class="browser__bar" aria-hidden="true">
+                <span class="browser__dots"></span>
+                hellobymarta.github.io/casa-brava
+              </p>
+              <div class="carousel">
+                <ul class="carousel__track">
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-inicio.webp"
+                      srcset="../../img/cb-inicio-800.webp 800w, ../../img/cb-inicio.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Casa Brava home page: a stone villa among palm trees with the CB monogram"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-villas.webp"
+                      srcset="../../img/cb-villas-800.webp 800w, ../../img/cb-villas.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Villas section with a rounded photo gallery and a short introduction"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-experiencias.webp"
+                      srcset="../../img/cb-experiencias-800.webp 800w, ../../img/cb-experiencias.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Experiences block on a sage green background with interior photographs"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-dia.webp"
+                      srcset="../../img/cb-dia-800.webp 800w, ../../img/cb-dia.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Experiences page: three numbered moments of the day with photographs"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-materiales.webp"
+                      srcset="../../img/cb-materiales-800.webp 800w, ../../img/cb-materiales.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="About page: materials and surroundings with a photo collage of the interiors"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/cb-contacto.webp"
+                      srcset="../../img/cb-contacto-800.webp 800w, ../../img/cb-contacto.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Contact page with a form next to a photograph of the villa"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="phone">
+              <img src="../../img/cb-movil.webp" width="600" height="1298" alt="Casa Brava on a phone" loading="lazy" />
+            </div>
+            <div class="carousel__controls">
+              <div class="carousel__arrows">
+                <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
+                <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
+              </div>
+              <div class="carousel__dots">
+                <button type="button" aria-label="Screenshot 1"></button>
+                <button type="button" aria-label="Screenshot 2"></button>
+                <button type="button" aria-label="Screenshot 3"></button>
+                <button type="button" aria-label="Screenshot 4"></button>
+                <button type="button" aria-label="Screenshot 5"></button>
+                <button type="button" aria-label="Screenshot 6"></button>
+              </div>
+              <p class="carousel__count" aria-hidden="true">
+                <span data-count>1</span>
+                / 6
+              </p>
+            </div>
+          </div>
+
+          <div class="case__details">
+            <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+            <dl class="story">
+              <div>
+                <dt>
+                  <span class="story__num">01</span>
+                  <span data-l="es">Mi papel</span>
+                  <span data-l="en">My role</span>
+                  <span data-l="de">Meine Rolle</span>
+                </dt>
+                <dd data-l="es">
+                  Diseño y desarrollo de principio a fin: estructura, textos de interfaz, maquetación y código.
+                </dd>
+                <dd data-l="en">
+                  Design and development from start to finish: structure, interface copy, layout and code.
+                </dd>
+                <dd data-l="de">
+                  Konzeption, Design und Entwicklung aus einer Hand: Struktur, Interface-Texte, Layout und Code.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">02</span>
+                  <span data-l="es">El reto</span>
+                  <span data-l="en">The challenge</span>
+                  <span data-l="de">Die Herausforderung</span>
+                </dt>
+                <dd data-l="es">
+                  Transmitir la calma y la exclusividad de unas villas en Lombok sin convertir la web en un catálogo de
+                  reservas, y que cargara bien en el móvil.
+                </dd>
+                <dd data-l="en">
+                  Conveying the calm and exclusivity of a villa retreat in Lombok without turning the site into a
+                  booking catalogue – and making it load well on phones.
+                </dd>
+                <dd data-l="de">
+                  Die Ruhe und Exklusivität einer Villenanlage auf Lombok vermitteln, ohne dass die Website wie ein
+                  Buchungskatalog wirkt – und das auch mobil mit kurzen Ladezeiten.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">03</span>
+                  <span data-l="es">Lo que hice</span>
+                  <span data-l="en">What I did</span>
+                  <span data-l="de">Was ich gemacht habe</span>
+                </dt>
+                <dd data-l="es">
+                  Un diseño editorial de 5 páginas, con HTML semántico, CSS ordenado en SUIT, animaciones con GSAP que
+                  nunca ocultan el contenido y reservas directas por email, teléfono o WhatsApp.
+                </dd>
+                <dd data-l="en">
+                  A five-page editorial design with semantic HTML, CSS organised in SUIT, GSAP animations that never
+                  hide content, and direct booking by email, phone or WhatsApp.
+                </dd>
+                <dd data-l="de">
+                  Ein fünfseitiges Editorial-Design mit semantischem HTML, nach SUIT strukturiertem CSS,
+                  GSAP-Animationen, die nie Inhalte verbergen, und Direktbuchung per E-Mail, Telefon oder WhatsApp.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">04</span>
+                  <span data-l="es">El resultado</span>
+                  <span data-l="en">The result</span>
+                  <span data-l="de">Das Ergebnis</span>
+                </dt>
+                <dd data-l="es">
+                  Una web publicada, accesible (WCAG AA) y mobile first, que fue a la vez encargo real y proyecto de
+                  máster.
+                </dd>
+                <dd data-l="en">
+                  A live, accessible (WCAG AA), mobile-first website that served both as real client work and as a
+                  master's project.
+                </dd>
+                <dd data-l="de">
+                  Eine veröffentlichte, barrierefreie (WCAG AA) Mobile-first-Website – zugleich Kundenauftrag und
+                  Masterprojekt.
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="sr-only">
+              <span data-l="en">Highlights</span>
+              <span data-l="es">Lo más destacado</span>
+              <span data-l="de">Highlights</span>
+            </h2>
+            <ul class="highlights">
+              <li>
+                <strong>5</strong>
+                <span data-l="en">pages in semantic HTML5, CSS3 and vanilla JavaScript</span>
+                <span data-l="es">páginas con HTML5 semántico, CSS3 y JavaScript vanilla</span>
+                <span data-l="de">Seiten mit semantischem HTML5, CSS3 und Vanilla-JavaScript</span>
+              </li>
+              <li>
+                <strong>WCAG AA</strong>
+                <span data-l="en">accessibility, with technical SEO and performance built in</span>
+                <span data-l="es">de accesibilidad, con SEO técnico y Core Web Vitals</span>
+                <span data-l="de">Barrierefreiheit, dazu technisches SEO und optimierte Ladezeiten</span>
+              </li>
+              <li>
+                <strong>Mobile first</strong>
+                <span data-l="en">with a clean, scalable CSS architecture (SUIT CSS)</span>
+                <span data-l="es">con una arquitectura CSS ordenada en SUIT CSS</span>
+                <span data-l="de">mit einer sauberen, skalierbaren CSS-Architektur (SUIT CSS)</span>
+              </li>
+              <li>
+                <strong>GSAP</strong>
+                <span data-l="en">scroll animations that never hide content, even if the script fails to load</span>
+                <span data-l="es">en animaciones de scroll que nunca ocultan el contenido</span>
+                <span data-l="de">
+                  Scroll-Animationen, die keine Inhalte verbergen – auch wenn das Skript nicht lädt
+                </span>
+              </li>
+            </ul>
+            <p class="case__stack">
+              <span class="eyebrow">
+                <span data-l="en">Built with</span>
+                <span data-l="es">Hecha con</span>
+                <span data-l="de">Umgesetzt mit</span>
+              </span>
+              HTML5 · CSS3 · JavaScript · SUIT CSS · GSAP · GitHub Pages
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto anterior y siguiente -->
+      <nav class="case-pager wrap" aria-label="Projects">
+        <a class="case-pager__link" href="../demya/">
+          <span class="case-pager__label">
+            <span data-l="en">← Previous</span>
+            <span data-l="es">← Anterior</span>
+            <span data-l="de">← Vorheriges</span>
+          </span>
+          <span class="case-pager__name">DEMYA</span>
+        </a>
+        <a class="case-pager__link case-pager__link--next" href="../vagamundo/">
+          <span class="case-pager__label">
+            <span data-l="en">Next →</span>
+            <span data-l="es">Siguiente →</span>
+            <span data-l="de">Nächstes →</span>
+          </span>
+          <span class="case-pager__name">Vagamundo</span>
+        </a>
+      </nav>
+
+      <!-- Llamada a la acción -->
+      <section class="wrap case-cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">
+          <span data-l="en">Like what you see? Let's talk.</span>
+          <span data-l="es">¿Te gusta lo que ves? Hablemos.</span>
+          <span data-l="de">Gefällt Ihnen, was Sie sehen? Lassen Sie uns sprechen.</span>
+        </h2>
+        <div class="actions">
+          <a class="btn" href="../../#contact">
+            <span data-l="en">Get in touch</span>
+            <span data-l="es">Escríbeme</span>
+            <span data-l="de">Kontakt aufnehmen</span>
+          </a>
+          <a
+            class="btn btn--ghost"
+            href="https://cal.com/bymarta/virtual-coffee-with-marta"
+            target="_blank"
+            rel="noopener"
+          >
+            <span data-l="en">Book a virtual coffee · 15 min</span>
+            <span data-l="es">Reserva un café virtual · 15 min</span>
+            <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div class="footer__brand">
+          <svg class="footer__sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="../../img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span data-l="en">Web development &amp; digital marketing. Made in Cologne.</span>
+            <span data-l="es">Desarrollo web y marketing digital. Hecho en Colonia.</span>
+            <span data-l="de">Webentwicklung &amp; digitales Marketing. Gemacht in Köln.</span>
+          </p>
+        </div>
+
+        <nav class="footer__col" aria-labelledby="footer-menu">
+          <h2 class="footer__title" id="footer-menu">
+            <span data-l="en">Menu</span>
+            <span data-l="es">Menú</span>
+            <span data-l="de">Menü</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="../../#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h2 class="footer__title">
+            <span data-l="en">Let's talk</span>
+            <span data-l="es">Hablemos</span>
+            <span data-l="de">Kontakt</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span data-l="en">Email</span>
+                <span data-l="es">Email</span>
+                <span data-l="de">E-Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span data-l="en">Virtual coffee</span>
+                <span data-l="es">Café virtual</span>
+                <span data-l="de">Virtueller Kaffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap footer__bottom">
+        <p>© 2026 Marta Rodríguez · ByMarta</p>
+        <p>
+          <span data-l="en">Designed and built with HTML, CSS and JavaScript.</span>
+          <span data-l="es">Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
+          <span data-l="de">Gestaltet und umgesetzt mit HTML, CSS und JavaScript.</span>
+        </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="footer__legal">
+          <li>
+            <a href="../../aviso-legal.html">
+              <span data-l="en">Legal notice</span>
+              <span data-l="es">Aviso legal</span>
+              <span data-l="de">Impressum</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../privacidad.html">
+              <span data-l="en">Privacy</span>
+              <span data-l="es">Privacidad</span>
+              <span data-l="de">Datenschutz</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

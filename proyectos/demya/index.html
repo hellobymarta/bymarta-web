@@ -1,0 +1,567 @@
+<!doctype html>
+<!--
+  ByMarta · Portfolio de Marta Rodríguez
+  Web developer & digital marketing · Colonia (Alemania)
+  Uso de IA: esta página se ha desarrollado con asistencia de IA (Claude, de Anthropic)
+  a partir de las indicaciones, textos y proyectos de Marta, y ha sido revisada por ella.
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>DEMYA · Caso de estudio · Marta Rodríguez</title>
+    <meta
+      name="description"
+      content="Caso de estudio del plan de marketing digital de DEMYA: auditoría web y SEO, redes, competencia, DAFO y KPIs."
+    />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="DEMYA · Marta Rodríguez" />
+    <meta
+      property="og:description"
+      content="Caso de estudio del plan de marketing digital de DEMYA: auditoría web y SEO, redes, competencia, DAFO y KPIs."
+    />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/dm-inicio.webp" />
+    <link rel="canonical" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/proyectos/demya/?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/proyectos/demya/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <link rel="icon" type="image/png" href="../../img/favicon.png" />
+    <link rel="preload" href="../../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script src="../../js/idioma.js"></script>
+    <script src="../../js/main.js" defer></script>
+  </head>
+  <body class="page-project">
+    <a class="skip" href="#case">
+      <span data-l="en">Skip to content</span>
+      <span data-l="es">Saltar al contenido</span>
+      <span data-l="de">Zum Inhalt</span>
+    </a>
+
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CABECERA ===== -->
+    <header class="top">
+      <div class="wrap top__inner">
+        <a class="brand" href="../../#home" aria-label="Marta Rodríguez">
+          <img class="brand__mono on-light" src="../../img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="brand__mono on-dark" src="../../img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="brand__name">Marta Rodríguez</span>
+        </a>
+
+        <nav class="nav" aria-label="Main">
+          <ul class="nav__list" id="menu">
+            <li>
+              <a href="../../#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" id="lang-es" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+            <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+            <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false" lang="de">DE</button>
+          </div>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="theme-btn" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="sr-only" data-l="en">Dark mode</span>
+            <span class="sr-only" data-l="es">Modo oscuro</span>
+            <span class="sr-only" data-l="de">Dunkelmodus</span>
+            <svg class="theme-btn__moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="theme-btn__sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
+
+          <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="case">
+      <!-- Migas: volver a todos los proyectos -->
+      <nav class="crumbs wrap" aria-label="Breadcrumb">
+        <a href="../../#projects">
+          <span data-l="en">← All projects</span>
+          <span data-l="es">← Todos los proyectos</span>
+          <span data-l="de">← Alle Projekte</span>
+        </a>
+        <span class="crumbs__count">04 / 04</span>
+      </nav>
+
+      <article class="case case--dm" aria-labelledby="demya-title">
+        <div class="wrap">
+          <div class="case__head">
+            <div>
+              <ul class="case__meta eyebrow">
+                <li>
+                  <span data-l="en">Aesthetic medicine clinic, Madrid</span>
+                  <span data-l="es">Clínica de medicina estética, Madrid</span>
+                  <span data-l="de">Klinik für ästhetische Medizin, Madrid</span>
+                </li>
+                <li>
+                  <span data-l="en">Master's project · Digital marketing</span>
+                  <span data-l="es">Proyecto de máster · Marketing digital</span>
+                  <span data-l="de">Masterprojekt · Digitalmarketing</span>
+                </li>
+              </ul>
+              <h1 id="demya-title" class="case__title--dm">
+                DEMYA
+                <em>Plan de Marketing Digital</em>
+              </h1>
+            </div>
+            <div>
+              <p class="case__summary" data-l="en">
+                A full digital marketing plan for DEMYA, a group of aesthetic medicine and plastic surgery clinics:
+                website and SEO audit, social media, competitors, SWOT, SMART goals, action plan and KPIs. Updated with
+                October 2026 data and turned into an interactive web report, with a PDF version.
+              </p>
+              <p class="case__summary" data-l="es">
+                Plan de marketing digital completo para DEMYA, grupo de clínicas de medicina estética y cirugía
+                plástica: auditoría web y SEO, redes sociales, competencia, DAFO, objetivos SMART, plan de acción y
+                KPIs. Actualizado con datos de octubre de 2026 y convertido en un informe web interactivo, con su
+                versión en PDF.
+              </p>
+              <p class="case__summary" data-l="de">
+                Ein vollständiger Digitalmarketing-Plan für DEMYA, eine Gruppe von Kliniken für ästhetische Medizin und
+                plastische Chirurgie: Website- und SEO-Audit, Social Media, Wettbewerb, SWOT, SMART-Ziele, Maßnahmenplan
+                und KPIs. Mit Daten von Oktober 2026 aktualisiert und als interaktiver Web-Bericht umgesetzt, dazu eine
+                PDF-Version.
+              </p>
+              <div class="links">
+                <a href="../../proyectos/plan-marketing-demya/index.html" target="_blank" rel="noopener">
+                  <span data-l="en">View the web report</span>
+                  <span data-l="es">Ver la web</span>
+                  <span data-l="de">Web-Bericht ansehen</span>
+                </a>
+                <a href="../../proyectos/plan-marketing-demya/plan-marketing-demya.pdf" target="_blank" rel="noopener">
+                  <span data-l="en">PDF (Spanish)</span>
+                  <span data-l="es">PDF</span>
+                  <span data-l="de">PDF (Spanisch)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="case__media"
+            data-carousel
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="DEMYA, Plan de Marketing Digital"
+          >
+            <div class="browser">
+              <p class="browser__bar" aria-hidden="true">
+                <span class="browser__dots"></span>
+                plan-marketing-demya
+              </p>
+              <div class="carousel">
+                <ul class="carousel__track">
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/dm-inicio.webp"
+                      srcset="../../img/dm-inicio-800.webp 800w, ../../img/dm-inicio.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Cover of the DEMYA digital marketing plan: navy background, title and key figures for October 2026"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/dm-capturas.webp"
+                      srcset="../../img/dm-capturas-800.webp 800w, ../../img/dm-capturas.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Annotated screenshot of the DEMYA website with numbered gold frames and enlarged details"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/dm-competencia.webp"
+                      srcset="../../img/dm-competencia-800.webp 800w, ../../img/dm-competencia.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Competitor analysis with annotated screenshots of Dr. Andrés Gómez’s website"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/dm-dafo.webp"
+                      srcset="../../img/dm-dafo-800.webp 800w, ../../img/dm-dafo.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="SWOT analysis chapter with the fixed table of contents on the left"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="carousel__slide">
+                    <img
+                      src="../../img/dm-datos.webp"
+                      srcset="../../img/dm-datos-800.webp 800w, ../../img/dm-datos.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="October 2026 update: Instagram followers bar chart and competitor comparison table"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="phone">
+              <img
+                src="../../img/dm-movil.webp"
+                width="600"
+                height="1298"
+                alt="The DEMYA marketing plan on a phone"
+                loading="lazy"
+              />
+            </div>
+            <div class="carousel__controls">
+              <div class="carousel__arrows">
+                <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
+                <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
+              </div>
+              <div class="carousel__dots">
+                <button type="button" aria-label="Screenshot 1"></button>
+                <button type="button" aria-label="Screenshot 2"></button>
+                <button type="button" aria-label="Screenshot 3"></button>
+                <button type="button" aria-label="Screenshot 4"></button>
+                <button type="button" aria-label="Screenshot 5"></button>
+              </div>
+              <p class="carousel__count" aria-hidden="true">
+                <span data-count>1</span>
+                / 5
+              </p>
+            </div>
+          </div>
+
+          <div class="case__details">
+            <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+            <dl class="story">
+              <div>
+                <dt>
+                  <span class="story__num">01</span>
+                  <span data-l="es">Mi papel</span>
+                  <span data-l="en">My role</span>
+                  <span data-l="de">Meine Rolle</span>
+                </dt>
+                <dd data-l="es">Análisis, estrategia y presentación del plan, de la auditoría a los KPIs.</dd>
+                <dd data-l="en">Analysis, strategy and presentation of the plan, from the audit to the KPIs.</dd>
+                <dd data-l="de">Analyse, Strategie und Aufbereitung des Plans – vom Audit bis zu den KPIs.</dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">02</span>
+                  <span data-l="es">El reto</span>
+                  <span data-l="en">The challenge</span>
+                  <span data-l="de">Die Herausforderung</span>
+                </dt>
+                <dd data-l="es">
+                  Ordenar mucha información (web, SEO, redes y competencia) en un plan que una clínica pudiera entender
+                  y poner en práctica.
+                </dd>
+                <dd data-l="en">
+                  Turning a lot of information (website, SEO, social media and competitors) into a plan a clinic could
+                  understand and put into practice.
+                </dd>
+                <dd data-l="de">
+                  Viele Informationen (Website, SEO, Social Media und Wettbewerb) in einen Plan übersetzen, den eine
+                  Klinik versteht und umsetzen kann.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">03</span>
+                  <span data-l="es">Lo que hice</span>
+                  <span data-l="en">What I did</span>
+                  <span data-l="de">Was ich gemacht habe</span>
+                </dt>
+                <dd data-l="es">
+                  Auditoría con Screaming Frog, PageSpeed Insights y Ahrefs, DAFO, objetivos SMART, plan de acción y
+                  KPIs, actualizado con datos de octubre de 2026.
+                </dd>
+                <dd data-l="en">
+                  An audit with Screaming Frog, PageSpeed Insights and Ahrefs, a SWOT, SMART goals, an action plan and
+                  KPIs, updated with October 2026 data.
+                </dd>
+                <dd data-l="de">
+                  Audit mit Screaming Frog, PageSpeed Insights und Ahrefs, SWOT-Analyse, SMART-Ziele, Maßnahmenplan und
+                  KPIs – aktualisiert mit Daten von Oktober 2026.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="story__num">04</span>
+                  <span data-l="es">El resultado</span>
+                  <span data-l="en">The result</span>
+                  <span data-l="de">Das Ergebnis</span>
+                </dt>
+                <dd data-l="es">
+                  Un informe web interactivo de 16 capítulos, con versión PDF lista para imprimir, donde cada hallazgo
+                  se ve con su captura y su recomendación.
+                </dd>
+                <dd data-l="en">
+                  A 16-chapter interactive web report with a print-ready PDF, where every finding comes with its
+                  screenshot and recommendation.
+                </dd>
+                <dd data-l="de">
+                  Ein interaktiver Web-Bericht mit 16 Kapiteln und druckfertiger PDF-Version, in dem jeder Befund mit
+                  Screenshot und Empfehlung gezeigt wird.
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="sr-only">
+              <span data-l="en">Highlights</span>
+              <span data-l="es">Lo más destacado</span>
+              <span data-l="de">Highlights</span>
+            </h2>
+            <ul class="highlights">
+              <li>
+                <strong>16</strong>
+                <span data-l="en">chapters, from situation analysis to KPIs, with a fixed table of contents</span>
+                <span data-l="es">capítulos, del análisis de situación a los KPIs, con índice fijo</span>
+                <span data-l="de">
+                  Kapitel, von der Situationsanalyse bis zu den KPIs, mit festem Inhaltsverzeichnis
+                </span>
+              </li>
+              <li>
+                <strong data-l="en">Audit</strong>
+                <strong data-l="es">Auditoría</strong>
+                <strong data-l="de">Audit</strong>
+                <span data-l="en">SEO and performance with Screaming Frog, PageSpeed Insights and Ahrefs</span>
+                <span data-l="es">SEO y rendimiento con Screaming Frog, PageSpeed Insights y Ahrefs</span>
+                <span data-l="de">SEO und Performance mit Screaming Frog, PageSpeed Insights und Ahrefs</span>
+              </li>
+              <li>
+                <strong data-l="en">Evidence</strong>
+                <strong data-l="es">Evidencias</strong>
+                <strong data-l="de">Belege</strong>
+                <span data-l="en">annotated screenshots with numbered frames and enlarged details</span>
+                <span data-l="es">capturas comentadas con marcos numerados y detalles ampliados</span>
+                <span data-l="de">kommentierte Screenshots mit nummerierten Rahmen und vergrößerten Details</span>
+              </li>
+              <li>
+                <strong>Web + PDF</strong>
+                <span data-l="en">one source, responsive on screen and print-ready in A4</span>
+                <span data-l="es">una sola fuente: adaptable en pantalla y lista para imprimir en A4</span>
+                <span data-l="de">eine Quelle: responsiv am Bildschirm und druckfertig in A4</span>
+              </li>
+            </ul>
+            <p class="case__stack">
+              <span class="eyebrow">
+                <span data-l="en">Built with</span>
+                <span data-l="es">Hecha con</span>
+                <span data-l="de">Umgesetzt mit</span>
+              </span>
+              HTML5 · CSS3 · JavaScript · Screaming Frog · PageSpeed Insights · Ahrefs
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto anterior y siguiente -->
+      <nav class="case-pager wrap" aria-label="Projects">
+        <a class="case-pager__link" href="../golden-chance-senior/">
+          <span class="case-pager__label">
+            <span data-l="en">← Previous</span>
+            <span data-l="es">← Anterior</span>
+            <span data-l="de">← Vorheriges</span>
+          </span>
+          <span class="case-pager__name">Golden Chance Senior</span>
+        </a>
+        <a class="case-pager__link case-pager__link--next" href="../casa-brava/">
+          <span class="case-pager__label">
+            <span data-l="en">Next →</span>
+            <span data-l="es">Siguiente →</span>
+            <span data-l="de">Nächstes →</span>
+          </span>
+          <span class="case-pager__name">Casa Brava</span>
+        </a>
+      </nav>
+
+      <!-- Llamada a la acción -->
+      <section class="wrap case-cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">
+          <span data-l="en">Like what you see? Let's talk.</span>
+          <span data-l="es">¿Te gusta lo que ves? Hablemos.</span>
+          <span data-l="de">Gefällt Ihnen, was Sie sehen? Lassen Sie uns sprechen.</span>
+        </h2>
+        <div class="actions">
+          <a class="btn" href="../../#contact">
+            <span data-l="en">Get in touch</span>
+            <span data-l="es">Escríbeme</span>
+            <span data-l="de">Kontakt aufnehmen</span>
+          </a>
+          <a
+            class="btn btn--ghost"
+            href="https://cal.com/bymarta/virtual-coffee-with-marta"
+            target="_blank"
+            rel="noopener"
+          >
+            <span data-l="en">Book a virtual coffee · 15 min</span>
+            <span data-l="es">Reserva un café virtual · 15 min</span>
+            <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div class="footer__brand">
+          <svg class="footer__sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="../../img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span data-l="en">Web development &amp; digital marketing. Made in Cologne.</span>
+            <span data-l="es">Desarrollo web y marketing digital. Hecho en Colonia.</span>
+            <span data-l="de">Webentwicklung &amp; digitales Marketing. Gemacht in Köln.</span>
+          </p>
+        </div>
+
+        <nav class="footer__col" aria-labelledby="footer-menu">
+          <h2 class="footer__title" id="footer-menu">
+            <span data-l="en">Menu</span>
+            <span data-l="es">Menú</span>
+            <span data-l="de">Menü</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="../../#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h2 class="footer__title">
+            <span data-l="en">Let's talk</span>
+            <span data-l="es">Hablemos</span>
+            <span data-l="de">Kontakt</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span data-l="en">Email</span>
+                <span data-l="es">Email</span>
+                <span data-l="de">E-Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span data-l="en">Virtual coffee</span>
+                <span data-l="es">Café virtual</span>
+                <span data-l="de">Virtueller Kaffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap footer__bottom">
+        <p>© 2026 Marta Rodríguez · ByMarta</p>
+        <p>
+          <span data-l="en">Designed and built with HTML, CSS and JavaScript.</span>
+          <span data-l="es">Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
+          <span data-l="de">Gestaltet und umgesetzt mit HTML, CSS und JavaScript.</span>
+        </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="footer__legal">
+          <li>
+            <a href="../../aviso-legal.html">
+              <span data-l="en">Legal notice</span>
+              <span data-l="es">Aviso legal</span>
+              <span data-l="de">Impressum</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../privacidad.html">
+              <span data-l="en">Privacy</span>
+              <span data-l="es">Privacidad</span>
+              <span data-l="de">Datenschutz</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

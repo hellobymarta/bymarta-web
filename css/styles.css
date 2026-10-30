@@ -1037,6 +1037,7 @@ section {
   color: var(--muted);
 }
 
+.case h1,
 .case h3 {
   margin-top: 0.85rem;
   font-size: clamp(2.4rem, 5vw, 3.75rem);
@@ -1422,6 +1423,204 @@ section {
 @media (max-width: 760px) {
   .case-index ol {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Portada: cuadrícula de proyectos (cada tarjeta lleva a su caso de estudio) */
+.work {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.25rem) clamp(1.25rem, 3vw, 2.5rem);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work__link {
+  display: grid;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.work__media {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--chip);
+}
+
+.work__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.work__link:hover .work__media img,
+.work__link:focus-visible .work__media img {
+  transform: scale(1.03);
+}
+
+.work__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  color: var(--muted);
+  font: 600 0.72rem/1.4 var(--f-body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.work__num {
+  color: var(--c);
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.work__title {
+  font-family: var(--f-display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 350;
+  line-height: 1.1;
+}
+
+.work__text {
+  max-width: 46ch;
+  color: var(--muted);
+}
+
+.work__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 0.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+}
+
+.work__tags {
+  color: var(--muted);
+}
+
+.work__cta {
+  font-weight: 600;
+}
+
+.work__link:hover .work__cta,
+.work__link:focus-visible .work__cta {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .work {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Página de proyecto: migas, paginación y llamada final */
+.crumbs {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: clamp(6.5rem, 10vw, 8rem);
+  padding-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.crumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.crumbs a:hover,
+.crumbs a:focus-visible {
+  color: var(--ink);
+}
+
+.crumbs__count {
+  font-family: var(--f-display);
+  font-style: italic;
+}
+
+.page-project .case {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.case-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.case-pager__link {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.case-pager__link:hover,
+.case-pager__link:focus-visible {
+  border-color: var(--taupe);
+  background: var(--chip);
+}
+
+.case-pager__link--next {
+  text-align: right;
+}
+
+.case-pager__label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.case-pager__name {
+  font-family: var(--f-display);
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+}
+
+.case-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-block: clamp(3rem, 6vw, 4.5rem) var(--section-space);
+}
+
+.case-cta h2 {
+  font-size: var(--step-3);
+}
+
+@media (max-width: 560px) {
+  .case-pager {
+    grid-template-columns: 1fr;
+  }
+
+  .case-pager__link--next {
+    text-align: left;
   }
 }
 

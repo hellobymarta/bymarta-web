@@ -325,1195 +325,182 @@
             </p>
           </header>
 
-          <!-- Índice de proyectos: miniaturas que llevan a cada caso -->
-          <nav class="case-index" aria-label="Project index">
-            <ol>
-              <li>
-                <a href="#casa-brava">
-                  <img src="img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                  <span class="case-index__num">01</span>
-                  <span class="case-index__name">Casa Brava</span>
-                  <span class="case-index__type">
-                    <span data-l="es">Hotel boutique</span>
-                    <span data-l="en">Boutique hotel</span>
-                    <span data-l="de">Boutique-Hotel</span>
+          <!-- Cuadrícula de proyectos: cada tarjeta lleva a su caso de estudio -->
+          <ul class="work">
+            <li class="work__item" id="casa-brava" style="--c: var(--teal)">
+              <a class="work__link" href="proyectos/casa-brava/">
+                <span class="work__media">
+                  <img
+                    src="img/cb-inicio-800.webp"
+                    srcset="img/cb-inicio-640.webp 640w, img/cb-inicio-800.webp 800w, img/cb-inicio.webp 1440w"
+                    sizes="(max-width: 760px) 92vw, 560px"
+                    width="1440"
+                    height="900"
+                    alt=""
+                    loading="lazy"
+                  />
+                </span>
+                <span class="work__meta">
+                  <span class="work__num">01</span>
+                  <span class="work__type">
+                    <span data-l="en">Boutique hotel · Lombok</span>
+                    <span data-l="es">Hotel boutique · Lombok</span>
+                    <span data-l="de">Boutique-Hotel · Lombok</span>
                   </span>
-                </a>
-              </li>
-              <li>
-                <a href="#vagamundo">
-                  <img src="img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                  <span class="case-index__num">02</span>
-                  <span class="case-index__name">Vagamundo</span>
-                  <span class="case-index__type">
-                    <span data-l="es">Full stack</span>
-                    <span data-l="en">Full stack</span>
-                    <span data-l="de">Full Stack</span>
+                </span>
+                <span class="work__title">Casa Brava</span>
+                <span class="work__text">
+                  <span data-l="en">
+                    An editorial website for a villa retreat that reads like an architecture magazine.
                   </span>
-                </a>
-              </li>
-              <li>
-                <a href="#golden-chance">
-                  <img src="img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                  <span class="case-index__num">03</span>
-                  <span class="case-index__name">Golden Chance Senior</span>
-                  <span class="case-index__type">
-                    <span data-l="es">Residencial sénior</span>
-                    <span data-l="en">Senior living</span>
-                    <span data-l="de">Wohnen im Alter</span>
+                  <span data-l="es">
+                    Web editorial para un complejo de villas: se lee como una revista de arquitectura.
                   </span>
-                </a>
-              </li>
-              <li>
-                <a href="#demya">
-                  <img src="img/dm-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                  <span class="case-index__num">04</span>
-                  <span class="case-index__name">DEMYA</span>
-                  <span class="case-index__type">
-                    <span data-l="es">Plan de marketing</span>
-                    <span data-l="en">Marketing plan</span>
-                    <span data-l="de">Marketingplan</span>
+                  <span data-l="de">
+                    Eine Website im Magazin-Stil für eine Villenanlage – wie ein Architekturmagazin.
                   </span>
-                </a>
-              </li>
-            </ol>
-          </nav>
+                </span>
+                <span class="work__foot">
+                  <span class="work__tags">HTML · CSS · JavaScript · GSAP</span>
+                  <span class="work__cta">
+                    <span data-l="en">View case study →</span>
+                    <span data-l="es">Ver caso de estudio →</span>
+                    <span data-l="de">Fallstudie ansehen →</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="work__item" id="vagamundo" style="--c: var(--mustard)">
+              <a class="work__link" href="proyectos/vagamundo/">
+                <span class="work__media">
+                  <img
+                    src="img/vg-inicio-800.webp"
+                    srcset="img/vg-inicio-640.webp 640w, img/vg-inicio-800.webp 800w, img/vg-inicio.webp 1440w"
+                    sizes="(max-width: 760px) 92vw, 560px"
+                    width="1440"
+                    height="900"
+                    alt=""
+                    loading="lazy"
+                  />
+                </span>
+                <span class="work__meta">
+                  <span class="work__num">02</span>
+                  <span class="work__type">
+                    <span data-l="en">Travel agency · full stack</span>
+                    <span data-l="es">Agencia de viajes · full stack</span>
+                    <span data-l="de">Reiseveranstalter · Full Stack</span>
+                  </span>
+                </span>
+                <span class="work__title">Vagamundo</span>
+                <span class="work__text">
+                  <span data-l="en">
+                    Catalogue, bookings with seat control and a statistics dashboard, on its own API.
+                  </span>
+                  <span data-l="es">
+                    Catálogo, reservas con control de plazas y panel de estadísticas, con API propia.
+                  </span>
+                  <span data-l="de">
+                    Katalog, Buchungen mit Platzverwaltung und Statistik-Dashboard – mit eigener API.
+                  </span>
+                </span>
+                <span class="work__foot">
+                  <span class="work__tags">React · TypeScript · Node · MongoDB</span>
+                  <span class="work__cta">
+                    <span data-l="en">View case study →</span>
+                    <span data-l="es">Ver caso de estudio →</span>
+                    <span data-l="de">Fallstudie ansehen →</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="work__item" id="golden-chance-senior" style="--c: var(--taupe)">
+              <a class="work__link" href="proyectos/golden-chance-senior/">
+                <span class="work__media">
+                  <img
+                    src="img/gcs-inicio-800.webp"
+                    srcset="img/gcs-inicio-640.webp 640w, img/gcs-inicio-800.webp 800w, img/gcs-inicio.webp 1440w"
+                    sizes="(max-width: 760px) 92vw, 560px"
+                    width="1440"
+                    height="900"
+                    alt=""
+                    loading="lazy"
+                  />
+                </span>
+                <span class="work__meta">
+                  <span class="work__num">03</span>
+                  <span class="work__type">
+                    <span data-l="en">Senior living · in progress</span>
+                    <span data-l="es">Residencial sénior · en desarrollo</span>
+                    <span data-l="de">Wohnen im Alter · in Arbeit</span>
+                  </span>
+                </span>
+                <span class="work__title">Golden Chance Senior</span>
+                <span class="work__text">
+                  <span data-l="en">
+                    A bilingual landing page for a residential project: brand, copy and art direction.
+                  </span>
+                  <span data-l="es">
+                    Landing bilingüe para un proyecto residencial: marca, textos y dirección de arte.
+                  </span>
+                  <span data-l="de">
+                    Zweisprachige Landingpage für ein Wohnprojekt: Marke, Texte und Art Direction.
+                  </span>
+                </span>
+                <span class="work__foot">
+                  <span class="work__tags">HTML · CSS · JavaScript · Vercel</span>
+                  <span class="work__cta">
+                    <span data-l="en">View case study →</span>
+                    <span data-l="es">Ver caso de estudio →</span>
+                    <span data-l="de">Fallstudie ansehen →</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li class="work__item" id="demya" style="--c: var(--rose, #c98f7d)">
+              <a class="work__link" href="proyectos/demya/">
+                <span class="work__media">
+                  <img
+                    src="img/dm-inicio-800.webp"
+                    srcset="img/dm-inicio-640.webp 640w, img/dm-inicio-800.webp 800w, img/dm-inicio.webp 1440w"
+                    sizes="(max-width: 760px) 92vw, 560px"
+                    width="1440"
+                    height="900"
+                    alt=""
+                    loading="lazy"
+                  />
+                </span>
+                <span class="work__meta">
+                  <span class="work__num">04</span>
+                  <span class="work__type">
+                    <span data-l="en">Digital marketing plan</span>
+                    <span data-l="es">Plan de marketing digital</span>
+                    <span data-l="de">Digitalmarketing-Plan</span>
+                  </span>
+                </span>
+                <span class="work__title">DEMYA</span>
+                <span class="work__text">
+                  <span data-l="en">
+                    Audit, competitors, SWOT and KPIs for a group of clinics, as an interactive web report.
+                  </span>
+                  <span data-l="es">
+                    Auditoría, competencia, DAFO y KPIs para un grupo de clínicas, en un informe web interactivo.
+                  </span>
+                  <span data-l="de">
+                    Audit, Wettbewerb, SWOT und KPIs für eine Klinikgruppe – als interaktiver Web-Bericht.
+                  </span>
+                </span>
+                <span class="work__foot">
+                  <span class="work__tags">SEO · Ahrefs · PageSpeed · KPIs</span>
+                  <span class="work__cta">
+                    <span data-l="en">View case study →</span>
+                    <span data-l="es">Ver caso de estudio →</span>
+                    <span data-l="de">Fallstudie ansehen →</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <!-- Proyecto 1: Casa Brava -->
-        <article class="case case--cb" id="casa-brava" aria-labelledby="casa-brava-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Boutique hotel, Lombok</span>
-                    <span data-l="es">Hotel boutique, Lombok</span>
-                    <span data-l="de">Boutique-Hotel, Lombok</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's project &amp; client work</span>
-                    <span data-l="es">Proyecto de máster y encargo real</span>
-                    <span data-l="de">Masterprojekt &amp; Kundenauftrag</span>
-                  </li>
-                </ul>
-                <h3 id="casa-brava-title" class="case__title--cb">Casa Brava</h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  An editorial website for a retreat of villas and suites in Kuta Mandalika, Lombok. It reads like an
-                  architecture magazine rather than a booking catalogue, and guests book by email, phone or WhatsApp.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Web editorial para un complejo de villas y suites en Kuta Mandalika. Pensada como una revista de
-                  arquitectura más que como un catálogo de reservas: las reservas se derivan a correo, teléfono y
-                  WhatsApp.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Eine Website im Magazin-Stil für eine Anlage mit Villen und Suiten in Kuta Mandalika auf Lombok. Sie
-                  liest sich eher wie ein Architekturmagazin als wie ein Buchungsportal; gebucht wird per E-Mail,
-                  Telefon oder WhatsApp.
-                </p>
-                <div class="links">
-                  <a href="https://hellobymarta.github.io/casa-brava/" target="_blank" rel="noopener">
-                    <span data-l="en">Visit site</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Website ansehen</span>
-                  </a>
-                  <a href="https://github.com/hellobymarta/casa-brava" target="_blank" rel="noopener">
-                    <span data-l="en">Code</span>
-                    <span data-l="es">Código</span>
-                    <span data-l="de">Code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="case__media"
-              data-carousel
-              role="region"
-              aria-roledescription="carousel"
-              aria-label="Casa Brava"
-            >
-              <div class="browser">
-                <p class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
-                  hellobymarta.github.io/casa-brava
-                </p>
-                <div class="carousel">
-                  <ul class="carousel__track">
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-inicio.webp"
-                        srcset="img/cb-inicio-800.webp 800w, img/cb-inicio.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Casa Brava home page: a stone villa among palm trees with the CB monogram"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-villas.webp"
-                        srcset="img/cb-villas-800.webp 800w, img/cb-villas.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Villas section with a rounded photo gallery and a short introduction"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-experiencias.webp"
-                        srcset="img/cb-experiencias-800.webp 800w, img/cb-experiencias.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Experiences block on a sage green background with interior photographs"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-dia.webp"
-                        srcset="img/cb-dia-800.webp 800w, img/cb-dia.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Experiences page: three numbered moments of the day with photographs"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-materiales.webp"
-                        srcset="img/cb-materiales-800.webp 800w, img/cb-materiales.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="About page: materials and surroundings with a photo collage of the interiors"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/cb-contacto.webp"
-                        srcset="img/cb-contacto-800.webp 800w, img/cb-contacto.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Contact page with a form next to a photograph of the villa"
-                        loading="lazy"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="phone">
-                <img src="img/cb-movil.webp" width="600" height="1298" alt="Casa Brava on a phone" loading="lazy" />
-              </div>
-              <div class="carousel__controls">
-                <div class="carousel__arrows">
-                  <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
-                  <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
-                </div>
-                <div class="carousel__dots">
-                  <button type="button" aria-label="Screenshot 1"></button>
-                  <button type="button" aria-label="Screenshot 2"></button>
-                  <button type="button" aria-label="Screenshot 3"></button>
-                  <button type="button" aria-label="Screenshot 4"></button>
-                  <button type="button" aria-label="Screenshot 5"></button>
-                  <button type="button" aria-label="Screenshot 6"></button>
-                </div>
-                <p class="carousel__count" aria-hidden="true">
-                  <span data-count>1</span>
-                  / 6
-                </p>
-              </div>
-            </div>
-
-            <div class="case__details">
-              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
-              <dl class="story">
-                <div>
-                  <dt>
-                    <span class="story__num">01</span>
-                    <span data-l="es">Mi papel</span>
-                    <span data-l="en">My role</span>
-                    <span data-l="de">Meine Rolle</span>
-                  </dt>
-                  <dd data-l="es">
-                    Diseño y desarrollo de principio a fin: estructura, textos de interfaz, maquetación y código.
-                  </dd>
-                  <dd data-l="en">
-                    Design and development from start to finish: structure, interface copy, layout and code.
-                  </dd>
-                  <dd data-l="de">
-                    Konzeption, Design und Entwicklung aus einer Hand: Struktur, Interface-Texte, Layout und Code.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">02</span>
-                    <span data-l="es">El reto</span>
-                    <span data-l="en">The challenge</span>
-                    <span data-l="de">Die Herausforderung</span>
-                  </dt>
-                  <dd data-l="es">
-                    Transmitir la calma y la exclusividad de unas villas en Lombok sin convertir la web en un catálogo
-                    de reservas, y que cargara bien en el móvil.
-                  </dd>
-                  <dd data-l="en">
-                    Conveying the calm and exclusivity of a villa retreat in Lombok without turning the site into a
-                    booking catalogue – and making it load well on phones.
-                  </dd>
-                  <dd data-l="de">
-                    Die Ruhe und Exklusivität einer Villenanlage auf Lombok vermitteln, ohne dass die Website wie ein
-                    Buchungskatalog wirkt – und das auch mobil mit kurzen Ladezeiten.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">03</span>
-                    <span data-l="es">Lo que hice</span>
-                    <span data-l="en">What I did</span>
-                    <span data-l="de">Was ich gemacht habe</span>
-                  </dt>
-                  <dd data-l="es">
-                    Un diseño editorial de 5 páginas, con HTML semántico, CSS ordenado en SUIT, animaciones con GSAP que
-                    nunca ocultan el contenido y reservas directas por email, teléfono o WhatsApp.
-                  </dd>
-                  <dd data-l="en">
-                    A five-page editorial design with semantic HTML, CSS organised in SUIT, GSAP animations that never
-                    hide content, and direct booking by email, phone or WhatsApp.
-                  </dd>
-                  <dd data-l="de">
-                    Ein fünfseitiges Editorial-Design mit semantischem HTML, nach SUIT strukturiertem CSS,
-                    GSAP-Animationen, die nie Inhalte verbergen, und Direktbuchung per E-Mail, Telefon oder WhatsApp.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">04</span>
-                    <span data-l="es">El resultado</span>
-                    <span data-l="en">The result</span>
-                    <span data-l="de">Das Ergebnis</span>
-                  </dt>
-                  <dd data-l="es">
-                    Una web publicada, accesible (WCAG AA) y mobile first, que fue a la vez encargo real y proyecto de
-                    máster.
-                  </dd>
-                  <dd data-l="en">
-                    A live, accessible (WCAG AA), mobile-first website that served both as real client work and as a
-                    master's project.
-                  </dd>
-                  <dd data-l="de">
-                    Eine veröffentlichte, barrierefreie (WCAG AA) Mobile-first-Website – zugleich Kundenauftrag und
-                    Masterprojekt.
-                  </dd>
-                </div>
-              </dl>
-
-              <h4 class="sr-only">
-                <span data-l="en">Highlights</span>
-                <span data-l="es">Lo más destacado</span>
-                <span data-l="de">Highlights</span>
-              </h4>
-              <ul class="highlights">
-                <li>
-                  <strong>5</strong>
-                  <span data-l="en">pages in semantic HTML5, CSS3 and vanilla JavaScript</span>
-                  <span data-l="es">páginas con HTML5 semántico, CSS3 y JavaScript vanilla</span>
-                  <span data-l="de">Seiten mit semantischem HTML5, CSS3 und Vanilla-JavaScript</span>
-                </li>
-                <li>
-                  <strong>WCAG AA</strong>
-                  <span data-l="en">accessibility, with technical SEO and performance built in</span>
-                  <span data-l="es">de accesibilidad, con SEO técnico y Core Web Vitals</span>
-                  <span data-l="de">Barrierefreiheit, dazu technisches SEO und optimierte Ladezeiten</span>
-                </li>
-                <li>
-                  <strong>Mobile first</strong>
-                  <span data-l="en">with a clean, scalable CSS architecture (SUIT CSS)</span>
-                  <span data-l="es">con una arquitectura CSS ordenada en SUIT CSS</span>
-                  <span data-l="de">mit einer sauberen, skalierbaren CSS-Architektur (SUIT CSS)</span>
-                </li>
-                <li>
-                  <strong>GSAP</strong>
-                  <span data-l="en">scroll animations that never hide content, even if the script fails to load</span>
-                  <span data-l="es">en animaciones de scroll que nunca ocultan el contenido</span>
-                  <span data-l="de">
-                    Scroll-Animationen, die keine Inhalte verbergen – auch wenn das Skript nicht lädt
-                  </span>
-                </li>
-              </ul>
-              <p class="case__stack">
-                <span class="eyebrow">
-                  <span data-l="en">Built with</span>
-                  <span data-l="es">Hecha con</span>
-                  <span data-l="de">Umgesetzt mit</span>
-                </span>
-                HTML5 · CSS3 · JavaScript · SUIT CSS · GSAP · GitHub Pages
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 2: Vagamundo -->
-        <article class="case case--vg case--reverse" id="vagamundo" aria-labelledby="vagamundo-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Travel agency, full stack</span>
-                    <span data-l="es">Agencia de viajes, full stack</span>
-                    <span data-l="de">Reiseveranstalter, Full Stack</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's final project</span>
-                    <span data-l="es">Proyecto final de máster</span>
-                    <span data-l="de">Abschlussprojekt im Master</span>
-                  </li>
-                </ul>
-                <h3 id="vagamundo-title" class="case__title--vg">Vagamundo</h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A travel agency for small groups, with a trip catalogue, destination guides, a travel journal readers
-                  can comment on and online booking. The React front end runs on its own Express API and a MongoDB Atlas
-                  database.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Agencia de viajes en grupo pequeño con catálogo, fichas de destino, diario de viaje con comentarios y
-                  reservas. Web en React y una API propia en Express sobre MongoDB Atlas.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Ein Reiseveranstalter für Kleingruppen – mit Reisekatalog, Reisezielen, einem kommentierbaren
-                  Reisetagebuch und Online-Buchung. Das React-Frontend läuft auf einer eigenen Express-API mit MongoDB
-                  Atlas.
-                </p>
-                <div class="links">
-                  <a href="https://vagamundo-web.vercel.app" target="_blank" rel="noopener">
-                    <span data-l="en">Visit site</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Website ansehen</span>
-                  </a>
-                  <a href="https://github.com/hellobymarta/vagamundo-web" target="_blank" rel="noopener">
-                    <span data-l="en">Front-end code</span>
-                    <span data-l="es">Código web</span>
-                    <span data-l="de">Frontend-Code</span>
-                  </a>
-                  <a href="https://github.com/hellobymarta/vagamundo-api" target="_blank" rel="noopener">
-                    <span data-l="en">API code</span>
-                    <span data-l="es">Código API</span>
-                    <span data-l="de">API-Code</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="case__media" data-carousel role="region" aria-roledescription="carousel" aria-label="Vagamundo">
-              <div class="browser">
-                <p class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
-                  vagamundo-web.vercel.app
-                </p>
-                <div class="carousel">
-                  <ul class="carousel__track">
-                    <li class="carousel__slide">
-                      <img
-                        src="img/vg-inicio.webp"
-                        srcset="img/vg-inicio-800.webp 800w, img/vg-inicio.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Vagamundo home page: Positano at sunset with the headline about the Amalfi coast"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/vg-motivos.webp"
-                        srcset="img/vg-motivos-800.webp 800w, img/vg-motivos.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Three ways into the catalogue: beach, culture, and nature and adventure"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/vg-catalogo.webp"
-                        srcset="img/vg-catalogo-800.webp 800w, img/vg-catalogo.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Trip catalogue with Iceland, Namibia and Jordan, each with its price"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/vg-destinos.webp"
-                        srcset="img/vg-destinos-800.webp 800w, img/vg-destinos.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Asia destinations: Japan, India and Vietnam"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/vg-viaje.webp"
-                        srcset="img/vg-viaje-800.webp 800w, img/vg-viaje.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Trip page with price per person, seats left and trip details"
-                        loading="lazy"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="phone">
-                <img src="img/vg-movil.webp" width="600" height="1298" alt="Vagamundo on a phone" loading="lazy" />
-              </div>
-              <div class="carousel__controls">
-                <div class="carousel__arrows">
-                  <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
-                  <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
-                </div>
-                <div class="carousel__dots">
-                  <button type="button" aria-label="Screenshot 1"></button>
-                  <button type="button" aria-label="Screenshot 2"></button>
-                  <button type="button" aria-label="Screenshot 3"></button>
-                  <button type="button" aria-label="Screenshot 4"></button>
-                  <button type="button" aria-label="Screenshot 5"></button>
-                </div>
-                <p class="carousel__count" aria-hidden="true">
-                  <span data-count>1</span>
-                  / 5
-                </p>
-              </div>
-            </div>
-
-            <div class="case__details">
-              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
-              <dl class="story">
-                <div>
-                  <dt>
-                    <span class="story__num">01</span>
-                    <span data-l="es">Mi papel</span>
-                    <span data-l="en">My role</span>
-                    <span data-l="de">Meine Rolle</span>
-                  </dt>
-                  <dd data-l="es">
-                    Desarrollo full stack completo: interfaz, front-end en React, API y base de datos.
-                  </dd>
-                  <dd data-l="en">Full-stack development end to end: interface, React front end, API and database.</dd>
-                  <dd data-l="de">Full-Stack-Entwicklung komplett: Oberfläche, React-Frontend, API und Datenbank.</dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">02</span>
-                    <span data-l="es">El reto</span>
-                    <span data-l="en">The challenge</span>
-                    <span data-l="de">Die Herausforderung</span>
-                  </dt>
-                  <dd data-l="es">
-                    Crear una agencia de viajes que funcione de verdad: reservas que nunca superen las plazas libres y
-                    una zona privada para el equipo.
-                  </dd>
-                  <dd data-l="en">
-                    Building a travel agency that really works: bookings that never exceed the seats available, plus a
-                    private area for the team.
-                  </dd>
-                  <dd data-l="de">
-                    Einen Reiseveranstalter bauen, der wirklich funktioniert: Buchungen, die nie die freien Plätze
-                    überschreiten, und ein geschützter Bereich fürs Team.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">03</span>
-                    <span data-l="es">Lo que hice</span>
-                    <span data-l="en">What I did</span>
-                    <span data-l="de">Was ich gemacht habe</span>
-                  </dt>
-                  <dd data-l="es">
-                    Front-end en React y TypeScript sobre una API propia en Express y MongoDB Atlas, login con JWT,
-                    control de plazas por salida y un panel de estadísticas.
-                  </dd>
-                  <dd data-l="en">
-                    A React and TypeScript front end on my own Express and MongoDB Atlas API, JWT login, seat control
-                    per departure and a statistics dashboard.
-                  </dd>
-                  <dd data-l="de">
-                    React- und TypeScript-Frontend auf einer eigenen Express-API mit MongoDB Atlas, JWT-Login,
-                    Platzverwaltung pro Termin und ein Statistik-Dashboard.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">04</span>
-                    <span data-l="es">El resultado</span>
-                    <span data-l="en">The result</span>
-                    <span data-l="de">Das Ergebnis</span>
-                  </dt>
-                  <dd data-l="es">
-                    Una aplicación completa desplegada en Vercel, con la que superé el módulo de Desarrollo Full Stack
-                    del máster.
-                  </dd>
-                  <dd data-l="en">
-                    A complete application deployed on Vercel, which helped me pass the master's Full Stack Development
-                    module.
-                  </dd>
-                  <dd data-l="de">
-                    Eine vollständige, auf Vercel veröffentlichte Anwendung, mit der ich das Modul
-                    Full-Stack-Entwicklung im Master bestanden habe.
-                  </dd>
-                </div>
-              </dl>
-
-              <h4 class="sr-only">
-                <span data-l="en">Highlights</span>
-                <span data-l="es">Lo más destacado</span>
-                <span data-l="de">Highlights</span>
-              </h4>
-              <ul class="highlights">
-                <li>
-                  <strong>API</strong>
-                  <span data-l="en">built from scratch with Express and MongoDB Atlas</span>
-                  <span data-l="es">propia, hecha con Express y MongoDB Atlas</span>
-                  <span data-l="de">selbst entwickelt mit Express und MongoDB Atlas</span>
-                </li>
-                <li>
-                  <strong>JWT</strong>
-                  <span data-l="en">authentication, with private areas for the team</span>
-                  <span data-l="es">para el inicio de sesión y las rutas privadas del equipo</span>
-                  <span data-l="de">Anmeldung mit geschützten Bereichen für das Team</span>
-                </li>
-                <li>
-                  <strong data-l="en">Bookings</strong>
-                  <strong data-l="es">Reservas</strong>
-                  <strong data-l="de">Buchungen</strong>
-                  <span data-l="en">that keep track of the seats left on every departure</span>
-                  <span data-l="es">con control de plazas libres por salida</span>
-                  <span data-l="de">mit Übersicht über die freien Plätze pro Termin</span>
-                </li>
-                <li>
-                  <strong data-l="en">Dashboard</strong>
-                  <strong data-l="es">Panel</strong>
-                  <strong data-l="de">Dashboard</strong>
-                  <span data-l="en">showing occupancy, prices and destinations</span>
-                  <span data-l="es">de estadísticas con ocupación, precios y destinos</span>
-                  <span data-l="de">mit Kennzahlen zu Auslastung, Preisen und Reisezielen</span>
-                </li>
-              </ul>
-              <p class="case__stack">
-                <span class="eyebrow">
-                  <span data-l="en">Built with</span>
-                  <span data-l="es">Hecha con</span>
-                  <span data-l="de">Umgesetzt mit</span>
-                </span>
-                React 19 · TypeScript · Vite · Tailwind · Node · Express · MongoDB Atlas · Vercel
-              </p>
-            </div>
-          </div>
-        </article>
-        <!-- Proyecto 3: Golden Chance Senior (en desarrollo) -->
-        <article class="case case--gcs" id="golden-chance" aria-labelledby="gcs-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Senior living, northern Spain</span>
-                    <span data-l="es">Residencial sénior, norte de España</span>
-                    <span data-l="de">Wohnen für Senioren, Nordspanien</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Client project</span>
-                    <span data-l="es">Proyecto para cliente</span>
-                    <span data-l="de">Kundenprojekt</span>
-                  </li>
-                </ul>
-                <h3 id="gcs-title" class="case__title--gcs">
-                  Golden Chance
-                  <em>Senior</em>
-                </h3>
-                <p class="badge">
-                  <span class="dot" aria-hidden="true"></span>
-                  <span data-l="en">In development</span>
-                  <span data-l="es">En desarrollo</span>
-                  <span data-l="de">In Entwicklung</span>
-                </p>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A landing page for a new senior living community in northern Spain, backed by Golden Chance. It
-                  presents a way of living built on independence, community, security and the future, in Spanish and
-                  English, with an enquiry form for anyone who wants to learn more.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Landing de un nuevo proyecto residencial sénior en el norte de España, impulsado por Golden Chance.
-                  Presenta una forma de vivir basada en la independencia, la comunidad, la seguridad y el futuro, en
-                  español e inglés, con un formulario para quien quiera conocer el proyecto.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Eine Landingpage für ein neues Wohnprojekt für Senioren in Nordspanien, initiiert von Golden Chance.
-                  Sie stellt eine Lebensform vor, die auf Unabhängigkeit, Gemeinschaft, Sicherheit und Zukunft setzt –
-                  auf Spanisch und Englisch, mit einem Anfrageformular für alle, die mehr erfahren möchten.
-                </p>
-                <p class="case__note" data-l="en">
-                  The site is live and keeps evolving: the mobile experience and new content are being added step by
-                  step.
-                </p>
-                <p class="case__note" data-l="es">
-                  La web ya está online y sigue creciendo: la experiencia móvil y los nuevos contenidos se van
-                  incorporando poco a poco.
-                </p>
-                <p class="case__note" data-l="de">
-                  Die Website ist bereits online und wächst weiter: Die mobile Ansicht und neue Inhalte kommen nach und
-                  nach hinzu.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="case__media"
-              data-carousel
-              role="region"
-              aria-roledescription="carousel"
-              aria-label="Golden Chance Senior"
-            >
-              <div class="browser">
-                <p class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
-                  golden-chance-senior.vercel.app
-                </p>
-                <div class="carousel">
-                  <ul class="carousel__track">
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-inicio.webp"
-                        srcset="img/gcs-inicio-800.webp 800w, img/gcs-inicio.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Golden Chance Senior home page: a modern house with an olive tree and the headline Your home. Your life. Your future."
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-filosofia.webp"
-                        srcset="img/gcs-filosofia-800.webp 800w, img/gcs-filosofia.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Philosophy section with a photograph of two older friends in a garden"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-vivir.webp"
-                        srcset="img/gcs-vivir-800.webp 800w, img/gcs-vivir.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="A new way of living: three photographs of private patios and shared gardens"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-comunidad.webp"
-                        srcset="img/gcs-comunidad-800.webp 800w, img/gcs-comunidad.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Community model section on an olive green background with a shared terrace"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-modelo.webp"
-                        srcset="img/gcs-modelo-800.webp 800w, img/gcs-modelo.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Three numbered reasons that make the project different"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/gcs-proyecto.webp"
-                        srcset="img/gcs-proyecto-800.webp 800w, img/gcs-proyecto.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Project status and enquiry form on a dark background"
-                        loading="lazy"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="phone">
-                <img
-                  src="img/gcs-movil.webp"
-                  width="600"
-                  height="1298"
-                  alt="Golden Chance Senior on a phone"
-                  loading="lazy"
-                />
-              </div>
-              <div class="carousel__controls">
-                <div class="carousel__arrows">
-                  <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
-                  <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
-                </div>
-                <div class="carousel__dots">
-                  <button type="button" aria-label="Screenshot 1"></button>
-                  <button type="button" aria-label="Screenshot 2"></button>
-                  <button type="button" aria-label="Screenshot 3"></button>
-                  <button type="button" aria-label="Screenshot 4"></button>
-                  <button type="button" aria-label="Screenshot 5"></button>
-                  <button type="button" aria-label="Screenshot 6"></button>
-                </div>
-                <p class="carousel__count" aria-hidden="true">
-                  <span data-count>1</span>
-                  / 6
-                </p>
-              </div>
-            </div>
-
-            <div class="case__details">
-              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
-              <dl class="story">
-                <div>
-                  <dt>
-                    <span class="story__num">01</span>
-                    <span data-l="es">Mi papel</span>
-                    <span data-l="en">My role</span>
-                    <span data-l="de">Meine Rolle</span>
-                  </dt>
-                  <dd data-l="es">
-                    Marca, textos, dirección de arte y desarrollo de la landing, en contacto directo con el cliente.
-                  </dd>
-                  <dd data-l="en">
-                    Brand, copy, art direction and development of the landing page, working directly with the client.
-                  </dd>
-                  <dd data-l="de">
-                    Marke, Texte, Art Direction und Entwicklung der Landingpage – in direktem Austausch mit dem Kunden.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">02</span>
-                    <span data-l="es">El reto</span>
-                    <span data-l="en">The challenge</span>
-                    <span data-l="de">Die Herausforderung</span>
-                  </dt>
-                  <dd data-l="es">
-                    Presentar un proyecto residencial que todavía no existe, transmitiendo confianza a personas mayores
-                    y a sus familias, en dos idiomas.
-                  </dd>
-                  <dd data-l="en">
-                    Presenting a residential project that doesn't exist yet, building trust with older people and their
-                    families, in two languages.
-                  </dd>
-                  <dd data-l="de">
-                    Ein Wohnprojekt vorstellen, das es noch nicht gibt, und dabei älteren Menschen und ihren Familien
-                    Vertrauen vermitteln – in zwei Sprachen.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">03</span>
-                    <span data-l="es">Lo que hice</span>
-                    <span data-l="en">What I did</span>
-                    <span data-l="de">Was ich gemacht habe</span>
-                  </dt>
-                  <dd data-l="es">
-                    Una landing bilingüe (ES/EN) con mensajes claros sobre independencia, comunidad y seguridad,
-                    formulario con consentimiento de privacidad y despliegue en Vercel con tipografías propias.
-                  </dd>
-                  <dd data-l="en">
-                    A bilingual (ES/EN) landing page with clear messages on independence, community and security, an
-                    enquiry form with privacy consent, and deployment on Vercel with self-hosted fonts.
-                  </dd>
-                  <dd data-l="de">
-                    Eine zweisprachige Landingpage (ES/EN) mit klaren Botschaften zu Unabhängigkeit, Gemeinschaft und
-                    Sicherheit, Anfrageformular mit Datenschutz-Einwilligung und Deployment auf Vercel mit lokal
-                    eingebundenen Schriften.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">04</span>
-                    <span data-l="es">El resultado</span>
-                    <span data-l="en">The result</span>
-                    <span data-l="de">Das Ergebnis</span>
-                  </dt>
-                  <dd data-l="es">
-                    La web ya está online como primer punto de contacto con las personas interesadas. Ahora estoy
-                    sumando la versión móvil y nuevos contenidos.
-                  </dd>
-                  <dd data-l="en">
-                    The site is already live as the first point of contact for interested people. I'm now adding the
-                    mobile experience and new content.
-                  </dd>
-                  <dd data-l="de">
-                    Die Website ist bereits online und erster Anlaufpunkt für Interessierte. Derzeit ergänze ich die
-                    mobile Ansicht und neue Inhalte.
-                  </dd>
-                </div>
-              </dl>
-
-              <h4 class="sr-only">
-                <span data-l="en">Highlights</span>
-                <span data-l="es">Lo más destacado</span>
-                <span data-l="de">Highlights</span>
-              </h4>
-              <ul class="highlights">
-                <li>
-                  <strong data-l="en">Brand</strong>
-                  <strong data-l="es">Marca</strong>
-                  <strong data-l="de">Marke</strong>
-                  <span data-l="en">design, copy and art direction, from start to finish</span>
-                  <span data-l="es">diseño, textos y dirección de arte, de principio a fin</span>
-                  <span data-l="de">Design, Texte und Art Direction aus einer Hand</span>
-                </li>
-                <li>
-                  <strong>ES / EN</strong>
-                  <span data-l="en">bilingual, with links that open straight in English</span>
-                  <span data-l="es">bilingüe, con enlaces que abren directamente en inglés</span>
-                  <span data-l="de">zweisprachig, mit Links, die direkt auf Englisch öffnen</span>
-                </li>
-                <li>
-                  <strong data-l="en">Enquiries</strong>
-                  <strong data-l="es">Contacto</strong>
-                  <strong data-l="de">Anfragen</strong>
-                  <span data-l="en">a form that goes straight to the client's inbox, with privacy consent</span>
-                  <span data-l="es">
-                    formulario que llega directo al correo del cliente, con consentimiento de privacidad
-                  </span>
-                  <span data-l="de">ein Formular, das direkt beim Kunden ankommt – mit Datenschutz-Einwilligung</span>
-                </li>
-                <li>
-                  <strong>Vercel</strong>
-                  <span data-l="en">deployment with caching and security headers, and self-hosted fonts</span>
-                  <span data-l="es">
-                    despliegue con cabeceras de caché y seguridad, y tipografías alojadas en la propia web
-                  </span>
-                  <span data-l="de">
-                    Deployment mit Caching- und Sicherheits-Headern sowie selbst gehosteten Schriften
-                  </span>
-                </li>
-              </ul>
-              <p class="case__stack">
-                <span class="eyebrow">
-                  <span data-l="en">Built with</span>
-                  <span data-l="es">Hecha con</span>
-                  <span data-l="de">Umgesetzt mit</span>
-                </span>
-                HTML5 · CSS3 · JavaScript · FormSubmit · Vercel
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Proyecto 4: Plan de Marketing Digital DEMYA -->
-        <article class="case case--dm case--reverse" id="demya" aria-labelledby="demya-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Aesthetic medicine clinic, Madrid</span>
-                    <span data-l="es">Clínica de medicina estética, Madrid</span>
-                    <span data-l="de">Klinik für ästhetische Medizin, Madrid</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's project · Digital marketing</span>
-                    <span data-l="es">Proyecto de máster · Marketing digital</span>
-                    <span data-l="de">Masterprojekt · Digitalmarketing</span>
-                  </li>
-                </ul>
-                <h3 id="demya-title" class="case__title--dm">
-                  DEMYA
-                  <em>Plan de Marketing Digital</em>
-                </h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A full digital marketing plan for DEMYA, a group of aesthetic medicine and plastic surgery clinics:
-                  website and SEO audit, social media, competitors, SWOT, SMART goals, action plan and KPIs. Updated
-                  with October 2026 data and turned into an interactive web report, with a PDF version.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Plan de marketing digital completo para DEMYA, grupo de clínicas de medicina estética y cirugía
-                  plástica: auditoría web y SEO, redes sociales, competencia, DAFO, objetivos SMART, plan de acción y
-                  KPIs. Actualizado con datos de octubre de 2026 y convertido en un informe web interactivo, con su
-                  versión en PDF.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Ein vollständiger Digitalmarketing-Plan für DEMYA, eine Gruppe von Kliniken für ästhetische Medizin
-                  und plastische Chirurgie: Website- und SEO-Audit, Social Media, Wettbewerb, SWOT, SMART-Ziele,
-                  Maßnahmenplan und KPIs. Mit Daten von Oktober 2026 aktualisiert und als interaktiver Web-Bericht
-                  umgesetzt, dazu eine PDF-Version.
-                </p>
-                <div class="links">
-                  <a href="proyectos/plan-marketing-demya/index.html" target="_blank" rel="noopener">
-                    <span data-l="en">View the web report</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Web-Bericht ansehen</span>
-                  </a>
-                  <a href="proyectos/plan-marketing-demya/plan-marketing-demya.pdf" target="_blank" rel="noopener">
-                    <span data-l="en">PDF (Spanish)</span>
-                    <span data-l="es">PDF</span>
-                    <span data-l="de">PDF (Spanisch)</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="case__media"
-              data-carousel
-              role="region"
-              aria-roledescription="carousel"
-              aria-label="DEMYA, Plan de Marketing Digital"
-            >
-              <div class="browser">
-                <p class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
-                  plan-marketing-demya
-                </p>
-                <div class="carousel">
-                  <ul class="carousel__track">
-                    <li class="carousel__slide">
-                      <img
-                        src="img/dm-inicio.webp"
-                        srcset="img/dm-inicio-800.webp 800w, img/dm-inicio.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Cover of the DEMYA digital marketing plan: navy background, title and key figures for October 2026"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/dm-capturas.webp"
-                        srcset="img/dm-capturas-800.webp 800w, img/dm-capturas.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Annotated screenshot of the DEMYA website with numbered gold frames and enlarged details"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/dm-competencia.webp"
-                        srcset="img/dm-competencia-800.webp 800w, img/dm-competencia.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="Competitor analysis with annotated screenshots of Dr. Andrés Gómez’s website"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/dm-dafo.webp"
-                        srcset="img/dm-dafo-800.webp 800w, img/dm-dafo.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="SWOT analysis chapter with the fixed table of contents on the left"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
-                        src="img/dm-datos.webp"
-                        srcset="img/dm-datos-800.webp 800w, img/dm-datos.webp 1440w"
-                        sizes="(max-width: 860px) 90vw, 900px"
-                        width="1440"
-                        height="900"
-                        alt="October 2026 update: Instagram followers bar chart and competitor comparison table"
-                        loading="lazy"
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="phone">
-                <img
-                  src="img/dm-movil.webp"
-                  width="600"
-                  height="1298"
-                  alt="The DEMYA marketing plan on a phone"
-                  loading="lazy"
-                />
-              </div>
-              <div class="carousel__controls">
-                <div class="carousel__arrows">
-                  <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
-                  <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
-                </div>
-                <div class="carousel__dots">
-                  <button type="button" aria-label="Screenshot 1"></button>
-                  <button type="button" aria-label="Screenshot 2"></button>
-                  <button type="button" aria-label="Screenshot 3"></button>
-                  <button type="button" aria-label="Screenshot 4"></button>
-                  <button type="button" aria-label="Screenshot 5"></button>
-                </div>
-                <p class="carousel__count" aria-hidden="true">
-                  <span data-count>1</span>
-                  / 5
-                </p>
-              </div>
-            </div>
-
-            <div class="case__details">
-              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
-              <dl class="story">
-                <div>
-                  <dt>
-                    <span class="story__num">01</span>
-                    <span data-l="es">Mi papel</span>
-                    <span data-l="en">My role</span>
-                    <span data-l="de">Meine Rolle</span>
-                  </dt>
-                  <dd data-l="es">Análisis, estrategia y presentación del plan, de la auditoría a los KPIs.</dd>
-                  <dd data-l="en">Analysis, strategy and presentation of the plan, from the audit to the KPIs.</dd>
-                  <dd data-l="de">Analyse, Strategie und Aufbereitung des Plans – vom Audit bis zu den KPIs.</dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">02</span>
-                    <span data-l="es">El reto</span>
-                    <span data-l="en">The challenge</span>
-                    <span data-l="de">Die Herausforderung</span>
-                  </dt>
-                  <dd data-l="es">
-                    Ordenar mucha información (web, SEO, redes y competencia) en un plan que una clínica pudiera
-                    entender y poner en práctica.
-                  </dd>
-                  <dd data-l="en">
-                    Turning a lot of information (website, SEO, social media and competitors) into a plan a clinic could
-                    understand and put into practice.
-                  </dd>
-                  <dd data-l="de">
-                    Viele Informationen (Website, SEO, Social Media und Wettbewerb) in einen Plan übersetzen, den eine
-                    Klinik versteht und umsetzen kann.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">03</span>
-                    <span data-l="es">Lo que hice</span>
-                    <span data-l="en">What I did</span>
-                    <span data-l="de">Was ich gemacht habe</span>
-                  </dt>
-                  <dd data-l="es">
-                    Auditoría con Screaming Frog, PageSpeed Insights y Ahrefs, DAFO, objetivos SMART, plan de acción y
-                    KPIs, actualizado con datos de octubre de 2026.
-                  </dd>
-                  <dd data-l="en">
-                    An audit with Screaming Frog, PageSpeed Insights and Ahrefs, a SWOT, SMART goals, an action plan and
-                    KPIs, updated with October 2026 data.
-                  </dd>
-                  <dd data-l="de">
-                    Audit mit Screaming Frog, PageSpeed Insights und Ahrefs, SWOT-Analyse, SMART-Ziele, Maßnahmenplan
-                    und KPIs – aktualisiert mit Daten von Oktober 2026.
-                  </dd>
-                </div>
-                <div>
-                  <dt>
-                    <span class="story__num">04</span>
-                    <span data-l="es">El resultado</span>
-                    <span data-l="en">The result</span>
-                    <span data-l="de">Das Ergebnis</span>
-                  </dt>
-                  <dd data-l="es">
-                    Un informe web interactivo de 16 capítulos, con versión PDF lista para imprimir, donde cada hallazgo
-                    se ve con su captura y su recomendación.
-                  </dd>
-                  <dd data-l="en">
-                    A 16-chapter interactive web report with a print-ready PDF, where every finding comes with its
-                    screenshot and recommendation.
-                  </dd>
-                  <dd data-l="de">
-                    Ein interaktiver Web-Bericht mit 16 Kapiteln und druckfertiger PDF-Version, in dem jeder Befund mit
-                    Screenshot und Empfehlung gezeigt wird.
-                  </dd>
-                </div>
-              </dl>
-
-              <h4 class="sr-only">
-                <span data-l="en">Highlights</span>
-                <span data-l="es">Lo más destacado</span>
-                <span data-l="de">Highlights</span>
-              </h4>
-              <ul class="highlights">
-                <li>
-                  <strong>16</strong>
-                  <span data-l="en">chapters, from situation analysis to KPIs, with a fixed table of contents</span>
-                  <span data-l="es">capítulos, del análisis de situación a los KPIs, con índice fijo</span>
-                  <span data-l="de">
-                    Kapitel, von der Situationsanalyse bis zu den KPIs, mit festem Inhaltsverzeichnis
-                  </span>
-                </li>
-                <li>
-                  <strong data-l="en">Audit</strong>
-                  <strong data-l="es">Auditoría</strong>
-                  <strong data-l="de">Audit</strong>
-                  <span data-l="en">SEO and performance with Screaming Frog, PageSpeed Insights and Ahrefs</span>
-                  <span data-l="es">SEO y rendimiento con Screaming Frog, PageSpeed Insights y Ahrefs</span>
-                  <span data-l="de">SEO und Performance mit Screaming Frog, PageSpeed Insights und Ahrefs</span>
-                </li>
-                <li>
-                  <strong data-l="en">Evidence</strong>
-                  <strong data-l="es">Evidencias</strong>
-                  <strong data-l="de">Belege</strong>
-                  <span data-l="en">annotated screenshots with numbered frames and enlarged details</span>
-                  <span data-l="es">capturas comentadas con marcos numerados y detalles ampliados</span>
-                  <span data-l="de">kommentierte Screenshots mit nummerierten Rahmen und vergrößerten Details</span>
-                </li>
-                <li>
-                  <strong>Web + PDF</strong>
-                  <span data-l="en">one source, responsive on screen and print-ready in A4</span>
-                  <span data-l="es">una sola fuente: adaptable en pantalla y lista para imprimir en A4</span>
-                  <span data-l="de">eine Quelle: responsiv am Bildschirm und druckfertig in A4</span>
-                </li>
-              </ul>
-              <p class="case__stack">
-                <span class="eyebrow">
-                  <span data-l="en">Built with</span>
-                  <span data-l="es">Hecha con</span>
-                  <span data-l="de">Umgesetzt mit</span>
-                </span>
-                HTML5 · CSS3 · JavaScript · Screaming Frog · PageSpeed Insights · Ahrefs
-              </p>
-            </div>
-          </div>
-        </article>
       </section>
 
       <!-- ===== CÓMO PUEDO AYUDARTE =====
@@ -1838,9 +825,9 @@
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplos:</span>
                     <span data-l="de">Beispiele:</span>
-                    <a href="#casa-brava">Casa Brava</a>
+                    <a href="proyectos/casa-brava/">Casa Brava</a>
                     ·
-                    <a href="#golden-chance">Golden Chance Senior</a>
+                    <a href="proyectos/golden-chance-senior/">Golden Chance Senior</a>
                   </p>
                 </li>
                 <li class="service">
@@ -1882,7 +869,7 @@
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplo:</span>
                     <span data-l="de">Beispiel:</span>
-                    <a href="#demya">
+                    <a href="proyectos/demya/">
                       <span data-l="en">the DEMYA web audit</span>
                       <span data-l="es">la auditoría web de DEMYA</span>
                       <span data-l="de">das Website-Audit für DEMYA</span>
@@ -1930,7 +917,7 @@
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplo:</span>
                     <span data-l="de">Beispiel:</span>
-                    <a href="#demya">DEMYA</a>
+                    <a href="proyectos/demya/">DEMYA</a>
                   </p>
                 </li>
               </ul>
