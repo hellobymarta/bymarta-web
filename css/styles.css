@@ -690,7 +690,8 @@ p {
   position: relative;
   isolation: isolate;
   overflow: clip;
-  padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--section-space);
+  /* Más aire entre la línea del menú y la firma */
+  padding-block: clamp(4.5rem, 10vw, 7.5rem) var(--section-space);
   text-align: center;
 }
 
