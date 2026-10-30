@@ -89,12 +89,67 @@
 
         <nav class="nav" aria-label="Main">
           <ul class="nav__list" id="menu">
-            <li>
-              <a href="#projects">
+            <li class="nav__item--menu">
+              <a href="#projects" class="nav__parent" aria-haspopup="true">
                 <span data-l="en">Work</span>
                 <span data-l="es">Proyectos</span>
                 <span data-l="de">Projekte</span>
+                <svg class="nav__caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
               </a>
+              <!-- Desplegable: los cuatro casos de estudio -->
+              <div class="mega">
+                <ul class="mega__list">
+                  <li>
+                    <a class="mega__link" href="proyectos/casa-brava/">
+                      <img src="img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Casa Brava</span>
+                      <span class="mega__type">
+                        <span data-l="en">Boutique hotel</span>
+                        <span data-l="es">Hotel boutique</span>
+                        <span data-l="de">Boutique-Hotel</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/vagamundo/">
+                      <img src="img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Vagamundo</span>
+                      <span class="mega__type">
+                        <span data-l="en">Travel agency · full stack</span>
+                        <span data-l="es">Agencia de viajes · full stack</span>
+                        <span data-l="de">Reiseveranstalter · Full Stack</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/golden-chance-senior/">
+                      <img src="img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Golden Chance Senior</span>
+                      <span class="mega__type">
+                        <span data-l="en">Senior living</span>
+                        <span data-l="es">Residencial sénior</span>
+                        <span data-l="de">Wohnen im Alter</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/demya/">
+                      <img src="img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">DEMYA</span>
+                      <span class="mega__type">
+                        <span data-l="en">Digital marketing plan</span>
+                        <span data-l="es">Plan de marketing digital</span>
+                        <span data-l="de">Digitalmarketing-Plan</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <a class="mega__all" href="#projects">
+                  <span data-l="en">See all projects →</span>
+                  <span data-l="es">Ver todos los proyectos →</span>
+                  <span data-l="de">Alle Projekte ansehen →</span>
+                </a>
+              </div>
             </li>
             <li>
               <a href="#services">
@@ -598,69 +653,106 @@
 
             <!-- Pestaña 1: para empresas -->
             <div class="tabs__panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies">
-              <div class="bento">
-                <!-- Tarjeta principal: quién soy para un equipo y cómo contactar -->
-                <div class="bento__intro">
-                  <p class="bento__status">
+              <!-- Ficha de candidata: datos clave a la izquierda, áreas y botones a la derecha -->
+              <article class="ficha">
+                <aside class="ficha__side">
+                  <img class="ficha__mono" src="img/monograma-crema-68.webp" width="34" height="34" alt="" />
+                  <p class="ficha__name">Marta Rodríguez</p>
+                  <p class="ficha__status">
                     <span class="dot" aria-hidden="true"></span>
                     <span data-l="en">Available now</span>
                     <span data-l="es">Disponible ahora</span>
                     <span data-l="de">Ab sofort verfügbar</span>
                   </p>
-                  <h3 class="bento__lead">
-                    <span data-l="en">
-                      I'm looking for an internship or a first role that brings together web development, digital
-                      marketing and design.
-                    </span>
-                    <span data-l="es">
-                      Busco prácticas o un primer puesto donde unir desarrollo web, marketing digital y diseño.
-                    </span>
-                    <span data-l="de">
-                      Ich suche ein Praktikum oder eine erste Stelle, in der sich Webentwicklung, digitales Marketing
-                      und Design verbinden.
-                    </span>
-                  </h3>
-                  <dl class="bento__facts">
+                  <dl class="ficha__facts">
                     <div>
                       <dt>
-                        <span data-l="en">Internship</span>
-                        <span data-l="es">Prácticas</span>
-                        <span data-l="de">Praktikum</span>
+                        <span data-l="en">Looking for</span>
+                        <span data-l="es">Busco</span>
+                        <span data-l="de">Gesucht</span>
                       </dt>
                       <dd>
-                        <span data-l="en">3–6 months</span>
-                        <span data-l="es">3 a 6 meses</span>
-                        <span data-l="de">3–6 Monate</span>
+                        <span data-l="en">A 3–6 month internship or a first role</span>
+                        <span data-l="es">Prácticas de 3 a 6 meses o un primer puesto</span>
+                        <span data-l="de">Praktikum (3–6 Monate) oder Berufseinstieg</span>
                       </dd>
                     </div>
                     <div>
                       <dt>
-                        <span data-l="en">Location</span>
-                        <span data-l="es">Ubicación</span>
-                        <span data-l="de">Standort</span>
+                        <span data-l="en">From</span>
+                        <span data-l="es">Desde</span>
+                        <span data-l="de">Ab</span>
                       </dt>
                       <dd>
-                        <span data-l="en">Cologne, Germany</span>
-                        <span data-l="es">Colonia, Alemania</span>
-                        <span data-l="de">Köln</span>
+                        <span data-l="en">Now, in Cologne or remote</span>
+                        <span data-l="es">Ya, en Colonia o en remoto</span>
+                        <span data-l="de">Sofort, in Köln oder remote</span>
                       </dd>
                     </div>
                     <div>
                       <dt>
-                        <span data-l="en">Start</span>
-                        <span data-l="es">Inicio</span>
-                        <span data-l="de">Beginn</span>
+                        <span data-l="en">Languages</span>
+                        <span data-l="es">Idiomas</span>
+                        <span data-l="de">Sprachen</span>
                       </dt>
                       <dd>
-                        <span data-l="en">Immediately</span>
-                        <span data-l="es">Inmediato</span>
-                        <span data-l="de">Ab sofort</span>
+                        <span data-l="en">Spanish · German · English</span>
+                        <span data-l="es">Español · alemán · inglés</span>
+                        <span data-l="de">Spanisch · Deutsch · Englisch</span>
                       </dd>
                     </div>
                   </dl>
-                  <div class="actions bento__actions">
+                </aside>
+
+                <div class="ficha__main">
+                  <h3 class="ficha__lead">
+                    <span data-l="en">
+                      I bring web development, digital marketing and design together in one profile.
+                    </span>
+                    <span data-l="es">Uno desarrollo web, marketing digital y diseño en un mismo perfil.</span>
+                    <span data-l="de">
+                      Ich verbinde Webentwicklung, digitales Marketing und Design in einem Profil.
+                    </span>
+                  </h3>
+                  <ul class="ficha__areas">
+                    <li style="--c: var(--teal)">
+                      <h4>
+                        <span data-l="en">Web development</span>
+                        <span data-l="es">Desarrollo web</span>
+                        <span data-l="de">Webentwicklung</span>
+                      </h4>
+                      <p data-l="en">
+                        HTML, CSS, JavaScript, React and TypeScript, with a grounding in Node and MongoDB.
+                      </p>
+                      <p data-l="es">HTML, CSS, JavaScript, React y TypeScript, con base en Node y MongoDB.</p>
+                      <p data-l="de">
+                        HTML, CSS, JavaScript, React und TypeScript, dazu Grundlagen in Node und MongoDB.
+                      </p>
+                    </li>
+                    <li style="--c: var(--mustard)">
+                      <h4>
+                        <span data-l="en">Digital marketing</span>
+                        <span data-l="es">Marketing digital</span>
+                        <span data-l="de">Digitales Marketing</span>
+                      </h4>
+                      <p data-l="en">SEO, analytics and social media: websites that get found and convert.</p>
+                      <p data-l="es">SEO, analítica y redes: webs que se encuentran y convierten.</p>
+                      <p data-l="de">SEO, Analytics und Social Media: Websites, die gefunden werden und überzeugen.</p>
+                    </li>
+                    <li style="--c: var(--taupe)">
+                      <h4>
+                        <span data-l="en">Design &amp; teamwork</span>
+                        <span data-l="es">Diseño y equipo</span>
+                        <span data-l="de">Design &amp; Team</span>
+                      </h4>
+                      <p data-l="en">Figma and art direction, plus five years of leading groups.</p>
+                      <p data-l="es">Figma y dirección de arte, y cinco años coordinando grupos.</p>
+                      <p data-l="de">Figma und Art Direction, dazu fünf Jahre Gruppenleitung.</p>
+                    </li>
+                  </ul>
+                  <div class="actions ficha__actions">
                     <a
-                      class="btn btn--light"
+                      class="btn"
                       href="https://cal.com/bymarta/virtual-coffee-with-marta"
                       target="_blank"
                       rel="noopener"
@@ -670,7 +762,7 @@
                       <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
                     </a>
                     <a
-                      class="btn btn--ghost-light"
+                      class="btn btn--ghost"
                       href="cv/marta-rodriguez-cv-en.pdf"
                       target="_blank"
                       rel="noopener"
@@ -679,7 +771,7 @@
                       Download CV
                     </a>
                     <a
-                      class="btn btn--ghost-light"
+                      class="btn btn--ghost"
                       href="cv/marta-rodriguez-cv-es.pdf"
                       target="_blank"
                       rel="noopener"
@@ -688,7 +780,7 @@
                       Descargar CV
                     </a>
                     <a
-                      class="btn btn--ghost-light"
+                      class="btn btn--ghost"
                       href="cv/marta-rodriguez-cv-de.pdf"
                       target="_blank"
                       rel="noopener"
@@ -698,150 +790,7 @@
                     </a>
                   </div>
                 </div>
-
-                <div class="tile tile--teal">
-                  <span class="tile__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 5l-4 14" /></svg>
-                  </span>
-                  <h4>
-                    <span data-l="en">Web development</span>
-                    <span data-l="es">Desarrollo web</span>
-                    <span data-l="de">Webentwicklung</span>
-                  </h4>
-                  <p data-l="en">Hand-coded, accessible, fast websites, plus React apps on their own API.</p>
-                  <p data-l="es">Webs a mano, accesibles y rápidas, y aplicaciones con React y una API propia.</p>
-                  <p data-l="de">
-                    Handgeschriebene, barrierefreie und schnelle Websites sowie React-Apps mit eigener API.
-                  </p>
-                  <ul class="tile__chips">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>TypeScript</li>
-                    <li>Node</li>
-                  </ul>
-                </div>
-                <div class="tile tile--mustard">
-                  <span class="tile__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
-                  </span>
-                  <h4>
-                    <span data-l="en">Digital marketing</span>
-                    <span data-l="es">Marketing digital</span>
-                    <span data-l="de">Digitales Marketing</span>
-                  </h4>
-                  <p data-l="en">Websites built to be found and to convert, backed by data and priorities.</p>
-                  <p data-l="es">Webs pensadas para que se encuentren y conviertan, con datos y prioridades.</p>
-                  <p data-l="de">Websites, die gefunden werden und überzeugen – mit Daten und Prioritäten.</p>
-                  <ul class="tile__chips">
-                    <li>SEO</li>
-                    <li>Analytics</li>
-                    <li>Social media</li>
-                    <li>KPIs</li>
-                  </ul>
-                </div>
-                <div class="tile tile--taupe">
-                  <span class="tile__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 19l7-7 3 3-7 7-3-3Z" />
-                      <path d="M18 13 16.5 5.5 2 2l3.5 14.5L13 18l5-5Z" />
-                      <path d="M2 2l7.6 7.6" />
-                      <circle cx="11" cy="11" r="2" />
-                    </svg>
-                  </span>
-                  <h4>
-                    <span data-l="en">Design</span>
-                    <span data-l="es">Diseño</span>
-                    <span data-l="de">Design</span>
-                  </h4>
-                  <p data-l="en">Visual identity and art direction, with care for every detail.</p>
-                  <p data-l="es">Identidad visual y dirección de arte, cuidando cada detalle.</p>
-                  <p data-l="de">Visuelle Identität und Art Direction – mit Liebe zum Detail.</p>
-                  <ul class="tile__chips">
-                    <li>Figma</li>
-                    <li>Branding</li>
-                    <li>UI</li>
-                  </ul>
-                </div>
-                <div class="tile tile--rose">
-                  <span class="tile__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="9" />
-                      <path
-                        d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"
-                      />
-                    </svg>
-                  </span>
-                  <h4>
-                    <span data-l="en">Languages &amp; teamwork</span>
-                    <span data-l="es">Idiomas y equipo</span>
-                    <span data-l="de">Sprachen &amp; Team</span>
-                  </h4>
-                  <ul class="langs-meter">
-                    <li>
-                      <span class="langs-meter__name">
-                        <span data-l="en">Spanish</span>
-                        <span data-l="es">Español</span>
-                        <span data-l="de">Spanisch</span>
-                      </span>
-                      <span class="langs-meter__dots" aria-hidden="true">
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                      </span>
-                      <span class="langs-meter__level">
-                        <span data-l="en">Native</span>
-                        <span data-l="es">Nativo</span>
-                        <span data-l="de">Muttersprache</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span class="langs-meter__name">
-                        <span data-l="en">German</span>
-                        <span data-l="es">Alemán</span>
-                        <span data-l="de">Deutsch</span>
-                      </span>
-                      <span class="langs-meter__dots" aria-hidden="true">
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i></i>
-                      </span>
-                      <span class="langs-meter__level">
-                        <span data-l="en">Fluent</span>
-                        <span data-l="es">Muy alto</span>
-                        <span data-l="de">Sehr gut</span>
-                      </span>
-                    </li>
-                    <li>
-                      <span class="langs-meter__name">
-                        <span data-l="en">English</span>
-                        <span data-l="es">Inglés</span>
-                        <span data-l="de">Englisch</span>
-                      </span>
-                      <span class="langs-meter__dots" aria-hidden="true">
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i class="on"></i>
-                        <i></i>
-                      </span>
-                      <span class="langs-meter__level">
-                        <span data-l="en">Advanced</span>
-                        <span data-l="es">Avanzado</span>
-                        <span data-l="de">Fortgeschritten</span>
-                      </span>
-                    </li>
-                  </ul>
-                  <p class="tile__note" data-l="en">Plus five years of leading groups.</p>
-                  <p class="tile__note" data-l="es">Y cinco años coordinando grupos.</p>
-                  <p class="tile__note" data-l="de">Dazu fünf Jahre Gruppenleitung.</p>
-                </div>
-              </div>
+              </article>
             </div>
 
             <!-- Pestaña 2: para marcas (freelance) -->

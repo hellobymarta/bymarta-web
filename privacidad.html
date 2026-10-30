@@ -43,12 +43,67 @@
 
         <nav class="nav" aria-label="Main">
           <ul class="nav__list" id="menu">
-            <li>
-              <a href="index.html#projects">
+            <li class="nav__item--menu">
+              <a href="index.html#projects" class="nav__parent" aria-haspopup="true">
                 <span data-l="en">Work</span>
                 <span data-l="es">Proyectos</span>
                 <span data-l="de">Projekte</span>
+                <svg class="nav__caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
               </a>
+              <!-- Desplegable: los cuatro casos de estudio -->
+              <div class="mega">
+                <ul class="mega__list">
+                  <li>
+                    <a class="mega__link" href="proyectos/casa-brava/">
+                      <img src="img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Casa Brava</span>
+                      <span class="mega__type">
+                        <span data-l="en">Boutique hotel</span>
+                        <span data-l="es">Hotel boutique</span>
+                        <span data-l="de">Boutique-Hotel</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/vagamundo/">
+                      <img src="img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Vagamundo</span>
+                      <span class="mega__type">
+                        <span data-l="en">Travel agency · full stack</span>
+                        <span data-l="es">Agencia de viajes · full stack</span>
+                        <span data-l="de">Reiseveranstalter · Full Stack</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/golden-chance-senior/">
+                      <img src="img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">Golden Chance Senior</span>
+                      <span class="mega__type">
+                        <span data-l="en">Senior living</span>
+                        <span data-l="es">Residencial sénior</span>
+                        <span data-l="de">Wohnen im Alter</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="mega__link" href="proyectos/demya/">
+                      <img src="img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="mega__name">DEMYA</span>
+                      <span class="mega__type">
+                        <span data-l="en">Digital marketing plan</span>
+                        <span data-l="es">Plan de marketing digital</span>
+                        <span data-l="de">Digitalmarketing-Plan</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <a class="mega__all" href="index.html#projects">
+                  <span data-l="en">See all projects →</span>
+                  <span data-l="es">Ver todos los proyectos →</span>
+                  <span data-l="de">Alle Projekte ansehen →</span>
+                </a>
+              </div>
             </li>
             <li>
               <a href="index.html#services">
