@@ -29,6 +29,15 @@
     idioma = parametro;
   }
 
+  // Si la dirección indica el idioma (?lang=en), la URL canónica lo incluye, para que Google
+  // trate cada idioma como una versión propia (enlaces hreflang en el <head>)
+  if (idioma !== "es") {
+    var canonica = document.querySelector('link[rel="canonical"]');
+    if (canonica && parametro === idioma) {
+      canonica.href = canonica.href.split("?")[0] + "?lang=" + idioma;
+    }
+  }
+
   document.documentElement.setAttribute("data-lang", idioma);
   document.documentElement.lang = idioma;
 })();

@@ -1,0 +1,5 @@
+# ByMarta · instrucciones para buscadores: se puede rastrear toda la web
+User-agent: *
+Allow: /
+
+Sitemap: https://bymarta-web.vercel.app/sitemap.xml

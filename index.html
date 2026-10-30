@@ -12,7 +12,7 @@
     <title>Marta Rodríguez · ByMarta</title>
     <meta
       name="description"
-      content="Portfolio de Marta Rodríguez, desarrolladora web y especialista en marketing digital en Colonia: Casa Brava, Vagamundo y Golden Chance Senior."
+      content="Portfolio de Marta Rodríguez, desarrolladora web con formación en marketing digital en Colonia: Casa Brava, Vagamundo, Golden Chance Senior y el plan de marketing de DEMYA."
     />
     <meta name="author" content="Marta Alarcón Rodríguez" />
     <meta name="theme-color" content="#fbf8f3" />
@@ -31,6 +31,28 @@
     <meta property="og:locale:alternate" content="de_DE" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://bymarta-web.vercel.app/" />
+    <!-- Versiones por idioma para Google (el español es la principal) -->
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/" />
+    <!-- Datos estructurados: ficha de la persona para buscadores -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marta Rodríguez",
+        "alternateName": "ByMarta",
+        "jobTitle": "Web Developer & Digital Marketing",
+        "url": "https://bymarta-web.vercel.app/",
+        "image": "https://bymarta-web.vercel.app/img/og-imagen.jpg",
+        "email": "mailto:martaalarcon22@icloud.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Köln", "addressCountry": "DE" },
+        "knowsLanguage": ["es", "de", "en"],
+        "knowsAbout": ["Web development", "Front-end", "React", "Digital marketing", "SEO", "Web design"],
+        "sameAs": ["https://www.linkedin.com/in/rodriguezbymarta", "https://github.com/hellobymarta"]
+      }
+    </script>
 
     <!-- Iconos -->
     <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -59,9 +81,9 @@
     <!-- ===== CABECERA ===== -->
     <header class="top">
       <div class="wrap top__inner">
-        <a class="brand" href="#home" aria-label="ByMarta, home">
-          <img class="brand__mono on-light" src="img/monograma-tinta.png" alt="" width="34" height="34" />
-          <img class="brand__mono on-dark" src="img/monograma-crema.png" alt="" width="34" height="34" />
+        <a class="brand" href="#home" aria-label="Marta Rodríguez">
+          <img class="brand__mono on-light" src="img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="brand__mono on-dark" src="img/monograma-crema-68.webp" alt="" width="34" height="34" />
           <span class="brand__name">Marta Rodríguez</span>
         </a>
 
@@ -140,7 +162,16 @@
         <div class="wrap">
           <!-- Logotipo: acuarela en imagen + letras en vector para que se vean nítidas -->
           <div class="signature" role="img" aria-label="hello, I'm ByMarta">
-            <img class="signature__wash" src="img/logo-acuarela.webp" width="2330" height="848" alt="" />
+            <img
+              class="signature__wash"
+              src="img/logo-acuarela-1400.webp"
+              srcset="img/logo-acuarela-800.webp 800w, img/logo-acuarela-1400.webp 1400w"
+              sizes="(max-width: 720px) 92vw, 680px"
+              width="2330"
+              height="848"
+              alt=""
+              fetchpriority="high"
+            />
             <svg class="signature__hello" viewBox="0 0 1165 424" aria-hidden="true">
               <use href="img/logo-firma.svg#hello"></use>
             </svg>
@@ -171,7 +202,8 @@
               </span>
               <span data-l="de">
                 Ich entwickle Websites mit
-                <em>Seele</em> – von der ersten Skizze bis zum Code.
+                <em>Seele</em>
+                – von der ersten Skizze bis zum Code.
               </span>
             </h1>
 
@@ -298,7 +330,7 @@
             <ol>
               <li>
                 <a href="#casa-brava">
-                  <img src="img/cb-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <img src="img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
                   <span class="case-index__num">01</span>
                   <span class="case-index__name">Casa Brava</span>
                   <span class="case-index__type">
@@ -310,7 +342,7 @@
               </li>
               <li>
                 <a href="#vagamundo">
-                  <img src="img/vg-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <img src="img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
                   <span class="case-index__num">02</span>
                   <span class="case-index__name">Vagamundo</span>
                   <span class="case-index__type">
@@ -322,7 +354,7 @@
               </li>
               <li>
                 <a href="#golden-chance">
-                  <img src="img/gcs-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <img src="img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
                   <span class="case-index__num">03</span>
                   <span class="case-index__name">Golden Chance Senior</span>
                   <span class="case-index__type">
@@ -334,7 +366,7 @@
               </li>
               <li>
                 <a href="#demya">
-                  <img src="img/dm-inicio.webp" width="1440" height="900" alt="" loading="lazy" />
+                  <img src="img/dm-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
                   <span class="case-index__num">04</span>
                   <span class="case-index__name">DEMYA</span>
                   <span class="case-index__type">
@@ -414,6 +446,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-inicio.webp"
+                        srcset="img/cb-inicio-800.webp 800w, img/cb-inicio.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Casa Brava home page: a stone villa among palm trees with the CB monogram"
@@ -423,6 +457,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-villas.webp"
+                        srcset="img/cb-villas-800.webp 800w, img/cb-villas.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Villas section with a rounded photo gallery and a short introduction"
@@ -432,6 +468,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-experiencias.webp"
+                        srcset="img/cb-experiencias-800.webp 800w, img/cb-experiencias.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Experiences block on a sage green background with interior photographs"
@@ -441,6 +479,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-dia.webp"
+                        srcset="img/cb-dia-800.webp 800w, img/cb-dia.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Experiences page: three numbered moments of the day with photographs"
@@ -450,6 +490,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-materiales.webp"
+                        srcset="img/cb-materiales-800.webp 800w, img/cb-materiales.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="About page: materials and surroundings with a photo collage of the interiors"
@@ -459,6 +501,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/cb-contacto.webp"
+                        srcset="img/cb-contacto-800.webp 800w, img/cb-contacto.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Contact page with a form next to a photograph of the villa"
@@ -683,6 +727,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/vg-inicio.webp"
+                        srcset="img/vg-inicio-800.webp 800w, img/vg-inicio.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Vagamundo home page: Positano at sunset with the headline about the Amalfi coast"
@@ -691,16 +737,9 @@
                     </li>
                     <li class="carousel__slide">
                       <img
-                        src="img/vg-italia.webp"
-                        width="1440"
-                        height="900"
-                        alt="Destination slider for Italy with the outline of the country over a photograph"
-                        loading="lazy"
-                      />
-                    </li>
-                    <li class="carousel__slide">
-                      <img
                         src="img/vg-motivos.webp"
+                        srcset="img/vg-motivos-800.webp 800w, img/vg-motivos.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Three ways into the catalogue: beach, culture, and nature and adventure"
@@ -710,6 +749,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/vg-catalogo.webp"
+                        srcset="img/vg-catalogo-800.webp 800w, img/vg-catalogo.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Trip catalogue with Iceland, Namibia and Jordan, each with its price"
@@ -719,6 +760,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/vg-destinos.webp"
+                        srcset="img/vg-destinos-800.webp 800w, img/vg-destinos.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Asia destinations: Japan, India and Vietnam"
@@ -728,6 +771,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/vg-viaje.webp"
+                        srcset="img/vg-viaje-800.webp 800w, img/vg-viaje.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Trip page with price per person, seats left and trip details"
@@ -751,11 +796,10 @@
                   <button type="button" aria-label="Screenshot 3"></button>
                   <button type="button" aria-label="Screenshot 4"></button>
                   <button type="button" aria-label="Screenshot 5"></button>
-                  <button type="button" aria-label="Screenshot 6"></button>
                 </div>
                 <p class="carousel__count" aria-hidden="true">
                   <span data-count>1</span>
-                  / 6
+                  / 5
                 </p>
               </div>
             </div>
@@ -960,6 +1004,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-inicio.webp"
+                        srcset="img/gcs-inicio-800.webp 800w, img/gcs-inicio.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Golden Chance Senior home page: a modern house with an olive tree and the headline Your home. Your life. Your future."
@@ -969,6 +1015,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-filosofia.webp"
+                        srcset="img/gcs-filosofia-800.webp 800w, img/gcs-filosofia.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Philosophy section with a photograph of two older friends in a garden"
@@ -978,6 +1026,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-vivir.webp"
+                        srcset="img/gcs-vivir-800.webp 800w, img/gcs-vivir.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="A new way of living: three photographs of private patios and shared gardens"
@@ -987,6 +1037,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-comunidad.webp"
+                        srcset="img/gcs-comunidad-800.webp 800w, img/gcs-comunidad.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Community model section on an olive green background with a shared terrace"
@@ -996,6 +1048,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-modelo.webp"
+                        srcset="img/gcs-modelo-800.webp 800w, img/gcs-modelo.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Three numbered reasons that make the project different"
@@ -1005,6 +1059,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/gcs-proyecto.webp"
+                        srcset="img/gcs-proyecto-800.webp 800w, img/gcs-proyecto.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Project status and enquiry form on a dark background"
@@ -1251,6 +1307,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/dm-inicio.webp"
+                        srcset="img/dm-inicio-800.webp 800w, img/dm-inicio.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Cover of the DEMYA digital marketing plan: navy background, title and key figures for October 2026"
@@ -1260,6 +1318,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/dm-capturas.webp"
+                        srcset="img/dm-capturas-800.webp 800w, img/dm-capturas.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Annotated screenshot of the DEMYA website with numbered gold frames and enlarged details"
@@ -1269,6 +1329,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/dm-competencia.webp"
+                        srcset="img/dm-competencia-800.webp 800w, img/dm-competencia.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="Competitor analysis with annotated screenshots of Dr. Andrés Gómez’s website"
@@ -1278,6 +1340,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/dm-dafo.webp"
+                        srcset="img/dm-dafo-800.webp 800w, img/dm-dafo.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="SWOT analysis chapter with the fixed table of contents on the left"
@@ -1287,6 +1351,8 @@
                     <li class="carousel__slide">
                       <img
                         src="img/dm-datos.webp"
+                        srcset="img/dm-datos-800.webp 800w, img/dm-datos.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
                         width="1440"
                         height="900"
                         alt="October 2026 update: Instagram followers bar chart and competitor comparison table"
@@ -1500,21 +1566,29 @@
           </header>
 
           <div class="tabs" data-tabs>
-            <div class="tabs__list" role="tablist" aria-label="Services">
+            <!-- Selector de dos caminos: empresas (prácticas o empleo) y marcas (freelance) -->
+            <div class="tabs__list paths" role="tablist" aria-label="Services">
               <button
-                class="tabs__tab"
+                class="tabs__tab path"
                 type="button"
                 role="tab"
                 id="tab-companies"
                 aria-controls="panel-companies"
                 aria-selected="true"
               >
-                <span data-l="en">For companies</span>
-                <span data-l="es">Para empresas</span>
-                <span data-l="de">Für Unternehmen</span>
+                <span class="path__num">01</span>
+                <span class="path__text">
+                  <span class="path__title" data-l="en">For companies</span>
+                  <span class="path__title" data-l="es">Para empresas</span>
+                  <span class="path__title" data-l="de">Für Unternehmen</span>
+                  <span class="path__sub" data-l="en">Internship or first role</span>
+                  <span class="path__sub" data-l="es">Prácticas o primer puesto</span>
+                  <span class="path__sub" data-l="de">Praktikum oder Berufseinstieg</span>
+                </span>
+                <span class="path__arrow" aria-hidden="true">→</span>
               </button>
               <button
-                class="tabs__tab"
+                class="tabs__tab path"
                 type="button"
                 role="tab"
                 id="tab-brands"
@@ -1522,114 +1596,188 @@
                 aria-selected="false"
                 tabindex="-1"
               >
-                <span data-l="en">For brands · freelance</span>
-                <span data-l="es">Para marcas · freelance</span>
-                <span data-l="de">Für Marken · Freelance</span>
+                <span class="path__num">02</span>
+                <span class="path__text">
+                  <span class="path__title" data-l="en">For brands</span>
+                  <span class="path__title" data-l="es">Para marcas</span>
+                  <span class="path__title" data-l="de">Für Marken</span>
+                  <span class="path__sub" data-l="en">Freelance projects</span>
+                  <span class="path__sub" data-l="es">Proyectos freelance</span>
+                  <span class="path__sub" data-l="de">Freelance-Projekte</span>
+                </span>
+                <span class="path__arrow" aria-hidden="true">→</span>
               </button>
             </div>
 
             <!-- Pestaña 1: para empresas -->
             <div class="tabs__panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies">
-              <p class="tabs__lead">
-                <span data-l="en">
-                  I'm looking for a 3–6 month internship or a first role that brings together web development, digital
-                  marketing and design.
-                </span>
-                <span data-l="es">
-                  Busco prácticas de 3 a 6 meses o un primer puesto donde unir desarrollo web, marketing digital y
-                  diseño.
-                </span>
-                <span data-l="de">
-                  Ich suche ein Praktikum von 3–6 Monaten oder eine erste Stelle, in der sich Webentwicklung, digitales
-                  Marketing und Design verbinden.
-                </span>
-              </p>
-              <ul class="highlights offer__bring">
-                <li>
-                  <strong data-l="en">Front-end development</strong>
-                  <strong data-l="es">Desarrollo front-end</strong>
-                  <strong data-l="de">Frontend-Entwicklung</strong>
-                  <span data-l="en">
-                    HTML, CSS, JavaScript, React and TypeScript, with a grounding in Node, Express and MongoDB.
-                  </span>
-                  <span data-l="es">
-                    HTML, CSS, JavaScript, React y TypeScript, con base en Node, Express y MongoDB.
-                  </span>
-                  <span data-l="de">
-                    HTML, CSS, JavaScript, React und TypeScript, dazu Grundlagen in Node, Express und MongoDB.
-                  </span>
-                </li>
-                <li>
-                  <strong data-l="en">A marketing mindset</strong>
-                  <strong data-l="es">Mirada de marketing</strong>
-                  <strong data-l="de">Marketing-Denken</strong>
-                  <span data-l="en">Websites built to be found and to convert: SEO, analytics and social media.</span>
-                  <span data-l="es">
-                    Webs pensadas para que se encuentren y conviertan: SEO, analítica y redes sociales.
-                  </span>
-                  <span data-l="de">
-                    Websites, die gefunden werden und überzeugen: SEO, Analytics und Social Media.
-                  </span>
-                </li>
-                <li>
-                  <strong data-l="en">An eye for design</strong>
-                  <strong data-l="es">Ojo para el diseño</strong>
-                  <strong data-l="de">Gespür für Design</strong>
-                  <span data-l="en">Visual identity, art direction and Figma, with care for every detail.</span>
-                  <span data-l="es">Identidad visual, dirección de arte y Figma, cuidando cada detalle.</span>
-                  <span data-l="de">Visuelle Identität, Art Direction und Figma – mit Liebe zum Detail.</span>
-                </li>
-                <li>
-                  <strong data-l="en">Languages &amp; teamwork</strong>
-                  <strong data-l="es">Idiomas y equipo</strong>
-                  <strong data-l="de">Sprachen &amp; Team</strong>
-                  <span data-l="en">Native Spanish, fluent German and English, plus five years of leading groups.</span>
-                  <span data-l="es">Español nativo, alemán muy alto e inglés, y cinco años coordinando grupos.</span>
-                  <span data-l="de">
-                    Spanisch als Muttersprache, sehr gutes Deutsch und Englisch sowie fünf Jahre Erfahrung in der
-                    Gruppenleitung.
-                  </span>
-                </li>
-              </ul>
-              <div class="actions offer__actions">
-                <a class="btn" href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
-                  <span data-l="en">Book a virtual coffee · 15 min</span>
-                  <span data-l="es">Reserva un café virtual · 15 min</span>
-                  <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
-                </a>
-                <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-en.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  data-l="en"
-                >
-                  Download CV
-                </a>
-                <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-es.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  data-l="es"
-                >
-                  Descargar CV
-                </a>
-                <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-de.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  data-l="de"
-                >
-                  Lebenslauf herunterladen
-                </a>
+              <div class="hire">
+                <div class="hire__intro">
+                  <h3 class="tabs__lead">
+                    <span data-l="en">
+                      I'm looking for an internship or a first role that brings together web development, digital
+                      marketing and design.
+                    </span>
+                    <span data-l="es">
+                      Busco prácticas o un primer puesto donde unir desarrollo web, marketing digital y diseño.
+                    </span>
+                    <span data-l="de">
+                      Ich suche ein Praktikum oder eine erste Stelle, in der sich Webentwicklung, digitales Marketing
+                      und Design verbinden.
+                    </span>
+                  </h3>
+                  <!-- Ficha rápida para quien está seleccionando -->
+                  <dl class="facts">
+                    <div>
+                      <dt>
+                        <span data-l="en">Availability</span>
+                        <span data-l="es">Disponibilidad</span>
+                        <span data-l="de">Verfügbarkeit</span>
+                      </dt>
+                      <dd>
+                        <span data-l="en">3–6 month internship · now</span>
+                        <span data-l="es">Prácticas de 3 a 6 meses · ya</span>
+                        <span data-l="de">Praktikum, 3–6 Monate · ab sofort</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>
+                        <span data-l="en">Location</span>
+                        <span data-l="es">Ubicación</span>
+                        <span data-l="de">Standort</span>
+                      </dt>
+                      <dd>
+                        <span data-l="en">Cologne, Germany</span>
+                        <span data-l="es">Colonia, Alemania</span>
+                        <span data-l="de">Köln</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>
+                        <span data-l="en">Languages</span>
+                        <span data-l="es">Idiomas</span>
+                        <span data-l="de">Sprachen</span>
+                      </dt>
+                      <dd>
+                        <span data-l="en">Spanish · German · English</span>
+                        <span data-l="es">Español · alemán · inglés</span>
+                        <span data-l="de">Spanisch · Deutsch · Englisch</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>
+                        <span data-l="en">Areas</span>
+                        <span data-l="es">Áreas</span>
+                        <span data-l="de">Bereiche</span>
+                      </dt>
+                      <dd>
+                        <span data-l="en">Web development · digital marketing</span>
+                        <span data-l="es">Desarrollo web · marketing digital</span>
+                        <span data-l="de">Webentwicklung · digitales Marketing</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="actions offer__actions">
+                    <a
+                      class="btn"
+                      href="https://cal.com/bymarta/virtual-coffee-with-marta"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <span data-l="en">Book a virtual coffee · 15 min</span>
+                      <span data-l="es">Reserva un café virtual · 15 min</span>
+                      <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+                    </a>
+                    <a
+                      class="btn btn--ghost"
+                      href="cv/marta-rodriguez-cv-en.pdf"
+                      target="_blank"
+                      rel="noopener"
+                      data-l="en"
+                    >
+                      Download CV
+                    </a>
+                    <a
+                      class="btn btn--ghost"
+                      href="cv/marta-rodriguez-cv-es.pdf"
+                      target="_blank"
+                      rel="noopener"
+                      data-l="es"
+                    >
+                      Descargar CV
+                    </a>
+                    <a
+                      class="btn btn--ghost"
+                      href="cv/marta-rodriguez-cv-de.pdf"
+                      target="_blank"
+                      rel="noopener"
+                      data-l="de"
+                    >
+                      Lebenslauf herunterladen
+                    </a>
+                  </div>
+                </div>
+
+                <ul class="bring">
+                  <li>
+                    <span class="bring__num">01</span>
+                    <h4>
+                      <span data-l="en">Front-end development</span>
+                      <span data-l="es">Desarrollo front-end</span>
+                      <span data-l="de">Frontend-Entwicklung</span>
+                    </h4>
+                    <p data-l="en">
+                      HTML, CSS, JavaScript, React and TypeScript, with a grounding in Node, Express and MongoDB.
+                    </p>
+                    <p data-l="es">HTML, CSS, JavaScript, React y TypeScript, con base en Node, Express y MongoDB.</p>
+                    <p data-l="de">
+                      HTML, CSS, JavaScript, React und TypeScript, dazu Grundlagen in Node, Express und MongoDB.
+                    </p>
+                  </li>
+                  <li>
+                    <span class="bring__num">02</span>
+                    <h4>
+                      <span data-l="en">A marketing mindset</span>
+                      <span data-l="es">Mirada de marketing</span>
+                      <span data-l="de">Marketing-Denken</span>
+                    </h4>
+                    <p data-l="en">Websites built to be found and to convert: SEO, analytics and social media.</p>
+                    <p data-l="es">
+                      Webs pensadas para que se encuentren y conviertan: SEO, analítica y redes sociales.
+                    </p>
+                    <p data-l="de">Websites, die gefunden werden und überzeugen: SEO, Analytics und Social Media.</p>
+                  </li>
+                  <li>
+                    <span class="bring__num">03</span>
+                    <h4>
+                      <span data-l="en">An eye for design</span>
+                      <span data-l="es">Ojo para el diseño</span>
+                      <span data-l="de">Gespür für Design</span>
+                    </h4>
+                    <p data-l="en">Visual identity, art direction and Figma, with care for every detail.</p>
+                    <p data-l="es">Identidad visual, dirección de arte y Figma, cuidando cada detalle.</p>
+                    <p data-l="de">Visuelle Identität, Art Direction und Figma – mit Liebe zum Detail.</p>
+                  </li>
+                  <li>
+                    <span class="bring__num">04</span>
+                    <h4>
+                      <span data-l="en">Languages & teamwork</span>
+                      <span data-l="es">Idiomas y equipo</span>
+                      <span data-l="de">Sprachen &amp; Team</span>
+                    </h4>
+                    <p data-l="en">Native Spanish, fluent German and English, plus five years of leading groups.</p>
+                    <p data-l="es">Español nativo, alemán muy alto e inglés, y cinco años coordinando grupos.</p>
+                    <p data-l="de">
+                      Spanisch als Muttersprache, sehr gutes Deutsch und Englisch sowie fünf Jahre Gruppenleitung.
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
 
             <!-- Pestaña 2: para marcas (freelance) -->
             <div class="tabs__panel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands">
-              <p class="tabs__lead">
+              <h3 class="tabs__lead">
                 <span data-l="en">
                   I work with brands that want a website with personality or a clear plan to grow online.
                 </span>
@@ -1640,28 +1788,35 @@
                   Ich arbeite mit Marken, die eine Website mit Persönlichkeit oder einen klaren Plan für ihr Wachstum
                   online möchten.
                 </span>
-              </p>
+              </h3>
               <ul class="services">
                 <li class="service">
-                  <h3>
+                  <span class="service__num">01</span>
+                  <h4>
                     <span data-l="en">A website for your brand</span>
                     <span data-l="es">Web para tu marca</span>
                     <span data-l="de">Eine Website für Ihre Marke</span>
-                  </h3>
-                  <p data-l="en">A custom website, from a single landing page to a multi-page site.</p>
-                  <p data-l="es">Diseño y desarrollo de una web a medida, de una landing a varias páginas.</p>
-                  <p data-l="de">Eine maßgeschneiderte Website, von der Landingpage bis zur mehrseitigen Website.</p>
-                  <ul class="service__list" data-l="en">
-                    <li>Design and copy in your brand's voice</li>
-                    <li>Mobile-friendly, fast and accessible</li>
-                    <li>Multilingual if you need it</li>
-                    <li>Contact via form or WhatsApp</li>
-                  </ul>
+                  </h4>
+                  <p class="service__desc" data-l="en">
+                    A custom website, from a single landing page to a multi-page site.
+                  </p>
+                  <p class="service__desc" data-l="es">
+                    Diseño y desarrollo de una web a medida, de una landing a varias páginas.
+                  </p>
+                  <p class="service__desc" data-l="de">
+                    Eine maßgeschneiderte Website, von der Landingpage bis zur mehrseitigen Website.
+                  </p>
                   <ul class="service__list" data-l="es">
                     <li>Diseño y textos con el tono de tu marca</li>
                     <li>Adaptada a móvil, rápida y accesible</li>
                     <li>En varios idiomas si lo necesitas</li>
                     <li>Contacto por formulario o WhatsApp</li>
+                  </ul>
+                  <ul class="service__list" data-l="en">
+                    <li>Design and copy in your brand's voice</li>
+                    <li>Mobile-friendly, fast and accessible</li>
+                    <li>Multilingual if you need it</li>
+                    <li>Contact via form or WhatsApp</li>
                   </ul>
                   <ul class="service__list" data-l="de">
                     <li>Design und Texte im Ton Ihrer Marke</li>
@@ -1669,88 +1824,198 @@
                     <li>Auf Wunsch mehrsprachig</li>
                     <li>Kontakt per Formular oder WhatsApp</li>
                   </ul>
+                  <p class="service__ideal">
+                    <strong>
+                      <span data-l="en">Ideal for</span>
+                      <span data-l="es">Ideal para</span>
+                      <span data-l="de">Ideal für</span>
+                    </strong>
+                    <span data-l="en">New brands, local businesses and projects with character.</span>
+                    <span data-l="es">Marcas nuevas, negocios locales y proyectos con carácter.</span>
+                    <span data-l="de">Neue Marken, lokale Unternehmen und Projekte mit Charakter.</span>
+                  </p>
                   <p class="service__example">
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplos:</span>
                     <span data-l="de">Beispiele:</span>
-                    <a href="#casa-brava-title">Casa Brava</a>
+                    <a href="#casa-brava">Casa Brava</a>
                     ·
-                    <a href="#gcs-title">Golden Chance Senior</a>
+                    <a href="#golden-chance">Golden Chance Senior</a>
                   </p>
                 </li>
                 <li class="service">
-                  <h3>
+                  <span class="service__num">02</span>
+                  <h4>
                     <span data-l="en">Redesign &amp; improvements</span>
                     <span data-l="es">Rediseño y mejora</span>
                     <span data-l="de">Redesign &amp; Optimierung</span>
-                  </h3>
-                  <p data-l="en">For existing websites that no longer reflect who you are.</p>
-                  <p data-l="es">Para webs que ya existen pero no transmiten lo que eres.</p>
-                  <p data-l="de">Für bestehende Websites, die nicht mehr zeigen, wer Sie sind.</p>
-                  <ul class="service__list" data-l="en">
-                    <li>A review of speed, SEO and accessibility</li>
-                    <li>A fresh look without starting from scratch</li>
-                    <li>A clear, prioritised list of improvements</li>
-                  </ul>
+                  </h4>
+                  <p class="service__desc" data-l="en">For existing websites that no longer reflect who you are.</p>
+                  <p class="service__desc" data-l="es">Para webs que ya existen pero no transmiten lo que eres.</p>
+                  <p class="service__desc" data-l="de">Für bestehende Websites, die nicht mehr zeigen, wer Sie sind.</p>
                   <ul class="service__list" data-l="es">
                     <li>Revisión de velocidad, SEO y accesibilidad</li>
                     <li>Nueva imagen sin empezar de cero</li>
                     <li>Lista clara de mejoras por prioridad</li>
+                  </ul>
+                  <ul class="service__list" data-l="en">
+                    <li>A review of speed, SEO and accessibility</li>
+                    <li>A fresh look without starting from scratch</li>
+                    <li>A clear, prioritised list of improvements</li>
                   </ul>
                   <ul class="service__list" data-l="de">
                     <li>Analyse von Ladezeit, SEO und Barrierefreiheit</li>
                     <li>Ein neuer Look, ohne bei null anzufangen</li>
                     <li>Eine klare, priorisierte Liste mit Verbesserungen</li>
                   </ul>
+                  <p class="service__ideal">
+                    <strong>
+                      <span data-l="en">Ideal for</span>
+                      <span data-l="es">Ideal para</span>
+                      <span data-l="de">Ideal für</span>
+                    </strong>
+                    <span data-l="en">Websites that work but have fallen behind.</span>
+                    <span data-l="es">Webs que funcionan, pero se han quedado atrás.</span>
+                    <span data-l="de">Websites, die funktionieren, aber nicht mehr zeitgemäß sind.</span>
+                  </p>
                   <p class="service__example">
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplo:</span>
                     <span data-l="de">Beispiel:</span>
-                    <a href="#demya-title">
-                      <span data-l="en">the web audit in the DEMYA plan</span>
-                      <span data-l="es">la auditoría web del plan de DEMYA</span>
-                      <span data-l="de">die Website-Analyse im DEMYA-Plan</span>
+                    <a href="#demya">
+                      <span data-l="en">the DEMYA web audit</span>
+                      <span data-l="es">la auditoría web de DEMYA</span>
+                      <span data-l="de">das Website-Audit für DEMYA</span>
                     </a>
                   </p>
                 </li>
                 <li class="service">
-                  <h3>
+                  <span class="service__num">03</span>
+                  <h4>
                     <span data-l="en">Digital marketing plan</span>
                     <span data-l="es">Plan de marketing digital</span>
                     <span data-l="de">Digitaler Marketingplan</span>
-                  </h3>
-                  <p data-l="en">A clear plan to grow online, backed by data and priorities.</p>
-                  <p data-l="es">Un plan claro para crecer online, con datos y prioridades.</p>
-                  <p data-l="de">Ein klarer Plan für Ihr Wachstum online – mit Daten und Prioritäten.</p>
-                  <ul class="service__list" data-l="en">
-                    <li>Website, SEO and social media audit</li>
-                    <li>Competitor analysis and SWOT</li>
-                    <li>SMART goals, action plan and KPIs</li>
-                  </ul>
+                  </h4>
+                  <p class="service__desc" data-l="en">A clear plan to grow online, backed by data and priorities.</p>
+                  <p class="service__desc" data-l="es">Un plan claro para crecer online, con datos y prioridades.</p>
+                  <p class="service__desc" data-l="de">
+                    Ein klarer Plan für Ihr Wachstum online – mit Daten und Prioritäten.
+                  </p>
                   <ul class="service__list" data-l="es">
                     <li>Auditoría de web, SEO y redes</li>
                     <li>Competencia y DAFO</li>
                     <li>Objetivos SMART, plan de acción y KPIs</li>
+                  </ul>
+                  <ul class="service__list" data-l="en">
+                    <li>Website, SEO and social media audit</li>
+                    <li>Competitor analysis and SWOT</li>
+                    <li>SMART goals, action plan and KPIs</li>
                   </ul>
                   <ul class="service__list" data-l="de">
                     <li>Analyse von Website, SEO und Social Media</li>
                     <li>Wettbewerbsanalyse und SWOT</li>
                     <li>SMART-Ziele, Maßnahmenplan und KPIs</li>
                   </ul>
+                  <p class="service__ideal">
+                    <strong>
+                      <span data-l="en">Ideal for</span>
+                      <span data-l="es">Ideal para</span>
+                      <span data-l="de">Ideal für</span>
+                    </strong>
+                    <span data-l="en">Businesses that want to grow with data, not guesswork.</span>
+                    <span data-l="es">Negocios que quieren crecer con datos, no a ciegas.</span>
+                    <span data-l="de">Unternehmen, die datenbasiert statt aus dem Bauch heraus wachsen wollen.</span>
+                  </p>
                   <p class="service__example">
                     <span data-l="en">See:</span>
                     <span data-l="es">Ejemplo:</span>
                     <span data-l="de">Beispiel:</span>
-                    <a href="#demya-title">DEMYA</a>
+                    <a href="#demya">DEMYA</a>
                   </p>
                 </li>
               </ul>
-              <div class="actions offer__actions">
-                <a class="btn" href="#contact" data-motivo="Proyecto freelance">
-                  <span data-l="en">Tell me about your project</span>
-                  <span data-l="es">Cuéntame tu proyecto</span>
-                  <span data-l="de">Erzählen Sie mir von Ihrem Projekt</span>
-                </a>
+
+              <!-- Cómo trabajo: cuatro pasos sencillos -->
+              <div class="process">
+                <h4 class="process__title">
+                  <span data-l="en">How I work</span>
+                  <span data-l="es">Cómo trabajo</span>
+                  <span data-l="de">So arbeite ich</span>
+                </h4>
+                <ol class="process__steps">
+                  <li>
+                    <span class="process__num">01</span>
+                    <strong>
+                      <span data-l="en">A 15-minute coffee</span>
+                      <span data-l="es">Café de 15 minutos</span>
+                      <span data-l="de">15 Minuten Kaffee</span>
+                    </strong>
+                    <p data-l="en">You tell me your idea and we see if we're a good fit.</p>
+                    <p data-l="es">Me cuentas tu idea y vemos si encajamos.</p>
+                    <p data-l="de">Sie erzählen mir von Ihrer Idee und wir sehen, ob es passt.</p>
+                  </li>
+                  <li>
+                    <span class="process__num">02</span>
+                    <strong>
+                      <span data-l="en">A clear proposal</span>
+                      <span data-l="es">Propuesta clara</span>
+                      <span data-l="de">Klares Angebot</span>
+                    </strong>
+                    <p data-l="en">Scope, timeline and price in writing, with no surprises.</p>
+                    <p data-l="es">Alcance, plazos y precio por escrito, sin sorpresas.</p>
+                    <p data-l="de">Umfang, Zeitplan und Preis schriftlich – ohne Überraschungen.</p>
+                  </li>
+                  <li>
+                    <span class="process__num">03</span>
+                    <strong>
+                      <span data-l="en">Design &amp; build</span>
+                      <span data-l="es">Diseño y desarrollo</span>
+                      <span data-l="de">Design &amp; Umsetzung</span>
+                    </strong>
+                    <p data-l="en">I share progress and we fine-tune it together.</p>
+                    <p data-l="es">Te enseño avances y lo ajustamos juntos.</p>
+                    <p data-l="de">Ich zeige Zwischenstände und wir passen gemeinsam an.</p>
+                  </li>
+                  <li>
+                    <span class="process__num">04</span>
+                    <strong>
+                      <span data-l="en">Launch</span>
+                      <span data-l="es">Entrega</span>
+                      <span data-l="de">Übergabe</span>
+                    </strong>
+                    <p data-l="en">Your site goes live and I show you how to look after it.</p>
+                    <p data-l="es">Tu web publicada y te explico cómo mantenerla.</p>
+                    <p data-l="de">Ihre Website geht online und ich zeige Ihnen, wie Sie sie pflegen.</p>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Llamada a la acción final -->
+              <div class="cta-band">
+                <p>
+                  <span data-l="en">Have a project in mind? Tell me about it and I'll suggest the next steps.</span>
+                  <span data-l="es">¿Tienes un proyecto en mente? Cuéntamelo y te propongo los siguientes pasos.</span>
+                  <span data-l="de">
+                    Sie haben ein Projekt im Kopf? Erzählen Sie mir davon – ich schlage Ihnen die nächsten Schritte vor.
+                  </span>
+                </p>
+                <div class="actions">
+                  <a class="btn" href="#contact" data-motivo="Proyecto freelance">
+                    <span data-l="en">Tell me about your project</span>
+                    <span data-l="es">Cuéntame tu proyecto</span>
+                    <span data-l="de">Erzählen Sie mir von Ihrem Projekt</span>
+                  </a>
+                  <a
+                    class="btn btn--ghost"
+                    href="https://cal.com/bymarta/virtual-coffee-with-marta"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span data-l="en">Book a virtual coffee · 15 min</span>
+                    <span data-l="es">Reserva un café virtual · 15 min</span>
+                    <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

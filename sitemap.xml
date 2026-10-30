@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ByMarta · mapa del sitio para buscadores (con las versiones por idioma de la portada) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bymarta-web.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/?lang=de</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/proyectos/plan-marketing-demya/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+</urlset>
