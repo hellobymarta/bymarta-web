@@ -34,6 +34,20 @@ botonesIdioma.forEach(function (boton) {
     } catch (error) {
       // Si no se puede guardar, la web sigue funcionando igual
     }
+
+    // La dirección del navegador cambia a ?lang=xx (sin recargar), para que
+    // al copiar el enlace se comparta la web en el idioma que se está viendo
+    try {
+      const url = new URL(window.location.href);
+      if (boton.dataset.setLang === "es") {
+        url.searchParams.delete("lang");
+      } else {
+        url.searchParams.set("lang", boton.dataset.setLang);
+      }
+      history.replaceState(null, "", url);
+    } catch (error) {
+      // En entornos donde no se puede cambiar la dirección, no pasa nada
+    }
   });
 });
 

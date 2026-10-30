@@ -11,7 +11,7 @@
   var IDIOMAS = ["es", "en", "de"];
   var idioma = "es";
 
-  // Si la persona ya eligió un idioma en otra visita, se respeta
+  // 1) Si la persona ya eligió un idioma en otra visita, se respeta
   try {
     var guardado = localStorage.getItem("bymarta-lang");
     if (IDIOMAS.indexOf(guardado) !== -1) {
@@ -19,6 +19,13 @@
     }
   } catch (error) {
     // Sin acceso a localStorage (modo privado): se queda en español
+  }
+
+  // 2) Un enlace con ?lang=en o ?lang=de manda sobre todo lo anterior.
+  //    Así se puede enviar a una empresa la web directamente en su idioma.
+  var parametro = new URLSearchParams(window.location.search).get("lang");
+  if (IDIOMAS.indexOf(parametro) !== -1) {
+    idioma = parametro;
   }
 
   document.documentElement.setAttribute("data-lang", idioma);
