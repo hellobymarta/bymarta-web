@@ -5,6 +5,7 @@
    2. Menú móvil (abrir / cerrar)
    3. Carrusel de capturas de cada proyecto
    4. Efecto de scroll en "Sobre mí": los bloques suben al aparecer
+   5. Formulario de contacto (idioma, traducciones y mensaje de gracias)
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
@@ -184,4 +185,48 @@ if ("IntersectionObserver" in window && !sinMovimiento) {
   bloques.forEach(function (bloque) {
     bloque.classList.add("is-visible");
   });
+}
+
+/* 5. FORMULARIO DE CONTACTO
+   a) Traduce las opciones del desplegable al idioma activo.
+   b) Antes de enviar, guarda el idioma en un campo oculto y prepara la vuelta a esta misma web.
+   c) Al volver de FormSubmit con ?enviado=1 se muestra el mensaje de gracias. */
+const formulario = document.getElementById("contact-form");
+
+if (formulario) {
+  const campoIdioma = document.getElementById("form-idioma");
+  const campoVuelta = document.getElementById("form-next");
+  const gracias = document.getElementById("form-thanks");
+
+  function traducirFormulario() {
+    const idioma = root.getAttribute("data-lang") || "es";
+    campoIdioma.value = idioma;
+    formulario.querySelectorAll("option").forEach(function (opcion) {
+      opcion.textContent = opcion.dataset["text" + idioma.charAt(0).toUpperCase() + idioma.slice(1)];
+    });
+  }
+
+  botonesIdioma.forEach(function (boton) {
+    boton.addEventListener("click", traducirFormulario);
+  });
+  traducirFormulario();
+
+  formulario.addEventListener("submit", function () {
+    const idioma = root.getAttribute("data-lang") || "es";
+    campoIdioma.value = idioma;
+    campoVuelta.value = window.location.origin + window.location.pathname + "?enviado=1&lang=" + idioma + "#contact";
+  });
+
+  if (new URLSearchParams(window.location.search).get("enviado") === "1") {
+    formulario.hidden = true;
+    gracias.hidden = false;
+    // Se limpia ?enviado=1 de la dirección para que no reaparezca al recargar
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("enviado");
+      history.replaceState(null, "", url);
+    } catch (error) {
+      // Sin cambios en la dirección, no pasa nada
+    }
+  }
 }

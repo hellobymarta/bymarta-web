@@ -930,25 +930,61 @@
                 <div class="carousel">
                   <ul class="carousel__track">
                     <li class="carousel__slide">
-                      <img src="img/dm-inicio.webp" width="1440" height="900" alt="Cover of the DEMYA digital marketing plan: navy background, title and key figures for October 2026" loading="lazy" />
+                      <img
+                        src="img/dm-inicio.webp"
+                        width="1440"
+                        height="900"
+                        alt="Cover of the DEMYA digital marketing plan: navy background, title and key figures for October 2026"
+                        loading="lazy"
+                      />
                     </li>
                     <li class="carousel__slide">
-                      <img src="img/dm-capturas.webp" width="1440" height="900" alt="Annotated screenshot of the DEMYA website with numbered gold frames and enlarged details" loading="lazy" />
+                      <img
+                        src="img/dm-capturas.webp"
+                        width="1440"
+                        height="900"
+                        alt="Annotated screenshot of the DEMYA website with numbered gold frames and enlarged details"
+                        loading="lazy"
+                      />
                     </li>
                     <li class="carousel__slide">
-                      <img src="img/dm-competencia.webp" width="1440" height="900" alt="Competitor analysis with annotated screenshots of Dr. Andrés Gómez’s website" loading="lazy" />
+                      <img
+                        src="img/dm-competencia.webp"
+                        width="1440"
+                        height="900"
+                        alt="Competitor analysis with annotated screenshots of Dr. Andrés Gómez’s website"
+                        loading="lazy"
+                      />
                     </li>
                     <li class="carousel__slide">
-                      <img src="img/dm-dafo.webp" width="1440" height="900" alt="SWOT analysis chapter with the fixed table of contents on the left" loading="lazy" />
+                      <img
+                        src="img/dm-dafo.webp"
+                        width="1440"
+                        height="900"
+                        alt="SWOT analysis chapter with the fixed table of contents on the left"
+                        loading="lazy"
+                      />
                     </li>
                     <li class="carousel__slide">
-                      <img src="img/dm-datos.webp" width="1440" height="900" alt="October 2026 update: Instagram followers bar chart and competitor comparison table" loading="lazy" />
+                      <img
+                        src="img/dm-datos.webp"
+                        width="1440"
+                        height="900"
+                        alt="October 2026 update: Instagram followers bar chart and competitor comparison table"
+                        loading="lazy"
+                      />
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="phone">
-                <img src="img/dm-movil.webp" width="600" height="1298" alt="The DEMYA marketing plan on a phone" loading="lazy" />
+                <img
+                  src="img/dm-movil.webp"
+                  width="600"
+                  height="1298"
+                  alt="The DEMYA marketing plan on a phone"
+                  loading="lazy"
+                />
               </div>
               <div class="carousel__controls">
                 <div class="carousel__arrows">
@@ -980,7 +1016,9 @@
                   <strong>16</strong>
                   <span data-l="en">chapters, from situation analysis to KPIs, with a fixed table of contents</span>
                   <span data-l="es">capítulos, del análisis de situación a los KPIs, con índice fijo</span>
-                  <span data-l="de">Kapitel, von der Situationsanalyse bis zu den KPIs, mit festem Inhaltsverzeichnis</span>
+                  <span data-l="de">
+                    Kapitel, von der Situationsanalyse bis zu den KPIs, mit festem Inhaltsverzeichnis
+                  </span>
                 </li>
                 <li>
                   <strong data-l="en">Audit</strong>
@@ -1276,7 +1314,8 @@
       </section>
 
       <!-- ===== CONTACTO =====
-         Panel de cierre: mensaje y botones a la izquierda, enlaces en filas a la derecha. -->
+           Panel de cierre: a la izquierda el mensaje, los accesos directos (WhatsApp y email)
+           y los enlaces; a la derecha un formulario corto que llega a mi correo (FormSubmit). -->
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="wrap">
           <div class="contact__panel">
@@ -1303,70 +1342,222 @@
                 Ich suche ein Praktikum oder eine erste Stelle in der Webentwicklung oder im digitalen Marketing, in
                 einer Agentur oder bei einer Marke mit Persönlichkeit. Auch für Freelance-Projekte bin ich offen.
               </p>
-              <div class="actions">
-                <a class="btn" href="mailto:martaalarcon22@icloud.com">
-                  <span data-l="en">Email me</span>
-                  <span data-l="es">Escríbeme</span>
-                  <span data-l="de">Schreiben Sie mir</span>
-                </a>
+
+              <!-- Accesos directos: el número de WhatsApp solo va dentro del enlace, no se muestra como texto -->
+              <div class="actions contact__quick">
                 <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-en.pdf"
-                  target="_blank"
-                  rel="noopener"
-                  data-l="en"
-                >
-                  Download CV
-                </a>
-                <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-es.pdf"
-                  target="_blank"
-                  rel="noopener"
+                  class="btn btn--whatsapp"
                   data-l="es"
-                >
-                  Descargar CV
-                </a>
-                <a
-                  class="btn btn--ghost"
-                  href="cv/marta-rodriguez-cv-de.pdf"
+                  href="https://wa.me/34608520361?text=Hola%20Marta%2C%20he%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
                   target="_blank"
                   rel="noopener"
-                  data-l="de"
                 >
-                  Lebenslauf herunterladen
+                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  WhatsApp
+                </a>
+                <a
+                  class="btn btn--whatsapp"
+                  data-l="en"
+                  href="https://wa.me/34608520361?text=Hi%20Marta%2C%20I%27ve%20seen%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  WhatsApp
+                </a>
+                <a
+                  class="btn btn--whatsapp"
+                  data-l="de"
+                  href="https://wa.me/34608520361?text=Hallo%20Marta%2C%20ich%20habe%20Ihr%20Portfolio%20gesehen%20und%20w%C3%BCrde%20gern%20mit%20Ihnen%20sprechen."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  WhatsApp
+                </a>
+                <a class="btn btn--ghost" href="mailto:martaalarcon22@icloud.com">
+                  <span data-l="en">Email me</span>
+                  <span data-l="es">Escríbeme un email</span>
+                  <span data-l="de">E-Mail schreiben</span>
                 </a>
               </div>
+
+              <ul class="contact__list">
+                <li>
+                  <span class="eyebrow">Email</span>
+                  <a id="email" href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
+                </li>
+                <li>
+                  <span class="eyebrow">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">
+                    in/rodriguezbymarta
+                  </a>
+                </li>
+                <li>
+                  <span class="eyebrow">GitHub</span>
+                  <a href="https://github.com/hellobymarta" target="_blank" rel="noopener">hellobymarta</a>
+                </li>
+                <li>
+                  <span class="eyebrow">
+                    <span data-l="en">CV</span>
+                    <span data-l="es">CV</span>
+                    <span data-l="de">Lebenslauf</span>
+                  </span>
+                  <span class="contact__cv">
+                    <a href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener">Español</a>
+                    <a href="cv/marta-rodriguez-cv-en.pdf" target="_blank" rel="noopener">English</a>
+                    <a href="cv/marta-rodriguez-cv-de.pdf" target="_blank" rel="noopener">Deutsch</a>
+                  </span>
+                </li>
+              </ul>
             </div>
 
-            <ul class="contact__list">
-              <li>
-                <span class="eyebrow">Email</span>
-                <a id="email" href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
-              </li>
-              <li>
-                <span class="eyebrow">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">
-                  in/rodriguezbymarta
-                </a>
-              </li>
-              <li>
-                <span class="eyebrow">GitHub</span>
-                <a href="https://github.com/hellobymarta" target="_blank" rel="noopener">hellobymarta</a>
-              </li>
-              <li>
-                <span class="eyebrow">
-                  <span data-l="en">CV</span>
-                  <span data-l="es">CV</span>
-                  <span data-l="de">Lebenslauf</span>
-                </span>
-                <span class="contact__cv">
-                  <a href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener">Español</a>
-                  <a href="cv/marta-rodriguez-cv-en.pdf" target="_blank" rel="noopener">English</a>
-                  <a href="cv/marta-rodriguez-cv-de.pdf" target="_blank" rel="noopener">Deutsch</a>
-                </span>
-              </li>
-            </ul>
+            <!-- Formulario: FormSubmit lo reenvía a mi correo. El primer envío manda un email de activación. -->
+            <div class="contact__form-wrap">
+              <form
+                class="contact-form"
+                id="contact-form"
+                action="https://formsubmit.co/martaalarcon22@icloud.com"
+                method="POST"
+              >
+                <p class="contact-form__title">
+                  <span data-l="en">Or leave me a message</span>
+                  <span data-l="es">O déjame un mensaje</span>
+                  <span data-l="de">Oder schreiben Sie mir hier</span>
+                </p>
+
+                <!-- Campos ocultos de configuración de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio ByMarta" />
+                <input type="hidden" name="_template" value="table" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://hellobymarta.github.io/bymarta-web/?enviado=1#contact"
+                  id="form-next"
+                />
+                <input type="hidden" name="idioma" value="es" id="form-idioma" />
+                <!-- Campo trampa contra spam: las personas no lo ven -->
+                <input
+                  type="text"
+                  name="_honey"
+                  class="contact-form__honey"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+
+                <div class="field">
+                  <label for="form-nombre">
+                    <span data-l="en">Name</span>
+                    <span data-l="es">Nombre</span>
+                    <span data-l="de">Name</span>
+                  </label>
+                  <input id="form-nombre" name="nombre" type="text" autocomplete="name" required />
+                </div>
+                <div class="field">
+                  <label for="form-email">
+                    <span data-l="en">Email</span>
+                    <span data-l="es">Email</span>
+                    <span data-l="de">E-Mail</span>
+                  </label>
+                  <input id="form-email" name="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="field">
+                  <label for="form-motivo">
+                    <span data-l="en">What is it about?</span>
+                    <span data-l="es">¿Sobre qué es?</span>
+                    <span data-l="de">Worum geht es?</span>
+                  </label>
+                  <select id="form-motivo" name="motivo">
+                    <option
+                      value="Vacante / prácticas"
+                      data-text-en="A job or internship"
+                      data-text-es="Una vacante o prácticas"
+                      data-text-de="Eine Stelle oder ein Praktikum"
+                    >
+                      Una vacante o prácticas
+                    </option>
+                    <option
+                      value="Proyecto freelance"
+                      data-text-en="A freelance project"
+                      data-text-es="Un proyecto freelance"
+                      data-text-de="Ein Freelance-Projekt"
+                    >
+                      Un proyecto freelance
+                    </option>
+                    <option
+                      value="Otro"
+                      data-text-en="Something else"
+                      data-text-es="Otra cosa"
+                      data-text-de="Etwas anderes"
+                    >
+                      Otra cosa
+                    </option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="form-mensaje">
+                    <span data-l="en">Message</span>
+                    <span data-l="es">Mensaje</span>
+                    <span data-l="de">Nachricht</span>
+                  </label>
+                  <textarea id="form-mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <div class="field field--check">
+                  <input id="form-privacidad" name="privacidad" type="checkbox" value="aceptada" required />
+                  <label for="form-privacidad">
+                    <span data-l="en">I agree that my details are used only to reply to this message.</span>
+                    <span data-l="es">Acepto que mis datos se usen solo para responder a este mensaje.</span>
+                    <span data-l="de">
+                      Ich bin einverstanden, dass meine Daten nur zur Beantwortung dieser Nachricht verwendet werden.
+                    </span>
+                  </label>
+                </div>
+                <button class="btn contact-form__send" type="submit">
+                  <span data-l="en">Send message</span>
+                  <span data-l="es">Enviar mensaje</span>
+                  <span data-l="de">Nachricht senden</span>
+                </button>
+              </form>
+
+              <!-- Se muestra al volver de FormSubmit (?enviado=1) -->
+              <div class="contact-form__thanks" id="form-thanks" role="status" hidden>
+                <p class="contact-form__title">
+                  <span data-l="en">Thank you!</span>
+                  <span data-l="es">¡Gracias!</span>
+                  <span data-l="de">Vielen Dank!</span>
+                </p>
+                <p>
+                  <span data-l="en">Your message has reached me. I'll get back to you as soon as I can.</span>
+                  <span data-l="es">Tu mensaje me ha llegado. Te responderé lo antes posible.</span>
+                  <span data-l="de">Ihre Nachricht ist bei mir angekommen. Ich melde mich so bald wie möglich.</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

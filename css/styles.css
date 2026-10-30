@@ -183,6 +183,11 @@ p {
   color: var(--taupe);
 }
 
+/* Los elementos con el atributo hidden se ocultan siempre, aunque tengan display propio */
+[hidden] {
+  display: none !important;
+}
+
 /* Texto solo para lectores de pantalla */
 .sr-only {
   position: absolute;
@@ -1444,20 +1449,21 @@ section {
 }
 
 /* 11. CONTACTO Y PIE
-   Panel de cierre con fondo suave: mensaje a la izquierda y enlaces en filas a la derecha. */
+   Panel de cierre con fondo suave: mensaje, accesos directos y enlaces a la izquierda;
+   formulario corto a la derecha. */
 .contact__panel {
   display: grid;
   grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
-  padding: clamp(2rem, 6vw, 4.5rem);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+  padding: clamp(1.5rem, 5vw, 4rem);
   border-radius: 14px;
   background: var(--chip);
 }
 
 .contact h2 {
   margin-top: 0.75rem;
-  font-size: var(--step-4);
+  font-size: var(--step-3);
 }
 
 .contact .intro {
@@ -1472,8 +1478,15 @@ section {
   margin-top: 2rem;
 }
 
+/* Botón de WhatsApp con icono de bocadillo */
+.btn__icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
 .contact__list {
-  margin: 0;
+  margin: 2.5rem 0 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--line);
@@ -1484,13 +1497,13 @@ section {
   grid-template-columns: 110px minmax(0, 1fr);
   gap: 1rem;
   align-items: baseline;
-  padding-block: 1.1rem;
+  padding-block: 1rem;
   border-bottom: 1px solid var(--line);
 }
 
 .contact__list a {
   font-family: var(--f-display);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   overflow-wrap: anywhere;
   text-decoration: none;
 }
@@ -1503,6 +1516,108 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 1.25rem;
+}
+
+/* Formulario: tarjeta clara dentro del panel */
+.contact__form-wrap {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 24px 50px -36px rgba(60, 45, 30, 0.45);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.contact-form__title {
+  font-family: "Bodoni Moda", Didot, "Bodoni 72", Georgia, serif;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  font-style: italic;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label {
+  color: var(--taupe);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.1rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-bottom-color: var(--teal);
+  outline: none;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  box-shadow: 0 2px 0 0 var(--teal);
+}
+
+/* Casilla de consentimiento: casilla + texto en línea */
+.field--check {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.field--check input {
+  width: 18px;
+  min-height: 18px;
+  margin-top: 0.2rem;
+  accent-color: var(--ink);
+}
+
+.field--check label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.contact-form__send {
+  justify-self: start;
+  margin-top: 0.25rem;
+}
+
+/* Campo trampa anti-spam: fuera de la vista */
+.contact-form__honey {
+  position: absolute;
+  left: -9999px;
+}
+
+.contact-form__thanks {
+  display: grid;
+  gap: 0.75rem;
 }
 
 @media (max-width: 900px) {
