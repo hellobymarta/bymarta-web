@@ -6,6 +6,7 @@
    3. Carrusel de capturas de cada proyecto
    4. Efecto de scroll en "Sobre mí": los bloques suben al aparecer
    5. Formulario de contacto (idioma, traducciones y mensaje de gracias)
+   6. Pestañas de "Cómo puedo ayudarte"
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
@@ -230,3 +231,52 @@ if (formulario) {
     }
   }
 }
+
+/* 6. PESTAÑAS DE "CÓMO PUEDO AYUDARTE"
+   Una variable guarda la pestaña activa; al cambiarla se actualizan aria-selected
+   y la clase .is-active del panel. Se puede navegar con las flechas del teclado. */
+document.querySelectorAll("[data-tabs]").forEach(function (contenedor) {
+  const pestanas = Array.from(contenedor.querySelectorAll('[role="tab"]'));
+  const paneles = pestanas.map(function (pestana) {
+    return document.getElementById(pestana.getAttribute("aria-controls"));
+  });
+  let activa = 0;
+
+  function mostrar(indice, conFoco) {
+    activa = indice;
+    pestanas.forEach(function (pestana, i) {
+      const seleccionada = i === activa;
+      pestana.setAttribute("aria-selected", String(seleccionada));
+      pestana.tabIndex = seleccionada ? 0 : -1;
+      paneles[i].classList.toggle("is-active", seleccionada);
+    });
+    if (conFoco) {
+      pestanas[activa].focus();
+    }
+  }
+
+  pestanas.forEach(function (pestana, i) {
+    pestana.addEventListener("click", function () {
+      mostrar(i, false);
+    });
+    pestana.addEventListener("keydown", function (evento) {
+      if (evento.key === "ArrowRight") {
+        mostrar((activa + 1) % pestanas.length, true);
+      } else if (evento.key === "ArrowLeft") {
+        mostrar((activa - 1 + pestanas.length) % pestanas.length, true);
+      }
+    });
+  });
+
+  mostrar(0, false);
+});
+
+// Botones con data-motivo: al ir al formulario, dejan elegido el motivo (p. ej. "Proyecto freelance")
+document.querySelectorAll("[data-motivo]").forEach(function (enlace) {
+  enlace.addEventListener("click", function () {
+    const desplegable = document.getElementById("form-motivo");
+    if (desplegable) {
+      desplegable.value = enlace.dataset.motivo;
+    }
+  });
+});

@@ -76,6 +76,13 @@
               </a>
             </li>
             <li>
+              <a href="#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
               <a href="#about">
                 <span data-l="en">About</span>
                 <span data-l="es">Sobre mí</span>
@@ -1056,19 +1063,21 @@
         </article>
       </section>
 
-      <!-- ===== QUÉ HAGO ===== -->
-      <section class="section" id="what-i-do" aria-labelledby="skills-title">
+      <!-- ===== CÓMO PUEDO AYUDARTE =====
+           Dos pestañas: "Para empresas" (lo que aporto a un equipo) y "Para marcas" (servicios freelance).
+           Las pestañas funcionan con main.js (módulo 6); sin JavaScript se ven las dos seguidas. -->
+      <section class="section" id="services" aria-labelledby="services-title">
         <div class="wrap">
           <header class="section-head">
             <p class="eyebrow">
-              <span data-l="en">What I do</span>
-              <span data-l="es">Qué hago</span>
-              <span data-l="de">Was ich mache</span>
+              <span data-l="en">How I can help</span>
+              <span data-l="es">Cómo puedo ayudarte</span>
+              <span data-l="de">Wie ich helfen kann</span>
             </p>
-            <h2 id="skills-title">
-              <span data-l="en">Between code and brand</span>
-              <span data-l="es">Entre el código y la marca</span>
-              <span data-l="de">Zwischen Code und Marke</span>
+            <h2 id="services-title">
+              <span data-l="en">For your team or for your brand</span>
+              <span data-l="es">Para tu equipo o para tu marca</span>
+              <span data-l="de">Für Ihr Team oder Ihre Marke</span>
             </h2>
             <svg class="stroke" viewBox="0 0 120 14" aria-hidden="true">
               <path
@@ -1090,106 +1099,272 @@
             </svg>
             <p class="intro">
               <span data-l="en">
-                Three skill sets that work best together: building the site, getting it seen and giving it a
-                recognisable look.
+                If you're hiring, here's what I bring to a team. If you have a brand, here's what I can do for it.
               </span>
               <span data-l="es">
-                Tres áreas que funcionan mejor juntas: construir la web, conseguir que se vea y darle una imagen
-                reconocible.
+                Si buscas a alguien para tu equipo, esto es lo que aporto. Si tienes una marca, esto es lo que puedo
+                hacer por ella.
               </span>
               <span data-l="de">
-                Drei Bereiche, die zusammen am stärksten sind: die Website entwickeln, sie sichtbar machen und ihr ein
-                unverwechselbares Gesicht geben.
+                Wenn Sie jemanden für Ihr Team suchen, sehen Sie hier, was ich mitbringe. Wenn Sie eine Marke haben,
+                sehen Sie hier, was ich für sie tun kann.
               </span>
             </p>
           </header>
 
-          <div class="skills">
-            <div class="skill">
-              <h3>
-                <span data-l="en">Web development</span>
-                <span data-l="es">Desarrollo web</span>
-                <span data-l="de">Webentwicklung</span>
-              </h3>
-              <p data-l="en">
-                Fast, accessible custom websites, from a single landing page to an app with its own database.
-              </p>
-              <p data-l="es">
-                Webs a medida, rápidas y accesibles, desde una landing hasta una aplicación con su base de datos.
-              </p>
-              <p data-l="de">
-                Maßgeschneiderte, schnelle und barrierefreie Websites, von der Landingpage bis zur App mit eigener
-                Datenbank.
-              </p>
-              <ul>
-                <li>HTML5, CSS3, SASS, JavaScript</li>
-                <li>React, TypeScript, Next.js, Vite</li>
-                <li>Node, Express, MongoDB</li>
-                <li>Git, GitHub, Netlify, Vercel</li>
-              </ul>
+          <div class="tabs" data-tabs>
+            <div class="tabs__list" role="tablist" aria-label="Services">
+              <button
+                class="tabs__tab"
+                type="button"
+                role="tab"
+                id="tab-companies"
+                aria-controls="panel-companies"
+                aria-selected="true"
+              >
+                <span data-l="en">For companies</span>
+                <span data-l="es">Para empresas</span>
+                <span data-l="de">Für Unternehmen</span>
+              </button>
+              <button
+                class="tabs__tab"
+                type="button"
+                role="tab"
+                id="tab-brands"
+                aria-controls="panel-brands"
+                aria-selected="false"
+                tabindex="-1"
+              >
+                <span data-l="en">For brands · freelance</span>
+                <span data-l="es">Para marcas · freelance</span>
+                <span data-l="de">Für Marken · Freelance</span>
+              </button>
             </div>
-            <div class="skill">
-              <h3>
-                <span data-l="en">Digital marketing</span>
-                <span data-l="es">Marketing digital</span>
-                <span data-l="de">Digitales Marketing</span>
-              </h3>
-              <p data-l="en">Strategy, content and social media that help a brand get seen and found.</p>
-              <p data-l="es">Estrategia, contenidos y redes para que una marca se vea y se encuentre.</p>
-              <p data-l="de">Strategie, Content und Social Media, damit eine Marke gesehen und gefunden wird.</p>
-              <ul data-l="en">
-                <li>Social media planning and ads</li>
-                <li>Email marketing and content creation</li>
-                <li>SEO and SEM fundamentals</li>
-                <li>WordPress and Google Analytics 4</li>
+
+            <!-- Pestaña 1: para empresas -->
+            <div class="tabs__panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies">
+              <p class="tabs__lead">
+                <span data-l="en">
+                  I'm looking for a 3–6 month internship or a first role that brings together web development, digital
+                  marketing and design.
+                </span>
+                <span data-l="es">
+                  Busco prácticas de 3 a 6 meses o un primer puesto donde unir desarrollo web, marketing digital y
+                  diseño.
+                </span>
+                <span data-l="de">
+                  Ich suche ein Praktikum von 3–6 Monaten oder eine erste Stelle, in der sich Webentwicklung, digitales
+                  Marketing und Design verbinden.
+                </span>
+              </p>
+              <ul class="highlights offer__bring">
+                <li>
+                  <strong data-l="en">Front-end development</strong>
+                  <strong data-l="es">Desarrollo front-end</strong>
+                  <strong data-l="de">Frontend-Entwicklung</strong>
+                  <span data-l="en">
+                    HTML, CSS, JavaScript, React and TypeScript, with a grounding in Node, Express and MongoDB.
+                  </span>
+                  <span data-l="es">
+                    HTML, CSS, JavaScript, React y TypeScript, con base en Node, Express y MongoDB.
+                  </span>
+                  <span data-l="de">
+                    HTML, CSS, JavaScript, React und TypeScript, dazu Grundlagen in Node, Express und MongoDB.
+                  </span>
+                </li>
+                <li>
+                  <strong data-l="en">A marketing mindset</strong>
+                  <strong data-l="es">Mirada de marketing</strong>
+                  <strong data-l="de">Marketing-Denken</strong>
+                  <span data-l="en">Websites built to be found and to convert: SEO, analytics and social media.</span>
+                  <span data-l="es">
+                    Webs pensadas para que se encuentren y conviertan: SEO, analítica y redes sociales.
+                  </span>
+                  <span data-l="de">
+                    Websites, die gefunden werden und überzeugen: SEO, Analytics und Social Media.
+                  </span>
+                </li>
+                <li>
+                  <strong data-l="en">An eye for design</strong>
+                  <strong data-l="es">Ojo para el diseño</strong>
+                  <strong data-l="de">Gespür für Design</strong>
+                  <span data-l="en">Visual identity, art direction and Figma, with care for every detail.</span>
+                  <span data-l="es">Identidad visual, dirección de arte y Figma, cuidando cada detalle.</span>
+                  <span data-l="de">Visuelle Identität, Art Direction und Figma – mit Liebe zum Detail.</span>
+                </li>
+                <li>
+                  <strong data-l="en">Languages &amp; teamwork</strong>
+                  <strong data-l="es">Idiomas y equipo</strong>
+                  <strong data-l="de">Sprachen &amp; Team</strong>
+                  <span data-l="en">Native Spanish, fluent German and English, plus five years of leading groups.</span>
+                  <span data-l="es">Español nativo, alemán muy alto e inglés, y cinco años coordinando grupos.</span>
+                  <span data-l="de">
+                    Spanisch als Muttersprache, sehr gutes Deutsch und Englisch sowie fünf Jahre Erfahrung in der
+                    Gruppenleitung.
+                  </span>
+                </li>
               </ul>
-              <ul data-l="es">
-                <li>Plan de redes sociales y anuncios</li>
-                <li>Email marketing y contenidos</li>
-                <li>Fundamentos de SEO y SEM</li>
-                <li>WordPress y Google Analytics 4</li>
-              </ul>
-              <ul data-l="de">
-                <li>Social-Media-Planung und Ads</li>
-                <li>E-Mail-Marketing und Content-Erstellung</li>
-                <li>Grundlagen in SEO und SEA</li>
-                <li>WordPress und Google Analytics 4</li>
-              </ul>
+              <div class="actions offer__actions">
+                <a class="btn" href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                  <span data-l="en">Book a virtual coffee · 15 min</span>
+                  <span data-l="es">Reserva un café virtual · 15 min</span>
+                  <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+                </a>
+                <a
+                  class="btn btn--ghost"
+                  href="cv/marta-rodriguez-cv-en.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  data-l="en"
+                >
+                  Download CV
+                </a>
+                <a
+                  class="btn btn--ghost"
+                  href="cv/marta-rodriguez-cv-es.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  data-l="es"
+                >
+                  Descargar CV
+                </a>
+                <a
+                  class="btn btn--ghost"
+                  href="cv/marta-rodriguez-cv-de.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  data-l="de"
+                >
+                  Lebenslauf herunterladen
+                </a>
+              </div>
             </div>
-            <div class="skill">
-              <h3>
-                <span data-l="en">Design &amp; brand</span>
-                <span data-l="es">Diseño y marca</span>
-                <span data-l="de">Design &amp; Marke</span>
-              </h3>
-              <p data-l="en">
-                The part I enjoy most: finding the tone, palette and typography that make a brand recognisable.
+
+            <!-- Pestaña 2: para marcas (freelance) -->
+            <div class="tabs__panel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands">
+              <p class="tabs__lead">
+                <span data-l="en">
+                  I work with brands that want a website with personality or a clear plan to grow online.
+                </span>
+                <span data-l="es">
+                  Trabajo con marcas que quieren una web con personalidad o un plan claro para crecer online.
+                </span>
+                <span data-l="de">
+                  Ich arbeite mit Marken, die eine Website mit Persönlichkeit oder einen klaren Plan für ihr Wachstum
+                  online möchten.
+                </span>
               </p>
-              <p data-l="es">
-                La parte que más disfruto: el tono, la paleta y la tipografía que hacen que una marca se reconozca.
-              </p>
-              <p data-l="de">
-                Der Teil, der mir am meisten Freude macht: Tonalität, Farben und Typografie, die eine Marke
-                unverwechselbar machen.
-              </p>
-              <ul data-l="en">
-                <li>Art direction for websites</li>
-                <li>Visual identity (including this logo and monogram)</li>
-                <li>Figma for web projects</li>
-                <li>Copywriting and brand voice</li>
+              <ul class="services">
+                <li class="service">
+                  <h3>
+                    <span data-l="en">A website for your brand</span>
+                    <span data-l="es">Web para tu marca</span>
+                    <span data-l="de">Eine Website für Ihre Marke</span>
+                  </h3>
+                  <p data-l="en">A custom website, from a single landing page to a multi-page site.</p>
+                  <p data-l="es">Diseño y desarrollo de una web a medida, de una landing a varias páginas.</p>
+                  <p data-l="de">Eine maßgeschneiderte Website, von der Landingpage bis zur mehrseitigen Website.</p>
+                  <ul class="service__list" data-l="en">
+                    <li>Design and copy in your brand's voice</li>
+                    <li>Mobile-friendly, fast and accessible</li>
+                    <li>Multilingual if you need it</li>
+                    <li>Contact via form or WhatsApp</li>
+                  </ul>
+                  <ul class="service__list" data-l="es">
+                    <li>Diseño y textos con el tono de tu marca</li>
+                    <li>Adaptada a móvil, rápida y accesible</li>
+                    <li>En varios idiomas si lo necesitas</li>
+                    <li>Contacto por formulario o WhatsApp</li>
+                  </ul>
+                  <ul class="service__list" data-l="de">
+                    <li>Design und Texte im Ton Ihrer Marke</li>
+                    <li>Mobil optimiert, schnell und barrierefrei</li>
+                    <li>Auf Wunsch mehrsprachig</li>
+                    <li>Kontakt per Formular oder WhatsApp</li>
+                  </ul>
+                  <p class="service__example">
+                    <span data-l="en">See:</span>
+                    <span data-l="es">Ejemplos:</span>
+                    <span data-l="de">Beispiele:</span>
+                    <a href="#casa-brava-title">Casa Brava</a>
+                    ·
+                    <a href="#gcs-title">Golden Chance Senior</a>
+                  </p>
+                </li>
+                <li class="service">
+                  <h3>
+                    <span data-l="en">Redesign &amp; improvements</span>
+                    <span data-l="es">Rediseño y mejora</span>
+                    <span data-l="de">Redesign &amp; Optimierung</span>
+                  </h3>
+                  <p data-l="en">For existing websites that no longer reflect who you are.</p>
+                  <p data-l="es">Para webs que ya existen pero no transmiten lo que eres.</p>
+                  <p data-l="de">Für bestehende Websites, die nicht mehr zeigen, wer Sie sind.</p>
+                  <ul class="service__list" data-l="en">
+                    <li>A review of speed, SEO and accessibility</li>
+                    <li>A fresh look without starting from scratch</li>
+                    <li>A clear, prioritised list of improvements</li>
+                  </ul>
+                  <ul class="service__list" data-l="es">
+                    <li>Revisión de velocidad, SEO y accesibilidad</li>
+                    <li>Nueva imagen sin empezar de cero</li>
+                    <li>Lista clara de mejoras por prioridad</li>
+                  </ul>
+                  <ul class="service__list" data-l="de">
+                    <li>Analyse von Ladezeit, SEO und Barrierefreiheit</li>
+                    <li>Ein neuer Look, ohne bei null anzufangen</li>
+                    <li>Eine klare, priorisierte Liste mit Verbesserungen</li>
+                  </ul>
+                  <p class="service__example">
+                    <span data-l="en">See:</span>
+                    <span data-l="es">Ejemplo:</span>
+                    <span data-l="de">Beispiel:</span>
+                    <a href="#demya-title">
+                      <span data-l="en">the web audit in the DEMYA plan</span>
+                      <span data-l="es">la auditoría web del plan de DEMYA</span>
+                      <span data-l="de">die Website-Analyse im DEMYA-Plan</span>
+                    </a>
+                  </p>
+                </li>
+                <li class="service">
+                  <h3>
+                    <span data-l="en">Digital marketing plan</span>
+                    <span data-l="es">Plan de marketing digital</span>
+                    <span data-l="de">Digitaler Marketingplan</span>
+                  </h3>
+                  <p data-l="en">A clear plan to grow online, backed by data and priorities.</p>
+                  <p data-l="es">Un plan claro para crecer online, con datos y prioridades.</p>
+                  <p data-l="de">Ein klarer Plan für Ihr Wachstum online – mit Daten und Prioritäten.</p>
+                  <ul class="service__list" data-l="en">
+                    <li>Website, SEO and social media audit</li>
+                    <li>Competitor analysis and SWOT</li>
+                    <li>SMART goals, action plan and KPIs</li>
+                  </ul>
+                  <ul class="service__list" data-l="es">
+                    <li>Auditoría de web, SEO y redes</li>
+                    <li>Competencia y DAFO</li>
+                    <li>Objetivos SMART, plan de acción y KPIs</li>
+                  </ul>
+                  <ul class="service__list" data-l="de">
+                    <li>Analyse von Website, SEO und Social Media</li>
+                    <li>Wettbewerbsanalyse und SWOT</li>
+                    <li>SMART-Ziele, Maßnahmenplan und KPIs</li>
+                  </ul>
+                  <p class="service__example">
+                    <span data-l="en">See:</span>
+                    <span data-l="es">Ejemplo:</span>
+                    <span data-l="de">Beispiel:</span>
+                    <a href="#demya-title">DEMYA</a>
+                  </p>
+                </li>
               </ul>
-              <ul data-l="es">
-                <li>Dirección estética de una web</li>
-                <li>Identidad visual (este logo y su monograma)</li>
-                <li>Figma para desarrollo web</li>
-                <li>Textos y voz de marca</li>
-              </ul>
-              <ul data-l="de">
-                <li>Art Direction für Websites</li>
-                <li>Visuelle Identität (z. B. dieses Logo und Monogramm)</li>
-                <li>Figma für Webprojekte</li>
-                <li>Texte und Markensprache</li>
-              </ul>
+              <div class="actions offer__actions">
+                <a class="btn" href="#contact" data-motivo="Proyecto freelance">
+                  <span data-l="en">Tell me about your project</span>
+                  <span data-l="es">Cuéntame tu proyecto</span>
+                  <span data-l="de">Erzählen Sie mir von Ihrem Projekt</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
