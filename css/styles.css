@@ -624,17 +624,26 @@ p {
   animation: write 1.6s cubic-bezier(0.6, 0.1, 0.3, 1) 0.9s both;
 }
 
-/* En modo oscuro, la firma conserva su tinta y gana un halo crema para leerse sobre el fondo */
+/* En modo oscuro: firma en crema con una sombra fina y la acuarela algo más apagada,
+   como pintada sobre papel oscuro. Así la firma se lee bien sin cambiar el fondo. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .signature__ink {
-    color: #3a2f28;
-    filter: drop-shadow(0 0 1px rgb(251 248 243 / 0.6)) drop-shadow(0 0 6px rgb(251 248 243 / 0.28));
+    color: #f4eee6;
+    filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75)) drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
+  }
+
+  :root:not([data-theme="light"]) .signature__wash {
+    filter: brightness(0.72) saturate(1.1);
   }
 }
 
 :root[data-theme="dark"] .signature__ink {
-  color: #3a2f28;
-  filter: drop-shadow(0 0 1px rgb(251 248 243 / 0.6)) drop-shadow(0 0 6px rgb(251 248 243 / 0.28));
+  color: #f4eee6;
+  filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75)) drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
+}
+
+:root[data-theme="dark"] .signature__wash {
+  filter: brightness(0.72) saturate(1.1);
 }
 
 @keyframes paint {
