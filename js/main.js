@@ -190,14 +190,18 @@ if ("IntersectionObserver" in window && !sinMovimiento) {
 
 /* 5. FORMULARIO DE CONTACTO
    a) Traduce las opciones del desplegable al idioma activo.
-   b) Antes de enviar, guarda el idioma en un campo oculto y prepara la vuelta a esta misma web.
-   c) Al volver de FormSubmit con ?enviado=1 se muestra el mensaje de gracias. */
+   b) Envía el mensaje a Web3Forms con fetch, sin salir de la página, y muestra el mensaje de gracias.
+      Si falla, muestra un aviso con el email. Sin JavaScript, el formulario se envía de forma normal
+      y Web3Forms vuelve a esta web con ?enviado=1.
+   c) Al volver con ?enviado=1 también se muestra el mensaje de gracias. */
 const formulario = document.getElementById("contact-form");
 
 if (formulario) {
   const campoIdioma = document.getElementById("form-idioma");
   const campoVuelta = document.getElementById("form-next");
   const gracias = document.getElementById("form-thanks");
+  const aviso = document.getElementById("form-error");
+  const botonEnviar = formulario.querySelector('[type="submit"]');
 
   function traducirFormulario() {
     const idioma = root.getAttribute("data-lang") || "es";
@@ -207,20 +211,54 @@ if (formulario) {
     });
   }
 
+  function mostrarGracias() {
+    formulario.hidden = true;
+    gracias.hidden = false;
+  }
+
   botonesIdioma.forEach(function (boton) {
     boton.addEventListener("click", traducirFormulario);
   });
   traducirFormulario();
 
-  formulario.addEventListener("submit", function () {
+  formulario.addEventListener("submit", function (evento) {
     const idioma = root.getAttribute("data-lang") || "es";
     campoIdioma.value = idioma;
     campoVuelta.value = window.location.origin + window.location.pathname + "?enviado=1&lang=" + idioma + "#contact";
+
+    // Si el navegador no tiene fetch, se deja el envío normal
+    if (!window.fetch) return;
+
+    evento.preventDefault();
+    aviso.hidden = true;
+    botonEnviar.disabled = true;
+
+    fetch(formulario.action, {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: new FormData(formulario),
+    })
+      .then(function (respuesta) {
+        return respuesta.json();
+      })
+      .then(function (datos) {
+        if (datos.success) {
+          formulario.reset();
+          mostrarGracias();
+        } else {
+          aviso.hidden = false;
+        }
+      })
+      .catch(function () {
+        aviso.hidden = false;
+      })
+      .finally(function () {
+        botonEnviar.disabled = false;
+      });
   });
 
   if (new URLSearchParams(window.location.search).get("enviado") === "1") {
-    formulario.hidden = true;
-    gracias.hidden = false;
+    mostrarGracias();
     // Se limpia ?enviado=1 de la dirección para que no reaparezca al recargar
     try {
       const url = new URL(window.location.href);

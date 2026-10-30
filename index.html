@@ -21,8 +21,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Marta Rodríguez · ByMarta" />
     <meta property="og:description" content="Desarrollo web y marketing digital · Portfolio" />
-    <meta property="og:url" content="https://hellobymarta.github.io/bymarta-web/" />
-    <meta property="og:image" content="https://hellobymarta.github.io/bymarta-web/img/og-imagen.jpg" />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/og-imagen.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="hello, I'm ByMarta" />
@@ -30,7 +30,7 @@
     <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:locale:alternate" content="de_DE" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://hellobymarta.github.io/bymarta-web/" />
+    <link rel="canonical" href="https://bymarta-web.vercel.app/" />
 
     <!-- Iconos -->
     <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -1490,7 +1490,7 @@
 
       <!-- ===== CONTACTO =====
            Panel de cierre: a la izquierda el mensaje, los accesos directos (WhatsApp y email)
-           y los enlaces; a la derecha un formulario corto que llega a mi correo (FormSubmit). -->
+           y los enlaces; a la derecha un formulario corto que llega a mi correo (Web3Forms). -->
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="wrap">
           <div class="contact__panel">
@@ -1627,37 +1627,33 @@
               </ul>
             </div>
 
-            <!-- Formulario: FormSubmit lo reenvía a mi correo. El primer envío manda un email de activación. -->
+            <!-- Formulario: Web3Forms lo reenvía a mi correo (la clave de acceso es pública, no es una contraseña).
+                 Con JavaScript se envía sin salir de la página; sin JavaScript, Web3Forms vuelve a esta web con ?enviado=1. -->
             <div class="contact__form-wrap">
-              <form
-                class="contact-form"
-                id="contact-form"
-                action="https://formsubmit.co/martaalarcon22@icloud.com"
-                method="POST"
-              >
+              <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <p class="contact-form__title">
                   <span data-l="en">Or leave me a message</span>
                   <span data-l="es">O déjame un mensaje</span>
                   <span data-l="de">Oder schreiben Sie mir hier</span>
                 </p>
 
-                <!-- Campos ocultos de configuración de FormSubmit -->
-                <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio ByMarta" />
-                <input type="hidden" name="_template" value="table" />
+                <!-- Campos ocultos de configuración de Web3Forms -->
+                <input type="hidden" name="access_key" value="adb3efff-8e3c-476d-a571-cebcbd44343f" />
+                <input type="hidden" name="subject" value="Nuevo mensaje desde tu portfolio ByMarta" />
+                <input type="hidden" name="from_name" value="Portfolio ByMarta" />
                 <input
                   type="hidden"
-                  name="_next"
-                  value="https://hellobymarta.github.io/bymarta-web/?enviado=1#contact"
+                  name="redirect"
+                  value="https://bymarta-web.vercel.app/?enviado=1#contact"
                   id="form-next"
                 />
                 <input type="hidden" name="idioma" value="es" id="form-idioma" />
-                <!-- Campo trampa contra spam: las personas no lo ven -->
+                <!-- Casilla trampa contra spam: las personas no la ven -->
                 <input
-                  type="text"
-                  name="_honey"
+                  type="checkbox"
+                  name="botcheck"
                   class="contact-form__honey"
                   tabindex="-1"
-                  autocomplete="off"
                   aria-hidden="true"
                 />
 
@@ -1733,9 +1729,26 @@
                   <span data-l="es">Enviar mensaje</span>
                   <span data-l="de">Nachricht senden</span>
                 </button>
+
+                <!-- Aviso si el envío falla: se ofrece escribir por email -->
+                <p class="contact-form__error" id="form-error" role="alert" hidden>
+                  <span data-l="en">
+                    Sorry, the message couldn't be sent. Please try again or write to me at
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                  </span>
+                  <span data-l="es">
+                    Vaya, el mensaje no se ha podido enviar. Inténtalo de nuevo o escríbeme a
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                  </span>
+                  <span data-l="de">
+                    Leider konnte die Nachricht nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie
+                    mir an
+                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>.
+                  </span>
+                </p>
               </form>
 
-              <!-- Se muestra al volver de FormSubmit (?enviado=1) -->
+              <!-- Se muestra tras enviar el formulario -->
               <div class="contact-form__thanks" id="form-thanks" role="status" hidden>
                 <p class="contact-form__title">
                   <span data-l="en">Thank you!</span>
