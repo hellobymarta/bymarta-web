@@ -53,6 +53,9 @@
       <span data-l="de">Zu den Projekten</span>
     </a>
 
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="progress" aria-hidden="true"><span></span></div>
+
     <!-- ===== CABECERA ===== -->
     <header class="top">
       <div class="wrap top__inner">
@@ -99,6 +102,22 @@
             <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
             <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false" lang="de">DE</button>
           </div>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="theme-btn" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="sr-only" data-l="en">Dark mode</span>
+            <span class="sr-only" data-l="es">Modo oscuro</span>
+            <span class="sr-only" data-l="de">Dunkelmodus</span>
+            <svg class="theme-btn__moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="theme-btn__sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
 
           <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
             <span></span>
@@ -169,11 +188,14 @@
               Charakter, Reisen und Projekte, die bis ins letzte Detail durchdacht sind.
             </p>
 
-            <p class="status">
-              <span class="dot" aria-hidden="true"></span>
-              <span data-l="en">Available for a 3–6 month internship</span>
-              <span data-l="es">Disponible para prácticas de 3 a 6 meses</span>
-              <span data-l="de">Verfügbar für ein Praktikum von 3–6 Monaten</span>
+            <p>
+              <a class="status" href="#contact">
+                <span class="dot" aria-hidden="true"></span>
+                <span data-l="en">Available for a 3–6 month internship</span>
+                <span data-l="es">Disponible para prácticas de 3 a 6 meses</span>
+                <span data-l="de">Verfügbar für ein Praktikum von 3–6 Monaten</span>
+                <span class="status__arrow" aria-hidden="true">→</span>
+              </a>
             </p>
 
             <div class="actions">
@@ -2137,9 +2159,89 @@
       </section>
     </main>
 
-    <!-- ===== PIE ===== -->
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
     <footer class="footer">
-      <div class="wrap footer__inner">
+      <div class="wrap footer__grid">
+        <div class="footer__brand">
+          <svg class="footer__sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span data-l="en">Web development &amp; digital marketing. Made in Cologne.</span>
+            <span data-l="es">Desarrollo web y marketing digital. Hecho en Colonia.</span>
+            <span data-l="de">Webentwicklung &amp; digitales Marketing. Gemacht in Köln.</span>
+          </p>
+        </div>
+
+        <nav class="footer__col" aria-labelledby="footer-menu">
+          <h2 class="footer__title" id="footer-menu">
+            <span data-l="en">Menu</span>
+            <span data-l="es">Menú</span>
+            <span data-l="de">Menü</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h2 class="footer__title">
+            <span data-l="en">Let's talk</span>
+            <span data-l="es">Hablemos</span>
+            <span data-l="de">Kontakt</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span data-l="en">Email</span>
+                <span data-l="es">Email</span>
+                <span data-l="de">E-Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span data-l="en">Virtual coffee</span>
+                <span data-l="es">Café virtual</span>
+                <span data-l="de">Virtueller Kaffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap footer__bottom">
         <p>© 2026 Marta Rodríguez · ByMarta</p>
         <p>
           <span data-l="en">Designed and built with HTML, CSS and JavaScript.</span>

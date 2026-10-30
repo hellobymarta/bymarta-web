@@ -1,7 +1,8 @@
 /* ==========================================================================
    ByMarta · idioma.js
-   Se carga en el <head> (sin defer) para aplicar el idioma antes de pintar
-   la página y evitar que se vea un instante en otro idioma.
+   Se carga en el <head> (sin defer) para aplicar el idioma y el tema
+   (claro u oscuro) antes de pintar la página, y evitar que se vea un
+   instante en otro idioma o con otros colores.
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
@@ -30,4 +31,16 @@
 
   document.documentElement.setAttribute("data-lang", idioma);
   document.documentElement.lang = idioma;
+})();
+
+/* Tema elegido con el botón (claro u oscuro). Si no se ha elegido, manda el sistema. */
+(function () {
+  try {
+    var tema = localStorage.getItem("bymarta-theme");
+    if (tema === "light" || tema === "dark") {
+      document.documentElement.setAttribute("data-theme", tema);
+    }
+  } catch (error) {
+    // Sin localStorage: se usa el tema del sistema
+  }
 })();

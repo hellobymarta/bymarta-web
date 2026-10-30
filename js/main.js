@@ -7,6 +7,8 @@
    4. Efecto de scroll en "Sobre mí": los bloques suben al aparecer
    5. Formulario de contacto (idioma, traducciones y mensaje de gracias)
    6. Pestañas de "Cómo puedo ayudarte"
+   7. Botón de modo claro / oscuro
+   8. Barra de progreso de lectura
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
@@ -318,3 +320,68 @@ document.querySelectorAll("[data-motivo]").forEach(function (enlace) {
     }
   });
 });
+
+/* 7. BOTÓN DE MODO CLARO / OSCURO
+   Cambia el atributo data-theme de <html> y guarda la elección.
+   Si nunca se ha pulsado, la web sigue el modo del sistema. */
+const botonTema = document.getElementById("theme-toggle");
+const sistemaOscuro = window.matchMedia("(prefers-color-scheme: dark)");
+const metaColor = document.querySelector('meta[name="theme-color"]');
+
+function temaActual() {
+  return root.getAttribute("data-theme") || (sistemaOscuro.matches ? "dark" : "light");
+}
+
+function pintarBotonTema() {
+  const oscuro = temaActual() === "dark";
+  if (botonTema) {
+    botonTema.setAttribute("aria-pressed", String(oscuro));
+  }
+  if (metaColor) {
+    metaColor.setAttribute("content", oscuro ? "#1d1a17" : "#fbf8f3");
+  }
+}
+
+if (botonTema) {
+  botonTema.addEventListener("click", function () {
+    const nuevo = temaActual() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", nuevo);
+    try {
+      localStorage.setItem("bymarta-theme", nuevo);
+    } catch (error) {
+      // Si no se puede guardar, el cambio vale solo para esta visita
+    }
+    pintarBotonTema();
+  });
+}
+
+// Si cambia el modo del sistema y no se ha elegido otro, se actualiza el botón
+sistemaOscuro.addEventListener("change", pintarBotonTema);
+pintarBotonTema();
+
+/* 8. BARRA DE PROGRESO DE LECTURA
+   Variable numérica entre 0 y 1 según lo que se ha bajado en la página. */
+const barra = document.querySelector(".progress span");
+
+if (barra) {
+  let pendiente = false;
+
+  function actualizarBarra() {
+    const recorrido = document.documentElement.scrollHeight - window.innerHeight;
+    const avance = recorrido > 0 ? Math.min(window.scrollY / recorrido, 1) : 0;
+    barra.style.transform = "scaleX(" + avance + ")";
+    pendiente = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!pendiente) {
+        pendiente = true;
+        window.requestAnimationFrame(actualizarBarra);
+      }
+    },
+    { passive: true },
+  );
+  actualizarBarra();
+}
