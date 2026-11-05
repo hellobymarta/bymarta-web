@@ -1,66 +1,31 @@
 /* ==========================================================================
    ByMarta · main.js
    Módulos de la página:
-   1. Selector de idioma (ES / EN / DE)
+   1. Idioma: cada idioma es una página propia (/, /en/, /de/); aquí solo se lee el idioma activo
    2. Menú móvil (abrir / cerrar)
    3. Carrusel de capturas de cada proyecto
-   4. Efecto de scroll en "Sobre mí": los bloques suben al aparecer
-   5. Formulario de contacto (idioma, traducciones y mensaje de gracias)
+   4. Aparición suave de bloques al hacer scroll
+   5. Formulario de contacto (validación, envío y mensaje de gracias)
    6. Pestañas de "Cómo puedo ayudarte"
    7. Botón de modo claro / oscuro
    8. Barra de progreso de lectura
+   9. Desplegable de Proyectos en el menú
+   10. Menú que marca la sección visible
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
 
 const root = document.documentElement;
 
-/* 1. SELECTOR DE IDIOMA
-   Cambia el atributo data-lang de <html>; el CSS muestra solo los textos de ese idioma. */
-const botonesIdioma = document.querySelectorAll("[data-set-lang]");
-
-function aplicarIdioma(idioma) {
-  root.setAttribute("data-lang", idioma);
-  root.lang = idioma;
-
-  botonesIdioma.forEach(function (boton) {
-    boton.setAttribute("aria-pressed", String(boton.dataset.setLang === idioma));
-  });
-}
-
-botonesIdioma.forEach(function (boton) {
-  boton.addEventListener("click", function () {
-    aplicarIdioma(boton.dataset.setLang);
-
-    // Se guarda la elección para la próxima visita
-    try {
-      localStorage.setItem("bymarta-lang", boton.dataset.setLang);
-    } catch (error) {
-      // Si no se puede guardar, la web sigue funcionando igual
-    }
-
-    // La dirección del navegador cambia a ?lang=xx (sin recargar), para que
-    // al copiar el enlace se comparta la web en el idioma que se está viendo
-    try {
-      const url = new URL(window.location.href);
-      if (boton.dataset.setLang === "es") {
-        url.searchParams.delete("lang");
-      } else {
-        url.searchParams.set("lang", boton.dataset.setLang);
-      }
-      history.replaceState(null, "", url);
-    } catch (error) {
-      // En entornos donde no se puede cambiar la dirección, no pasa nada
-    }
-  });
-});
-
-aplicarIdioma(root.getAttribute("data-lang") || "es");
+/* 1. IDIOMA
+   Cada idioma tiene su propia página (/, /en/, /de/) con todos sus textos en el HTML,
+   así que el navegador no tiene que traducir nada. Los enlaces ES · EN · DE del menú
+   llevan a la misma página en el otro idioma. */
 
 /* 2. MENÚ MÓVIL
    Variable booleana que indica si el menú está abierto; se refleja con la clase .is-open. */
-const cabecera = document.querySelector(".top");
-const botonMenu = document.querySelector(".menu-btn");
+const cabecera = document.querySelector(".Header");
+const botonMenu = document.querySelector(".MenuButton");
 let menuAbierto = false;
 
 function cambiarMenu(abrir) {
@@ -74,7 +39,7 @@ botonMenu.addEventListener("click", function () {
 });
 
 // Al pulsar un enlace del menú, el panel se cierra
-document.querySelectorAll(".nav__list a").forEach(function (enlace) {
+document.querySelectorAll(".Nav-list a").forEach(function (enlace) {
   enlace.addEventListener("click", function () {
     cambiarMenu(false);
   });
@@ -94,9 +59,9 @@ document.addEventListener("keydown", function (evento) {
 const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 document.querySelectorAll("[data-carousel]").forEach(function (carrusel) {
-  const pista = carrusel.querySelector(".carousel__track");
-  const diapositivas = carrusel.querySelectorAll(".carousel__slide");
-  const puntos = carrusel.querySelectorAll(".carousel__dots button");
+  const pista = carrusel.querySelector(".Carousel-track");
+  const diapositivas = carrusel.querySelectorAll(".Carousel-slide");
+  const puntos = carrusel.querySelectorAll(".Carousel-dots button");
   const anterior = carrusel.querySelector("[data-prev]");
   const siguiente = carrusel.querySelector("[data-next]");
   const contador = carrusel.querySelector("[data-count]");
@@ -165,7 +130,7 @@ document.querySelectorAll("[data-carousel]").forEach(function (carrusel) {
 /* 4. EFECTO DE SCROLL EN "SOBRE MÍ"
    Los bloques con data-reveal suben suavemente al entrar en pantalla (Intersection Observer).
    La clase .js en <html> indica que JavaScript está activo; sin ella todo se ve directamente. */
-root.classList.add("js");
+root.classList.add("is-js");
 
 const bloques = document.querySelectorAll("[data-reveal]");
 
@@ -191,42 +156,62 @@ if ("IntersectionObserver" in window && !sinMovimiento) {
 }
 
 /* 5. FORMULARIO DE CONTACTO
-   a) Traduce las opciones del desplegable al idioma activo.
-   b) Envía el mensaje a Web3Forms con fetch, sin salir de la página, y muestra el mensaje de gracias.
-      Si falla, muestra un aviso con el email. Sin JavaScript, el formulario se envía de forma normal
-      y Web3Forms vuelve a esta web con ?enviado=1.
-   c) Al volver con ?enviado=1 también se muestra el mensaje de gracias. */
+   a) Valida cada campo al enviar y al salir de él, con un mensaje claro debajo (aria-invalid + aria-describedby).
+   b) Envía el mensaje a Web3Forms con fetch, sin salir de la página, mostrando "Enviando…" en el botón.
+   c) Si todo va bien, muestra el mensaje de gracias; si falla, un aviso con el email.
+   Sin JavaScript, el formulario se envía de forma normal y Web3Forms vuelve a esta página con ?enviado=1. */
 const formulario = document.getElementById("contact-form");
 
 if (formulario) {
-  const campoIdioma = document.getElementById("form-idioma");
   const campoVuelta = document.getElementById("form-next");
   const gracias = document.getElementById("form-thanks");
   const aviso = document.getElementById("form-error");
   const botonEnviar = formulario.querySelector('[type="submit"]');
-
-  function traducirFormulario() {
-    const idioma = root.getAttribute("data-lang") || "es";
-    campoIdioma.value = idioma;
-    formulario.querySelectorAll("option").forEach(function (opcion) {
-      opcion.textContent = opcion.dataset["text" + idioma.charAt(0).toUpperCase() + idioma.slice(1)];
-    });
-  }
+  const textoBoton = botonEnviar.innerHTML;
+  const campos = Array.from(formulario.querySelectorAll("[data-error]"));
 
   function mostrarGracias() {
     formulario.hidden = true;
     gracias.hidden = false;
+    gracias.focus();
   }
 
-  botonesIdioma.forEach(function (boton) {
-    boton.addEventListener("click", traducirFormulario);
+  // Devuelve true si el campo es válido y muestra u oculta su mensaje de error
+  function validar(campo) {
+    const valido = campo.checkValidity() && (campo.type === "checkbox" || campo.value.trim() !== "");
+    const mensaje = document.getElementById(campo.id + "-error");
+    campo.setAttribute("aria-invalid", String(!valido));
+    mensaje.textContent = valido ? "" : campo.dataset.error;
+    mensaje.hidden = valido;
+    return valido;
+  }
+
+  campos.forEach(function (campo) {
+    // Al salir del campo solo se avisa si ya se había intentado enviar o si tenía texto
+    campo.addEventListener("blur", function () {
+      if (campo.hasAttribute("aria-invalid") || (campo.value && campo.type !== "checkbox")) {
+        validar(campo);
+      }
+    });
+    campo.addEventListener("input", function () {
+      if (campo.getAttribute("aria-invalid") === "true") {
+        validar(campo);
+      }
+    });
   });
-  traducirFormulario();
 
   formulario.addEventListener("submit", function (evento) {
-    const idioma = root.getAttribute("data-lang") || "es";
-    campoIdioma.value = idioma;
-    campoVuelta.value = window.location.origin + window.location.pathname + "?enviado=1&lang=" + idioma + "#contact";
+    campoVuelta.value = window.location.origin + window.location.pathname + "?enviado=1#contact";
+
+    const invalidos = campos.filter(function (campo) {
+      return !validar(campo);
+    });
+
+    if (invalidos.length) {
+      evento.preventDefault();
+      invalidos[0].focus();
+      return;
+    }
 
     // Si el navegador no tiene fetch, se deja el envío normal
     if (!window.fetch) return;
@@ -234,6 +219,8 @@ if (formulario) {
     evento.preventDefault();
     aviso.hidden = true;
     botonEnviar.disabled = true;
+    botonEnviar.textContent = botonEnviar.dataset.sending;
+    formulario.setAttribute("aria-busy", "true");
 
     fetch(formulario.action, {
       method: "POST",
@@ -256,6 +243,8 @@ if (formulario) {
       })
       .finally(function () {
         botonEnviar.disabled = false;
+        botonEnviar.innerHTML = textoBoton;
+        formulario.removeAttribute("aria-busy");
       });
   });
 
@@ -361,7 +350,7 @@ pintarBotonTema();
 
 /* 8. BARRA DE PROGRESO DE LECTURA
    Variable numérica entre 0 y 1 según lo que se ha bajado en la página. */
-const barra = document.querySelector(".progress span");
+const barra = document.querySelector(".Progress span");
 
 if (barra) {
   let pendiente = false;
@@ -384,4 +373,73 @@ if (barra) {
     { passive: true },
   );
   actualizarBarra();
+}
+
+/* 9. DESPLEGABLE DE PROYECTOS
+   Botón con aria-expanded que abre y cierra el panel (clase .is-open en el elemento del menú).
+   Con el ratón también se abre al pasar por encima (CSS). Escape lo cierra y devuelve el foco. */
+const itemProyectos = document.querySelector(".Nav-item--menu");
+
+if (itemProyectos) {
+  const botonProyectos = itemProyectos.querySelector("[aria-controls]");
+
+  function cambiarDesplegable(abrir) {
+    itemProyectos.classList.toggle("is-open", abrir);
+    botonProyectos.setAttribute("aria-expanded", String(abrir));
+  }
+
+  botonProyectos.addEventListener("click", function () {
+    cambiarDesplegable(botonProyectos.getAttribute("aria-expanded") !== "true");
+  });
+
+  itemProyectos.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape" && botonProyectos.getAttribute("aria-expanded") === "true") {
+      cambiarDesplegable(false);
+      botonProyectos.focus();
+    }
+  });
+
+  // Al salir del desplegable con el tabulador o hacer clic fuera, se cierra
+  itemProyectos.addEventListener("focusout", function (evento) {
+    if (!itemProyectos.contains(evento.relatedTarget)) {
+      cambiarDesplegable(false);
+    }
+  });
+  document.addEventListener("click", function (evento) {
+    if (!itemProyectos.contains(evento.target)) {
+      cambiarDesplegable(false);
+    }
+  });
+}
+
+/* 10. MENÚ QUE MARCA LA SECCIÓN VISIBLE
+   Solo en la portada: el enlace de la sección que se está leyendo recibe aria-current. */
+const enlacesSeccion = document.querySelectorAll("[data-spy]");
+
+if (enlacesSeccion.length && "IntersectionObserver" in window) {
+  const secciones = Array.from(enlacesSeccion)
+    .map(function (enlace) {
+      return document.getElementById(enlace.dataset.spy);
+    })
+    .filter(Boolean);
+
+  const vigilante = new IntersectionObserver(
+    function (entradas) {
+      entradas.forEach(function (entrada) {
+        if (!entrada.isIntersecting) return;
+        enlacesSeccion.forEach(function (enlace) {
+          if (enlace.dataset.spy === entrada.target.id) {
+            enlace.setAttribute("aria-current", "true");
+          } else {
+            enlace.removeAttribute("aria-current");
+          }
+        });
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" },
+  );
+
+  secciones.forEach(function (seccion) {
+    vigilante.observe(seccion);
+  });
 }

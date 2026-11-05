@@ -1,0 +1,553 @@
+<!doctype html>
+<!--
+  ByMarta · Portfolio de Marta Rodríguez
+  Web developer & digital marketing · Colonia (Alemania)
+  Uso de IA: esta página se ha desarrollado con asistencia de IA (Claude, de Anthropic)
+  a partir de las indicaciones, textos y proyectos de Marta, y ha sido revisada por ella.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Vagamundo · Case study · Marta Rodríguez</title>
+    <meta
+      name="description"
+      content="Vagamundo case study: a full-stack travel agency built with React, TypeScript, Express and MongoDB Atlas, with bookings and a statistics dashboard."
+    />
+    <!-- Open Graph: vista previa al compartir el enlace -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ByMarta" />
+    <meta property="og:title" content="Vagamundo · Case study · Marta Rodríguez" />
+    <meta
+      property="og:description"
+      content="Vagamundo case study: a full-stack travel agency built with React, TypeScript, Express and MongoDB Atlas, with bookings and a statistics dashboard."
+    />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/og-vagamundo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Dirección principal y versiones en cada idioma -->
+    <link rel="canonical" href="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/vagamundo/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/vagamundo/" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/proyectos/vagamundo/" />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <link rel="icon" type="image/png" href="../../../img/favicon.png" />
+    <link rel="preload" href="../../../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../../fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <script src="../../../js/idioma.js"></script>
+    <script src="../../../js/main.js" defer></script>
+  </head>
+  <body class="PageProject">
+    <a class="SkipLink" href="#case">
+      <span>Skip to content</span>
+    </a>
+
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="Progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CABECERA ===== -->
+    <header class="Header">
+      <div class="u-container Header-inner">
+        <a class="Brand" href="../../#home" aria-label="Marta Rodríguez">
+          <img class="Brand-mono u-onLight" src="../../../img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="Brand-mono u-onDark" src="../../../img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="Brand-name">Marta Rodríguez</span>
+        </a>
+
+        <nav class="Nav" aria-label="Main">
+          <ul class="Nav-list" id="menu">
+            <li class="Nav-item--menu">
+              <a href="../../#projects" class="Nav-parent" data-spy="projects">
+                <span>Work</span>
+              </a>
+              <button
+                class="Nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mega-proyectos"
+                aria-label="Show the four projects"
+              >
+                <svg class="Nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
+              </button>
+              <!-- Desplegable: los cuatro casos de estudio -->
+              <div class="MegaMenu" id="mega-proyectos">
+                <ul class="MegaMenu-list">
+                  <li>
+                    <a class="MegaMenu-link" href="../casa-brava/">
+                      <img src="../../../img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Casa Brava</span>
+                      <span class="MegaMenu-type">
+                        <span>Boutique hotel</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="./">
+                      <img src="../../../img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Vagamundo</span>
+                      <span class="MegaMenu-type">
+                        <span>Travel agency · full stack</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../golden-chance-senior/">
+                      <img src="../../../img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Golden Chance Senior</span>
+                      <span class="MegaMenu-type">
+                        <span>Senior living</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../demya/">
+                      <img src="../../../img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">DEMYA</span>
+                      <span class="MegaMenu-type">
+                        <span>Digital marketing plan</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <a class="MegaMenu-all" href="../../#projects">
+                  <span>See all projects →</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="../../#services" data-spy="services">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about" data-spy="about">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact" data-spy="contact">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="LangSwitch" aria-label="Language">
+            <li>
+              <a href="../../../proyectos/vagamundo/" data-lang-link="es" hreflang="es" lang="es" title="Español">ES</a>
+            </li>
+            <li><a href="./" aria-current="page" data-lang-link="en" hreflang="en" lang="en" title="English">EN</a></li>
+            <li>
+              <a href="../../../de/proyectos/vagamundo/" data-lang-link="de" hreflang="de" lang="de" title="Deutsch">
+                DE
+              </a>
+            </li>
+          </ul>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="ThemeButton" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="u-hiddenVisually">Dark mode</span>
+
+            <svg class="ThemeButton-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="ThemeButton-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
+
+          <button class="MenuButton" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="case">
+      <!-- Migas: volver a todos los proyectos -->
+      <nav class="Crumbs u-container" aria-label="Breadcrumb">
+        <a href="../../#projects">
+          <span>← All projects</span>
+        </a>
+        <span class="Crumbs-count">02 / 04</span>
+      </nav>
+
+      <article class="Case Case--vg" aria-labelledby="vagamundo-title">
+        <div class="u-container">
+          <div class="Case-head">
+            <div>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Travel agency, full stack</span>
+                </li>
+                <li>
+                  <span>Master's final project</span>
+                </li>
+              </ul>
+              <h1 id="vagamundo-title" class="Case-title--vg">Vagamundo</h1>
+            </div>
+            <div>
+              <p class="Case-summary">
+                A travel agency for small groups, with a trip catalogue, destination guides, a travel journal readers
+                can comment on and online booking. The React front end runs on its own Express API and a MongoDB Atlas
+                database.
+              </p>
+
+              <div class="Links">
+                <a href="https://vagamundo-web.vercel.app" target="_blank" rel="noopener">
+                  <span>Visit site</span>
+                </a>
+                <a href="https://github.com/hellobymarta/vagamundo-web" target="_blank" rel="noopener">
+                  <span>Front-end code</span>
+                </a>
+                <a href="https://github.com/hellobymarta/vagamundo-api" target="_blank" rel="noopener">
+                  <span>API code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="Case-media" data-carousel role="region" aria-roledescription="carousel" aria-label="Vagamundo">
+            <div class="Browser">
+              <p class="Browser-bar" aria-hidden="true">
+                <span class="Browser-dots"></span>
+                vagamundo-web.vercel.app
+              </p>
+              <div class="Carousel">
+                <ul class="Carousel-track">
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/vg-inicio.webp"
+                      srcset="../../../img/vg-inicio-800.webp 800w, ../../../img/vg-inicio.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Vagamundo home page: Positano at sunset with the headline about the Amalfi coast"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/vg-motivos.webp"
+                      srcset="../../../img/vg-motivos-800.webp 800w, ../../../img/vg-motivos.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Three ways into the catalogue: beach, culture, and nature and adventure"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/vg-catalogo.webp"
+                      srcset="../../../img/vg-catalogo-800.webp 800w, ../../../img/vg-catalogo.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Trip catalogue with Iceland, Namibia and Jordan, each with its price"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/vg-destinos.webp"
+                      srcset="../../../img/vg-destinos-800.webp 800w, ../../../img/vg-destinos.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Asia destinations: Japan, India and Vietnam"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/vg-viaje.webp"
+                      srcset="../../../img/vg-viaje-800.webp 800w, ../../../img/vg-viaje.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Trip page with price per person, seats left and trip details"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="Phone">
+              <img
+                src="../../../img/vg-movil.webp"
+                width="600"
+                height="1298"
+                alt="Vagamundo on a phone"
+                loading="lazy"
+              />
+            </div>
+            <div class="Carousel-controls">
+              <div class="Carousel-arrows">
+                <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
+                <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
+              </div>
+              <div class="Carousel-dots">
+                <button type="button" aria-label="Screenshot 1"></button>
+                <button type="button" aria-label="Screenshot 2"></button>
+                <button type="button" aria-label="Screenshot 3"></button>
+                <button type="button" aria-label="Screenshot 4"></button>
+                <button type="button" aria-label="Screenshot 5"></button>
+              </div>
+              <p class="Carousel-count" aria-hidden="true">
+                <span data-count>1</span>
+                / 5
+              </p>
+            </div>
+          </div>
+
+          <div class="Case-details">
+            <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+            <dl class="Story">
+              <div>
+                <dt>
+                  <span class="Story-num">01</span>
+
+                  <span>My role</span>
+                </dt>
+
+                <dd>Full-stack development end to end: interface, React front end, API and database.</dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">02</span>
+
+                  <span>The challenge</span>
+                </dt>
+
+                <dd>
+                  Building a travel agency that really works: bookings that never exceed the seats available, plus a
+                  private area for the team.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">03</span>
+
+                  <span>What I did</span>
+                </dt>
+
+                <dd>
+                  A React and TypeScript front end on my own Express and MongoDB Atlas API, JWT login, seat control per
+                  departure and a statistics dashboard.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">04</span>
+
+                  <span>The result</span>
+                </dt>
+
+                <dd>
+                  A complete application deployed on Vercel, which helped me pass the master's Full Stack Development
+                  module.
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="u-hiddenVisually">
+              <span>Highlights</span>
+            </h2>
+            <ul class="Highlights">
+              <li>
+                <strong>API</strong>
+                <span>built from scratch with Express and MongoDB Atlas</span>
+              </li>
+              <li>
+                <strong>JWT</strong>
+                <span>authentication, with private areas for the team</span>
+              </li>
+              <li>
+                <strong>Bookings</strong>
+
+                <span>that keep track of the seats left on every departure</span>
+              </li>
+              <li>
+                <strong>Dashboard</strong>
+
+                <span>showing occupancy, prices and destinations</span>
+              </li>
+            </ul>
+            <p class="Case-stack">
+              <span class="Eyebrow">
+                <span>Built with</span>
+              </span>
+              React 19 · TypeScript · Vite · Tailwind · Node · Express · MongoDB Atlas · Vercel
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Siguiente proyecto: bloque grande con su miniatura -->
+      <nav class="NextProject u-container" aria-label="Projects">
+        <a class="NextProject-link" href="../golden-chance-senior/">
+          <span class="NextProject-text">
+            <span class="NextProject-label">
+              <span>Next project</span>
+            </span>
+            <span class="NextProject-name">
+              Golden Chance Senior
+              <span aria-hidden="true">→</span>
+            </span>
+            <span class="NextProject-type">
+              <span>Senior living · in progress</span>
+            </span>
+          </span>
+          <span class="NextProject-media">
+            <img
+              src="../../../img/gcs-inicio-800.webp"
+              srcset="
+                ../../../img/gcs-inicio-640.webp  640w,
+                ../../../img/gcs-inicio-800.webp  800w,
+                ../../../img/gcs-inicio.webp     1440w
+              "
+              sizes="(max-width: 760px) 92vw, 520px"
+              width="1440"
+              height="900"
+              alt=""
+              loading="lazy"
+            />
+          </span>
+        </a>
+        <p class="NextProject-more">
+          <a href="../casa-brava/">
+            <span>← Previous:</span>
+
+            Casa Brava
+          </a>
+          <a href="../../#projects">
+            <span>All projects</span>
+          </a>
+        </p>
+      </nav>
+
+      <!-- Llamada a la acción final -->
+      <section class="CaseCta u-container" aria-labelledby="cta-title">
+        <div class="CaseCta-box">
+          <h2 id="cta-title">
+            <span>Like what you see?</span>
+          </h2>
+          <p>
+            <span>Tell me about your project or book a 15-minute coffee and let's talk.</span>
+          </p>
+          <div class="Actions">
+            <a class="Button Button--light" href="../../#contact">
+              <span>Get in touch</span>
+            </a>
+            <a
+              class="Button Button--ghostLight"
+              href="https://cal.com/bymarta/virtual-coffee-with-marta"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Book a virtual coffee · 15 min</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
+    <footer class="Footer">
+      <div class="u-container Footer-grid">
+        <div class="Footer-brand">
+          <svg class="Footer-sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="../../../img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span>Web development &amp; digital marketing. Made in Cologne.</span>
+          </p>
+        </div>
+
+        <nav class="Footer-col" aria-labelledby="footer-menu">
+          <h2 class="Footer-title" id="footer-menu">
+            <span>Menu</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="../../#projects">
+                <span>Work</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="Footer-col">
+          <h2 class="Footer-title">
+            <span>Let's talk</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span>Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span>Virtual coffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="u-container Footer-bottom">
+        <p>© 2026 Marta Rodríguez · ByMarta</p>
+        <p>
+          <span>Designed and built with HTML, CSS and JavaScript.</span>
+        </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="Footer-legal">
+          <li>
+            <a href="../../aviso-legal.html">
+              <span>Legal notice</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../privacidad.html">
+              <span>Privacy</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

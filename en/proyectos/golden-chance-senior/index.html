@@ -1,0 +1,586 @@
+<!doctype html>
+<!--
+  ByMarta · Portfolio de Marta Rodríguez
+  Web developer & digital marketing · Colonia (Alemania)
+  Uso de IA: esta página se ha desarrollado con asistencia de IA (Claude, de Anthropic)
+  a partir de las indicaciones, textos y proyectos de Marta, y ha sido revisada por ella.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Golden Chance Senior · Case study · Marta Rodríguez</title>
+    <meta
+      name="description"
+      content="Golden Chance Senior case study: a bilingual landing page for a senior living project in northern Spain. Brand, copy and development."
+    />
+    <!-- Open Graph: vista previa al compartir el enlace -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="ByMarta" />
+    <meta property="og:title" content="Golden Chance Senior · Case study · Marta Rodríguez" />
+    <meta
+      property="og:description"
+      content="Golden Chance Senior case study: a bilingual landing page for a senior living project in northern Spain. Brand, copy and development."
+    />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/og-golden-chance-senior.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Dirección principal y versiones en cada idioma -->
+    <link rel="canonical" href="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <link rel="icon" type="image/png" href="../../../img/favicon.png" />
+    <link rel="preload" href="../../../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../../fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <script src="../../../js/idioma.js"></script>
+    <script src="../../../js/main.js" defer></script>
+  </head>
+  <body class="PageProject">
+    <a class="SkipLink" href="#case">
+      <span>Skip to content</span>
+    </a>
+
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="Progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CABECERA ===== -->
+    <header class="Header">
+      <div class="u-container Header-inner">
+        <a class="Brand" href="../../#home" aria-label="Marta Rodríguez">
+          <img class="Brand-mono u-onLight" src="../../../img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="Brand-mono u-onDark" src="../../../img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="Brand-name">Marta Rodríguez</span>
+        </a>
+
+        <nav class="Nav" aria-label="Main">
+          <ul class="Nav-list" id="menu">
+            <li class="Nav-item--menu">
+              <a href="../../#projects" class="Nav-parent" data-spy="projects">
+                <span>Work</span>
+              </a>
+              <button
+                class="Nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mega-proyectos"
+                aria-label="Show the four projects"
+              >
+                <svg class="Nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
+              </button>
+              <!-- Desplegable: los cuatro casos de estudio -->
+              <div class="MegaMenu" id="mega-proyectos">
+                <ul class="MegaMenu-list">
+                  <li>
+                    <a class="MegaMenu-link" href="../casa-brava/">
+                      <img src="../../../img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Casa Brava</span>
+                      <span class="MegaMenu-type">
+                        <span>Boutique hotel</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../vagamundo/">
+                      <img src="../../../img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Vagamundo</span>
+                      <span class="MegaMenu-type">
+                        <span>Travel agency · full stack</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="./">
+                      <img src="../../../img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Golden Chance Senior</span>
+                      <span class="MegaMenu-type">
+                        <span>Senior living</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../demya/">
+                      <img src="../../../img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">DEMYA</span>
+                      <span class="MegaMenu-type">
+                        <span>Digital marketing plan</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <a class="MegaMenu-all" href="../../#projects">
+                  <span>See all projects →</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="../../#services" data-spy="services">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about" data-spy="about">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact" data-spy="contact">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="LangSwitch" aria-label="Language">
+            <li>
+              <a
+                href="../../../proyectos/golden-chance-senior/"
+                data-lang-link="es"
+                hreflang="es"
+                lang="es"
+                title="Español"
+              >
+                ES
+              </a>
+            </li>
+            <li><a href="./" aria-current="page" data-lang-link="en" hreflang="en" lang="en" title="English">EN</a></li>
+            <li>
+              <a
+                href="../../../de/proyectos/golden-chance-senior/"
+                data-lang-link="de"
+                hreflang="de"
+                lang="de"
+                title="Deutsch"
+              >
+                DE
+              </a>
+            </li>
+          </ul>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="ThemeButton" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="u-hiddenVisually">Dark mode</span>
+
+            <svg class="ThemeButton-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="ThemeButton-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
+
+          <button class="MenuButton" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="case">
+      <!-- Migas: volver a todos los proyectos -->
+      <nav class="Crumbs u-container" aria-label="Breadcrumb">
+        <a href="../../#projects">
+          <span>← All projects</span>
+        </a>
+        <span class="Crumbs-count">03 / 04</span>
+      </nav>
+
+      <article class="Case Case--gcs" aria-labelledby="gcs-title">
+        <div class="u-container">
+          <div class="Case-head">
+            <div>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Senior living, northern Spain</span>
+                </li>
+                <li>
+                  <span>Client project</span>
+                </li>
+              </ul>
+              <h1 id="gcs-title" class="Case-title--gcs">
+                Golden Chance
+                <em>Senior</em>
+              </h1>
+              <p class="Badge">
+                <span class="Dot" aria-hidden="true"></span>
+                <span>In development</span>
+              </p>
+            </div>
+            <div>
+              <p class="Case-summary">
+                A landing page for a new senior living community in northern Spain, backed by Golden Chance. It presents
+                a way of living built on independence, community, security and the future, in Spanish and English, with
+                an enquiry form for anyone who wants to learn more.
+              </p>
+
+              <p class="Case-note">
+                The site is live and keeps evolving: the mobile experience and new content are being added step by step.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="Case-media"
+            data-carousel
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Golden Chance Senior"
+          >
+            <div class="Browser">
+              <p class="Browser-bar" aria-hidden="true">
+                <span class="Browser-dots"></span>
+                golden-chance-senior.vercel.app
+              </p>
+              <div class="Carousel">
+                <ul class="Carousel-track">
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-inicio.webp"
+                      srcset="../../../img/gcs-inicio-800.webp 800w, ../../../img/gcs-inicio.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Golden Chance Senior home page: a modern house with an olive tree and the headline Your home. Your life. Your future."
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-filosofia.webp"
+                      srcset="../../../img/gcs-filosofia-800.webp 800w, ../../../img/gcs-filosofia.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Philosophy section with a photograph of two older friends in a garden"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-vivir.webp"
+                      srcset="../../../img/gcs-vivir-800.webp 800w, ../../../img/gcs-vivir.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="A new way of living: three photographs of private patios and shared gardens"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-comunidad.webp"
+                      srcset="../../../img/gcs-comunidad-800.webp 800w, ../../../img/gcs-comunidad.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Community model section on an olive green background with a shared terrace"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-modelo.webp"
+                      srcset="../../../img/gcs-modelo-800.webp 800w, ../../../img/gcs-modelo.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Three numbered reasons that make the project different"
+                      loading="lazy"
+                    />
+                  </li>
+                  <li class="Carousel-slide">
+                    <img
+                      src="../../../img/gcs-proyecto.webp"
+                      srcset="../../../img/gcs-proyecto-800.webp 800w, ../../../img/gcs-proyecto.webp 1440w"
+                      sizes="(max-width: 860px) 90vw, 900px"
+                      width="1440"
+                      height="900"
+                      alt="Project status and enquiry form on a dark background"
+                      loading="lazy"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="Phone">
+              <img
+                src="../../../img/gcs-movil.webp"
+                width="600"
+                height="1298"
+                alt="Golden Chance Senior on a phone"
+                loading="lazy"
+              />
+            </div>
+            <div class="Carousel-controls">
+              <div class="Carousel-arrows">
+                <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
+                <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
+              </div>
+              <div class="Carousel-dots">
+                <button type="button" aria-label="Screenshot 1"></button>
+                <button type="button" aria-label="Screenshot 2"></button>
+                <button type="button" aria-label="Screenshot 3"></button>
+                <button type="button" aria-label="Screenshot 4"></button>
+                <button type="button" aria-label="Screenshot 5"></button>
+                <button type="button" aria-label="Screenshot 6"></button>
+              </div>
+              <p class="Carousel-count" aria-hidden="true">
+                <span data-count>1</span>
+                / 6
+              </p>
+            </div>
+          </div>
+
+          <div class="Case-details">
+            <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+            <dl class="Story">
+              <div>
+                <dt>
+                  <span class="Story-num">01</span>
+
+                  <span>My role</span>
+                </dt>
+
+                <dd>
+                  Brand, copy, art direction and development of the landing page, working directly with the client.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">02</span>
+
+                  <span>The challenge</span>
+                </dt>
+
+                <dd>
+                  Presenting a residential project that doesn't exist yet, building trust with older people and their
+                  families, in two languages.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">03</span>
+
+                  <span>What I did</span>
+                </dt>
+
+                <dd>
+                  A bilingual (ES/EN) landing page with clear messages on independence, community and security, an
+                  enquiry form with privacy consent, and deployment on Vercel with self-hosted fonts.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <span class="Story-num">04</span>
+
+                  <span>The result</span>
+                </dt>
+
+                <dd>
+                  The site is already live as the first point of contact for interested people. I'm now adding the
+                  mobile experience and new content.
+                </dd>
+              </div>
+            </dl>
+
+            <h2 class="u-hiddenVisually">
+              <span>Highlights</span>
+            </h2>
+            <ul class="Highlights">
+              <li>
+                <strong>Brand</strong>
+
+                <span>design, copy and art direction, from start to finish</span>
+              </li>
+              <li>
+                <strong>ES / EN</strong>
+                <span>bilingual, with links that open straight in English</span>
+              </li>
+              <li>
+                <strong>Enquiries</strong>
+
+                <span>a form that goes straight to the client's inbox, with privacy consent</span>
+              </li>
+              <li>
+                <strong>Vercel</strong>
+                <span>deployment with caching and security headers, and self-hosted fonts</span>
+              </li>
+            </ul>
+            <p class="Case-stack">
+              <span class="Eyebrow">
+                <span>Built with</span>
+              </span>
+              HTML5 · CSS3 · JavaScript · FormSubmit · Vercel
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Siguiente proyecto: bloque grande con su miniatura -->
+      <nav class="NextProject u-container" aria-label="Projects">
+        <a class="NextProject-link" href="../demya/">
+          <span class="NextProject-text">
+            <span class="NextProject-label">
+              <span>Next project</span>
+            </span>
+            <span class="NextProject-name">
+              DEMYA
+              <span aria-hidden="true">→</span>
+            </span>
+            <span class="NextProject-type">
+              <span>Digital marketing plan</span>
+            </span>
+          </span>
+          <span class="NextProject-media">
+            <img
+              src="../../../img/dm-tarjeta-800.webp"
+              srcset="
+                ../../../img/dm-tarjeta-640.webp  640w,
+                ../../../img/dm-tarjeta-800.webp  800w,
+                ../../../img/dm-tarjeta.webp     1440w
+              "
+              sizes="(max-width: 760px) 92vw, 520px"
+              width="1440"
+              height="900"
+              alt=""
+              loading="lazy"
+            />
+          </span>
+        </a>
+        <p class="NextProject-more">
+          <a href="../vagamundo/">
+            <span>← Previous:</span>
+
+            Vagamundo
+          </a>
+          <a href="../../#projects">
+            <span>All projects</span>
+          </a>
+        </p>
+      </nav>
+
+      <!-- Llamada a la acción final -->
+      <section class="CaseCta u-container" aria-labelledby="cta-title">
+        <div class="CaseCta-box">
+          <h2 id="cta-title">
+            <span>Like what you see?</span>
+          </h2>
+          <p>
+            <span>Tell me about your project or book a 15-minute coffee and let's talk.</span>
+          </p>
+          <div class="Actions">
+            <a class="Button Button--light" href="../../#contact">
+              <span>Get in touch</span>
+            </a>
+            <a
+              class="Button Button--ghostLight"
+              href="https://cal.com/bymarta/virtual-coffee-with-marta"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>Book a virtual coffee · 15 min</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
+    <footer class="Footer">
+      <div class="u-container Footer-grid">
+        <div class="Footer-brand">
+          <svg class="Footer-sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="../../../img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span>Web development &amp; digital marketing. Made in Cologne.</span>
+          </p>
+        </div>
+
+        <nav class="Footer-col" aria-labelledby="footer-menu">
+          <h2 class="Footer-title" id="footer-menu">
+            <span>Menu</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="../../#projects">
+                <span>Work</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="Footer-col">
+          <h2 class="Footer-title">
+            <span>Let's talk</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span>Email</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span>Virtual coffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="u-container Footer-bottom">
+        <p>© 2026 Marta Rodríguez · ByMarta</p>
+        <p>
+          <span>Designed and built with HTML, CSS and JavaScript.</span>
+        </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="Footer-legal">
+          <li>
+            <a href="../../aviso-legal.html">
+              <span>Legal notice</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../privacidad.html">
+              <span>Privacy</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

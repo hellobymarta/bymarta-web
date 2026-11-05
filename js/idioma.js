@@ -1,49 +1,15 @@
 /* ==========================================================================
    ByMarta · idioma.js
-   Se carga en el <head> (sin defer) para aplicar el idioma y el tema
-   (claro u oscuro) antes de pintar la página, y evitar que se vea un
-   instante en otro idioma o con otros colores.
+   Se carga en el <head> (sin defer), antes de pintar la página:
+   1. Aplica el tema elegido con el botón (claro u oscuro) para que no parpadee.
+   2. Redirige los enlaces antiguos con ?lang=en o ?lang=de a la página de ese idioma
+      (/en/ o /de/), para que los enlaces que ya se compartieron sigan funcionando.
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
 
 (function () {
-  // Idiomas disponibles; el español es el idioma principal; después inglés y alemán
-  var IDIOMAS = ["es", "en", "de"];
-  var idioma = "es";
-
-  // 1) Si la persona ya eligió un idioma en otra visita, se respeta
-  try {
-    var guardado = localStorage.getItem("bymarta-lang");
-    if (IDIOMAS.indexOf(guardado) !== -1) {
-      idioma = guardado;
-    }
-  } catch (error) {
-    // Sin acceso a localStorage (modo privado): se queda en español
-  }
-
-  // 2) Un enlace con ?lang=en o ?lang=de manda sobre todo lo anterior.
-  //    Así se puede enviar a una empresa la web directamente en su idioma.
-  var parametro = new URLSearchParams(window.location.search).get("lang");
-  if (IDIOMAS.indexOf(parametro) !== -1) {
-    idioma = parametro;
-  }
-
-  // Si la dirección indica el idioma (?lang=en), la URL canónica lo incluye, para que Google
-  // trate cada idioma como una versión propia (enlaces hreflang en el <head>)
-  if (idioma !== "es") {
-    var canonica = document.querySelector('link[rel="canonical"]');
-    if (canonica && parametro === idioma) {
-      canonica.href = canonica.href.split("?")[0] + "?lang=" + idioma;
-    }
-  }
-
-  document.documentElement.setAttribute("data-lang", idioma);
-  document.documentElement.lang = idioma;
-})();
-
-/* Tema elegido con el botón (claro u oscuro). Si no se ha elegido, manda el sistema. */
-(function () {
+  // 1. Tema elegido con el botón. Si no se ha elegido, manda el sistema.
   try {
     var tema = localStorage.getItem("bymarta-theme");
     if (tema === "light" || tema === "dark") {
@@ -51,5 +17,16 @@
     }
   } catch (error) {
     // Sin localStorage: se usa el tema del sistema
+  }
+
+  // 2. Enlaces antiguos ?lang=xx -> página de ese idioma
+  var parametro = new URLSearchParams(window.location.search).get("lang");
+  var actual = document.documentElement.lang;
+  if ((parametro === "en" || parametro === "de") && actual === "es") {
+    // La raíz de la web se deduce de la ruta de este archivo (…/js/idioma.js)
+    var raiz = document.currentScript.src.replace(/js\/idioma\.js.*$/, "");
+    var pagina = window.location.href.split("?")[0].split("#")[0];
+    var resto = pagina.indexOf(raiz) === 0 ? pagina.slice(raiz.length) : "";
+    window.location.replace(raiz + parametro + "/" + resto + window.location.hash);
   }
 })();

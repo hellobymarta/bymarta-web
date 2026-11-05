@@ -1,45 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ByMarta · mapa del sitio para buscadores (con las versiones por idioma de la portada) -->
+<!-- ByMarta · mapa del sitio (lo genera scripts/build.py) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bymarta-web.vercel.app/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
-    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://bymarta-web.vercel.app/?lang=en</loc>
+    <loc>https://bymarta-web.vercel.app/en/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
-    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://bymarta-web.vercel.app/?lang=de</loc>
+    <loc>https://bymarta-web.vercel.app/de/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
-    <lastmod>2026-10-30</lastmod>
-  </url>
-  <url>
-    <loc>https://bymarta-web.vercel.app/proyectos/plan-marketing-demya/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://bymarta-web.vercel.app/proyectos/casa-brava/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/casa-brava/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://bymarta-web.vercel.app/proyectos/vagamundo/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <loc>https://bymarta-web.vercel.app/en/proyectos/casa-brava/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/casa-brava/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
-    <loc>https://bymarta-web.vercel.app/proyectos/golden-chance-senior/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <loc>https://bymarta-web.vercel.app/de/proyectos/casa-brava/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/casa-brava/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/casa-brava/" />
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://bymarta-web.vercel.app/proyectos/demya/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/demya/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/en/proyectos/demya/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/demya/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/de/proyectos/demya/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/demya/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/demya/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/proyectos/golden-chance-senior/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/golden-chance-senior/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/golden-chance-senior/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/de/proyectos/golden-chance-senior/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/golden-chance-senior/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/golden-chance-senior/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/proyectos/vagamundo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/vagamundo/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/en/proyectos/vagamundo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/vagamundo/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/de/proyectos/vagamundo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/proyectos/vagamundo/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/proyectos/vagamundo/" />
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://bymarta-web.vercel.app/proyectos/plan-marketing-demya/</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
 </urlset>

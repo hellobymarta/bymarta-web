@@ -1,5 +1,8 @@
-# ByMarta · instrucciones para buscadores: se puede rastrear toda la web
+# ByMarta · instrucciones para buscadores
 User-agent: *
 Allow: /
+# Plantillas y herramientas internas: no son páginas para buscadores
+Disallow: /src/
+Disallow: /scripts/
 
 Sitemap: https://bymarta-web.vercel.app/sitemap.xml

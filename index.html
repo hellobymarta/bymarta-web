@@ -9,33 +9,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Marta Rodríguez · ByMarta</title>
+    <title>Marta Rodríguez · Desarrollo web y marketing digital en Colonia</title>
     <meta
       name="description"
-      content="Portfolio de Marta Rodríguez, desarrolladora web con formación en marketing digital en Colonia: Casa Brava, Vagamundo, Golden Chance Senior y el plan de marketing de DEMYA."
+      content="Portfolio de Marta Rodríguez, desarrolladora web con formación en marketing digital en Colonia. Casos de estudio de Casa Brava, Vagamundo, Golden Chance Senior y DEMYA. Disponible para prácticas."
     />
-    <meta name="author" content="Marta Alarcón Rodríguez" />
-    <meta name="theme-color" content="#fbf8f3" />
-
     <!-- Open Graph: vista previa al compartir el enlace -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Marta Rodríguez · ByMarta" />
-    <meta property="og:description" content="Desarrollo web y marketing digital · Portfolio" />
+    <meta property="og:site_name" content="ByMarta" />
+    <meta property="og:title" content="Marta Rodríguez · Desarrollo web y marketing digital en Colonia" />
+    <meta
+      property="og:description"
+      content="Portfolio de Marta Rodríguez, desarrolladora web con formación en marketing digital en Colonia. Casos de estudio de Casa Brava, Vagamundo, Golden Chance Senior y DEMYA. Disponible para prácticas."
+    />
     <meta property="og:url" content="https://bymarta-web.vercel.app/" />
     <meta property="og:image" content="https://bymarta-web.vercel.app/img/og-imagen.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="hello, I'm ByMarta" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:locale:alternate" content="en_GB" />
     <meta property="og:locale:alternate" content="de_DE" />
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- Dirección principal y versiones en cada idioma -->
     <link rel="canonical" href="https://bymarta-web.vercel.app/" />
-    <!-- Versiones por idioma para Google (el español es la principal) -->
     <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/" />
-    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/?lang=en" />
-    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/?lang=de" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/en/" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/de/" />
     <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/" />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
     <!-- Datos estructurados: ficha de la persona para buscadores -->
     <script type="application/ld+json">
       {
@@ -69,126 +71,113 @@
   </head>
 
   <body>
-    <a class="skip" href="#projects">
-      <span data-l="en">Skip to projects</span>
-      <span data-l="es">Saltar a los proyectos</span>
-      <span data-l="de">Zu den Projekten</span>
+    <a class="SkipLink" href="#projects">
+      <span>Saltar a los proyectos</span>
     </a>
 
     <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
-    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="Progress" aria-hidden="true"><span></span></div>
 
     <!-- ===== CABECERA ===== -->
-    <header class="top">
-      <div class="wrap top__inner">
-        <a class="brand" href="#home" aria-label="Marta Rodríguez">
-          <img class="brand__mono on-light" src="img/monograma-tinta-68.webp" alt="" width="34" height="34" />
-          <img class="brand__mono on-dark" src="img/monograma-crema-68.webp" alt="" width="34" height="34" />
-          <span class="brand__name">Marta Rodríguez</span>
+    <header class="Header">
+      <div class="u-container Header-inner">
+        <a class="Brand" href="#home" aria-label="Marta Rodríguez">
+          <img class="Brand-mono u-onLight" src="img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="Brand-mono u-onDark" src="img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="Brand-name">Marta Rodríguez</span>
         </a>
 
-        <nav class="nav" aria-label="Main">
-          <ul class="nav__list" id="menu">
-            <li class="nav__item--menu">
-              <a href="#projects" class="nav__parent" aria-haspopup="true">
-                <span data-l="en">Work</span>
-                <span data-l="es">Proyectos</span>
-                <span data-l="de">Projekte</span>
-                <svg class="nav__caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
+        <nav class="Nav" aria-label="Principal">
+          <ul class="Nav-list" id="menu">
+            <li class="Nav-item--menu">
+              <a href="#projects" class="Nav-parent" data-spy="projects">
+                <span>Proyectos</span>
               </a>
+              <button
+                class="Nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mega-proyectos"
+                aria-label="Ver los cuatro proyectos"
+              >
+                <svg class="Nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
+              </button>
               <!-- Desplegable: los cuatro casos de estudio -->
-              <div class="mega">
-                <ul class="mega__list">
+              <div class="MegaMenu" id="mega-proyectos">
+                <ul class="MegaMenu-list">
                   <li>
-                    <a class="mega__link" href="proyectos/casa-brava/">
+                    <a class="MegaMenu-link" href="proyectos/casa-brava/">
                       <img src="img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                      <span class="mega__name">Casa Brava</span>
-                      <span class="mega__type">
-                        <span data-l="en">Boutique hotel</span>
-                        <span data-l="es">Hotel boutique</span>
-                        <span data-l="de">Boutique-Hotel</span>
+                      <span class="MegaMenu-name">Casa Brava</span>
+                      <span class="MegaMenu-type">
+                        <span>Hotel boutique</span>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a class="mega__link" href="proyectos/vagamundo/">
+                    <a class="MegaMenu-link" href="proyectos/vagamundo/">
                       <img src="img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                      <span class="mega__name">Vagamundo</span>
-                      <span class="mega__type">
-                        <span data-l="en">Travel agency · full stack</span>
-                        <span data-l="es">Agencia de viajes · full stack</span>
-                        <span data-l="de">Reiseveranstalter · Full Stack</span>
+                      <span class="MegaMenu-name">Vagamundo</span>
+                      <span class="MegaMenu-type">
+                        <span>Agencia de viajes · full stack</span>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a class="mega__link" href="proyectos/golden-chance-senior/">
+                    <a class="MegaMenu-link" href="proyectos/golden-chance-senior/">
                       <img src="img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
-                      <span class="mega__name">Golden Chance Senior</span>
-                      <span class="mega__type">
-                        <span data-l="en">Senior living</span>
-                        <span data-l="es">Residencial sénior</span>
-                        <span data-l="de">Wohnen im Alter</span>
+                      <span class="MegaMenu-name">Golden Chance Senior</span>
+                      <span class="MegaMenu-type">
+                        <span>Residencial sénior</span>
                       </span>
                     </a>
                   </li>
                   <li>
-                    <a class="mega__link" href="proyectos/demya/">
+                    <a class="MegaMenu-link" href="proyectos/demya/">
                       <img src="img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
-                      <span class="mega__name">DEMYA</span>
-                      <span class="mega__type">
-                        <span data-l="en">Digital marketing plan</span>
-                        <span data-l="es">Plan de marketing digital</span>
-                        <span data-l="de">Digitalmarketing-Plan</span>
+                      <span class="MegaMenu-name">DEMYA</span>
+                      <span class="MegaMenu-type">
+                        <span>Plan de marketing digital</span>
                       </span>
                     </a>
                   </li>
                 </ul>
-                <a class="mega__all" href="#projects">
-                  <span data-l="en">See all projects →</span>
-                  <span data-l="es">Ver todos los proyectos →</span>
-                  <span data-l="de">Alle Projekte ansehen →</span>
+                <a class="MegaMenu-all" href="#projects">
+                  <span>Ver todos los proyectos →</span>
                 </a>
               </div>
             </li>
             <li>
-              <a href="#services">
-                <span data-l="en">Services</span>
-                <span data-l="es">Servicios</span>
-                <span data-l="de">Leistungen</span>
+              <a href="#services" data-spy="services">
+                <span>Servicios</span>
               </a>
             </li>
             <li>
-              <a href="#about">
-                <span data-l="en">About</span>
-                <span data-l="es">Sobre mí</span>
-                <span data-l="de">Über mich</span>
+              <a href="#about" data-spy="about">
+                <span>Sobre mí</span>
               </a>
             </li>
             <li>
-              <a href="#contact">
-                <span data-l="en">Contact</span>
-                <span data-l="es">Contacto</span>
-                <span data-l="de">Kontakt</span>
+              <a href="#contact" data-spy="contact">
+                <span>Contacto</span>
               </a>
             </li>
           </ul>
 
-          <div class="lang" role="group" aria-label="Language">
-            <button type="button" id="lang-es" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
-            <button type="button" id="lang-en" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
-            <button type="button" id="lang-de" data-set-lang="de" aria-pressed="false" lang="de">DE</button>
-          </div>
+          <ul class="LangSwitch" aria-label="Idioma">
+            <li><a href="./" aria-current="page" data-lang-link="es" hreflang="es" lang="es" title="Español">ES</a></li>
+            <li><a href="en/" data-lang-link="en" hreflang="en" lang="en" title="English">EN</a></li>
+            <li><a href="de/" data-lang-link="de" hreflang="de" lang="de" title="Deutsch">DE</a></li>
+          </ul>
 
           <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
-          <button class="theme-btn" type="button" id="theme-toggle" aria-pressed="false">
-            <span class="sr-only" data-l="en">Dark mode</span>
-            <span class="sr-only" data-l="es">Modo oscuro</span>
-            <span class="sr-only" data-l="de">Dunkelmodus</span>
-            <svg class="theme-btn__moon" viewBox="0 0 24 24" aria-hidden="true">
+          <button class="ThemeButton" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="u-hiddenVisually">Modo oscuro</span>
+
+            <svg class="ThemeButton-moon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
             </svg>
-            <svg class="theme-btn__sun" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="ThemeButton-sun" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="12" r="4" />
               <path
                 d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
@@ -196,7 +185,7 @@
             </svg>
           </button>
 
-          <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+          <button class="MenuButton" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menú">
             <span></span>
             <span></span>
             <span></span>
@@ -207,18 +196,18 @@
 
     <main id="home">
       <!-- ===== PORTADA ===== -->
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="washes" aria-hidden="true">
+      <section class="Hero" aria-labelledby="hero-title">
+        <div class="Washes" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <div class="wrap">
+        <div class="u-container">
           <!-- Logotipo: acuarela en imagen + letras en vector para que se vean nítidas -->
-          <div class="signature" role="img" aria-label="hello, I'm ByMarta">
+          <div class="Signature" role="img" aria-label="hello, I'm ByMarta">
             <img
-              class="signature__wash"
+              class="Signature-wash"
               src="img/logo-acuarela-1400.webp"
               srcset="img/logo-acuarela-800.webp 800w, img/logo-acuarela-1400.webp 1400w"
               sizes="(max-width: 720px) 92vw, 680px"
@@ -227,123 +216,106 @@
               alt=""
               fetchpriority="high"
             />
-            <svg class="signature__hello" viewBox="0 0 1165 424" aria-hidden="true">
+            <svg class="Signature-hello" viewBox="0 0 1165 424" aria-hidden="true">
               <use href="img/logo-firma.svg#hello"></use>
             </svg>
-            <svg class="signature__ink" viewBox="0 0 1165 424" aria-hidden="true">
+            <svg class="Signature-ink" viewBox="0 0 1165 424" aria-hidden="true">
               <use href="img/logo-firma.svg#firma"></use>
             </svg>
           </div>
 
-          <ul class="tagline eyebrow">
-            <li>Web Developer</li>
-            <li>Digital Marketing</li>
+          <ul class="Tagline Eyebrow">
             <li>
-              <span data-l="en">Cologne</span>
-              <span data-l="es">Colonia</span>
-              <span data-l="de">Köln</span>
+              <span>Desarrollo web</span>
+            </li>
+            <li>
+              <span>Marketing digital</span>
+            </li>
+            <li>
+              <span>Colonia</span>
             </li>
           </ul>
 
-          <div class="hero__text">
+          <div class="Hero-text">
             <h1 id="hero-title">
-              <span data-l="en">
-                I build websites with
-                <em>soul</em>, from first sketch to code.
-              </span>
-              <span data-l="es">
+              <span>
                 Construyo webs con
                 <em>alma</em>, del primer boceto al código.
               </span>
-              <span data-l="de">
-                Ich entwickle Websites mit
-                <em>Seele</em>
-                – von der ersten Skizze bis zum Code.
-              </span>
             </h1>
 
-            <p class="lede" data-l="en">
-              Web developer with a background in digital marketing and an eye for design. I love brands with character,
-              travel and projects where every detail is cared for.
-            </p>
-            <p class="lede" data-l="es">
+            <p class="Lede">
               Desarrolladora web con formación en marketing digital y ojo para el diseño. Me gustan las marcas con
               carácter, los viajes y los proyectos que se cuidan hasta el último detalle.
             </p>
-            <p class="lede" data-l="de">
-              Webentwicklerin mit Hintergrund im digitalen Marketing und einem Gespür für Design. Ich liebe Marken mit
-              Charakter, Reisen und Projekte, die bis ins letzte Detail durchdacht sind.
-            </p>
 
             <p>
-              <a class="status" href="#contact">
-                <span class="dot" aria-hidden="true"></span>
-                <span data-l="en">Available for a 3–6 month internship</span>
-                <span data-l="es">Disponible para prácticas de 3 a 6 meses</span>
-                <span data-l="de">Verfügbar für ein Praktikum von 3–6 Monaten</span>
-                <span class="status__arrow" aria-hidden="true">→</span>
+              <a class="Status" href="#contact">
+                <span class="Dot" aria-hidden="true"></span>
+
+                <span>Disponible para prácticas de 3 a 6 meses</span>
+
+                <span class="Status-arrow" aria-hidden="true">→</span>
               </a>
             </p>
 
-            <div class="actions">
-              <a class="btn" href="#projects">
-                <span data-l="en">See my work</span>
-                <span data-l="es">Ver proyectos</span>
-                <span data-l="de">Projekte ansehen</span>
+            <div class="Actions">
+              <a class="Button" href="#projects">
+                <span>Ver proyectos</span>
               </a>
-              <a class="btn btn--ghost" href="cv/marta-rodriguez-cv-en.pdf" target="_blank" rel="noopener" data-l="en">
-                Download CV
-              </a>
-              <a class="btn btn--ghost" href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener" data-l="es">
+
+              <a class="Button Button--ghost" href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener">
                 Descargar CV
-              </a>
-              <a class="btn btn--ghost" href="cv/marta-rodriguez-cv-de.pdf" target="_blank" rel="noopener" data-l="de">
-                Lebenslauf herunterladen
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== CINTA DE ESPECIALIDADES (se mueve sola) ===== -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <ul class="marquee__group">
-            <li>Web Development</li>
-            <li>Digital Marketing</li>
-            <li>Design &amp; Brand</li>
-            <li>Front-End</li>
-            <li>Social Media</li>
-            <li>Full Stack</li>
-          </ul>
-          <ul class="marquee__group">
-            <li>Web Development</li>
-            <li>Digital Marketing</li>
-            <li>Design &amp; Brand</li>
-            <li>Front-End</li>
-            <li>Social Media</li>
-            <li>Full Stack</li>
-          </ul>
-        </div>
-      </div>
+      <!-- ===== DATOS CLAVE =====
+           Cuatro cifras reales que resumen el perfil (sustituyen a la cinta animada, que repetía la portada). -->
+      <section class="Keyfacts" aria-label="Datos clave">
+        <dl class="u-container Keyfacts-list">
+          <div>
+            <dt>4</dt>
+            <dd>
+              <span>casos de estudio con capturas reales</span>
+            </dd>
+          </div>
+          <div>
+            <dt>3</dt>
+            <dd>
+              <span>idiomas: español, alemán C1, inglés B2</span>
+            </dd>
+          </div>
+          <div>
+            <dt>3–6</dt>
+            <dd>
+              <span>meses de prácticas, desde ya</span>
+            </dd>
+          </div>
+          <div>
+            <dt>5</dt>
+            <dd>
+              <span>años coordinando equipos y grupos</span>
+            </dd>
+          </div>
+        </dl>
+      </section>
 
       <!-- ===== PROYECTOS =====
            Cada proyecto es una franja con el color de su marca: cabecera, carrusel en marco
            de navegador con la versión móvil superpuesta y cuatro puntos destacados. -->
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="eyebrow">
-              <span data-l="en">Selected work</span>
-              <span data-l="es">Proyectos</span>
-              <span data-l="de">Projekte</span>
+      <section class="Section" id="projects" aria-labelledby="projects-title">
+        <div class="u-container">
+          <header class="SectionHead">
+            <p class="Eyebrow">
+              <span>Proyectos</span>
             </p>
             <h2 id="projects-title">
-              <span data-l="en">Four projects, each with its own character</span>
-              <span data-l="es">Cuatro proyectos, cada uno con su carácter</span>
-              <span data-l="de">Vier Projekte, jedes mit eigenem Charakter</span>
+              <span>Cuatro proyectos, cada uno con su carácter</span>
             </h2>
-            <svg class="stroke" viewBox="0 0 120 14" aria-hidden="true">
+            <svg class="Stroke" viewBox="0 0 120 14" aria-hidden="true">
               <path
                 d="M2 9 C 22 1, 38 13, 60 7 S 98 2, 118 8"
                 fill="none"
@@ -361,362 +333,335 @@
                 opacity=".8"
               />
             </svg>
-            <p class="intro">
-              <span data-l="en">
-                A boutique hotel and a senior living project, both hand-coded in HTML, CSS and JavaScript, plus a
-                full-stack travel agency with its own API and database. And a digital marketing plan turned into an
-                interactive report.
-              </span>
-              <span data-l="es">
-                Un hotel boutique y un proyecto residencial sénior, hechos a mano con HTML, CSS y JavaScript, y una
-                agencia de viajes full stack con su propia API y base de datos. Y un plan de marketing digital
-                convertido en un informe web interactivo.
-              </span>
-              <span data-l="de">
-                Ein Boutique-Hotel und ein Wohnprojekt für Senioren, beide von Hand mit HTML, CSS und JavaScript
-                programmiert, dazu ein Full-Stack-Reiseveranstalter mit eigener API und Datenbank. Und ein
-                Digitalmarketing-Plan als interaktiver Web-Bericht.
+            <p class="Intro">
+              <span>
+                Proyectos reales y de máster contados como casos de estudio: mi papel, el reto, lo que hice y el
+                resultado.
               </span>
             </p>
           </header>
         </div>
 
-        <article class="case case--teaser case--cb" id="casa-brava" aria-labelledby="casa-brava-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Boutique hotel, Lombok</span>
-                    <span data-l="es">Hotel boutique, Lombok</span>
-                    <span data-l="de">Boutique-Hotel, Lombok</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's project &amp; client work</span>
-                    <span data-l="es">Proyecto de máster y encargo real</span>
-                    <span data-l="de">Masterprojekt &amp; Kundenauftrag</span>
-                  </li>
-                </ul>
-                <h3 id="casa-brava-title" class="case__title--cb">Casa Brava</h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  An editorial website for a retreat of villas and suites in Kuta Mandalika, Lombok. It reads like an
-                  architecture magazine rather than a booking catalogue, and guests book by email, phone or WhatsApp.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Web editorial para un complejo de villas y suites en Kuta Mandalika. Pensada como una revista de
-                  arquitectura más que como un catálogo de reservas: las reservas se derivan a correo, teléfono y
-                  WhatsApp.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Eine Website im Magazin-Stil für eine Anlage mit Villen und Suiten in Kuta Mandalika auf Lombok. Sie
-                  liest sich eher wie ein Architekturmagazin als wie ein Buchungsportal; gebucht wird per E-Mail,
-                  Telefon oder WhatsApp.
-                </p>
-                <div class="links">
+        <!-- Proyecto 1: Casa Brava -->
+        <article class="Case Case--teaser Case--cb" id="casa-brava" aria-labelledby="casa-brava-title">
+          <div class="u-container Case-teaser">
+            <div class="Case-intro">
+              <p class="Case-count">01 / 04</p>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Hotel boutique, Lombok</span>
+                </li>
+                <li>
+                  <span>Proyecto de máster y encargo real</span>
+                </li>
+              </ul>
+              <h3 id="casa-brava-title" class="Case-title--cb">Casa Brava</h3>
+              <p class="Case-lede">
+                <span>Web editorial para un complejo de villas: se lee como una revista de arquitectura.</span>
+              </p>
+              <dl class="Case-facts">
+                <div>
+                  <dt>
+                    <span>Mi papel</span>
+                  </dt>
+                  <dd>
+                    <span>Diseño y desarrollo de principio a fin</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>
+                    <ul class="Case-stackList">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>GSAP</li>
+                      <li>WCAG AA</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="Case-actions">
+                <a class="Button" href="proyectos/casa-brava/">
+                  <span>Ver caso de estudio</span>
+
+                  <span aria-hidden="true">→</span>
+                </a>
+                <div class="Links">
                   <a href="https://hellobymarta.github.io/casa-brava/" target="_blank" rel="noopener">
-                    <span data-l="en">Visit site</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Website ansehen</span>
+                    <span>Ver la web</span>
                   </a>
                   <a href="https://github.com/hellobymarta/casa-brava" target="_blank" rel="noopener">
-                    <span data-l="en">Code</span>
-                    <span data-l="es">Código</span>
-                    <span data-l="de">Code</span>
+                    <span>Código</span>
                   </a>
                 </div>
               </div>
             </div>
-
-            <a class="case__media case__media--link" href="proyectos/casa-brava/" aria-label="Casa Brava">
-              <span class="browser">
-                <span class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
+            <a class="Case-media Case-media--link" href="proyectos/casa-brava/" tabindex="-1" aria-hidden="true">
+              <span class="Browser">
+                <span class="Browser-bar">
+                  <span class="Browser-dots"></span>
                   hellobymarta.github.io/casa-brava
                 </span>
                 <img
-                  class="browser__shot"
+                  class="Browser-shot"
                   src="img/cb-inicio.webp"
                   srcset="img/cb-inicio-800.webp 800w, img/cb-inicio.webp 1440w"
-                  sizes="(max-width: 860px) 90vw, 900px"
+                  sizes="(max-width: 860px) 92vw, 700px"
                   width="1440"
                   height="900"
                   alt=""
                   loading="lazy"
                 />
               </span>
-              <span class="phone"><img src="img/cb-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
+              <span class="Phone"><img src="img/cb-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
             </a>
-            <p class="case__more">
-              <a class="btn" href="proyectos/casa-brava/">
-                <span data-l="en">View case study</span>
-                <span data-l="es">Ver caso de estudio</span>
-                <span data-l="de">Fallstudie ansehen</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </p>
           </div>
         </article>
 
-        <article class="case case--teaser case--vg case--reverse" id="vagamundo" aria-labelledby="vagamundo-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Travel agency, full stack</span>
-                    <span data-l="es">Agencia de viajes, full stack</span>
-                    <span data-l="de">Reiseveranstalter, Full Stack</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's final project</span>
-                    <span data-l="es">Proyecto final de máster</span>
-                    <span data-l="de">Abschlussprojekt im Master</span>
-                  </li>
-                </ul>
-                <h3 id="vagamundo-title" class="case__title--vg">Vagamundo</h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A travel agency for small groups, with a trip catalogue, destination guides, a travel journal readers
-                  can comment on and online booking. The React front end runs on its own Express API and a MongoDB Atlas
-                  database.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Agencia de viajes en grupo pequeño con catálogo, fichas de destino, diario de viaje con comentarios y
-                  reservas. Web en React y una API propia en Express sobre MongoDB Atlas.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Ein Reiseveranstalter für Kleingruppen – mit Reisekatalog, Reisezielen, einem kommentierbaren
-                  Reisetagebuch und Online-Buchung. Das React-Frontend läuft auf einer eigenen Express-API mit MongoDB
-                  Atlas.
-                </p>
-                <div class="links">
+        <!-- Proyecto 2: Vagamundo -->
+        <article class="Case Case--teaser Case--vg Case--reverse" id="vagamundo" aria-labelledby="vagamundo-title">
+          <div class="u-container Case-teaser">
+            <div class="Case-intro">
+              <p class="Case-count">02 / 04</p>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Agencia de viajes, full stack</span>
+                </li>
+                <li>
+                  <span>Proyecto final de máster</span>
+                </li>
+              </ul>
+              <h3 id="vagamundo-title" class="Case-title--vg">Vagamundo</h3>
+              <p class="Case-lede">
+                <span>Catálogo, reservas con control de plazas y panel de estadísticas, con API propia.</span>
+              </p>
+              <dl class="Case-facts">
+                <div>
+                  <dt>
+                    <span>Mi papel</span>
+                  </dt>
+                  <dd>
+                    <span>Desarrollo full stack: interfaz, API y base de datos</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>
+                    <ul class="Case-stackList">
+                      <li>React</li>
+                      <li>TypeScript</li>
+                      <li>Express</li>
+                      <li>MongoDB</li>
+                      <li>JWT</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="Case-actions">
+                <a class="Button" href="proyectos/vagamundo/">
+                  <span>Ver caso de estudio</span>
+
+                  <span aria-hidden="true">→</span>
+                </a>
+                <div class="Links">
                   <a href="https://vagamundo-web.vercel.app" target="_blank" rel="noopener">
-                    <span data-l="en">Visit site</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Website ansehen</span>
+                    <span>Ver la web</span>
                   </a>
                   <a href="https://github.com/hellobymarta/vagamundo-web" target="_blank" rel="noopener">
-                    <span data-l="en">Front-end code</span>
-                    <span data-l="es">Código web</span>
-                    <span data-l="de">Frontend-Code</span>
+                    <span>Código web</span>
                   </a>
                   <a href="https://github.com/hellobymarta/vagamundo-api" target="_blank" rel="noopener">
-                    <span data-l="en">API code</span>
-                    <span data-l="es">Código API</span>
-                    <span data-l="de">API-Code</span>
+                    <span>Código API</span>
                   </a>
                 </div>
               </div>
             </div>
-
-            <a class="case__media case__media--link" href="proyectos/vagamundo/" aria-label="Vagamundo">
-              <span class="browser">
-                <span class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
+            <a class="Case-media Case-media--link" href="proyectos/vagamundo/" tabindex="-1" aria-hidden="true">
+              <span class="Browser">
+                <span class="Browser-bar">
+                  <span class="Browser-dots"></span>
                   vagamundo-web.vercel.app
                 </span>
                 <img
-                  class="browser__shot"
+                  class="Browser-shot"
                   src="img/vg-inicio.webp"
                   srcset="img/vg-inicio-800.webp 800w, img/vg-inicio.webp 1440w"
-                  sizes="(max-width: 860px) 90vw, 900px"
+                  sizes="(max-width: 860px) 92vw, 700px"
                   width="1440"
                   height="900"
                   alt=""
                   loading="lazy"
                 />
               </span>
-              <span class="phone"><img src="img/vg-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
+              <span class="Phone"><img src="img/vg-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
             </a>
-            <p class="case__more">
-              <a class="btn" href="proyectos/vagamundo/">
-                <span data-l="en">View case study</span>
-                <span data-l="es">Ver caso de estudio</span>
-                <span data-l="de">Fallstudie ansehen</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </p>
           </div>
         </article>
 
-        <article class="case case--teaser case--gcs" id="golden-chance" aria-labelledby="gcs-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Senior living, northern Spain</span>
-                    <span data-l="es">Residencial sénior, norte de España</span>
-                    <span data-l="de">Wohnen für Senioren, Nordspanien</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Client project</span>
-                    <span data-l="es">Proyecto para cliente</span>
-                    <span data-l="de">Kundenprojekt</span>
-                  </li>
-                </ul>
-                <h3 id="gcs-title" class="case__title--gcs">
-                  Golden Chance
-                  <em>Senior</em>
-                </h3>
-                <p class="badge">
-                  <span class="dot" aria-hidden="true"></span>
-                  <span data-l="en">In development</span>
-                  <span data-l="es">En desarrollo</span>
-                  <span data-l="de">In Entwicklung</span>
-                </p>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A landing page for a new senior living community in northern Spain, backed by Golden Chance. It
-                  presents a way of living built on independence, community, security and the future, in Spanish and
-                  English, with an enquiry form for anyone who wants to learn more.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Landing de un nuevo proyecto residencial sénior en el norte de España, impulsado por Golden Chance.
-                  Presenta una forma de vivir basada en la independencia, la comunidad, la seguridad y el futuro, en
-                  español e inglés, con un formulario para quien quiera conocer el proyecto.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Eine Landingpage für ein neues Wohnprojekt für Senioren in Nordspanien, initiiert von Golden Chance.
-                  Sie stellt eine Lebensform vor, die auf Unabhängigkeit, Gemeinschaft, Sicherheit und Zukunft setzt –
-                  auf Spanisch und Englisch, mit einem Anfrageformular für alle, die mehr erfahren möchten.
-                </p>
-                <p class="case__note" data-l="en">
-                  The site is live and keeps evolving: the mobile experience and new content are being added step by
-                  step.
-                </p>
-                <p class="case__note" data-l="es">
-                  La web ya está online y sigue creciendo: la experiencia móvil y los nuevos contenidos se van
-                  incorporando poco a poco.
-                </p>
-                <p class="case__note" data-l="de">
-                  Die Website ist bereits online und wächst weiter: Die mobile Ansicht und neue Inhalte kommen nach und
-                  nach hinzu.
-                </p>
+        <!-- Proyecto 3: Golden Chance Senior -->
+        <article class="Case Case--teaser Case--gcs" id="golden-chance-senior" aria-labelledby="gcs-title">
+          <div class="u-container Case-teaser">
+            <div class="Case-intro">
+              <p class="Case-count">03 / 04</p>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Residencial sénior, norte de España</span>
+                </li>
+                <li>
+                  <span>Proyecto para cliente</span>
+                </li>
+              </ul>
+              <h3 id="gcs-title" class="Case-title--gcs">
+                Golden Chance
+                <em>Senior</em>
+              </h3>
+              <p class="Badge">
+                <span class="Dot" aria-hidden="true"></span>
+
+                <span>En desarrollo</span>
+              </p>
+              <p class="Case-lede">
+                <span>Landing bilingüe para un proyecto residencial: marca, textos y dirección de arte.</span>
+              </p>
+              <dl class="Case-facts">
+                <div>
+                  <dt>
+                    <span>Mi papel</span>
+                  </dt>
+                  <dd>
+                    <span>Marca, textos, dirección de arte y desarrollo</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>
+                    <ul class="Case-stackList">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>Vercel</li>
+                      <li>ES / EN</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="Case-actions">
+                <a class="Button" href="proyectos/golden-chance-senior/">
+                  <span>Ver caso de estudio</span>
+
+                  <span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
-
             <a
-              class="case__media case__media--link"
+              class="Case-media Case-media--link"
               href="proyectos/golden-chance-senior/"
-              aria-label="Golden Chance Senior"
+              tabindex="-1"
+              aria-hidden="true"
             >
-              <span class="browser">
-                <span class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
+              <span class="Browser">
+                <span class="Browser-bar">
+                  <span class="Browser-dots"></span>
                   golden-chance-senior.vercel.app
                 </span>
                 <img
-                  class="browser__shot"
+                  class="Browser-shot"
                   src="img/gcs-inicio.webp"
                   srcset="img/gcs-inicio-800.webp 800w, img/gcs-inicio.webp 1440w"
-                  sizes="(max-width: 860px) 90vw, 900px"
+                  sizes="(max-width: 860px) 92vw, 700px"
                   width="1440"
                   height="900"
                   alt=""
                   loading="lazy"
                 />
               </span>
-              <span class="phone">
+              <span class="Phone">
                 <img src="img/gcs-movil.webp" width="600" height="1298" alt="" loading="lazy" />
               </span>
             </a>
-            <p class="case__more">
-              <a class="btn" href="proyectos/golden-chance-senior/">
-                <span data-l="en">View case study</span>
-                <span data-l="es">Ver caso de estudio</span>
-                <span data-l="de">Fallstudie ansehen</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </p>
           </div>
         </article>
 
-        <article class="case case--teaser case--dm case--reverse" id="demya" aria-labelledby="demya-title">
-          <div class="wrap">
-            <div class="case__head">
-              <div>
-                <ul class="case__meta eyebrow">
-                  <li>
-                    <span data-l="en">Aesthetic medicine clinic, Madrid</span>
-                    <span data-l="es">Clínica de medicina estética, Madrid</span>
-                    <span data-l="de">Klinik für ästhetische Medizin, Madrid</span>
-                  </li>
-                  <li>
-                    <span data-l="en">Master's project · Digital marketing</span>
-                    <span data-l="es">Proyecto de máster · Marketing digital</span>
-                    <span data-l="de">Masterprojekt · Digitalmarketing</span>
-                  </li>
-                </ul>
-                <h3 id="demya-title" class="case__title--dm">
-                  DEMYA
-                  <em>Plan de Marketing Digital</em>
-                </h3>
-              </div>
-              <div>
-                <p class="case__summary" data-l="en">
-                  A full digital marketing plan for DEMYA, a group of aesthetic medicine and plastic surgery clinics:
-                  website and SEO audit, social media, competitors, SWOT, SMART goals, action plan and KPIs. Updated
-                  with October 2026 data and turned into an interactive web report, with a PDF version.
-                </p>
-                <p class="case__summary" data-l="es">
-                  Plan de marketing digital completo para DEMYA, grupo de clínicas de medicina estética y cirugía
-                  plástica: auditoría web y SEO, redes sociales, competencia, DAFO, objetivos SMART, plan de acción y
-                  KPIs. Actualizado con datos de octubre de 2026 y convertido en un informe web interactivo, con su
-                  versión en PDF.
-                </p>
-                <p class="case__summary" data-l="de">
-                  Ein vollständiger Digitalmarketing-Plan für DEMYA, eine Gruppe von Kliniken für ästhetische Medizin
-                  und plastische Chirurgie: Website- und SEO-Audit, Social Media, Wettbewerb, SWOT, SMART-Ziele,
-                  Maßnahmenplan und KPIs. Mit Daten von Oktober 2026 aktualisiert und als interaktiver Web-Bericht
-                  umgesetzt, dazu eine PDF-Version.
-                </p>
-                <div class="links">
+        <!-- Proyecto 4: DEMYA -->
+        <article class="Case Case--teaser Case--dm Case--reverse" id="demya" aria-labelledby="demya-title">
+          <div class="u-container Case-teaser">
+            <div class="Case-intro">
+              <p class="Case-count">04 / 04</p>
+              <ul class="Case-meta Eyebrow">
+                <li>
+                  <span>Clínica de medicina estética, Madrid</span>
+                </li>
+                <li>
+                  <span>Proyecto de máster · Marketing digital</span>
+                </li>
+              </ul>
+              <h3 id="demya-title" class="Case-title--dm">
+                DEMYA
+                <em>Plan de Marketing Digital</em>
+              </h3>
+              <p class="Case-lede">
+                <span>
+                  Auditoría, competencia, DAFO y KPIs para un grupo de clínicas, en un informe web interactivo.
+                </span>
+              </p>
+              <dl class="Case-facts">
+                <div>
+                  <dt>
+                    <span>Mi papel</span>
+                  </dt>
+                  <dd>
+                    <span>Análisis, estrategia y presentación del plan</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Stack</dt>
+                  <dd>
+                    <ul class="Case-stackList">
+                      <li>SEO</li>
+                      <li>Ahrefs</li>
+                      <li>PageSpeed</li>
+                      <li>DAFO</li>
+                      <li>KPIs</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+              <div class="Case-actions">
+                <a class="Button" href="proyectos/demya/">
+                  <span>Ver caso de estudio</span>
+
+                  <span aria-hidden="true">→</span>
+                </a>
+                <div class="Links">
                   <a href="proyectos/plan-marketing-demya/index.html" target="_blank" rel="noopener">
-                    <span data-l="en">View the web report</span>
-                    <span data-l="es">Ver la web</span>
-                    <span data-l="de">Web-Bericht ansehen</span>
+                    <span>Ver la web</span>
                   </a>
                   <a href="proyectos/plan-marketing-demya/plan-marketing-demya.pdf" target="_blank" rel="noopener">
-                    <span data-l="en">PDF (Spanish)</span>
-                    <span data-l="es">PDF</span>
-                    <span data-l="de">PDF (Spanisch)</span>
+                    <span>PDF</span>
                   </a>
                 </div>
               </div>
             </div>
-
-            <a class="case__media case__media--link" href="proyectos/demya/" aria-label="DEMYA">
-              <span class="browser">
-                <span class="browser__bar" aria-hidden="true">
-                  <span class="browser__dots"></span>
+            <a class="Case-media Case-media--link" href="proyectos/demya/" tabindex="-1" aria-hidden="true">
+              <span class="Browser">
+                <span class="Browser-bar">
+                  <span class="Browser-dots"></span>
                   plan-marketing-demya
                 </span>
                 <img
-                  class="browser__shot"
+                  class="Browser-shot"
                   src="img/dm-inicio.webp"
                   srcset="img/dm-inicio-800.webp 800w, img/dm-inicio.webp 1440w"
-                  sizes="(max-width: 860px) 90vw, 900px"
+                  sizes="(max-width: 860px) 92vw, 700px"
                   width="1440"
                   height="900"
                   alt=""
                   loading="lazy"
                 />
               </span>
-              <span class="phone"><img src="img/dm-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
+              <span class="Phone"><img src="img/dm-movil.webp" width="600" height="1298" alt="" loading="lazy" /></span>
             </a>
-            <p class="case__more">
-              <a class="btn" href="proyectos/demya/">
-                <span data-l="en">View case study</span>
-                <span data-l="es">Ver caso de estudio</span>
-                <span data-l="de">Fallstudie ansehen</span>
-                <span aria-hidden="true">→</span>
-              </a>
-            </p>
           </div>
         </article>
       </section>
@@ -724,20 +669,16 @@
       <!-- ===== CÓMO PUEDO AYUDARTE =====
            Dos pestañas: "Para empresas" (lo que aporto a un equipo) y "Para marcas" (servicios freelance).
            Las pestañas funcionan con main.js (módulo 6); sin JavaScript se ven las dos seguidas. -->
-      <section class="section" id="services" aria-labelledby="services-title">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="eyebrow">
-              <span data-l="en">How I can help</span>
-              <span data-l="es">Cómo puedo ayudarte</span>
-              <span data-l="de">Wie ich helfen kann</span>
+      <section class="Section" id="services" aria-labelledby="services-title">
+        <div class="u-container">
+          <header class="SectionHead">
+            <p class="Eyebrow">
+              <span>Cómo puedo ayudarte</span>
             </p>
             <h2 id="services-title">
-              <span data-l="en">For your team or for your brand</span>
-              <span data-l="es">Para tu equipo o para tu marca</span>
-              <span data-l="de">Für Ihr Team oder Ihre Marke</span>
+              <span>Para tu equipo o para tu marca</span>
             </h2>
-            <svg class="stroke" viewBox="0 0 120 14" aria-hidden="true">
+            <svg class="Stroke" viewBox="0 0 120 14" aria-hidden="true">
               <path
                 d="M2 9 C 22 1, 38 13, 60 7 S 98 2, 118 8"
                 fill="none"
@@ -755,45 +696,35 @@
                 opacity=".8"
               />
             </svg>
-            <p class="intro">
-              <span data-l="en">
-                If you're hiring, here's what I bring to a team. If you have a brand, here's what I can do for it.
-              </span>
-              <span data-l="es">
+            <p class="Intro">
+              <span>
                 Si buscas a alguien para tu equipo, esto es lo que aporto. Si tienes una marca, esto es lo que puedo
                 hacer por ella.
-              </span>
-              <span data-l="de">
-                Wenn Sie jemanden für Ihr Team suchen, sehen Sie hier, was ich mitbringe. Wenn Sie eine Marke haben,
-                sehen Sie hier, was ich für sie tun kann.
               </span>
             </p>
           </header>
 
-          <div class="tabs" data-tabs>
+          <div class="Tabs" data-tabs>
             <!-- Selector de dos caminos: empresas (prácticas o empleo) y marcas (freelance) -->
-            <div class="tabs__list paths" role="tablist" aria-label="Services">
+            <div class="Tabs-list Paths" role="tablist" aria-label="Servicios">
               <button
-                class="tabs__tab path"
+                class="Tabs-tab Path"
                 type="button"
                 role="tab"
                 id="tab-companies"
                 aria-controls="panel-companies"
                 aria-selected="true"
               >
-                <span class="path__num">01</span>
-                <span class="path__text">
-                  <span class="path__title" data-l="en">For companies</span>
-                  <span class="path__title" data-l="es">Para empresas</span>
-                  <span class="path__title" data-l="de">Für Unternehmen</span>
-                  <span class="path__sub" data-l="en">Internship or first role</span>
-                  <span class="path__sub" data-l="es">Prácticas o primer puesto</span>
-                  <span class="path__sub" data-l="de">Praktikum oder Berufseinstieg</span>
+                <span class="Path-num">01</span>
+                <span class="Path-text">
+                  <span class="Path-title">Para empresas</span>
+
+                  <span class="Path-sub">Prácticas o primer puesto</span>
                 </span>
-                <span class="path__arrow" aria-hidden="true">→</span>
+                <span class="Path-arrow" aria-hidden="true">→</span>
               </button>
               <button
-                class="tabs__tab path"
+                class="Tabs-tab Path"
                 type="button"
                 role="tab"
                 id="tab-brands"
@@ -801,155 +732,95 @@
                 aria-selected="false"
                 tabindex="-1"
               >
-                <span class="path__num">02</span>
-                <span class="path__text">
-                  <span class="path__title" data-l="en">For brands</span>
-                  <span class="path__title" data-l="es">Para marcas</span>
-                  <span class="path__title" data-l="de">Für Marken</span>
-                  <span class="path__sub" data-l="en">Freelance projects</span>
-                  <span class="path__sub" data-l="es">Proyectos freelance</span>
-                  <span class="path__sub" data-l="de">Freelance-Projekte</span>
+                <span class="Path-num">02</span>
+                <span class="Path-text">
+                  <span class="Path-title">Para marcas</span>
+
+                  <span class="Path-sub">Proyectos freelance</span>
                 </span>
-                <span class="path__arrow" aria-hidden="true">→</span>
+                <span class="Path-arrow" aria-hidden="true">→</span>
               </button>
             </div>
 
             <!-- Pestaña 1: para empresas -->
-            <div class="tabs__panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies">
+            <div class="Tabs-panel" role="tabpanel" id="panel-companies" aria-labelledby="tab-companies">
               <!-- Ficha de candidata: datos clave a la izquierda, áreas y botones a la derecha -->
-              <article class="ficha">
-                <aside class="ficha__side">
-                  <img class="ficha__mono" src="img/monograma-crema-68.webp" width="34" height="34" alt="" />
-                  <p class="ficha__name">Marta Rodríguez</p>
-                  <p class="ficha__status">
-                    <span class="dot" aria-hidden="true"></span>
-                    <span data-l="en">Available now</span>
-                    <span data-l="es">Disponible ahora</span>
-                    <span data-l="de">Ab sofort verfügbar</span>
+              <article class="Ficha">
+                <aside class="Ficha-side">
+                  <img class="Ficha-mono" src="img/monograma-crema-68.webp" width="34" height="34" alt="" />
+                  <p class="Ficha-name">Marta Rodríguez</p>
+                  <p class="Ficha-status">
+                    <span class="Dot" aria-hidden="true"></span>
+
+                    <span>Disponible ahora</span>
                   </p>
-                  <dl class="ficha__facts">
+                  <dl class="Ficha-facts">
                     <div>
                       <dt>
-                        <span data-l="en">Looking for</span>
-                        <span data-l="es">Busco</span>
-                        <span data-l="de">Gesucht</span>
+                        <span>Busco</span>
                       </dt>
                       <dd>
-                        <span data-l="en">A 3–6 month internship or a first role</span>
-                        <span data-l="es">Prácticas de 3 a 6 meses o un primer puesto</span>
-                        <span data-l="de">Praktikum (3–6 Monate) oder Berufseinstieg</span>
+                        <span>Prácticas de 3 a 6 meses o un primer puesto</span>
                       </dd>
                     </div>
                     <div>
                       <dt>
-                        <span data-l="en">From</span>
-                        <span data-l="es">Desde</span>
-                        <span data-l="de">Ab</span>
+                        <span>Desde</span>
                       </dt>
                       <dd>
-                        <span data-l="en">Now, in Cologne or remote</span>
-                        <span data-l="es">Ya, en Colonia o en remoto</span>
-                        <span data-l="de">Sofort, in Köln oder remote</span>
+                        <span>Ya, en Colonia o en remoto</span>
                       </dd>
                     </div>
                     <div>
                       <dt>
-                        <span data-l="en">Languages</span>
-                        <span data-l="es">Idiomas</span>
-                        <span data-l="de">Sprachen</span>
+                        <span>Idiomas</span>
                       </dt>
                       <dd>
-                        <span data-l="en">Spanish · German · English</span>
-                        <span data-l="es">Español · alemán · inglés</span>
-                        <span data-l="de">Spanisch · Deutsch · Englisch</span>
+                        <span>Español · alemán C1 · inglés B2</span>
                       </dd>
                     </div>
                   </dl>
                 </aside>
 
-                <div class="ficha__main">
-                  <h3 class="ficha__lead">
-                    <span data-l="en">
-                      I bring web development, digital marketing and design together in one profile.
-                    </span>
-                    <span data-l="es">Uno desarrollo web, marketing digital y diseño en un mismo perfil.</span>
-                    <span data-l="de">
-                      Ich verbinde Webentwicklung, digitales Marketing und Design in einem Profil.
-                    </span>
+                <div class="Ficha-main">
+                  <h3 class="Ficha-lead">
+                    <span>Uno desarrollo web, marketing digital y diseño en un mismo perfil.</span>
                   </h3>
-                  <ul class="ficha__areas">
-                    <li style="--c: var(--teal)">
+                  <ul class="Ficha-areas">
+                    <li class="Ficha-area Ficha-area--teal">
                       <h4>
-                        <span data-l="en">Web development</span>
-                        <span data-l="es">Desarrollo web</span>
-                        <span data-l="de">Webentwicklung</span>
+                        <span>Desarrollo web</span>
                       </h4>
-                      <p data-l="en">
-                        HTML, CSS, JavaScript, React and TypeScript, with a grounding in Node and MongoDB.
-                      </p>
-                      <p data-l="es">HTML, CSS, JavaScript, React y TypeScript, con base en Node y MongoDB.</p>
-                      <p data-l="de">
-                        HTML, CSS, JavaScript, React und TypeScript, dazu Grundlagen in Node und MongoDB.
-                      </p>
+
+                      <p>HTML, CSS, JavaScript, React y TypeScript, con base en Node y MongoDB.</p>
                     </li>
-                    <li style="--c: var(--mustard)">
+                    <li class="Ficha-area Ficha-area--mustard">
                       <h4>
-                        <span data-l="en">Digital marketing</span>
-                        <span data-l="es">Marketing digital</span>
-                        <span data-l="de">Digitales Marketing</span>
+                        <span>Marketing digital</span>
                       </h4>
-                      <p data-l="en">SEO, analytics and social media: websites that get found and convert.</p>
-                      <p data-l="es">SEO, analítica y redes: webs que se encuentran y convierten.</p>
-                      <p data-l="de">SEO, Analytics und Social Media: Websites, die gefunden werden und überzeugen.</p>
+
+                      <p>SEO, analítica y redes: webs que se encuentran y convierten.</p>
                     </li>
-                    <li style="--c: var(--taupe)">
+                    <li class="Ficha-area Ficha-area--taupe">
                       <h4>
-                        <span data-l="en">Design &amp; teamwork</span>
-                        <span data-l="es">Diseño y equipo</span>
-                        <span data-l="de">Design &amp; Team</span>
+                        <span>Diseño y equipo</span>
                       </h4>
-                      <p data-l="en">Figma and art direction, plus five years of leading groups.</p>
-                      <p data-l="es">Figma y dirección de arte, y cinco años coordinando grupos.</p>
-                      <p data-l="de">Figma und Art Direction, dazu fünf Jahre Gruppenleitung.</p>
+
+                      <p>Figma y dirección de arte, y cinco años coordinando grupos.</p>
                     </li>
                   </ul>
-                  <div class="actions ficha__actions">
+                  <div class="Actions Ficha-actions">
                     <a
-                      class="btn"
+                      class="Button"
                       href="https://cal.com/bymarta/virtual-coffee-with-marta"
                       target="_blank"
                       rel="noopener"
                     >
-                      <span data-l="en">Book a virtual coffee · 15 min</span>
-                      <span data-l="es">Reserva un café virtual · 15 min</span>
-                      <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+                      <span>Reserva un café virtual · 15 min</span>
                     </a>
-                    <a
-                      class="btn btn--ghost"
-                      href="cv/marta-rodriguez-cv-en.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      data-l="en"
-                    >
-                      Download CV
-                    </a>
-                    <a
-                      class="btn btn--ghost"
-                      href="cv/marta-rodriguez-cv-es.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      data-l="es"
-                    >
+
+                    <a class="Button Button--ghost" href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener">
                       Descargar CV
-                    </a>
-                    <a
-                      class="btn btn--ghost"
-                      href="cv/marta-rodriguez-cv-de.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      data-l="de"
-                    >
-                      Lebenslauf herunterladen
                     </a>
                   </div>
                 </div>
@@ -957,215 +828,142 @@
             </div>
 
             <!-- Pestaña 2: para marcas (freelance) -->
-            <div class="tabs__panel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands">
+            <div class="Tabs-panel" role="tabpanel" id="panel-brands" aria-labelledby="tab-brands">
               <!-- Ficha para marcas: servicios a la izquierda, cómo trabajo y botones a la derecha -->
-              <article class="ficha ficha--brands">
-                <div class="ficha__main">
-                  <h3 class="ficha__lead">
-                    <span data-l="en">
-                      Websites with personality and clear plans for brands that want to grow online.
-                    </span>
-                    <span data-l="es">
-                      Webs con personalidad y planes claros para marcas que quieren crecer online.
-                    </span>
-                    <span data-l="de">
-                      Websites mit Persönlichkeit und klare Pläne für Marken, die online wachsen wollen.
-                    </span>
+              <article class="Ficha Ficha--brands">
+                <div class="Ficha-main">
+                  <h3 class="Ficha-lead">
+                    <span>Webs con personalidad y planes claros para marcas que quieren crecer online.</span>
                   </h3>
-                  <ol class="offer">
-                    <li class="offer__item" style="--c: var(--teal)">
-                      <span class="offer__num">01</span>
-                      <div class="offer__body">
+                  <ol class="Offer">
+                    <li class="Offer-item Offer-item--teal">
+                      <span class="Offer-num">01</span>
+                      <div class="Offer-body">
                         <h4>
-                          <span data-l="en">A website for your brand</span>
-                          <span data-l="es">Web para tu marca</span>
-                          <span data-l="de">Eine Website für Ihre Marke</span>
+                          <span>Web para tu marca</span>
                         </h4>
-                        <p data-l="en">Custom design and build, from a single landing page to a multi-page site.</p>
-                        <p data-l="es">Diseño y desarrollo a medida, de una landing a una web de varias páginas.</p>
-                        <p data-l="de">
-                          Maßgeschneidertes Design und Umsetzung – von der Landingpage bis zur mehrseitigen Website.
-                        </p>
-                        <ul class="offer__chips" data-l="es">
+
+                        <p>Diseño y desarrollo a medida, de una landing a una web de varias páginas.</p>
+
+                        <ul class="Offer-chips">
                           <li>Diseño y textos</li>
                           <li>Móvil y accesible</li>
                           <li>Varios idiomas</li>
                           <li>Formulario o WhatsApp</li>
                         </ul>
-                        <ul class="offer__chips" data-l="en">
-                          <li>Design &amp; copy</li>
-                          <li>Mobile &amp; accessible</li>
-                          <li>Multilingual</li>
-                          <li>Form or WhatsApp</li>
-                        </ul>
-                        <ul class="offer__chips" data-l="de">
-                          <li>Design &amp; Texte</li>
-                          <li>Mobil &amp; barrierefrei</li>
-                          <li>Mehrsprachig</li>
-                          <li>Formular oder WhatsApp</li>
-                        </ul>
                       </div>
-                      <p class="offer__example">
-                        <span data-l="en">See</span>
-                        <span data-l="es">Ejemplos</span>
-                        <span data-l="de">Beispiele</span>
+                      <p class="Offer-example">
+                        <span>Ejemplos</span>
+
                         <a href="proyectos/casa-brava/">Casa Brava</a>
                         ·
                         <a href="proyectos/golden-chance-senior/">Golden Chance Senior</a>
                       </p>
                     </li>
-                    <li class="offer__item" style="--c: var(--mustard)">
-                      <span class="offer__num">02</span>
-                      <div class="offer__body">
+                    <li class="Offer-item Offer-item--mustard">
+                      <span class="Offer-num">02</span>
+                      <div class="Offer-body">
                         <h4>
-                          <span data-l="en">Redesign &amp; improvements</span>
-                          <span data-l="es">Rediseño y mejora</span>
-                          <span data-l="de">Redesign &amp; Optimierung</span>
+                          <span>Rediseño y mejora</span>
                         </h4>
-                        <p data-l="en">For websites that work but no longer reflect who you are.</p>
-                        <p data-l="es">Para webs que funcionan pero ya no transmiten lo que eres.</p>
-                        <p data-l="de">Für Websites, die funktionieren, aber nicht mehr zeigen, wer Sie sind.</p>
-                        <ul class="offer__chips" data-l="es">
+
+                        <p>Para webs que funcionan pero ya no transmiten lo que eres.</p>
+
+                        <ul class="Offer-chips">
                           <li>Velocidad y SEO</li>
                           <li>Accesibilidad</li>
                           <li>Nueva imagen</li>
                           <li>Mejoras por prioridad</li>
                         </ul>
-                        <ul class="offer__chips" data-l="en">
-                          <li>Speed &amp; SEO</li>
-                          <li>Accessibility</li>
-                          <li>Fresh look</li>
-                          <li>Prioritised fixes</li>
-                        </ul>
-                        <ul class="offer__chips" data-l="de">
-                          <li>Ladezeit &amp; SEO</li>
-                          <li>Barrierefreiheit</li>
-                          <li>Neuer Look</li>
-                          <li>Priorisierte Maßnahmen</li>
-                        </ul>
                       </div>
-                      <p class="offer__example">
-                        <span data-l="en">See</span>
-                        <span data-l="es">Ejemplo</span>
-                        <span data-l="de">Beispiel</span>
+                      <p class="Offer-example">
+                        <span>Ejemplo</span>
+
                         <a href="proyectos/demya/">DEMYA</a>
                       </p>
                     </li>
-                    <li class="offer__item" style="--c: var(--taupe)">
-                      <span class="offer__num">03</span>
-                      <div class="offer__body">
+                    <li class="Offer-item Offer-item--taupe">
+                      <span class="Offer-num">03</span>
+                      <div class="Offer-body">
                         <h4>
-                          <span data-l="en">Digital marketing plan</span>
-                          <span data-l="es">Plan de marketing digital</span>
-                          <span data-l="de">Digitaler Marketingplan</span>
+                          <span>Plan de marketing digital</span>
                         </h4>
-                        <p data-l="en">A clear plan to grow online, backed by data and priorities.</p>
-                        <p data-l="es">Un plan claro para crecer online, con datos y prioridades.</p>
-                        <p data-l="de">Ein klarer Plan für Ihr Wachstum online – mit Daten und Prioritäten.</p>
-                        <ul class="offer__chips" data-l="es">
+
+                        <p>Un plan claro para crecer online, con datos y prioridades.</p>
+
+                        <ul class="Offer-chips">
                           <li>Auditoría web y redes</li>
                           <li>Competencia y DAFO</li>
                           <li>Objetivos SMART</li>
                           <li>KPIs</li>
                         </ul>
-                        <ul class="offer__chips" data-l="en">
-                          <li>Website &amp; social audit</li>
-                          <li>Competitors &amp; SWOT</li>
-                          <li>SMART goals</li>
-                          <li>KPIs</li>
-                        </ul>
-                        <ul class="offer__chips" data-l="de">
-                          <li>Website- &amp; Social-Audit</li>
-                          <li>Wettbewerb &amp; SWOT</li>
-                          <li>SMART-Ziele</li>
-                          <li>KPIs</li>
-                        </ul>
                       </div>
-                      <p class="offer__example">
-                        <span data-l="en">See</span>
-                        <span data-l="es">Ejemplo</span>
-                        <span data-l="de">Beispiel</span>
+                      <p class="Offer-example">
+                        <span>Ejemplo</span>
+
                         <a href="proyectos/demya/">DEMYA</a>
                       </p>
                     </li>
                   </ol>
                 </div>
 
-                <aside class="ficha__side ficha__side--right">
-                  <p class="ficha__kicker">
-                    <span data-l="en">How I work</span>
-                    <span data-l="es">Cómo trabajo</span>
-                    <span data-l="de">So arbeite ich</span>
+                <aside class="Ficha-side Ficha-side--right">
+                  <p class="Ficha-kicker">
+                    <span>Cómo trabajo</span>
                   </p>
-                  <ol class="steps">
+                  <ol class="Steps">
                     <li>
-                      <span class="steps__num">1</span>
+                      <span class="Steps-num">1</span>
                       <div>
                         <strong>
-                          <span data-l="en">A 15-minute coffee</span>
-                          <span data-l="es">Café de 15 minutos</span>
-                          <span data-l="de">15 Minuten Kaffee</span>
+                          <span>Café de 15 minutos</span>
                         </strong>
-                        <p data-l="en">You tell me your idea.</p>
-                        <p data-l="es">Me cuentas tu idea.</p>
-                        <p data-l="de">Sie erzählen mir Ihre Idee.</p>
+
+                        <p>Me cuentas tu idea.</p>
                       </div>
                     </li>
                     <li>
-                      <span class="steps__num">2</span>
+                      <span class="Steps-num">2</span>
                       <div>
                         <strong>
-                          <span data-l="en">A clear proposal</span>
-                          <span data-l="es">Propuesta clara</span>
-                          <span data-l="de">Klares Angebot</span>
+                          <span>Propuesta clara</span>
                         </strong>
-                        <p data-l="en">Scope, timeline and price in writing.</p>
-                        <p data-l="es">Alcance, plazos y precio por escrito.</p>
-                        <p data-l="de">Umfang, Zeitplan und Preis schriftlich.</p>
+
+                        <p>Alcance, plazos y precio por escrito.</p>
                       </div>
                     </li>
                     <li>
-                      <span class="steps__num">3</span>
+                      <span class="Steps-num">3</span>
                       <div>
                         <strong>
-                          <span data-l="en">Design &amp; build</span>
-                          <span data-l="es">Diseño y desarrollo</span>
-                          <span data-l="de">Design &amp; Umsetzung</span>
+                          <span>Diseño y desarrollo</span>
                         </strong>
-                        <p data-l="en">I share progress and we fine-tune together.</p>
-                        <p data-l="es">Te enseño avances y ajustamos juntos.</p>
-                        <p data-l="de">Ich zeige Zwischenstände, wir passen gemeinsam an.</p>
+
+                        <p>Te enseño avances y ajustamos juntos.</p>
                       </div>
                     </li>
                     <li>
-                      <span class="steps__num">4</span>
+                      <span class="Steps-num">4</span>
                       <div>
                         <strong>
-                          <span data-l="en">Launch</span>
-                          <span data-l="es">Entrega</span>
-                          <span data-l="de">Übergabe</span>
+                          <span>Entrega</span>
                         </strong>
-                        <p data-l="en">Your site goes live and I show you how to look after it.</p>
-                        <p data-l="es">Web publicada y te explico cómo cuidarla.</p>
-                        <p data-l="de">Die Website geht online – ich zeige Ihnen die Pflege.</p>
+
+                        <p>Web publicada y te explico cómo cuidarla.</p>
                       </div>
                     </li>
                   </ol>
-                  <div class="actions ficha__side-actions">
-                    <a class="btn btn--light" href="#contact" data-motivo="Proyecto freelance">
-                      <span data-l="en">Tell me about your project</span>
-                      <span data-l="es">Cuéntame tu proyecto</span>
-                      <span data-l="de">Erzählen Sie mir von Ihrem Projekt</span>
+                  <div class="Actions Ficha-sideActions">
+                    <a class="Button Button--light" href="#contact" data-motivo="Proyecto freelance">
+                      <span>Cuéntame tu proyecto</span>
                     </a>
                     <a
-                      class="btn btn--ghost-light"
+                      class="Button Button--ghostLight"
                       href="https://cal.com/bymarta/virtual-coffee-with-marta"
                       target="_blank"
                       rel="noopener"
                     >
-                      <span data-l="en">Virtual coffee · 15 min</span>
-                      <span data-l="es">Café virtual · 15 min</span>
-                      <span data-l="de">Virtueller Kaffee · 15 Min.</span>
+                      <span>Café virtual · 15 min</span>
                     </a>
                   </div>
                 </aside>
@@ -1178,156 +976,149 @@
       <!-- ===== SOBRE MÍ =====
            Formato carta: centrado, con la acuarela del logo difuminada al fondo,
            el saludo en Bodoni cursiva, la firma y los datos clave en una línea. -->
-      <section class="section about" id="about" aria-labelledby="about-title">
-        <div class="about__wash" aria-hidden="true"></div>
-        <div class="wrap about__inner">
-          <p class="eyebrow">
-            <span data-l="en">About me</span>
-            <span data-l="es">Sobre mí</span>
-            <span data-l="de">Über mich</span>
+      <section class="Section About" id="about" aria-labelledby="about-title">
+        <div class="About-wash" aria-hidden="true"></div>
+        <div class="u-container About-inner">
+          <p class="Eyebrow">
+            <span>Sobre mí</span>
           </p>
           <h2 id="about-title">
-            <span data-l="en">Hi, I'm Marta</span>
-            <span data-l="es">Hola, soy Marta</span>
-            <span data-l="de">Hallo, ich bin Marta</span>
+            <span>Hola, soy Marta</span>
           </h2>
-          <p class="about__lead">
-            <span data-l="en">
-              I'm creative and curious, drawn to the point where technology, communication and digital growth meet.
-            </span>
-            <span data-l="es">
+          <p class="About-lead">
+            <span>
               Soy creativa y curiosa, y me interesa el punto donde se cruzan la tecnología, la comunicación y el
               crecimiento digital.
             </span>
-            <span data-l="de">
-              Ich bin kreativ und neugierig und interessiere mich für die Schnittstelle zwischen Technologie,
-              Kommunikation und digitalem Wachstum.
-            </span>
           </p>
 
-          <div class="about__body" data-reveal>
-            <p data-l="en">
-              I come from early childhood education, where I spent five years leading groups of children in Cologne and
-              Hanover, planning each day and encouraging their creativity. I decided to change careers to bring my
-              creative side together with digital and technical skills, and that path led me to web development and
-              digital marketing.
-            </p>
-            <p data-l="es">
+          <div class="About-body" data-reveal>
+            <p>
               Vengo de la educación infantil: cinco años dirigiendo grupos en Colonia y Hannover, organizando el día a
               día y fomentando la creatividad. Decidí reorientar mi carrera para unir mis intereses creativos con
               habilidades digitales y técnicas, y eso me ha traído hasta el desarrollo web y el marketing digital.
             </p>
-            <p data-l="de">
-              Ich komme aus der frühkindlichen Bildung: Fünf Jahre lang habe ich Kindergruppen in Köln und Hannover
-              geleitet, den Alltag organisiert und Kreativität gefördert. Ich habe mich bewusst neu orientiert, um meine
-              kreativen Interessen mit digitalen und technischen Fähigkeiten zu verbinden. So bin ich zur Webentwicklung
-              und zum digitalen Marketing gekommen.
-            </p>
-            <p data-l="en">
-              From those years I've kept my organisational skills, my patience and a knack for explaining things
-              clearly. Outside work you'll find me reading, at concerts, dancing, ice skating or getting lost in
-              fashion, design and interiors.
-            </p>
-            <p data-l="es">
+
+            <p>
               De esa etapa me traigo la organización, la paciencia y saber explicar las cosas con claridad. Fuera del
               trabajo me encontrarás leyendo, en un concierto, bailando, patinando sobre hielo o pensando en moda,
               diseño y decoración.
             </p>
-            <p data-l="de">
-              Aus dieser Zeit bringe ich Organisationstalent, Geduld und die Fähigkeit mit, Dinge klar zu erklären. In
-              meiner Freizeit lese ich, gehe auf Konzerte, tanze, laufe Schlittschuh oder beschäftige mich mit Mode,
-              Design und Inneneinrichtung.
-            </p>
-            <svg class="about__sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+
+            <svg class="About-sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
               <use href="img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
             </svg>
           </div>
 
-          <!-- Datos clave en una línea -->
-          <dl class="about__strip" data-reveal>
-            <div>
-              <dt>
-                <span data-l="en">Education</span>
-                <span data-l="es">Formación</span>
-                <span data-l="de">Ausbildung</span>
-              </dt>
-              <dd>
-                <span data-l="en">Master's degree, CEI · 2026</span>
-                <span data-l="es">Máster, CEI · 2026</span>
-                <span data-l="de">Master, CEI · 2026</span>
-              </dd>
-            </div>
-            <div>
-              <dt>
-                <span data-l="en">Languages</span>
-                <span data-l="es">Idiomas</span>
-                <span data-l="de">Sprachen</span>
-              </dt>
-              <dd>ES · EN · DE</dd>
-            </div>
-            <div>
-              <dt>
-                <span data-l="en">Based in</span>
-                <span data-l="es">Vivo en</span>
-                <span data-l="de">Wohnort</span>
-              </dt>
-              <dd>
-                <span data-l="en">Cologne</span>
-                <span data-l="es">Colonia</span>
-                <span data-l="de">Köln</span>
-              </dd>
-            </div>
-            <div>
-              <dt>
-                <span data-l="en">Available for</span>
-                <span data-l="es">Disponible</span>
-                <span data-l="de">Verfügbar</span>
-              </dt>
-              <dd>
-                <span data-l="en">3–6 month internship</span>
-                <span data-l="es">Prácticas de 3 a 6 meses</span>
-                <span data-l="de">Praktikum, 3–6 Monate</span>
-              </dd>
-            </div>
-          </dl>
+          <!-- Trayectoria: fechas reales, de lo más reciente a lo más antiguo -->
+          <div class="Journey" data-reveal>
+            <h3 class="Journey-title">
+              <span>Trayectoria</span>
+            </h3>
+            <ol class="Journey-list">
+              <li class="Journey-item is-current">
+                <span class="Journey-date">2025 – 2026</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Máster en Marketing Digital y Desarrollo Web</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>CEI · online · Full Stack superado, proyecto final de marketing en curso</span>
+                  </p>
+                </div>
+              </li>
+              <li class="Journey-item">
+                <span class="Journey-date">2024 – 2026</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Educadora infantil</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>GFO St. Elisabeth · Colonia</span>
+                  </p>
+                </div>
+              </li>
+              <li class="Journey-item">
+                <span class="Journey-date">2021 – 2024</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Responsable de grupo</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>Fröbel · Colonia</span>
+                  </p>
+                </div>
+              </li>
+              <li class="Journey-item">
+                <span class="Journey-date">2021</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Educadora en un grupo bilingüe (inglés / alemán)</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>Kinder Kinder · Hannover</span>
+                  </p>
+                </div>
+              </li>
+              <li class="Journey-item">
+                <span class="Journey-date">2015 – 2017</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Atención al cliente y ventas</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>El Corte Inglés · España</span>
+                  </p>
+                </div>
+              </li>
+              <li class="Journey-item">
+                <span class="Journey-date">2014 – 2019</span>
+                <div>
+                  <p class="Journey-role">
+                    <span>Grado en Educación Infantil</span>
+                  </p>
+                  <p class="Journey-place">
+                    <span>Universidad de Alcalá</span>
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <p class="Journey-langs">
+              <span>Español nativo · Alemán C1 · Inglés B2 · Vivo en Colonia</span>
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- ===== CONTACTO =====
            Panel de cierre: a la izquierda el mensaje, los accesos directos (WhatsApp y email)
            y los enlaces; a la derecha un formulario corto que llega a mi correo (Web3Forms). -->
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
-        <div class="wrap">
-          <div class="contact__panel">
-            <div class="contact__intro">
-              <p class="eyebrow">
-                <span data-l="en">Contact</span>
-                <span data-l="es">Contacto</span>
-                <span data-l="de">Kontakt</span>
+      <section class="Section Contact" id="contact" aria-labelledby="contact-title">
+        <div class="u-container">
+          <div class="Contact-panel">
+            <div class="Contact-intro">
+              <p class="Eyebrow">
+                <span>Contacto</span>
               </p>
               <h2 id="contact-title">
-                <span data-l="en">Got a project or an opening? Let's talk.</span>
-                <span data-l="es">¿Tienes un proyecto o una vacante? Hablemos.</span>
-                <span data-l="de">Sie haben ein Projekt oder eine offene Stelle? Lassen Sie uns sprechen.</span>
+                <span>¿Tienes un proyecto o una vacante? Hablemos.</span>
               </h2>
-              <p class="intro" data-l="en">
-                I'm looking for an internship or my first role in web development or digital marketing, at an agency or
-                a brand with personality. I'm also open to freelance projects.
-              </p>
-              <p class="intro" data-l="es">
+
+              <p class="Intro">
                 Busco prácticas o un primer puesto en desarrollo web o marketing digital, en agencia o en una marca con
                 personalidad. También me encantan los proyectos freelance.
               </p>
-              <p class="intro" data-l="de">
-                Ich suche ein Praktikum oder eine erste Stelle in der Webentwicklung oder im digitalen Marketing, in
-                einer Agentur oder bei einer Marke mit Persönlichkeit. Auch für Freelance-Projekte bin ich offen.
-              </p>
 
               <!-- Accesos directos: el número de WhatsApp solo va dentro del enlace, no se muestra como texto -->
-              <div class="actions contact__quick">
+              <div class="Actions Contact-quick">
                 <!-- Reserva de una videollamada de 15 min en Cal.com (se abre en una pestaña nueva) -->
-                <a class="btn" href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
-                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <a
+                  class="Button"
+                  href="https://cal.com/bymarta/virtual-coffee-with-marta"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg class="Button-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16 M9 3.5c0 1 1 1.3 1 2.3 M12.5 3.5c0 1 1 1.3 1 2.3"
                       fill="none"
@@ -1337,18 +1128,15 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span data-l="es">Reserva un café virtual · 15 min</span>
-                  <span data-l="en">Book a virtual coffee · 15 min</span>
-                  <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+                  <span>Reserva un café virtual · 15 min</span>
                 </a>
                 <a
-                  class="btn btn--ghost btn--whatsapp"
-                  data-l="es"
+                  class="Button Button--ghost Button--whatsapp"
                   href="https://wa.me/34608520361?text=Hola%20Marta%2C%20he%20visto%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
                   target="_blank"
                   rel="noopener"
                 >
-                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg class="Button-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
                       fill="none"
@@ -1358,72 +1146,29 @@
                     />
                   </svg>
                   WhatsApp
-                </a>
-                <a
-                  class="btn btn--ghost btn--whatsapp"
-                  data-l="en"
-                  href="https://wa.me/34608520361?text=Hi%20Marta%2C%20I%27ve%20seen%20your%20portfolio%20and%20I%27d%20like%20to%20talk%20to%20you."
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  WhatsApp
-                </a>
-                <a
-                  class="btn btn--ghost btn--whatsapp"
-                  data-l="de"
-                  href="https://wa.me/34608520361?text=Hallo%20Marta%2C%20ich%20habe%20Ihr%20Portfolio%20gesehen%20und%20w%C3%BCrde%20gern%20mit%20Ihnen%20sprechen."
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M4 18.5 5.3 15A7.5 7.5 0 1 1 9 18.3Z"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  WhatsApp
-                </a>
-                <a class="btn btn--ghost" href="mailto:martaalarcon22@icloud.com">
-                  <span data-l="en">Email me</span>
-                  <span data-l="es">Escríbeme un email</span>
-                  <span data-l="de">E-Mail schreiben</span>
                 </a>
               </div>
 
-              <ul class="contact__list">
+              <ul class="Contact-list">
                 <li>
-                  <span class="eyebrow">Email</span>
+                  <span class="Eyebrow">Email</span>
                   <a id="email" href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
                 </li>
                 <li>
-                  <span class="eyebrow">LinkedIn</span>
+                  <span class="Eyebrow">LinkedIn</span>
                   <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">
                     in/rodriguezbymarta
                   </a>
                 </li>
                 <li>
-                  <span class="eyebrow">GitHub</span>
+                  <span class="Eyebrow">GitHub</span>
                   <a href="https://github.com/hellobymarta" target="_blank" rel="noopener">hellobymarta</a>
                 </li>
                 <li>
-                  <span class="eyebrow">
-                    <span data-l="en">CV</span>
-                    <span data-l="es">CV</span>
-                    <span data-l="de">Lebenslauf</span>
+                  <span class="Eyebrow">
+                    <span>CV</span>
                   </span>
-                  <span class="contact__cv">
+                  <span class="Contact-cv">
                     <a href="cv/marta-rodriguez-cv-es.pdf" target="_blank" rel="noopener">Español</a>
                     <a href="cv/marta-rodriguez-cv-en.pdf" target="_blank" rel="noopener">English</a>
                     <a href="cv/marta-rodriguez-cv-de.pdf" target="_blank" rel="noopener">Deutsch</a>
@@ -1434,12 +1179,16 @@
 
             <!-- Formulario: Web3Forms lo reenvía a mi correo (la clave de acceso es pública, no es una contraseña).
                  Con JavaScript se envía sin salir de la página; sin JavaScript, Web3Forms vuelve a esta web con ?enviado=1. -->
-            <div class="contact__form-wrap">
-              <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <p class="contact-form__title">
-                  <span data-l="en">Or leave me a message</span>
-                  <span data-l="es">O déjame un mensaje</span>
-                  <span data-l="de">Oder schreiben Sie mir hier</span>
+            <div class="Contact-formWrap">
+              <form
+                class="ContactForm"
+                id="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                novalidate
+              >
+                <p class="ContactForm-title">
+                  <span>O déjame un mensaje</span>
                 </p>
 
                 <!-- Campos ocultos de configuración de Web3Forms -->
@@ -1454,104 +1203,88 @@
                 />
                 <input type="hidden" name="idioma" value="es" id="form-idioma" />
                 <!-- Casilla trampa contra spam: las personas no la ven -->
-                <input type="checkbox" name="botcheck" class="contact-form__honey" tabindex="-1" aria-hidden="true" />
+                <input type="checkbox" name="botcheck" class="ContactForm-honey" tabindex="-1" aria-hidden="true" />
 
-                <div class="field">
+                <div class="Field">
                   <label for="form-nombre">
-                    <span data-l="en">Name</span>
-                    <span data-l="es">Nombre</span>
-                    <span data-l="de">Name</span>
+                    <span>Nombre</span>
                   </label>
-                  <input id="form-nombre" name="nombre" type="text" autocomplete="name" required />
+                  <input
+                    id="form-nombre"
+                    aria-describedby="form-nombre-error"
+                    data-error="Escribe tu nombre."
+                    name="nombre"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
+                  <p class="Field-error" id="form-nombre-error" hidden></p>
                 </div>
-                <div class="field">
+                <div class="Field">
                   <label for="form-email">
-                    <span data-l="en">Email</span>
-                    <span data-l="es">Email</span>
-                    <span data-l="de">E-Mail</span>
+                    <span>Email</span>
                   </label>
-                  <input id="form-email" name="email" type="email" autocomplete="email" required />
+                  <input
+                    id="form-email"
+                    aria-describedby="form-email-error"
+                    data-error="Escribe un email válido, por ejemplo nombre@empresa.com."
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                  <p class="Field-error" id="form-email-error" hidden></p>
                 </div>
-                <div class="field">
+                <div class="Field">
                   <label for="form-motivo">
-                    <span data-l="en">What is it about?</span>
-                    <span data-l="es">¿Sobre qué es?</span>
-                    <span data-l="de">Worum geht es?</span>
+                    <span>¿Sobre qué es?</span>
                   </label>
                   <select id="form-motivo" name="motivo">
-                    <option
-                      value="Vacante / prácticas"
-                      data-text-en="A job or internship"
-                      data-text-es="Una vacante o prácticas"
-                      data-text-de="Eine Stelle oder ein Praktikum"
-                    >
-                      Una vacante o prácticas
-                    </option>
-                    <option
-                      value="Proyecto freelance"
-                      data-text-en="A freelance project"
-                      data-text-es="Un proyecto freelance"
-                      data-text-de="Ein Freelance-Projekt"
-                    >
-                      Un proyecto freelance
-                    </option>
-                    <option
-                      value="Otro"
-                      data-text-en="Something else"
-                      data-text-es="Otra cosa"
-                      data-text-de="Etwas anderes"
-                    >
-                      Otra cosa
-                    </option>
+                    <option value="Vacante / prácticas">Una vacante o prácticas</option>
+                    <option value="Proyecto freelance">Un proyecto freelance</option>
+                    <option value="Otro">Otra cosa</option>
                   </select>
                 </div>
-                <div class="field">
+                <div class="Field">
                   <label for="form-mensaje">
-                    <span data-l="en">Message</span>
-                    <span data-l="es">Mensaje</span>
-                    <span data-l="de">Nachricht</span>
+                    <span>Mensaje</span>
                   </label>
-                  <textarea id="form-mensaje" name="mensaje" rows="4" required></textarea>
+                  <textarea
+                    id="form-mensaje"
+                    aria-describedby="form-mensaje-error"
+                    data-error="Cuéntame en un par de líneas qué necesitas."
+                    name="mensaje"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <p class="Field-error" id="form-mensaje-error" hidden></p>
                 </div>
-                <div class="field field--check">
-                  <input id="form-privacidad" name="privacidad" type="checkbox" value="aceptada" required />
+                <div class="Field Field--check">
+                  <input
+                    id="form-privacidad"
+                    aria-describedby="form-privacidad-error"
+                    data-error="Marca la casilla para que pueda responderte."
+                    name="privacidad"
+                    type="checkbox"
+                    value="aceptada"
+                    required
+                  />
                   <label for="form-privacidad">
-                    <span data-l="en">
-                      I agree that my details are used only to reply to this message (see the
-                      <a href="privacidad.html">privacy policy</a>).
-                    </span>
-                    <span data-l="es">
+                    <span>
                       Acepto que mis datos se usen solo para responder a este mensaje (ver la
                       <a href="privacidad.html">política de privacidad</a>).
                     </span>
-                    <span data-l="de">
-                      Ich bin einverstanden, dass meine Daten nur zur Beantwortung dieser Nachricht verwendet werden
-                      (siehe
-                      <a href="privacidad.html">Datenschutzerklärung</a>).
-                    </span>
                   </label>
+                  <p class="Field-error" id="form-privacidad-error" hidden></p>
                 </div>
-                <button class="btn contact-form__send" type="submit">
-                  <span data-l="en">Send message</span>
-                  <span data-l="es">Enviar mensaje</span>
-                  <span data-l="de">Nachricht senden</span>
+                <button class="Button ContactForm-send" type="submit" data-sending="Enviando…">
+                  <span>Enviar mensaje</span>
                 </button>
 
                 <!-- Aviso si el envío falla: se ofrece escribir por email -->
-                <p class="contact-form__error" id="form-error" role="alert" hidden>
-                  <span data-l="en">
-                    Sorry, the message couldn't be sent. Please try again or write to me at
-                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
-                    .
-                  </span>
-                  <span data-l="es">
+                <p class="ContactForm-error" id="form-error" role="alert" hidden>
+                  <span>
                     Vaya, el mensaje no se ha podido enviar. Inténtalo de nuevo o escríbeme a
-                    <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
-                    .
-                  </span>
-                  <span data-l="de">
-                    Leider konnte die Nachricht nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie
-                    mir an
                     <a href="mailto:martaalarcon22@icloud.com">martaalarcon22@icloud.com</a>
                     .
                   </span>
@@ -1559,16 +1292,12 @@
               </form>
 
               <!-- Se muestra tras enviar el formulario -->
-              <div class="contact-form__thanks" id="form-thanks" role="status" hidden>
-                <p class="contact-form__title">
-                  <span data-l="en">Thank you!</span>
-                  <span data-l="es">¡Gracias!</span>
-                  <span data-l="de">Vielen Dank!</span>
+              <div class="ContactForm-thanks" id="form-thanks" role="status" tabindex="-1" hidden>
+                <p class="ContactForm-title">
+                  <span>¡Gracias!</span>
                 </p>
                 <p>
-                  <span data-l="en">Your message has reached me. I'll get back to you as soon as I can.</span>
-                  <span data-l="es">Tu mensaje me ha llegado. Te responderé lo antes posible.</span>
-                  <span data-l="de">Ihre Nachricht ist bei mir angekommen. Ich melde mich so bald wie möglich.</span>
+                  <span>Tu mensaje me ha llegado. Te responderé lo antes posible.</span>
                 </p>
               </div>
             </div>
@@ -1579,69 +1308,53 @@
 
     <!-- ===== PIE =====
          Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
-    <footer class="footer">
-      <div class="wrap footer__grid">
-        <div class="footer__brand">
-          <svg class="footer__sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+    <footer class="Footer">
+      <div class="u-container Footer-grid">
+        <div class="Footer-brand">
+          <svg class="Footer-sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
             <use href="img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
           </svg>
           <p>
-            <span data-l="en">Web development &amp; digital marketing. Made in Cologne.</span>
-            <span data-l="es">Desarrollo web y marketing digital. Hecho en Colonia.</span>
-            <span data-l="de">Webentwicklung &amp; digitales Marketing. Gemacht in Köln.</span>
+            <span>Desarrollo web y marketing digital. Hecho en Colonia.</span>
           </p>
         </div>
 
-        <nav class="footer__col" aria-labelledby="footer-menu">
-          <h2 class="footer__title" id="footer-menu">
-            <span data-l="en">Menu</span>
-            <span data-l="es">Menú</span>
-            <span data-l="de">Menü</span>
+        <nav class="Footer-col" aria-labelledby="footer-menu">
+          <h2 class="Footer-title" id="footer-menu">
+            <span>Menú</span>
           </h2>
           <ul>
             <li>
               <a href="#projects">
-                <span data-l="en">Work</span>
-                <span data-l="es">Proyectos</span>
-                <span data-l="de">Projekte</span>
+                <span>Proyectos</span>
               </a>
             </li>
             <li>
               <a href="#services">
-                <span data-l="en">Services</span>
-                <span data-l="es">Servicios</span>
-                <span data-l="de">Leistungen</span>
+                <span>Servicios</span>
               </a>
             </li>
             <li>
               <a href="#about">
-                <span data-l="en">About</span>
-                <span data-l="es">Sobre mí</span>
-                <span data-l="de">Über mich</span>
+                <span>Sobre mí</span>
               </a>
             </li>
             <li>
               <a href="#contact">
-                <span data-l="en">Contact</span>
-                <span data-l="es">Contacto</span>
-                <span data-l="de">Kontakt</span>
+                <span>Contacto</span>
               </a>
             </li>
           </ul>
         </nav>
 
-        <div class="footer__col">
-          <h2 class="footer__title">
-            <span data-l="en">Let's talk</span>
-            <span data-l="es">Hablemos</span>
-            <span data-l="de">Kontakt</span>
+        <div class="Footer-col">
+          <h2 class="Footer-title">
+            <span>Hablemos</span>
           </h2>
           <ul>
             <li>
               <a href="mailto:martaalarcon22@icloud.com">
-                <span data-l="en">Email</span>
-                <span data-l="es">Email</span>
-                <span data-l="de">E-Mail</span>
+                <span>Email</span>
               </a>
             </li>
             <li>
@@ -1650,36 +1363,28 @@
             <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
             <li>
               <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
-                <span data-l="en">Virtual coffee</span>
-                <span data-l="es">Café virtual</span>
-                <span data-l="de">Virtueller Kaffee</span>
+                <span>Café virtual</span>
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="wrap footer__bottom">
+      <div class="u-container Footer-bottom">
         <p>© 2026 Marta Rodríguez · ByMarta</p>
         <p>
-          <span data-l="en">Designed and built with HTML, CSS and JavaScript.</span>
-          <span data-l="es">Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
-          <span data-l="de">Gestaltet und umgesetzt mit HTML, CSS und JavaScript.</span>
+          <span>Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
         </p>
         <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
-        <ul class="footer__legal">
+        <ul class="Footer-legal">
           <li>
             <a href="aviso-legal.html">
-              <span data-l="en">Legal notice</span>
-              <span data-l="es">Aviso legal</span>
-              <span data-l="de">Impressum</span>
+              <span>Aviso legal</span>
             </a>
           </li>
           <li>
             <a href="privacidad.html">
-              <span data-l="en">Privacy</span>
-              <span data-l="es">Privacidad</span>
-              <span data-l="de">Datenschutz</span>
+              <span>Privacidad</span>
             </a>
           </li>
         </ul>

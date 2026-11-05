@@ -1,0 +1,671 @@
+<!doctype html>
+<!--
+  ByMarta · Portfolio de Marta Rodríguez
+  Web developer & digital marketing · Colonia (Alemania)
+  Uso de IA: esta página se ha desarrollado con asistencia de IA (Claude, de Anthropic)
+  a partir de las indicaciones, textos y proyectos de Marta, y ha sido revisada por ella.
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Golden Chance Senior · Caso de estudio · Marta Rodríguez</title>
+    <meta name="description" content="Caso de estudio de Golden Chance Senior: landing bilingüe para un proyecto residencial sénior en el norte de España." />
+    <meta name="author" content="Marta Alarcón Rodríguez" />
+    <meta name="theme-color" content="#fbf8f3" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Golden Chance Senior · Marta Rodríguez" />
+    <meta property="og:description" content="Caso de estudio de Golden Chance Senior: landing bilingüe para un proyecto residencial sénior en el norte de España." />
+    <meta property="og:url" content="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <meta property="og:image" content="https://bymarta-web.vercel.app/img/gcs-inicio.webp" />
+    <link rel="canonical" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="es" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <link rel="alternate" hreflang="en" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/?lang=en" />
+    <link rel="alternate" hreflang="de" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://bymarta-web.vercel.app/proyectos/golden-chance-senior/" />
+    <link rel="icon" type="image/png" href="../../img/favicon.png" />
+    <link rel="preload" href="../../fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <script src="../../js/idioma.js"></script>
+    <script src="../../js/main.js" defer></script>
+  </head>
+  <body class="PageProject">
+    <a class="SkipLink" href="#case">
+      <span data-l="en">Skip to content</span>
+      <span data-l="es">Saltar al contenido</span>
+      <span data-l="de">Zum Inhalt</span>
+    </a>
+
+    <!-- Barra fina de progreso de lectura, con los colores de la acuarela -->
+    <div class="Progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CABECERA ===== -->
+    <header class="Header">
+      <div class="u-container Header-inner">
+        <a class="Brand" href="../../#home" aria-label="Marta Rodríguez">
+          <img class="Brand-mono u-onLight" src="../../img/monograma-tinta-68.webp" alt="" width="34" height="34" />
+          <img class="Brand-mono u-onDark" src="../../img/monograma-crema-68.webp" alt="" width="34" height="34" />
+          <span class="Brand-name">Marta Rodríguez</span>
+        </a>
+
+        <nav class="Nav" aria-label="Main">
+          <ul class="Nav-list" id="menu">
+            <li class="Nav-item--menu">
+              <a href="../../#projects" class="Nav-parent" data-spy="projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+              <button class="Nav-toggle" type="button" aria-expanded="false" aria-controls="mega-proyectos" aria-label="Ver los cuatro proyectos">
+                <svg class="Nav-caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5l3-3" /></svg>
+              </button>
+              <!-- Desplegable: los cuatro casos de estudio -->
+              <div class="MegaMenu" id="mega-proyectos">
+                <ul class="MegaMenu-list">
+                  <li>
+                    <a class="MegaMenu-link" href="../../proyectos/casa-brava/">
+                      <img src="../../img/cb-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Casa Brava</span>
+                      <span class="MegaMenu-type">
+                        <span data-l="en">Boutique hotel</span>
+                        <span data-l="es">Hotel boutique</span>
+                        <span data-l="de">Boutique-Hotel</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../../proyectos/vagamundo/">
+                      <img src="../../img/vg-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Vagamundo</span>
+                      <span class="MegaMenu-type">
+                        <span data-l="en">Travel agency · full stack</span>
+                        <span data-l="es">Agencia de viajes · full stack</span>
+                        <span data-l="de">Reiseveranstalter · Full Stack</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../../proyectos/golden-chance-senior/">
+                      <img src="../../img/gcs-inicio-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">Golden Chance Senior</span>
+                      <span class="MegaMenu-type">
+                        <span data-l="en">Senior living</span>
+                        <span data-l="es">Residencial sénior</span>
+                        <span data-l="de">Wohnen im Alter</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="MegaMenu-link" href="../../proyectos/demya/">
+                      <img src="../../img/dm-tarjeta-640.webp" width="640" height="400" alt="" loading="lazy" />
+                      <span class="MegaMenu-name">DEMYA</span>
+                      <span class="MegaMenu-type">
+                        <span data-l="en">Digital marketing plan</span>
+                        <span data-l="es">Plan de marketing digital</span>
+                        <span data-l="de">Digitalmarketing-Plan</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <a class="MegaMenu-all" href="../../#projects">
+                  <span data-l="en">See all projects →</span>
+                  <span data-l="es">Ver todos los proyectos →</span>
+                  <span data-l="de">Alle Projekte ansehen →</span>
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="../../#services" data-spy="services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about" data-spy="about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact" data-spy="contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="LangSwitch" aria-label="Language">
+            <li><a href="../../#" data-lang-link="es" hreflang="es" lang="es" title="Español">ES</a></li>
+            <li><a href="../../#" data-lang-link="en" hreflang="en" lang="en" title="English">EN</a></li>
+            <li><a href="../../#" data-lang-link="de" hreflang="de" lang="de" title="Deutsch">DE</a></li>
+          </ul>
+
+          <!-- Modo claro / oscuro: el botón indica si el modo oscuro está activado -->
+          <button class="ThemeButton" type="button" id="theme-toggle" aria-pressed="false">
+            <span class="u-hiddenVisually" data-l="en">Dark mode</span>
+            <span class="u-hiddenVisually" data-l="es">Modo oscuro</span>
+            <span class="u-hiddenVisually" data-l="de">Dunkelmodus</span>
+            <svg class="ThemeButton-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+            </svg>
+            <svg class="ThemeButton-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"
+              />
+            </svg>
+          </button>
+
+          <button class="MenuButton" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+
+    <main id="case">
+      <!-- Migas: volver a todos los proyectos -->
+      <nav class="Crumbs u-container" aria-label="Breadcrumb">
+        <a href="../../#projects">
+          <span data-l="en">← All projects</span>
+          <span data-l="es">← Todos los proyectos</span>
+          <span data-l="de">← Alle Projekte</span>
+        </a>
+        <span class="Crumbs-count">03 / 04</span>
+      </nav>
+
+        <article class="Case Case--gcs" aria-labelledby="gcs-title">
+          <div class="u-container">
+            <div class="Case-head">
+              <div>
+                <ul class="Case-meta Eyebrow">
+                  <li>
+                    <span data-l="en">Senior living, northern Spain</span>
+                    <span data-l="es">Residencial sénior, norte de España</span>
+                    <span data-l="de">Wohnen für Senioren, Nordspanien</span>
+                  </li>
+                  <li>
+                    <span data-l="en">Client project</span>
+                    <span data-l="es">Proyecto para cliente</span>
+                    <span data-l="de">Kundenprojekt</span>
+                  </li>
+                </ul>
+                <h1 id="gcs-title" class="Case-title--gcs">
+                  Golden Chance
+                  <em>Senior</em>
+                </h1>
+                <p class="Badge">
+                  <span class="Dot" aria-hidden="true"></span>
+                  <span data-l="en">In development</span>
+                  <span data-l="es">En desarrollo</span>
+                  <span data-l="de">In Entwicklung</span>
+                </p>
+              </div>
+              <div>
+                <p class="Case-summary" data-l="en">
+                  A landing page for a new senior living community in northern Spain, backed by Golden Chance. It
+                  presents a way of living built on independence, community, security and the future, in Spanish and
+                  English, with an enquiry form for anyone who wants to learn more.
+                </p>
+                <p class="Case-summary" data-l="es">
+                  Landing de un nuevo proyecto residencial sénior en el norte de España, impulsado por Golden Chance.
+                  Presenta una forma de vivir basada en la independencia, la comunidad, la seguridad y el futuro, en
+                  español e inglés, con un formulario para quien quiera conocer el proyecto.
+                </p>
+                <p class="Case-summary" data-l="de">
+                  Eine Landingpage für ein neues Wohnprojekt für Senioren in Nordspanien, initiiert von Golden Chance.
+                  Sie stellt eine Lebensform vor, die auf Unabhängigkeit, Gemeinschaft, Sicherheit und Zukunft setzt –
+                  auf Spanisch und Englisch, mit einem Anfrageformular für alle, die mehr erfahren möchten.
+                </p>
+                <p class="Case-note" data-l="en">
+                  The site is live and keeps evolving: the mobile experience and new content are being added step by
+                  step.
+                </p>
+                <p class="Case-note" data-l="es">
+                  La web ya está online y sigue creciendo: la experiencia móvil y los nuevos contenidos se van
+                  incorporando poco a poco.
+                </p>
+                <p class="Case-note" data-l="de">
+                  Die Website ist bereits online und wächst weiter: Die mobile Ansicht und neue Inhalte kommen nach und
+                  nach hinzu.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="Case-media"
+              data-carousel
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="Golden Chance Senior"
+            >
+              <div class="Browser">
+                <p class="Browser-bar" aria-hidden="true">
+                  <span class="Browser-dots"></span>
+                  golden-chance-senior.vercel.app
+                </p>
+                <div class="Carousel">
+                  <ul class="Carousel-track">
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-inicio.webp"
+                        srcset="../../img/gcs-inicio-800.webp 800w, ../../img/gcs-inicio.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="Golden Chance Senior home page: a modern house with an olive tree and the headline Your home. Your life. Your future."
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-filosofia.webp"
+                        srcset="../../img/gcs-filosofia-800.webp 800w, ../../img/gcs-filosofia.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="Philosophy section with a photograph of two older friends in a garden"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-vivir.webp"
+                        srcset="../../img/gcs-vivir-800.webp 800w, ../../img/gcs-vivir.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="A new way of living: three photographs of private patios and shared gardens"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-comunidad.webp"
+                        srcset="../../img/gcs-comunidad-800.webp 800w, ../../img/gcs-comunidad.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="Community model section on an olive green background with a shared terrace"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-modelo.webp"
+                        srcset="../../img/gcs-modelo-800.webp 800w, ../../img/gcs-modelo.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="Three numbered reasons that make the project different"
+                        loading="lazy"
+                      />
+                    </li>
+                    <li class="Carousel-slide">
+                      <img
+                        src="../../img/gcs-proyecto.webp"
+                        srcset="../../img/gcs-proyecto-800.webp 800w, ../../img/gcs-proyecto.webp 1440w"
+                        sizes="(max-width: 860px) 90vw, 900px"
+                        width="1440"
+                        height="900"
+                        alt="Project status and enquiry form on a dark background"
+                        loading="lazy"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="Phone">
+                <img
+                  src="../../img/gcs-movil.webp"
+                  width="600"
+                  height="1298"
+                  alt="Golden Chance Senior on a phone"
+                  loading="lazy"
+                />
+              </div>
+              <div class="Carousel-controls">
+                <div class="Carousel-arrows">
+                  <button type="button" data-prev aria-label="Previous screenshot">&larr;</button>
+                  <button type="button" data-next aria-label="Next screenshot">&rarr;</button>
+                </div>
+                <div class="Carousel-dots">
+                  <button type="button" aria-label="Screenshot 1"></button>
+                  <button type="button" aria-label="Screenshot 2"></button>
+                  <button type="button" aria-label="Screenshot 3"></button>
+                  <button type="button" aria-label="Screenshot 4"></button>
+                  <button type="button" aria-label="Screenshot 5"></button>
+                  <button type="button" aria-label="Screenshot 6"></button>
+                </div>
+                <p class="Carousel-count" aria-hidden="true">
+                  <span data-count>1</span>
+                  / 6
+                </p>
+              </div>
+            </div>
+
+            <div class="Case-details">
+              <!-- Caso de estudio: papel, reto, lo que hice y resultado -->
+              <dl class="Story">
+                <div>
+                  <dt>
+                    <span class="Story-num">01</span>
+                    <span data-l="es">Mi papel</span>
+                    <span data-l="en">My role</span>
+                    <span data-l="de">Meine Rolle</span>
+                  </dt>
+                  <dd data-l="es">
+                    Marca, textos, dirección de arte y desarrollo de la landing, en contacto directo con el cliente.
+                  </dd>
+                  <dd data-l="en">
+                    Brand, copy, art direction and development of the landing page, working directly with the client.
+                  </dd>
+                  <dd data-l="de">
+                    Marke, Texte, Art Direction und Entwicklung der Landingpage – in direktem Austausch mit dem Kunden.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="Story-num">02</span>
+                    <span data-l="es">El reto</span>
+                    <span data-l="en">The challenge</span>
+                    <span data-l="de">Die Herausforderung</span>
+                  </dt>
+                  <dd data-l="es">
+                    Presentar un proyecto residencial que todavía no existe, transmitiendo confianza a personas mayores
+                    y a sus familias, en dos idiomas.
+                  </dd>
+                  <dd data-l="en">
+                    Presenting a residential project that doesn't exist yet, building trust with older people and their
+                    families, in two languages.
+                  </dd>
+                  <dd data-l="de">
+                    Ein Wohnprojekt vorstellen, das es noch nicht gibt, und dabei älteren Menschen und ihren Familien
+                    Vertrauen vermitteln – in zwei Sprachen.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="Story-num">03</span>
+                    <span data-l="es">Lo que hice</span>
+                    <span data-l="en">What I did</span>
+                    <span data-l="de">Was ich gemacht habe</span>
+                  </dt>
+                  <dd data-l="es">
+                    Una landing bilingüe (ES/EN) con mensajes claros sobre independencia, comunidad y seguridad,
+                    formulario con consentimiento de privacidad y despliegue en Vercel con tipografías propias.
+                  </dd>
+                  <dd data-l="en">
+                    A bilingual (ES/EN) landing page with clear messages on independence, community and security, an
+                    enquiry form with privacy consent, and deployment on Vercel with self-hosted fonts.
+                  </dd>
+                  <dd data-l="de">
+                    Eine zweisprachige Landingpage (ES/EN) mit klaren Botschaften zu Unabhängigkeit, Gemeinschaft und
+                    Sicherheit, Anfrageformular mit Datenschutz-Einwilligung und Deployment auf Vercel mit lokal
+                    eingebundenen Schriften.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span class="Story-num">04</span>
+                    <span data-l="es">El resultado</span>
+                    <span data-l="en">The result</span>
+                    <span data-l="de">Das Ergebnis</span>
+                  </dt>
+                  <dd data-l="es">
+                    La web ya está online como primer punto de contacto con las personas interesadas. Ahora estoy
+                    sumando la versión móvil y nuevos contenidos.
+                  </dd>
+                  <dd data-l="en">
+                    The site is already live as the first point of contact for interested people. I'm now adding the
+                    mobile experience and new content.
+                  </dd>
+                  <dd data-l="de">
+                    Die Website ist bereits online und erster Anlaufpunkt für Interessierte. Derzeit ergänze ich die
+                    mobile Ansicht und neue Inhalte.
+                  </dd>
+                </div>
+              </dl>
+
+              <h2 class="u-hiddenVisually">
+                <span data-l="en">Highlights</span>
+                <span data-l="es">Lo más destacado</span>
+                <span data-l="de">Highlights</span>
+              </h2>
+              <ul class="Highlights">
+                <li>
+                  <strong data-l="en">Brand</strong>
+                  <strong data-l="es">Marca</strong>
+                  <strong data-l="de">Marke</strong>
+                  <span data-l="en">design, copy and art direction, from start to finish</span>
+                  <span data-l="es">diseño, textos y dirección de arte, de principio a fin</span>
+                  <span data-l="de">Design, Texte und Art Direction aus einer Hand</span>
+                </li>
+                <li>
+                  <strong>ES / EN</strong>
+                  <span data-l="en">bilingual, with links that open straight in English</span>
+                  <span data-l="es">bilingüe, con enlaces que abren directamente en inglés</span>
+                  <span data-l="de">zweisprachig, mit Links, die direkt auf Englisch öffnen</span>
+                </li>
+                <li>
+                  <strong data-l="en">Enquiries</strong>
+                  <strong data-l="es">Contacto</strong>
+                  <strong data-l="de">Anfragen</strong>
+                  <span data-l="en">a form that goes straight to the client's inbox, with privacy consent</span>
+                  <span data-l="es">
+                    formulario que llega directo al correo del cliente, con consentimiento de privacidad
+                  </span>
+                  <span data-l="de">ein Formular, das direkt beim Kunden ankommt – mit Datenschutz-Einwilligung</span>
+                </li>
+                <li>
+                  <strong>Vercel</strong>
+                  <span data-l="en">deployment with caching and security headers, and self-hosted fonts</span>
+                  <span data-l="es">
+                    despliegue con cabeceras de caché y seguridad, y tipografías alojadas en la propia web
+                  </span>
+                  <span data-l="de">
+                    Deployment mit Caching- und Sicherheits-Headern sowie selbst gehosteten Schriften
+                  </span>
+                </li>
+              </ul>
+              <p class="Case-stack">
+                <span class="Eyebrow">
+                  <span data-l="en">Built with</span>
+                  <span data-l="es">Hecha con</span>
+                  <span data-l="de">Umgesetzt mit</span>
+                </span>
+                HTML5 · CSS3 · JavaScript · FormSubmit · Vercel
+              </p>
+            </div>
+          </div>
+        </article>
+
+      <!-- Siguiente proyecto: bloque grande con su miniatura -->
+      <nav class="NextProject u-container" aria-label="Projects">
+        <a class="NextProject-link" href="../demya/">
+          <span class="NextProject-text">
+            <span class="NextProject-label">
+              <span data-l="en">Next project</span>
+              <span data-l="es">Siguiente proyecto</span>
+              <span data-l="de">Nächstes Projekt</span>
+            </span>
+            <span class="NextProject-name">DEMYA <span aria-hidden="true">→</span></span>
+            <span class="NextProject-type">
+              <span data-l="en">Digital marketing plan</span>
+              <span data-l="es">Plan de marketing digital</span>
+              <span data-l="de">Digitalmarketing-Plan</span>
+            </span>
+          </span>
+          <span class="NextProject-media">
+            <img
+              src="../../img/dm-tarjeta-800.webp"
+              srcset="../../img/dm-tarjeta-640.webp 640w, ../../img/dm-tarjeta-800.webp 800w, ../../img/dm-tarjeta.webp 1440w"
+              sizes="(max-width: 760px) 92vw, 520px"
+              width="1440"
+              height="900"
+              alt=""
+              loading="lazy"
+            />
+          </span>
+        </a>
+        <p class="NextProject-more">
+          <a href="../vagamundo/">
+            <span data-l="en">← Previous: </span>
+            <span data-l="es">← Anterior: </span>
+            <span data-l="de">← Vorheriges: </span>
+            Vagamundo
+          </a>
+          <a href="../../#projects">
+            <span data-l="en">All projects</span>
+            <span data-l="es">Todos los proyectos</span>
+            <span data-l="de">Alle Projekte</span>
+          </a>
+        </p>
+      </nav>
+
+      <!-- Llamada a la acción final -->
+      <section class="CaseCta u-container" aria-labelledby="cta-title">
+        <div class="CaseCta-box">
+          <h2 id="cta-title">
+            <span data-l="en">Like what you see?</span>
+            <span data-l="es">¿Te gusta lo que ves?</span>
+            <span data-l="de">Gefällt Ihnen, was Sie sehen?</span>
+          </h2>
+          <p>
+            <span data-l="en">Tell me about your project or book a 15-minute coffee and let's talk.</span>
+            <span data-l="es">Cuéntame tu proyecto o reserva un café de 15 minutos y lo hablamos.</span>
+            <span data-l="de">Erzählen Sie mir von Ihrem Projekt oder buchen Sie einen 15-minütigen Kaffee.</span>
+          </p>
+          <div class="Actions">
+            <a class="Button Button--light" href="../../#contact">
+              <span data-l="en">Get in touch</span>
+              <span data-l="es">Escríbeme</span>
+              <span data-l="de">Kontakt aufnehmen</span>
+            </a>
+            <a class="Button Button--ghostLight" href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+              <span data-l="en">Book a virtual coffee · 15 min</span>
+              <span data-l="es">Reserva un café virtual · 15 min</span>
+              <span data-l="de">Virtuellen Kaffee buchen · 15 Min.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== PIE =====
+         Firma y frase, menú, contacto y, abajo, derechos y enlaces legales. -->
+    <footer class="Footer">
+      <div class="u-container Footer-grid">
+        <div class="Footer-brand">
+          <svg class="Footer-sign" viewBox="235 110 885 270" role="img" aria-label="ByMarta">
+            <use href="../../img/logo-firma.svg#firma" x="0" y="0" width="1165" height="424"></use>
+          </svg>
+          <p>
+            <span data-l="en">Web development &amp; digital marketing. Made in Cologne.</span>
+            <span data-l="es">Desarrollo web y marketing digital. Hecho en Colonia.</span>
+            <span data-l="de">Webentwicklung &amp; digitales Marketing. Gemacht in Köln.</span>
+          </p>
+        </div>
+
+        <nav class="Footer-col" aria-labelledby="footer-menu">
+          <h2 class="Footer-title" id="footer-menu">
+            <span data-l="en">Menu</span>
+            <span data-l="es">Menú</span>
+            <span data-l="de">Menü</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="../../#projects">
+                <span data-l="en">Work</span>
+                <span data-l="es">Proyectos</span>
+                <span data-l="de">Projekte</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#services">
+                <span data-l="en">Services</span>
+                <span data-l="es">Servicios</span>
+                <span data-l="de">Leistungen</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#about">
+                <span data-l="en">About</span>
+                <span data-l="es">Sobre mí</span>
+                <span data-l="de">Über mich</span>
+              </a>
+            </li>
+            <li>
+              <a href="../../#contact">
+                <span data-l="en">Contact</span>
+                <span data-l="es">Contacto</span>
+                <span data-l="de">Kontakt</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="Footer-col">
+          <h2 class="Footer-title">
+            <span data-l="en">Let's talk</span>
+            <span data-l="es">Hablemos</span>
+            <span data-l="de">Kontakt</span>
+          </h2>
+          <ul>
+            <li>
+              <a href="mailto:martaalarcon22@icloud.com">
+                <span data-l="en">Email</span>
+                <span data-l="es">Email</span>
+                <span data-l="de">E-Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rodriguezbymarta" target="_blank" rel="noopener">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hellobymarta" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <a href="https://cal.com/bymarta/virtual-coffee-with-marta" target="_blank" rel="noopener">
+                <span data-l="en">Virtual coffee</span>
+                <span data-l="es">Café virtual</span>
+                <span data-l="de">Virtueller Kaffee</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="u-container Footer-bottom">
+        <p>© 2026 Marta Rodríguez · ByMarta</p>
+        <p>
+          <span data-l="en">Designed and built with HTML, CSS and JavaScript.</span>
+          <span data-l="es">Diseñada y desarrollada con HTML, CSS y JavaScript.</span>
+          <span data-l="de">Gestaltet und umgesetzt mit HTML, CSS und JavaScript.</span>
+        </p>
+        <!-- Enlaces legales: obligatorios en Alemania (Impressum y Datenschutz) -->
+        <ul class="Footer-legal">
+          <li>
+            <a href="../../aviso-legal.html">
+              <span data-l="en">Legal notice</span>
+              <span data-l="es">Aviso legal</span>
+              <span data-l="de">Impressum</span>
+            </a>
+          </li>
+          <li>
+            <a href="../../privacidad.html">
+              <span data-l="en">Privacy</span>
+              <span data-l="es">Privacidad</span>
+              <span data-l="de">Datenschutz</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
