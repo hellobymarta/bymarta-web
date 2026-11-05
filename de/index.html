@@ -1148,11 +1148,20 @@
                   <label for="form-motivo">
                     <span>Worum geht es?</span>
                   </label>
-                  <select id="form-motivo" name="motivo">
+                  <select
+                    id="form-motivo"
+                    name="motivo"
+                    required
+                    aria-describedby="form-motivo-error"
+                    data-error="Bitte wählen Sie ein Anliegen aus."
+                  >
+                    <!-- Primera opción vacía: no hay nada elegido hasta que la persona lo seleccione -->
+                    <option value="" selected disabled>Bitte auswählen</option>
                     <option value="Vacante / prácticas">Eine Stelle oder ein Praktikum</option>
                     <option value="Proyecto freelance">Ein Freelance-Projekt</option>
                     <option value="Otro">Etwas anderes</option>
                   </select>
+                  <p class="Field-error" id="form-motivo-error" hidden></p>
                 </div>
                 <div class="Field">
                   <label for="form-mensaje">

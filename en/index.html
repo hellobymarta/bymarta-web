@@ -1134,11 +1134,20 @@
                   <label for="form-motivo">
                     <span>What is it about?</span>
                   </label>
-                  <select id="form-motivo" name="motivo">
+                  <select
+                    id="form-motivo"
+                    name="motivo"
+                    required
+                    aria-describedby="form-motivo-error"
+                    data-error="Please choose what your message is about."
+                  >
+                    <!-- Primera opción vacía: no hay nada elegido hasta que la persona lo seleccione -->
+                    <option value="" selected disabled>Choose an option</option>
                     <option value="Vacante / prácticas">A job or internship</option>
                     <option value="Proyecto freelance">A freelance project</option>
                     <option value="Otro">Something else</option>
                   </select>
+                  <p class="Field-error" id="form-motivo-error" hidden></p>
                 </div>
                 <div class="Field">
                   <label for="form-mensaje">

@@ -1374,7 +1374,17 @@
                     <span data-l="es">¿Sobre qué es?</span>
                     <span data-l="de">Worum geht es?</span>
                   </label>
-                  <select id="form-motivo" name="motivo">
+                  <select
+                    id="form-motivo"
+                    name="motivo"
+                    required
+                    aria-describedby="form-motivo-error"
+                    data-error-es="Elige el motivo de tu mensaje."
+                    data-error-en="Please choose what your message is about."
+                    data-error-de="Bitte wählen Sie ein Anliegen aus."
+                  >
+                    <!-- Primera opción vacía: no hay nada elegido hasta que la persona lo seleccione -->
+                    <option value="" selected disabled data-text-en="Choose an option" data-text-es="Elige una opción" data-text-de="Bitte auswählen">Elige una opción</option>
                     <option
                       value="Vacante / prácticas"
                       data-text-en="A job or internship"
@@ -1400,6 +1410,7 @@
                       Otra cosa
                     </option>
                   </select>
+                  <p class="Field-error" id="form-motivo-error" hidden></p>
                 </div>
                 <div class="Field">
                   <label for="form-mensaje">

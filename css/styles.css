@@ -70,8 +70,7 @@
     --chip: #f2ece4; /* fondo de etiquetas */
     --wash: 0.22; /* intensidad de las manchas de color de la portada */
 
-    --f-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia,
-      serif;
+    --f-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
     --f-body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
 
     /* Escala tipográfica */
@@ -317,8 +316,7 @@
     color: var(--muted);
     font-size: 0.95rem;
     text-decoration: none;
-    background: linear-gradient(currentColor, currentColor) left bottom 0.6rem /
-      0 1px no-repeat;
+    background: linear-gradient(currentColor, currentColor) left bottom 0.6rem / 0 1px no-repeat;
     transition:
       color 0.2s ease,
       background-size 0.3s ease;
@@ -421,12 +419,7 @@
   .Progress span {
     display: block;
     height: 100%;
-    background: linear-gradient(
-      90deg,
-      var(--teal),
-      var(--mustard) 55%,
-      var(--taupe)
-    );
+    background: linear-gradient(90deg, var(--teal), var(--mustard) 55%, var(--taupe));
     transform: scaleX(0);
     transform-origin: left center;
   }
@@ -830,8 +823,7 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .Signature-ink {
       color: #f4eee6;
-      filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75))
-        drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
+      filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75)) drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
     }
 
     :root:not([data-theme="light"]) .Signature-wash {
@@ -841,8 +833,7 @@
 
   :root[data-theme="dark"] .Signature-ink {
     color: #f4eee6;
-    filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75))
-      drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
+    filter: drop-shadow(0 1px 1.2px rgb(20 16 13 / 0.75)) drop-shadow(0 0 4px rgb(20 16 13 / 0.35));
   }
 
   :root[data-theme="dark"] .Signature-wash {
@@ -1328,8 +1319,7 @@
     flex: none;
     width: 42px;
     height: 10px;
-    background: radial-gradient(circle 5px at 5px 5px, #e0a39a 98%, transparent)
-      0 0 / 16px 10px repeat-x;
+    background: radial-gradient(circle 5px at 5px 5px, #e0a39a 98%, transparent) 0 0 / 16px 10px repeat-x;
     opacity: 0.85;
   }
 
@@ -1601,12 +1591,22 @@
     gap: clamp(1rem, 3vw, 2.5rem);
     max-width: 880px;
     margin: clamp(3.5rem, 7vw, 5rem) auto 0;
-    text-align: left;
+    text-align: center;
   }
 
   .Hero-fact {
     padding-top: 1rem;
-    border-top: 2px solid var(--c);
+  }
+
+  /* Una rayita corta de color, centrada encima de cada número */
+  .Hero-fact::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2px;
+    margin: 0 auto 1rem;
+    border-radius: 2px;
+    background: var(--c);
   }
 
   .Hero-fact--teal {
@@ -1648,26 +1648,53 @@
     }
   }
 
-  /* Página de proyecto: anterior y siguiente, cada uno con el color de su marca */
+  /* Página de proyecto: anterior y siguiente, con una miniatura redonda de cada web */
   .Pager {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: clamp(4rem, 8vw, 6rem);
+    border-block: 1px solid var(--line);
   }
 
   .Pager-link {
-    display: grid;
-    align-content: center;
-    gap: 0.75rem;
-    min-height: clamp(11rem, 22vw, 16rem);
-    padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 6vw, 5rem);
-    background: var(--panel);
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    padding-block: clamp(1.75rem, 4vw, 2.75rem);
     color: var(--ink);
     text-decoration: none;
   }
 
   .Pager-link--next {
+    justify-content: flex-end;
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+    border-left: 1px solid var(--line);
     text-align: right;
+  }
+
+  .Pager-link--prev {
+    padding-right: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .Pager-thumb {
+    flex: none;
+    width: clamp(4.5rem, 9vw, 7.5rem);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .Pager-link:hover .Pager-thumb,
+  .Pager-link:focus-visible .Pager-thumb {
+    transform: scale(1.06);
+  }
+
+  .Pager-text {
+    display: grid;
+    gap: 0.35rem;
   }
 
   .Pager-label {
@@ -1680,20 +1707,9 @@
 
   .Pager-name {
     font-family: var(--f-display);
-    font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 300;
-    line-height: 1.05;
-    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-
-  .Pager-link--prev:hover .Pager-name,
-  .Pager-link--prev:focus-visible .Pager-name {
-    transform: translateX(-6px);
-  }
-
-  .Pager-link--next:hover .Pager-name,
-  .Pager-link--next:focus-visible .Pager-name {
-    transform: translateX(6px);
+    line-height: 1.1;
   }
 
   @media (max-width: 640px) {
@@ -1702,7 +1718,9 @@
     }
 
     .Pager-link--next {
-      text-align: left;
+      padding-left: 0;
+      border-top: 1px solid var(--line);
+      border-left: 0;
     }
   }
 
@@ -1866,12 +1884,7 @@
     left: 0;
     height: 3px;
     border-radius: 3px;
-    background: linear-gradient(
-      90deg,
-      var(--teal),
-      var(--mustard) 60%,
-      var(--taupe)
-    );
+    background: linear-gradient(90deg, var(--teal), var(--mustard) 60%, var(--taupe));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -2592,6 +2605,11 @@
 
   .Field--check .Field-error {
     grid-column: 1 / -1;
+  }
+
+  /* Desplegable sin elegir: el texto "Elige una opción" en gris, como un marcador */
+  .Field select:invalid {
+    color: var(--muted);
   }
 
   .Field [aria-invalid="true"] {
