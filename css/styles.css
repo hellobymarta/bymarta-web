@@ -20,6 +20,7 @@
    11. Contacto y pie
    12. Reglas que siempre ganan (hidden, tema, movimiento reducido)
    13. Páginas legales (aviso legal y privacidad)
+   14. Versión móvil
    ========================================================================== */
 
 /* 0. TIPOGRAFÍAS
@@ -2946,6 +2947,232 @@
     margin-top: 2.5rem;
     color: var(--muted);
     font-size: var(--step--1);
+  }
+}
+
+/* 14. VERSIÓN MÓVIL
+   Ajustes pensados para el móvil (no la versión de ordenador encogida). Van en la misma
+   capa que el resto del diseño, después, para que se apliquen sobre las reglas generales. */
+@layer site {
+  /* Contacto rápido: solo en pantallas pequeñas */
+  .QuickContact {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    /* La línea bajo la firma cabe en una sola línea */
+    .Tagline {
+      gap: 0.3rem 0.4rem;
+      letter-spacing: 0.06em;
+    }
+
+    .Tagline li + li::before {
+      margin-right: 0.4rem;
+    }
+  }
+
+  /* En pantallas estrechas la ciudad quedaba sola en una segunda línea:
+     se muestra solo "Desarrollo web · Marketing digital" (Colonia aparece en la ficha) */
+  @media (max-width: 480px) {
+    .Tagline li:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    /* Proyectos: la imagen primero, más grande y sin el móvil superpuesto */
+    .Case--teaser {
+      padding-block: 3rem;
+    }
+
+    .Case-teaser {
+      gap: 1.75rem;
+    }
+
+    /* Sin esto, la fila de etiquetas que se desliza ensancharía la columna */
+    .Case-intro,
+    .Case-facts > div,
+    .Case-facts dd {
+      min-width: 0;
+    }
+
+    .Case-teaser .Case-media--link {
+      order: -1;
+      padding: 0;
+    }
+
+    .Case-teaser .Phone {
+      display: none;
+    }
+
+    .Case-count {
+      margin-bottom: 0.75rem;
+    }
+
+    .Case-lede {
+      margin-top: 0.9rem;
+      font-size: var(--step-0);
+    }
+
+    .Case-facts {
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+    }
+
+    /* Stack en una sola línea que se desliza de lado */
+    .Case-stackList {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin-inline: calc(var(--gutter) * -1);
+      padding-inline: var(--gutter);
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .Case-stackList::-webkit-scrollbar {
+      display: none;
+    }
+
+    .Case-stackList li {
+      flex: none;
+    }
+
+    .Case-actions {
+      margin-top: 1.5rem;
+    }
+
+    .Case-actions > .Button {
+      width: 100%;
+    }
+
+    /* Enlaces pequeños con zona táctil suficiente */
+    .Links a,
+    .Contact-cv a,
+    .Contact-list a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .Links {
+      gap: 0 1.5rem;
+    }
+
+    .Links a {
+      padding-bottom: 0;
+      border-bottom: 0;
+      text-decoration: underline;
+      text-decoration-color: var(--taupe);
+      text-underline-offset: 4px;
+    }
+
+    /* Pestañas como interruptor de dos opciones */
+    .Paths {
+      flex-wrap: nowrap;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .Path {
+      flex: 1;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 0.7rem 0.5rem;
+      border-radius: 999px;
+      text-align: center;
+    }
+
+    .Path::after,
+    .Path-num,
+    .Path-sub {
+      display: none;
+    }
+
+    .Path-title {
+      font-family: var(--f-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .Path[aria-selected="true"] {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* Contacto: sin la caja de fondo, el formulario usa todo el ancho */
+    .Contact-panel {
+      padding: 0;
+      border-radius: 0;
+      background: none;
+    }
+
+    .Contact-formWrap {
+      margin-inline: calc(var(--gutter) * -0.5);
+    }
+
+    /* Barra fija de contacto rápido */
+    .QuickContact {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 15;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      padding: 0.6rem var(--gutter)
+        calc(0.6rem + env(safe-area-inset-bottom, 0px));
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      animation: quick-in 0.3s ease both;
+    }
+
+    .QuickContact .Button {
+      width: 100%;
+      min-width: 0;
+      min-height: 44px;
+      padding-inline: 0.5rem;
+      white-space: nowrap;
+    }
+
+    /* Menos repeticiones en el móvil: el número 01/04 sobra y el email, LinkedIn
+       y GitHub ya están en el pie ("Hablemos"); en Contacto queda solo el CV */
+    .Case-count,
+    .Contact-list li:not(:last-child) {
+      display: none;
+    }
+
+    .Contact-list {
+      margin-top: 1.5rem;
+    }
+
+    .Case-teaser .Browser-bar {
+      padding-block: 0.4rem;
+    }
+
+    .Hero-facts {
+      margin-top: 2.75rem;
+    }
+
+    /* Hueco al final para que la barra no tape el pie */
+    body:has(.QuickContact) {
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  @keyframes quick-in {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: none;
+    }
   }
 }
 

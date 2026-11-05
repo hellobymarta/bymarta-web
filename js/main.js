@@ -11,6 +11,7 @@
    8. Barra de progreso de lectura
    9. Desplegable de Proyectos en el menú
    10. Menú que marca la sección visible
+   11. Contacto rápido en el móvil
    Uso de IA: desarrollado con asistencia de IA (Claude, de Anthropic) y
    revisado por Marta.
    ========================================================================== */
@@ -442,4 +443,30 @@ if (enlacesSeccion.length && "IntersectionObserver" in window) {
   secciones.forEach(function (seccion) {
     vigilante.observe(seccion);
   });
+}
+
+/* 11. CONTACTO RÁPIDO EN EL MÓVIL
+   Barra con dos botones que se muestra cuando la portada ya no se ve y se oculta
+   al llegar a la sección de contacto (el CSS la limita a pantallas pequeñas). */
+const barraContacto = document.querySelector("[data-quick-contact]");
+const portada = document.querySelector(".Hero");
+const seccionContacto = document.getElementById("contact");
+
+if (barraContacto && portada && seccionContacto && "IntersectionObserver" in window) {
+  let portadaVisible = true;
+  let contactoVisible = false;
+
+  function actualizarBarraContacto() {
+    barraContacto.hidden = portadaVisible || contactoVisible;
+  }
+
+  new IntersectionObserver(function (entradas) {
+    portadaVisible = entradas[0].isIntersecting;
+    actualizarBarraContacto();
+  }).observe(portada);
+
+  new IntersectionObserver(function (entradas) {
+    contactoVisible = entradas[0].isIntersecting;
+    actualizarBarraContacto();
+  }).observe(seccionContacto);
 }
