@@ -1562,29 +1562,6 @@
     }
   }
 
-  .NextProject-media {
-    display: block;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: var(--chip);
-  }
-
-  .NextProject-media img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    object-position: top;
-    transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-
-  .NextProject-link:hover .NextProject-media img,
-  .NextProject-link:focus-visible .NextProject-media img {
-    transform: scale(1.03);
-  }
-
   /* Página de proyecto: migas */
   .Crumbs {
     display: flex;
@@ -1616,70 +1593,117 @@
   }
 
   /* Siguiente proyecto: nombre grande y su miniatura */
-  .NextProject {
-    padding-top: clamp(3.5rem, 7vw, 5.5rem);
+
+  /* Portada: datos clave en una fila, como parte de la portada */
+  .Hero-facts {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2.5rem);
+    max-width: 880px;
+    margin: clamp(3.5rem, 7vw, 5rem) auto 0;
+    text-align: left;
   }
 
-  .NextProject-link {
+  .Hero-fact {
+    padding-top: 1rem;
+    border-top: 2px solid var(--c);
+  }
+
+  .Hero-fact--teal {
+    --c: var(--teal);
+  }
+
+  .Hero-fact--mustard {
+    --c: var(--mustard);
+  }
+
+  .Hero-fact--taupe {
+    --c: var(--taupe);
+  }
+
+  .Hero-fact--rose {
+    --c: #c98f7d;
+  }
+
+  .Hero-fact dt {
+    font-family: var(--f-display);
+    font-size: clamp(2rem, 3.6vw, 2.75rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1;
+    font-variant-numeric: lining-nums;
+  }
+
+  .Hero-fact dd {
+    margin: 0.5rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 640px) {
+    .Hero-facts {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      row-gap: 1.75rem;
+    }
+  }
+
+  /* Página de proyecto: anterior y siguiente, cada uno con el color de su marca */
+  .Pager {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: clamp(1.5rem, 4vw, 3.5rem);
-    align-items: center;
-    padding-top: clamp(2rem, 4vw, 2.75rem);
-    border-top: 1px solid var(--line);
-    color: inherit;
+    grid-template-columns: 1fr 1fr;
+    margin-top: clamp(4rem, 8vw, 6rem);
+  }
+
+  .Pager-link {
+    display: grid;
+    align-content: center;
+    gap: 0.75rem;
+    min-height: clamp(11rem, 22vw, 16rem);
+    padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 6vw, 5rem);
+    background: var(--panel);
+    color: var(--ink);
     text-decoration: none;
   }
 
-  .NextProject-text {
-    display: grid;
-    gap: 0.5rem;
+  .Pager-link--next {
+    text-align: right;
   }
 
-  .NextProject-label,
-  .NextProject-type {
+  .Pager-label {
     color: var(--muted);
-    font: 600 0.8125rem/1.4 var(--f-body);
-    letter-spacing: 0.14em;
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
-  .NextProject-name {
+  .Pager-name {
     font-family: var(--f-display);
-    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-size: clamp(1.9rem, 4.5vw, 3.4rem);
     font-weight: 300;
-    line-height: 1.02;
+    line-height: 1.05;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
-  .NextProject-name span {
-    display: inline-block;
-    transition: transform 0.3s ease;
+  .Pager-link--prev:hover .Pager-name,
+  .Pager-link--prev:focus-visible .Pager-name {
+    transform: translateX(-6px);
   }
 
-  .NextProject-link:hover .NextProject-name span,
-  .NextProject-link:focus-visible .NextProject-name span {
-    transform: translateX(8px);
+  .Pager-link--next:hover .Pager-name,
+  .Pager-link--next:focus-visible .Pager-name {
+    transform: translateX(6px);
   }
 
-  .NextProject-more {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0.75rem;
-    margin: 1.75rem 0 0;
-    font-size: 0.92rem;
-  }
+  @media (max-width: 640px) {
+    .Pager {
+      grid-template-columns: 1fr;
+    }
 
-  .NextProject-more a {
-    color: var(--muted);
-    text-decoration: none;
-  }
-
-  .NextProject-more a:hover,
-  .NextProject-more a:focus-visible {
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    .Pager-link--next {
+      text-align: left;
+    }
   }
 
   /* Llamada final: bloque oscuro con acuarela */
@@ -1746,12 +1770,6 @@
     :root:not([data-theme="light"]) .CaseCta-box {
       background: #2a2521;
       outline: 1px solid #36302a;
-    }
-  }
-
-  @media (max-width: 760px) {
-    .NextProject-link {
-      grid-template-columns: 1fr;
     }
   }
 
@@ -2168,26 +2186,6 @@
     font-size: 0.8125rem;
   }
 
-  .Offer-example {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.8125rem;
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  .Offer-example span {
-    display: block;
-    font: 600 0.8125rem/1.6 var(--f-body);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  .Offer-example a {
-    color: var(--ink);
-    text-underline-offset: 3px;
-  }
-
   .Steps {
     display: grid;
     gap: 1.1rem;
@@ -2203,14 +2201,16 @@
   }
 
   .Steps-num {
+    font-variant-numeric: lining-nums;
     display: grid;
     place-items: center;
     width: 1.9rem;
     height: 1.9rem;
     border: 1px solid rgb(244 238 230 / 0.3);
     border-radius: 50%;
-    font-family: var(--f-display);
-    font-size: 0.95rem;
+    font-family: var(--f-body);
+    font-size: 0.875rem;
+    font-weight: 600;
   }
 
   .Steps strong {
@@ -2241,12 +2241,6 @@
 
     .Offer-item {
       grid-template-columns: 2rem 1fr;
-    }
-
-    .Offer-example {
-      grid-column: 2;
-      margin-top: 0.8rem;
-      text-align: left;
     }
   }
 
@@ -2480,118 +2474,8 @@
   }
 
   /* Datos clave bajo la portada: cuatro cifras en línea */
-  .Keyfacts {
-    border-block: 1px solid var(--line);
-  }
-
-  .Keyfacts-list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-block: 0;
-  }
-
-  .Keyfacts-list div {
-    padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1rem, 2vw, 1.75rem);
-    border-left: 1px solid var(--line);
-  }
-
-  .Keyfacts-list div:first-child {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .Keyfacts-list dt {
-    font-family: var(--f-display);
-    font-size: clamp(2.2rem, 4vw, 3rem);
-    font-weight: 300;
-    line-height: 1;
-  }
-
-  .Keyfacts-list dd {
-    margin: 0.6rem 0 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  @media (max-width: 760px) {
-    .Keyfacts-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .Keyfacts-list div:nth-child(3) {
-      padding-left: 0;
-      border-left: 0;
-    }
-
-    .Keyfacts-list div:nth-child(n + 3) {
-      border-top: 1px solid var(--line);
-    }
-  }
 
   /* Sobre mí: trayectoria con fechas reales */
-  .Journey {
-    margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    text-align: left;
-  }
-
-  .Journey-title {
-    margin: 0 0 1rem;
-    color: var(--taupe);
-    font-family: var(--f-body);
-    font-size: var(--step--1);
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  .Journey-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid var(--line);
-  }
-
-  .Journey-item {
-    display: grid;
-    grid-template-columns: 8.5rem 1fr;
-    gap: 1.25rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .Journey-date {
-    color: var(--muted);
-    font-family: var(--f-display);
-    font-style: italic;
-  }
-
-  .Journey-item.is-current .Journey-date {
-    color: var(--teal);
-  }
-
-  .Journey-role {
-    margin: 0;
-    font-weight: 600;
-  }
-
-  .Journey-place {
-    margin: 0.15rem 0 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  .Journey-langs {
-    margin: 1.25rem 0 0;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  @media (max-width: 520px) {
-    .Journey-item {
-      grid-template-columns: 1fr;
-      gap: 0.25rem;
-    }
-  }
 
   /* 11. CONTACTO Y PIE
    Panel de cierre con fondo suave: mensaje, accesos directos y enlaces a la izquierda;
